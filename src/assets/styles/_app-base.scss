@@ -1,0 +1,110 @@
+@import "../bootstrap/bootstrap";
+
+// Pages
+@import "pages/login";
+@import "pages/404";
+@import "pages/inbox";
+@import "pages/compose";
+@import "pages/profile";
+//Widgets
+@import "widgets/topnav";
+@import "widgets/sidebar";
+@import "widgets/checkbox";
+@import "widgets/todo";
+@import "widgets/stats";
+@import "widgets/progressButton";
+@import "widgets/hover";
+//Custom
+@import "custom/btn-outline-rounded";
+@import "custom/custom";
+.main-container{
+	margin-left: 235px;
+	margin-top : 50px;
+	padding:10px;
+	transition: all .2s ease-in-out;
+	overflow: hidden;
+	background: #ECF0F1;
+}
+.rtl {
+	* {
+		direction: rtl;
+	}
+	.main-container {
+		margin-left: 0;
+		margin-right: 235px;
+	}
+	#sidebar div.side-widgets {
+		margin-left: 0;
+	}
+	.topnav-navbar {
+		.navbar-brand {
+			position: absolute;
+			right: -1rem;
+			padding-right: 65px;
+		}
+		.navbar-right {
+			margin-right: 196px;
+		}
+		.collapse {
+			margin-left: 1rem;
+		}
+	}
+}
+.spinner {
+	width: 100px;
+	height: 100px;
+	background-color: $brand-primary;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin:auto;
+	-webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+	animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+.animate {
+	-webkit-animation: cssAnimation 0.456s 1 ease;
+	-moz-animation: cssAnimation 0.456s 1 ease;
+	-o-animation: cssAnimation 0.456s 1 ease;
+}
+@-webkit-keyframes cssAnimation {
+	from { -webkit-transform: rotate(0deg) scale(0.955) skew(0deg) translate(0px); }
+	to { -webkit-transform: rotate(0deg) scale(1.0) skew(0deg) translate(0px); }
+}
+@-moz-keyframes cssAnimation {
+	from { -moz-transform: rotate(0deg) scale(0.955) skew(0deg) translate(0px); }
+	to { -moz-transform: rotate(0deg) scale(1.0) skew(0deg) translate(0px); }
+}
+@-o-keyframes cssAnimation {
+	from { -o-transform: rotate(0deg) scale(0.955) skew(0deg) translate(0px); }
+	to { -o-transform: rotate(0deg) scale(1.0) skew(0deg) translate(0px); }
+}
+
+.icon {
+	.icon-page {
+		.row p {
+			font-family: 'Open Sans', san-serif;		
+		}
+	}
+}

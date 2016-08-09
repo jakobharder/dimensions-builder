@@ -1,0 +1,21 @@
+img {
+    width: 160px;
+    height: 101px;
+}
+.box {
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+.box-type-0 {
+    background-color: #015095;
+}
+.box-type-2 {
+    background-color: #fee600;
+}
+.box-type-3 {
+    background-color: #ff6e01;
+}
+.box-type-4 {
+    background-color: #01be00;
+}

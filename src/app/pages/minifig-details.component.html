@@ -1,0 +1,8 @@
+<section *ngIf="minifig">
+    <h1>{{minifig.name}}</h1>
+    <img src="/assets/images/{{minifig.image}}.png">
+    <div *ngIf="pack">from set <a [routerLink]="['/pack/' + pack.id]">{{pack.id}} {{pack.name}}</a></div>
+    <ul>
+        <li *ngFor="let skill of minifig.skills"><b>{{skill.name}}</b>: {{minifig.name}} can {{skill.desc}}.</li>
+    </ul>
+</section>

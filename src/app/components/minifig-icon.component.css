@@ -1,0 +1,13 @@
+div {
+    cursor: pointer;
+    background: white;
+    padding: 4px;
+    display: inline-block;
+}
+div:hover {
+    background: darkslategray;
+}
+img {
+    width: 64px;
+    height: 85px;
+}

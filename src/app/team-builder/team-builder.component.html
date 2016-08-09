@@ -1,0 +1,21 @@
+<section *ngIf="skills">
+    <h1>Team Builder</h1>
+    <p>Select characters is order of the rarest abilities.
+        The ability preset given here contains all abilities the characters Batman, Gandalf and Wildstyle from the Starter Pack have.</p>
+    <ol *ngIf="skills">
+        <li *ngFor="let skill of skills">{{skill.name}}{{skill.fullfilled ? ' (ok)' : ''}}</li>
+    </ol>
+    <h2>Your Team</h2>
+    <div *ngIf="team">
+        <minifig-icon *ngFor="let minifig of team" [minifig]="minifig">{{minifig.name}}</minifig-icon>
+        <div>Extra skills:
+            <span *ngFor="let skill of teamSkills; let isLast = last">{{skill.name}}{{isLast ? '' : ', '}}</span>
+        </div>
+    </div>
+    <section *ngIf="(currentSkillIndex < skills.length)">
+        <h2>Select a character for {{skills[currentSkillIndex].name}}</h2>
+        <div *ngIf="proposedMinifigs">
+            <minifig-icon *ngFor="let minifig of proposedMinifigs" (click)="addMember(minifig)" [minifig]="minifig">{{minifig.name}}</minifig-icon>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,301 @@
+#sidebar {
+	width: $nav-width;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	color: #FFF;
+	background: $brand-primary;
+	-webkit-transition: all .2s ease-in-out;
+	   -moz-transition: all .2s ease-in-out;
+	    -ms-transition: all .2s ease-in-out;
+	     -o-transition: all .2s ease-in-out;
+	        transition: all .2s ease-in-out;
+	a {
+		cursor: pointer;
+	}
+	.sidenav-outer {
+		position: absolute;
+		top:50px;
+		bottom:0;
+		left:0;
+		right: 0;
+		overflow: hidden;
+		border-top: 1px solid darken($brand-primary,5%);
+	}
+	div.side-widgets {
+		margin-left: 45px;
+		color: rgba(255,255,255,0.8);
+		float: left;
+		width: $nav-width - 45px;
+		position: absolute;
+		left: 0;
+		.widgets-header {
+			text-align: center;
+			padding: 15px;
+			height: 50px;
+			color: rgba(255,255,255,0.8);
+			font-size: 15px;
+			font-weight: 600;
+			a {
+				color: inherit;
+				&:hover, &:focus {
+					color: rgba(255,255,255,1);
+					text-decoration: none;
+				}
+			}
+		}
+		.widgets-content {
+			padding: 12px;
+			overflow: hidden;
+			.avatar-name {
+				padding-top: 12px;
+				font-size: 14px;
+			}
+			.calendar-container {
+				margin-top: 10px;
+				.fc-toolbar {
+					margin: 0 -12px 0 -12px;
+					padding: 0 12px;
+					background: darken($brand-primary, 10%);;
+					.fc-left {
+						h2 {
+							font-size: 13px!important;
+						    font-weight: 600;
+						    margin-bottom: 0!important;
+						    text-transform: uppercase;
+						    padding-top: 9px;
+						}
+					}
+					.fc-right {
+						.fc-today-button {
+							display: none;
+						}
+					}
+					.fc-button-group {
+						font-size: 15px;
+						display: flex;
+						.fc-button {
+							background: transparent;
+							box-shadow: none;
+							border: none;
+							padding: 0;
+							&:focus {
+								outline: none;
+							}
+						}
+						.fc-icon {
+							color: #FFF;
+							font-size: 10px;
+						}
+					}
+				}
+				.fc-view-container {
+					padding-top: 8px;
+					* {
+					 	border : none;
+					}
+					.fc-head {
+						border-color: transparent;
+						.fc-row {
+							border-color: transparent;
+							.fc-day-header {
+								border-color: transparent;
+								font-size: 10px;
+							}
+						}
+					}
+					.fc-body {
+						.fc-widget-content {
+							.fc-scroller {
+								overflow: hidden !important;
+								.fc-day-grid {
+									margin: 0 !important;
+								}
+							}
+						}
+						font-size: 10px;
+						.fc-content-skeleton {
+							padding-bottom: 0;
+						}
+						.fc-row {
+							min-height: 10px;
+							.fc-day-number {
+								padding-right: 6px;
+								padding-top: 2px;
+							}
+							.fc-today {
+								font-weight: 700;
+								background: darken($brand-primary,10%);
+							}
+						}
+					}
+				}
+			}
+			.news-feed {
+				.feed-header {
+					text-transform: uppercase;
+					margin-left: -12px;
+					margin-right: -12px;
+					height: 27px;
+					padding-top: 6px;
+					padding-left: 12px;
+					font-size: 10px;
+					margin-top: 10px;
+					background: darken($brand-primary, 10%);
+				}
+				.feed-content {
+					margin-top: 4px;
+					ul {
+						list-style-type: none;
+						padding: 0;
+						li {
+							height: 40px;
+							padding-top: 4px;
+							font-size: 10.5px;
+							.feed-date {
+								float: right;
+								font-size: 9px;
+								padding-right: 5px;
+								color: #eee;
+							}
+							a {
+								color: inherit;
+								&:hover, &:focus {
+									color: rgba(255,255,255,1);
+									text-decoration: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	div.side-menu {
+		width: 45px;
+		background: darken($brand-primary, 10%);
+		position: absolute;
+		top: 0px;
+		bottom: 0;
+		z-index: 999;
+		float: left;
+		.menu-header {
+			height: 50px;
+			padding: 8px;
+		}
+		.menu-body {
+			width: 45px;
+			margin-top: -2px;
+			ul.sidenav {
+				list-style-type: none;
+				padding: 0;
+				li {
+					position: relative;
+					margin-top: -1px;
+					a {
+						color: rgba(255,255,255,0.8);
+						border-radius: 0;
+						transition: all .12s linear;
+						display: inline-block;
+						text-align: center;
+						vertical-align: middle;
+						padding: 10px;
+						width: 45px;
+						height: 44px;
+						i{
+							font-size: 1rem;
+						}
+						&:hover {
+							color: #fff;
+							ui.nested-dropdown{
+								li{
+									background: #FFF;
+									color: $brand-primary;
+								}
+							}
+						}
+						
+					}
+					a:hover, a:focus, a:active {			
+						background: $brand-primary;
+						color: #fff;
+					}
+					.router-link-active{
+						background: $brand-primary;
+					}
+					ul.nested-dropdown {
+						display: none;
+						list-style: none;
+						position: absolute;
+						top: -2px;
+						left: 45px;
+						background: white;
+						padding-left: 0px;
+						width: 190px;
+						min-height: 40px;	
+						margin-top: 2px;
+						li {
+							min-height: 24px;
+							color: darken($brand-primary, 5%);
+							a {
+								color: $brand-primary;
+								padding: 12px;
+								height: auto;
+								width: 100%;
+								display: block;
+								text-align: left;
+								font-size: 14px;
+								&:hover, &:focus, &:active {
+									color: darken($brand-primary, 5%);
+									background: #f8f8f8;
+									text-decoration: none;
+									padding-bottom: 12px;
+								}
+							}
+						}		
+						li.sidemenu-header {
+							text-transform: uppercase;
+							min-height:45px;
+							padding-top: 14px;
+							padding-left: 12px;
+							border-bottom: 1px solid #eee;
+							font-size: 12px;
+							font-weight: bold;
+							line-height: 21px;
+							color: darken($brand-primary, 5%);
+							a {
+								color: darken($brand-primary, 5%);
+							}
+						}
+					}
+					&:hover {
+						ul.nested-dropdown {
+							display: block;
+						}
+					}
+					&:hover{
+						ul.nested-dropdown li .router-link-active{
+							color: $brand-primary;
+							background: #FFF;
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+@media screen and (max-width: 768px) {
+ 	#sidebar {
+ 		left : -$nav-width;
+ 	}   
+ 	.main-container {
+ 	    margin-left: 0 !important;
+ 	}
+}
+.sidebar-left-zero {
+		left : 0 !important;
+}
+.main-container-ml-zero {
+	margin-left: 235px !important;
+	margin-right: -235px !important;
+}

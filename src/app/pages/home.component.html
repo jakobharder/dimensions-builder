@@ -1,0 +1,27 @@
+<h1>Lego Dimensions Toolbox</h1>
+<div><img src="assets/images/dimensions-logo.png" /></div>
+<div><a [routerLink]="['/pack-list']">List of all Dimension packs</a></div>
+<div><a [routerLink]="['/minifig-list']">List of all Dimension minifig characters</a></div>
+<div><a [routerLink]="['/ability-list']">List of all character abilities</a></div>
+
+<h2>Wave 6 in September</h2>
+<p>September 27th 2016 in the US, 30th of September in the UK</p>
+
+<h2>Team Builder</h2>
+<p>
+    Use the Team Builder to put together a team with all the abilities you want.
+</p>
+<p>
+    <a [routerLink]="['/team-builder']">Go to the team builder now</a>
+</p>
+
+<h2>Characters with 6+ abilities</h2>
+<ul>
+    <li *ngFor="let minifig of mostSkills">
+        <b><a [routerLink]="['/minifig/' + minifig.id]">{{minifig.name}}</a></b>
+        (<span *ngFor="let skill of minifig.skills; let isLast = last">{{skill.name}}{{isLast ? '' : ', '}}</span>)
+    </li>
+</ul>
+
+<h2>The better trio</h2>
+TODO, wicked witch, wonder woman, ...

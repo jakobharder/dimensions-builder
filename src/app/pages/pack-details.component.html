@@ -1,0 +1,10 @@
+<h1>{{pack.id}} {{pack.name}}</h1>
+<div>
+    <img src="assets/images/{{pack.image}}.jpg">
+</div>
+<div *ngIf="minifigs">minifigs: 
+    <div *ngFor="let minifig of minifigs"><minifig-textlink [minifig]="minifig"></minifig-textlink></div>
+</div>
+<ul *ngIf="skills">
+    <li *ngFor="let skill of skills">{{skill.name}}</li>
+</ul>
