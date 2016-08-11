@@ -37,14 +37,14 @@
     "@angular/platform-server": "2.0.0-rc.4",
     "@angular/router": "3.0.0-beta.2",
     "angular2-universal": "~0.104.5",
-    "core-js": "2.4.0",
-    "parse5": "^1.5.0",
     "body-parser": "^1.15.2",
+    "core-js": "2.4.0",
     "express": "^4.14.0",
     "methods": "~1.1.2",
+    "ng2-bootstrap": "^1.0.17",
+    "parse5": "^1.5.0",
     "preboot": "^2.1.2",
-    "rxjs": "5.0.0-beta.6",
-    "ng2-bootstrap": "1.0.17"
+    "rxjs": "5.0.0-beta.6"
   },
   "devDependencies": {
     "@types/body-parser": "0.0.29",

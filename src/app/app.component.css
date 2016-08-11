@@ -1,0 +1,6 @@
+.main-container{
+	margin-top : 50px;
+	transition: all .2s ease-in-out;
+	overflow: hidden;
+	background: #ECF0F1;
+}

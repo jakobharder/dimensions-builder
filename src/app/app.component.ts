@@ -8,6 +8,7 @@ import { DataService } from './data/index';
 	moduleId: module.id,
 	selector: 'dimensions-builder',
 	templateUrl: 'app.component.html',
+	styleUrls: ['app.component.css'],
 	directives: [ROUTER_DIRECTIVES, TopNavComponent, SidebarComponent],
 	providers: [DataService]
 })
