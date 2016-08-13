@@ -7,6 +7,7 @@ import { MinifigPanelComponent } from '../components/index';
 	moduleId: module.id,
 	selector: 'pack-details',
 	templateUrl: 'pack-details.component.html',
+    styles: ['img { max-width: 100%; }'],
     directives: [ROUTER_DIRECTIVES, MinifigPanelComponent]
 })
 export class PackDetailsComponent implements OnInit, OnDestroy {
