@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Minifig, Skill, DataService } from '../data/index';
-import { MinifigTextlinkComponent, MinifigIconComponent } from '../components/index';
+import { MinifigPanelComponent } from '../components/index';
 
 class FilterSkill extends Skill {
     fullfilled: boolean = false;
@@ -11,7 +11,7 @@ class FilterSkill extends Skill {
 	moduleId: module.id,
 	selector: 'team-builder',
 	templateUrl: 'team-builder.component.html',
-    directives: [ROUTER_DIRECTIVES, MinifigTextlinkComponent, MinifigIconComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent]
 })
 export class TeamBuilderComponent implements OnInit {
     skills: FilterSkill[];
@@ -75,6 +75,10 @@ export class TeamBuilderComponent implements OnInit {
             this.currentSkillIndex++;
         }
         this.updateProposal();
+    }
+
+    removeMember(member: Minifig) {
+        // TODO
     }
 
     private addFiltered(array: number[], add: Skill[], filter: number[]) {
