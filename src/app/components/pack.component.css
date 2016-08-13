@@ -1,7 +1,19 @@
+.panel-text {
+    margin-left: 114px;
+    height: 63px;
+    padding: 5px 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
 .panel-title {
     font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 63px;
+    font-size: 1.3rem;
+    line-height: 28px;
+    word-wrap: nowrap;
+}
+.panel-desc {
+    font-size: 1rem;
+    line-height: 25px;
     word-wrap: nowrap;
 }
 .panel {
@@ -19,11 +31,6 @@
     width: 106px;
     height: 63px;
     float: left;
-}
-.panel-text {
-    margin-left: 114px;
-    height: 63px;
-    overflow: hidden;
 }
 
 .box-type-0 {
