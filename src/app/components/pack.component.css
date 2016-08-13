@@ -1,14 +1,34 @@
-img {
-    width: 160px;
-    height: 101px;
-}
-.box {
-    padding: 5px;
-    color: white;
+.panel-title {
     font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 63px;
+    word-wrap: nowrap;
 }
+.panel {
+    width: 100%;
+    background: white;
+    /*border: 1px solid slategray;*/
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.panel:hover {
+    background: slategray;
+}
+.panel > img 
+{ 
+    width: 106px;
+    height: 63px;
+    float: left;
+}
+.panel-text {
+    margin-left: 114px;
+    height: 63px;
+    overflow: hidden;
+}
+
 .box-type-0 {
     background-color: #015095;
+    color: white;
 }
 .box-type-2 {
     background-color: #fee600;
