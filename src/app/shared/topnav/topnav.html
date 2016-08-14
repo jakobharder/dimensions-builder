@@ -1,11 +1,24 @@
-<nav class="navbar topnav-navbar navbar-fixed-top navbar-light bg-faded">
-    <button id="sidebar-toggler" class="hidden-md-up" type="button" (click)="sidebarToggler()">
+<nav class="navbar navbar-dark bg-inverse">
+    <div class="container">
+        <button class="navbar-toggler navbar-dark bg-inverse hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
         &#9776;
-    </button>
-    <a class="hidden-md-up theme-name" href="Javascript:void(0);" [routerLink]="['/']">Dimensions Guide</a>
-    <div class="collapse navbar-toggleable-sm">
-        <a class="navbar-brand" href="Javascript:void(0);" [routerLink]="['/']">Dimensions Guide</a>
+        </button>
+        <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+            <a class="navbar-brand" href="Javascript:void(0);" [routerLink]="['/']">Dimensions Guide</a>
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="Javascript:void(0);" [routerLink]="['/team-builder']">Team Builder</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Javascript:void(0);" [routerLink]="['/packs']">Packs</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Javascript:void(0);" [routerLink]="['/minifigs']">Minifigs</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Javascript:void(0);" [routerLink]="['/abilities']">Abilities</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <ul class="nav navbar-nav pull-right hidden-md-up hidd">
-    </ul>
 </nav>
