@@ -1,12 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Pack, Minifig, DataService } from '../data/index';
+import { PackComponent } from '../components/index';
 
 @Component({
 	moduleId: module.id,
 	selector: 'minifig-details',
 	templateUrl: 'minifig-details.component.html',
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES, PackComponent]
 })
 export class MinifigDetailsComponent implements OnInit, OnDestroy {
     sub: any;
