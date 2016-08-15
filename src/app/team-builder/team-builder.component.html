@@ -1,23 +1,35 @@
 <section *ngIf="skills">
-    <h1>Team Builder</h1>
-    <p>Select characters is order of the rarest abilities.
-        The ability preset given here contains all abilities the characters Batman, Gandalf and Wildstyle from the Starter Pack have.</p>
-    <ol *ngIf="skills">
-        <li *ngFor="let skill of skills">{{skill.name}}{{skill.fullfilled ? ' (ok)' : ''}}</li>
-    </ol>
-    <h2>Your Team</h2>
-    <p>Click on a minifig to remove it from your team.</p>
-    <div *ngIf="team">
-        <minifig-panel *ngFor="let minifig of team" (click)="removeMember(minifig)" [minifig]="minifig">{{minifig.name}}</minifig-panel>
-        <div>Extra skills:
-            <span *ngFor="let skill of teamSkills; let isLast = last">{{skill.name}}{{isLast ? '' : ', '}}</span>
+    <div class="card">
+        <div class="card-block">
+            <h2 class="card-title">Team Builder</h2>
+            <p>Select characters is order of the rarest abilities.
+                The ability preset given here contains all abilities the characters Batman, Gandalf and Wildstyle from the Starter Pack have.</p>
+            <ol *ngIf="skills">
+                <li *ngFor="let skill of skills">{{skill.name}}{{skill.fullfilled ? ' (ok)' : ''}}</li>
+            </ol>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-block">
+            <h2 class="card-title">Your Team</h2>
+            <p>Click on a minifig to remove it from your team.</p>
+            <div *ngIf="team">
+                <minifig-panel *ngFor="let minifig of team" (click)="removeMember(minifig)" [minifig]="minifig">{{minifig.name}}</minifig-panel>
+                <div>Extra skills:
+                    <span *ngFor="let skill of teamSkills; let isLast = last">{{skill.name}}{{isLast ? '' : ', '}}</span>
+                </div>
+            </div>
         </div>
     </div>
     <section *ngIf="(currentSkillIndex < skills.length)">
-        <h2>Select a character for {{skills[currentSkillIndex].name}}</h2>
-        <p>Click on a minifig to add it to your team.</p>
-        <div *ngIf="proposedMinifigs">
-            <minifig-panel *ngFor="let minifig of proposedMinifigs" (click)="addMember(minifig)" [minifig]="minifig">{{minifig.name}}</minifig-panel>
+        <div class="card">
+            <div class="card-block">
+                <h2 class="card-title">Select a character for {{skills[currentSkillIndex].name}}</h2>
+                <p>Click on a minifig to add it to your team.</p>
+                <div *ngIf="proposedMinifigs">
+                    <minifig-panel *ngFor="let minifig of proposedMinifigs" (click)="addMember(minifig)" [minifig]="minifig">{{minifig.name}}</minifig-panel>
+                </div>
+            </div>
         </div>
     </section>
 </section>
