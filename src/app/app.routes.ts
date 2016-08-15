@@ -18,7 +18,7 @@ export const routes: RouterConfig = [
 		component: HomeComponent
 	},
 	{
-		path: 'pack-list',
+		path: 'packs',
 		component: WaveListComponent
 	},
 	{
@@ -26,7 +26,7 @@ export const routes: RouterConfig = [
 		component: PackDetailsComponent
 	},
 	{
-		path: 'minifig-list',
+		path: 'minifigs',
 		component: MinifigListComponent
 	},
 	{
@@ -34,7 +34,7 @@ export const routes: RouterConfig = [
 		component: MinifigDetailsComponent
 	},
 	{
-		path: 'ability-list',
+		path: 'abilities',
 		component: SkillListComponent
 	},
 	{
