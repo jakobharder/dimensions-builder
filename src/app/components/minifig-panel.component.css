@@ -1,6 +1,6 @@
 .panel-title {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 63px;
     word-wrap: nowrap;
 }
@@ -24,4 +24,15 @@
     margin-left: 70px;
     height: 63px;
     overflow: hidden;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .panel {
+        width: 434px;
+    }
+}
+@media (min-width: 992px) {
+    .panel {
+        width: 355px;
+    }
 }
