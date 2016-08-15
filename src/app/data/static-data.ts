@@ -111,7 +111,7 @@ export const minifigs: MinifigData[] = [
     //{ id: 7128501, name: 'Marceline', skillIds: [], packId: 71285, image: '' },
     { id: 7117001, name: 'Batman', skillIds: [35, 36, 37], packId: 71170, image: '71200_1to1_MF_MUGSHOT_Batman_168' },
     { id: 7117002, name: 'Gandalf', skillIds: [31, 46, 47], packId: 71170, image: '10237_1to1_MF_MUGSHOT_GandalfTheGrey_168' },
-    { id: 7117003, name: 'Wildstyle', skillIds: [26, 32, 38], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' }
+    { id: 7117003, name: 'Wildstyle', skillIds: [32, 38], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' }
 ];
 
 export class SkillData {

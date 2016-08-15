@@ -29,7 +29,7 @@ export class TeamBuilderComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.skillIds = [46, 47, 32, 36, 26, 35, 31, 37, 38];
+        this.skillIds = [46, 47, 32, 36, 35, 31, 37, 38];
         let skills = this.dataService.getSkills(this.skillIds);
         for (let skill of skills) {
             this.skills.push(Object.assign({}, skill));
