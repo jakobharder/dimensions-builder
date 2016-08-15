@@ -38,12 +38,12 @@ import { ngApp } from './main.node';
 // Routes with html5pushstate
 // ensure routes match client-side-app
 app.get('/', ngApp);
-app.get('/pack-list', ngApp);
+app.get('/packs', ngApp);
 app.get('/pack/*', ngApp);
-app.get('/minifig-list', ngApp);
+app.get('/minifigs', ngApp);
 app.get('/minifig/*', ngApp);
 app.get('/team-builder', ngApp);
-app.get('/ability-list', ngApp);
+app.get('/abilities', ngApp);
 
 // use indexFile over ngApp only when there is too much load on the server
 function indexFile(req, res) {
