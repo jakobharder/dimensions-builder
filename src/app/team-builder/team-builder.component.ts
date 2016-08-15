@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Minifig, Skill, DataService } from '../data/index';
+import { Minifig, Skill, DataService, MinifigList } from '../data/index';
 import { MinifigPanelComponent } from '../components/index';
 
 class FilterSkill extends Skill {
@@ -14,14 +14,14 @@ class FilterSkill extends Skill {
     directives: [ROUTER_DIRECTIVES, MinifigPanelComponent]
 })
 export class TeamBuilderComponent implements OnInit {
-    skills: FilterSkill[];
-    skillIds: number[];
-    proposedMinifigs: Minifig[];
-    team: Minifig[];
-    teamSkills: Skill[];
-    extraSkills: number[];
+    skills: FilterSkill[] = [];
+    skillIds: number[] = [];
+    team = new MinifigList;
+    proposedMinifigs = new MinifigList;
+    teamSkills: Skill[] = [];
+    extraSkills: number[] = [];
 
-    currentSkillIndex: number;
+    currentSkillIndex: number = 0;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService) {
@@ -31,62 +31,56 @@ export class TeamBuilderComponent implements OnInit {
     ngOnInit() {
         this.skillIds = [46, 47, 32, 36, 26, 35, 31, 37, 38];
         let skills = this.dataService.getSkills(this.skillIds);
-        this.skills = [];
         for (let skill of skills) {
             this.skills.push(Object.assign({}, skill));
         }
 
-        this.currentSkillIndex = 0;
-        this.team = [];
-        this.extraSkills = [];
-
-        this.updateProposal();
+        this._updateProposal();
     }
 
-    updateProposal() {
-        this.proposedMinifigs = [];
+    addMember(member: Minifig) {
+        this.team.add(member);
+        this._updateProposal();
+    }
+
+    removeMember(member: Minifig) {
+        this.team.remove(member);
+        this._updateProposal();
+    }
+
+    private _updateProposal() {
+        for (let skill of this.skills) {
+            skill.fullfilled = (-1 !== this.team.getSkills().indexOf(skill.id));
+        }
+
+        this.extraSkills = this._filter(this.team.getSkills(), this.skillIds);
+        this.teamSkills = this.dataService.getSkills(this.extraSkills);
+
+        this.currentSkillIndex = 0;
+        while (this.currentSkillIndex < this.skills.length && this.skills[this.currentSkillIndex].fullfilled) {
+            this.currentSkillIndex++;
+        }
+
+        this.proposedMinifigs.clear();
+
         if (this.currentSkillIndex < this.skills.length) {
             let skill = this.skills[this.currentSkillIndex];
 
             for (let proposed of skill.providers) {
-                if (!this.team.isMember(proposed)) {
-                    this.proposedMinifigs.push(proposed);
+                if (!this.team.contains(proposed)) {
+                    this.proposedMinifigs.add(proposed);
                 }
             }
         }
     }
 
-    addMember(member: Minifig) {
-        this.team.push(member);
-        for (let skill of member.skills) {
-            for (let filterSkill of this.skills) {
-                if (filterSkill.id === skill.id) {
-                    filterSkill.fullfilled = true;
-                    break;
-                }
-            }
-
-        }
-
-        this.extraSkills = this.addFiltered(this.extraSkills, member.skills, this.skillIds);
-        this.teamSkills = this.dataService.getSkills(this.extraSkills);
-
-        while (this.currentSkillIndex < this.skills.length && this.skills[this.currentSkillIndex].fullfilled) {
-            this.currentSkillIndex++;
-        }
-        this.updateProposal();
-    }
-
-    removeMember(member: Minifig) {
-        // TODO
-    }
-
-    private addFiltered(array: number[], add: Skill[], filter: number[]) {
-        for (let a of add) {
-            if (!filter.includes(a.id)) {
-                array.push(a.id);
+    private _filter(input: number[], filter: number[]) {
+        let output = [];
+        for (let i of input) {
+            if (-1 === filter.indexOf(i)) {
+                output.push(i);
             }
         }
-        return array;
+        return output;
     }
 }
