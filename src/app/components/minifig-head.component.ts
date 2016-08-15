@@ -5,7 +5,7 @@ import { Minifig } from './../data/index';
 @Component({
 	moduleId: module.id,
 	selector: 'minifig-head',
-	template: '<img src="/assets/images/{{minifig.image}}.png">',
+	template: '<img src="/assets/images/21/{{minifig.image}}.png">',
     styles: ['img { width: 16px; height: 21px; }'],
     directives: [ROUTER_DIRECTIVES]
 })
