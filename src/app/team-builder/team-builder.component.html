@@ -1,12 +1,11 @@
 <section *ngIf="skills">
     <div class="card">
         <div class="card-block">
-            <h2 class="card-title">Team Builder</h2>
+            <h2 class="card-title">Team Builder <small>beta</small></h2>
+            <p>At the moment this is a proof-of-concept. Be aware some of the character stats may be incorrect.</p>
             <p>Select characters is order of the rarest abilities.
                 The ability preset given here contains all abilities the characters Batman, Gandalf and Wildstyle from the Starter Pack have.</p>
-            <ol *ngIf="skills">
-                <li *ngFor="let skill of skills">{{skill.name}}{{skill.fullfilled ? ' (ok)' : ''}}</li>
-            </ol>
+            <ability-select (changed)="onAbilitiesChanged($event)"></ability-select>
         </div>
     </div>
     <div class="card">

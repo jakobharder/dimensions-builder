@@ -16,6 +16,11 @@ export class Skill {
     providers: Minifig[];
 }
 
+export class FilterSkill extends Skill {
+    checked: boolean = true;
+    fullfilled: boolean = false;
+};
+
 export class Minifig {
     id: number;
     name: string;

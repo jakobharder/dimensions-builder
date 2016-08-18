@@ -1,0 +1,9 @@
+
+<ol *ngIf="skills">
+    <li *ngFor="let skill of skills.list">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="" [ngModel]="skill.checked" (ngModelChange)="skill.checked=$event;onChanged()">
+            {{skill.name}}{{skill.fullfilled ? ' (ok)' : ''}}
+        </label>
+    </li>
+</ol>

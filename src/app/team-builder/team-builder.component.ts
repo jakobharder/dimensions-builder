@@ -1,21 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Minifig, Skill, DataService, MinifigList } from '../data/index';
-import { MinifigPanelComponent } from '../components/index';
-
-class FilterSkill extends Skill {
-    fullfilled: boolean = false;
-};
+import { Minifig, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
+import { MinifigPanelComponent, AbilitySelectComponent } from '../components/index';
 
 @Component({
 	moduleId: module.id,
 	selector: 'team-builder',
 	templateUrl: 'team-builder.component.html',
-    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilitySelectComponent]
 })
 export class TeamBuilderComponent implements OnInit {
     skills: FilterSkill[] = [];
-    skillIds: number[] = [];
     team = new MinifigList;
     proposedMinifigs = new MinifigList;
     teamSkills: Skill[] = [];
@@ -29,12 +24,10 @@ export class TeamBuilderComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.skillIds = [46, 32, 36, 35, 31, 37, 38, 42];
-        let skills = this.dataService.getSkills(this.skillIds);
-        for (let skill of skills) {
-            this.skills.push(Object.assign({}, skill));
-        }
+    }
 
+    onAbilitiesChanged(skills: FilterSkill[]) {
+        this.skills = skills;
         this._updateProposal();
     }
 
@@ -53,11 +46,12 @@ export class TeamBuilderComponent implements OnInit {
             skill.fullfilled = (-1 !== this.team.getSkills().indexOf(skill.id));
         }
 
-        this.extraSkills = this._filter(this.team.getSkills(), this.skillIds);
+        //this.extraSkills = this._filter(this.team.getSkills(), this.skillIds);
         this.teamSkills = this.dataService.getSkills(this.extraSkills);
 
         this.currentSkillIndex = 0;
-        while (this.currentSkillIndex < this.skills.length && this.skills[this.currentSkillIndex].fullfilled) {
+        while (this.currentSkillIndex < this.skills.length && 
+            (this.skills[this.currentSkillIndex].fullfilled || !this.skills[this.currentSkillIndex].checked)) {
             this.currentSkillIndex++;
         }
 
