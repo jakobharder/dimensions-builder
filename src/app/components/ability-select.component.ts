@@ -25,6 +25,10 @@ class SkillList {
         this.orderByProviders();
     }
 
+    set(skills: FilterSkill[]) {
+        this.list = skills;
+    }
+
     check(value: boolean) {
         for (let skill of this.list) {
             skill.checked = true;
@@ -127,6 +131,10 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         for (let list of this.skillLists) {
             this.skills = this.skills.concat(list.list);
         }
+        let list = new SkillList(this.dataService);
+        list.set(this.skills);
+        list.orderByProviders();
+        this.skills = list.list;
         return this.skills;
     }
 }
