@@ -14,9 +14,6 @@
             <div *ngIf="team">
                 <minifig-panel class="pull-md-left" *ngFor="let minifig of team.get()" (click)="removeMember(minifig)" [piece]="minifig">{{minifig.name}}</minifig-panel>
                 <div class="clearfix"></div>
-                <div>Extra skills:
-                    <span *ngFor="let skill of teamSkills; let isLast = last">{{skill.name}}{{isLast ? '' : ', '}}</span>
-                </div>
             </div>
         </div>
     </div>

@@ -70,7 +70,7 @@ export const minifigs: MinifigData[] = [
     { id: 7120301, name: 'Chell', skillIds: [15, 38], packId: 71203, image: '71203_1to1_MF_MUGSHOT_Chell_168' },
     { id: 7120101, name: 'Marty McFly', skillIds: [18], packId: 71201, image: '71201_1to1_MF_MUGSHOT_Marty_168' },
     { id: 7123501, name: 'Gamer Kid', skillIds: [2, 12, 37, 44, 45], packId: 71235, image: '71235_1to1_MF_MUGSHOT_Retro_Gamer_168' },
-    { id: 7122801, name: 'Peter Venkman', skillIds: [12, 19, 34, 56], packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168' },
+    { id: 7122801, name: 'Peter Venkman', skillIds: [12, 34, 56], packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168' },
     //{ id: 7124801, name: 'Ethan Hunt', skillIds: [], packId: 71248, image: '' },
     //{ id: 7124501, name: 'Finn', skillIds: [], packId: 71245, image: '' },
     //{ id: 7124401, name: 'Sonic the Hedgehog', skillIds: [], packId: 71244, image: '' },
