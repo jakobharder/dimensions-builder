@@ -123,12 +123,12 @@ export const minifigs: MinifigData[] = [
 ];
 
 export const vehicles: VehicleData[] = [
-    { id: 71170041, name: 'Batmobile', skillIds: [50], packId: 71170, image: '', stage: 1, vehicleId: 7117004 },
-    { id: 71170042, name: 'Batblaster', skillIds: [18, 25, 50], packId: 71170, image: '', stage: 2, vehicleId: 7117004 },
-    { id: 71170043, name: 'Sonic Batray', skillIds: [18, 50], packId: 71170, image: '', stage: 3, vehicleId: 7117004 },
-    { id: 71209021, name: 'Invisible Jet', skillIds: [8, 37, 43, 51], packId: 71209, image: '', stage: 1, vehicleId: 7120902 },
-    { id: 71209021, name: 'Laser Shooter', skillIds: [8, 12, 37, 43, 51], packId: 71209, image: '', stage: 1, vehicleId: 7120902 },
-    { id: 71209021, name: 'Torpedo Bomber', skillIds: [8, 17, 37, 43, 51], packId: 71209, image: '', stage: 1, vehicleId: 7120902 }
+    { id: 71170041, name: 'Batmobile', skillIds: [50], packId: 71170, image: 'none', stage: 1, vehicleId: 7117004 },
+    { id: 71170042, name: 'Batblaster', skillIds: [18, 25, 50], packId: 71170, image: 'none', stage: 2, vehicleId: 7117004 },
+    { id: 71170043, name: 'Sonic Batray', skillIds: [18, 50], packId: 71170, image: 'none', stage: 3, vehicleId: 7117004 },
+    { id: 71209021, name: 'Invisible Jet', skillIds: [8, 37, 43, 51], packId: 71209, image: '71209021', stage: 1, vehicleId: 7120902 },
+    { id: 71209022, name: 'Laser Shooter', skillIds: [8, 12, 37, 43, 51], packId: 71209, image: 'none', stage: 1, vehicleId: 7120902 },
+    { id: 71209023, name: 'Torpedo Bomber', skillIds: [8, 17, 37, 43, 51], packId: 71209, image: 'none', stage: 1, vehicleId: 7120902 }
 ];
 
 export class SkillData {
