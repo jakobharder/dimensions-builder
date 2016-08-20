@@ -3,7 +3,6 @@
   "devDependencies": {},
   "globalDependencies": {
     "Q": "github:DefinitelyTyped/DefinitelyTyped/q/Q.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
-    "angular-protractor": "github:DefinitelyTyped/DefinitelyTyped/angular-protractor/angular-protractor.d.ts#64b25f63f0ec821040a5d3e049a976865062ed9d",
     "async": "github:DefinitelyTyped/DefinitelyTyped/async/async.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "body-parser": "registry:dt/body-parser#0.0.0+20160619023215",
     "browser-sync": "github:DefinitelyTyped/DefinitelyTyped/browser-sync/browser-sync.d.ts#d9b5b35ba3a79ac778c5890531393442439df5dd",

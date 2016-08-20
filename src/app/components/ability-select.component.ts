@@ -118,7 +118,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
             }
         }
         else {
-            jQuery('#abilityCollapse' + index).collapse('show');
+            $('#abilityCollapse' + index).collapse('show');
             event.stopPropagation();
         }
 
@@ -135,7 +135,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         }
         let value = (allAreSame ? (checked ? 1 : 0) : 2);
 
-        let radio = jQuery('#option' + value + '-' + index);
+        let radio = $('#option' + value + '-' + index);
         radio.prop("checked", true);
         radio.parent().parent().children('.active').removeClass("active");
         radio.parent().addClass("active");
