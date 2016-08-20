@@ -123,7 +123,12 @@ export const minifigs: MinifigData[] = [
 ];
 
 export const vehicles: VehicleData[] = [
-    { id: 71170041, name: 'Batmobile', skillIds: [18, 25, 50], packId: 71170, image: '', stage: 1, vehicleId: 7117004 }
+    { id: 71170041, name: 'Batmobile', skillIds: [50], packId: 71170, image: '', stage: 1, vehicleId: 7117004 },
+    { id: 71170042, name: 'Batblaster', skillIds: [18, 25, 50], packId: 71170, image: '', stage: 2, vehicleId: 7117004 },
+    { id: 71170043, name: 'Sonic Batray', skillIds: [18, 50], packId: 71170, image: '', stage: 3, vehicleId: 7117004 },
+    { id: 71209021, name: 'Invisible Jet', skillIds: [8, 37, 43, 51], packId: 71209, image: '', stage: 1, vehicleId: 7120902 },
+    { id: 71209021, name: 'Laser Shooter', skillIds: [8, 12, 37, 43, 51], packId: 71209, image: '', stage: 1, vehicleId: 7120902 },
+    { id: 71209021, name: 'Torpedo Bomber', skillIds: [8, 17, 37, 43, 51], packId: 71209, image: '', stage: 1, vehicleId: 7120902 }
 ];
 
 export class SkillData {
@@ -141,16 +146,16 @@ export const skills: SkillData[] = [
     { id: 5, name: 'Drill', desc: 'Drill at drill spots' },
     { id: 6, name: 'Electricity', desc: 'Power eletric coils' },
     { id: 7, name: 'Fix-it Ability', desc: 'Fix blue glowing LEGO objects' },
-    { id: 8, name: 'Flight Dock Ability', desc: 'Power jet switches' },
+    { id: 8, name: 'Flight Dock', desc: 'Power jet switches' },
     { id: 9, name: 'Gyropshere Switch Ability', desc: 'Use gyrosphere switches' },
     { id: 10, name: 'Hacking Ability', desc: 'Hack terminals' },
     { id: 11, name: 'Hazard Cleaner Ability', desc: 'Clear toxic hazards' },
-    { id: 12, name: 'Laser Ability', desc: 'Destroy gold LEGO objects; melt LEGO ice' },
+    { id: 12, name: 'Laser', desc: 'Destroy gold LEGO objects; melt LEGO ice' },
     { id: 13, name: 'Mini Access Ability', desc: 'Enter small hatches' },
     { id: 14, name: 'Pole Vault', desc: 'Create extra twirl poles' },
     { id: 15, name: 'Portal Gun', desc: 'Fire portals at white LEGO panels to reach other areas' },
     { id: 16, name: 'Rainbow LEGO Ability', desc: 'Smash rainbow LEGO objects' },
-    { id: 17, name: 'Silver LEGO Blowup', desc: 'Destroy silver LEGO objects' },
+    { id: 17, name: 'Silver Destroy', desc: 'Destroy silver LEGO objects' },
     { id: 18, name: 'Sonar Smash', desc: 'Destroy sonar glass' },
     { id: 19, name: 'Suspend Ghost', desc: 'Clear ghostly swarms' },
     { id: 20, name: 'Spinjitzu', desc: 'Use Spinjitzu switches' },
@@ -183,5 +188,6 @@ export const skills: SkillData[] = [
     { id: 47, name: 'Magic Shield', desc: ''},
     { id: 48, name: 'Ice', desc: ''},
     { id: 49, name: 'Gliding', desc: '' },
-    { id: 50, name: 'Accelerator Switch', desc: '' }
+    { id: 50, name: 'Accelerator Switch', desc: '' },
+    { id: 51, name: 'Cargo Hook', desc: '' }
 ];

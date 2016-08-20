@@ -25,7 +25,14 @@ export class MinifigList {
     }
 
     contains(fig: Piece) {
-        return (-1 !== this.list.indexOf(fig));
+        for (let element of this.list) {
+            if (element.id == fig.id) {
+                return true;
+            } else if (fig instanceof Vehicle && element instanceof Vehicle && element.vehicleId == fig.vehicleId) {
+                return true;
+            }
+        }
+        return false;
     }
 
     get() {
