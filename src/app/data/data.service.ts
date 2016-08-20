@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Pack, Minifig, Skill } from './data';
+import { Abilities } from './ability';
 import { minifigs, skills, packs } from './static-data';
 
 @Injectable()
@@ -95,5 +96,39 @@ export class DataService {
 
     getAllSkills() {
         return this.skills;
+    }
+
+    getMainAbilities(except: Abilities) {
+        let result = new Abilities(this.getSkills([46, 32, 36, 35, 31, 37, 38, 42]));
+        if (except !== null) {
+            result.removeRange(except);
+        }
+        return result;
+    }
+
+    getImportantAbilities(except: Abilities) {
+        let result = new Abilities(this.getSkills([2, 4, 5, 6, 7, 10, 12, 13, 14, 17, 18]));
+        if (except !== null) {
+            result.removeRange(except);
+        }
+        return result;
+    }
+
+    getUniqueAbilities(except: Abilities) {
+        let result = new Abilities([]);
+        for (let skill of this.skills) {
+            if (skill.providers.length == 1 && except !== null && !except.contains(skill)) {
+                result.add(skill);
+            }
+        }
+        return result;
+    }
+
+    getAbilities(except: Abilities) {
+        let result = new Abilities(this.getAllSkills());
+        if (except !== null) {
+            result.removeRange(except);
+        }
+        return result;
     }
 }

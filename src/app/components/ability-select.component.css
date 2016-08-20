@@ -1,0 +1,41 @@
+.input-group {
+  margin-bottom: 2px;
+}
+.input-group label.title {
+  background: #4B597C;
+  display: block;
+  padding: 8px 16px;
+  line-height: 20px;
+  margin: 0;
+  text-align: center;
+  border: 1px solid #4B597C;
+}
+.input-group label.btn {
+  margin-bottom: 0;
+}
+.btn-group-vertical {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.btn-group-vertical .btn {
+  border-radius: 0;
+  background: #324065;
+  color: #BAC2D5;
+  border-top: 1px solid #16203B;
+}
+.btn-group-vertical .btn:hover {
+  background: #4B597C;
+}
+.btn {
+  border-radius: 0;
+}
+.btn-secondary {
+  color: #BAC2D5;
+  background: #324065;
+  border: 1px solid #324065;
+}
+.btn-secondary:hover {
+  color: #EDF2F6;
+  background: #4B597C;
+  border: 1px solid #4B597C;
+}

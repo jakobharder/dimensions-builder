@@ -1,6 +1,6 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import { Skill, FilterSkill, DataService } from './../data/index';
+import { Skill, FilterSkill, DataService, Abilities } from './../data/index';
 
 class SkillList { 
     list: FilterSkill[] = [];
@@ -51,11 +51,19 @@ export class AbilitySelectComponent implements OnInit {
 
     ngOnInit() {
         let list = new SkillList(this.dataService);
-        list.init("main story", [46, 32, 36, 35, 31, 37, 38, 42]);
+        list.init("main story", this.dataService.getMainAbilities(null).ids());
         this.skillLists.push(list);
 
         list = new SkillList(this.dataService);
-        list.init("often needed", [2, 4, 5, 6, 7, 10, 12, 13, 14, 17, 18]);
+        list.init("often needed", this.dataService.getImportantAbilities(new Abilities(this.getAllSkills())).ids());
+        this.skillLists.push(list);
+
+        list = new SkillList(this.dataService);
+        list.init("unique", this.dataService.getUniqueAbilities(new Abilities(this.getAllSkills())).ids());
+        this.skillLists.push(list);
+
+        list = new SkillList(this.dataService);
+        list.init("other", this.dataService.getAbilities(new Abilities(this.getAllSkills())).ids());
         this.skillLists.push(list);
 
         this.changed.emit(this.getAllSkills());
