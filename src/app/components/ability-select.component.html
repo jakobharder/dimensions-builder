@@ -20,7 +20,7 @@
         </div>
     <div class="collapse" [attr.id]="'abilityCollapse' + i">
         <div class="btn-group-vertical" role="group">
-            <label class="form-check-label" *ngFor="let skill of skills.list">
+            <label class="btn form-check-label" *ngFor="let skill of skills.list">
                 <input class="form-check-input" type="checkbox" value="" [ngModel]="skill.checked" (ngModelChange)="skill.checked=$event;onChanged()">
                 {{skill.name}}{{skill.fullfilled ? ' (ok)' : ''}}
             </label>

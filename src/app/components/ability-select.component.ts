@@ -36,7 +36,7 @@ class SkillList {
 	moduleId: module.id,
 	selector: 'ability-select',
 	templateUrl: 'ability-select.component.html',
-    styles: [''],
+    styleUrls: ['ability-select.component.css'],
     directives: [ROUTER_DIRECTIVES]
 })
 export class AbilitySelectComponent implements OnInit {
