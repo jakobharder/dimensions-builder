@@ -3,8 +3,6 @@
     <div *ngFor="let ability of abilities.list">
         <b>{{ability.name}}</b> {{ability.desc}}<br>
         Characters having this skill:
-        <span *ngFor="let minifig of ability.providers; let isLast = last">
-            <minifig-textlink [minifig]="minifig"></minifig-textlink>{{isLast ? '' : ', '}}
-        </span>
+        <span *ngFor="let minifig of ability.providers; let isLast = last"><minifig-textlink [minifig]="minifig"></minifig-textlink>{{isLast ? '' : ', '}}</span>
     </div>
 </section>

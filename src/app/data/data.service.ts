@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Pack, Minifig, Vehicle, Skill } from './data';
+import { Pack, Piece, Minifig, Vehicle, Skill } from './data';
 import { Abilities } from './ability';
+import { Pieces } from './piece';
 import { minifigs, vehicles, skills, packs } from './static-data';
 
 @Injectable()
@@ -63,6 +64,10 @@ export class DataService {
                 for (let skill of vehicle.skills) {
                     skill.providers.push(vehicle);
                 }
+            }
+
+            for (let ability of this.skills) {
+                ability.providers = new Pieces(ability.providers).getOrdered().byName().list;
             }
         }
     }
