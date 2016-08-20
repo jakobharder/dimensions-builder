@@ -39,3 +39,8 @@
   background: #4B597C;
   border: 1px solid #4B597C;
 }
+@media (max-width: 543px) {
+    .input-group-btn {
+        text-align: center;
+    }
+}

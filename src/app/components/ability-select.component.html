@@ -12,8 +12,14 @@
                 <input type="radio" name="options" [attr.id]="'option0-' + i" autocomplete="off" value="0">none
             </label>
         </radio-group>
-        <label class="title">{{skills.name}}</label>
-        <span class="input-group-btn">
+        <label class="title hidden-xs-down">{{skills.name}}</label>
+        <span class="input-group-btn hidden-xs-down">
+            <button class="btn btn-secondary" data-toggle="collapse" [attr.data-target]="'#abilityCollapse' + i">show</button>
+        </span>
+    </div>
+    <div class="input-group">
+        <label class="title hidden-sm-up">{{skills.name}}</label>
+        <span class="input-group-btn hidden-sm-up">
             <button class="btn btn-secondary" data-toggle="collapse" [attr.data-target]="'#abilityCollapse' + i">show</button>
         </span>
     </div>
