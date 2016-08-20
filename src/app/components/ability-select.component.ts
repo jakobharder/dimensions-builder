@@ -4,11 +4,14 @@ import { Skill, FilterSkill, DataService } from './../data/index';
 
 class SkillList { 
     list: FilterSkill[] = [];
+    name: string;
     
     constructor(private dataService: DataService) {
     }
 
-    init(ids: number[]) {
+    init(name: string, ids: number[]) {
+        this.name = name;
+        
         let skills = this.dataService.getSkills(ids);
         //let skills = this.dataService.getAllSkills();
         for (let skill of skills) {
@@ -48,11 +51,11 @@ export class AbilitySelectComponent implements OnInit {
 
     ngOnInit() {
         let list = new SkillList(this.dataService);
-        list.init([46, 32, 36, 35, 31, 37, 38, 42]);
+        list.init("main story", [46, 32, 36, 35, 31, 37, 38, 42]);
         this.skillLists.push(list);
 
         list = new SkillList(this.dataService);
-        list.init([2, 4, 5, 6, 7, 10, 12, 13, 14, 17, 18]);
+        list.init("often needed", [2, 4, 5, 6, 7, 10, 12, 13, 14, 17, 18]);
         this.skillLists.push(list);
 
         this.changed.emit(this.getAllSkills());
