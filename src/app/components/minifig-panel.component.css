@@ -6,13 +6,14 @@
 }
 .panel {
     width: 100%;
-    background: white;
+    background: #4B597C;
     /*border: 1px solid slategray;*/
     box-sizing: border-box;
     cursor: pointer;
+    color: #EDF2F6;
 }
 .panel:hover {
-    background: slategray;
+    background: #11a8ab;
 }
 .panel > img 
 { 

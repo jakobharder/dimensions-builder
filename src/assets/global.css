@@ -1,10 +1,22 @@
 body {
   background: #16203B;
+  color: #BAC2D5;
 }
 .card {
   background: #324065;
-  color: #BAC2D5;
 }
-.card-title {
+.card-title, h1, h2, h3, h4, h5 {
   color: #EDF2F6;
+}
+a {
+  color: #4baad9;
+}
+.btn-primary, .btn-primary:link, .btn-primary:visited {
+  background: #e64c65;
+  border-radius: 0;
+  border: 1px solid #e64c65;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:checked {
+  background: #cc324b !important;
+  border: 1px solid #cc324b;
 }
