@@ -66,16 +66,16 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         this.skillLists.push(list);
 
         list = new SkillList(this.dataService);
-        list.init("often needed", this.dataService.getImportantAbilities(new Abilities(this.getAllSkills())).ids());
+        list.init("complete", this.dataService.getImportantAbilities(new Abilities(this.getAllSkills())).ids());
         list.check(true);
         this.skillLists.push(list);
 
-        list = new SkillList(this.dataService);
+        /*list = new SkillList(this.dataService);
         list.init("unique", this.dataService.getUniqueAbilities(new Abilities(this.getAllSkills())).ids());
-        this.skillLists.push(list);
+        this.skillLists.push(list);*/
 
         list = new SkillList(this.dataService);
-        list.init("other", this.dataService.getAbilities(new Abilities(this.getAllSkills())).ids());
+        list.init("not needed", this.dataService.getAbilities(new Abilities(this.getAllSkills())).ids());
         this.skillLists.push(list);
 
         this.changed.emit(this.getAllSkills());
@@ -85,7 +85,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         this._updateRadios(0);
         this._updateRadios(1);
         this._updateRadios(2);
-        this._updateRadios(3);
+        //this._updateRadios(3);
     }
 
     onChanged(index: number) {
