@@ -68,6 +68,7 @@ export const enum PackType {
     TeamPack,
     FunPack
 }
+export const packTypeStrings = ['Starter Set', 'Story Pack', 'LevelPack', 'Team Pack', 'Fun Pack'];
 
 /* 
 wave 1 09/27/2015

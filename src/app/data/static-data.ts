@@ -3,7 +3,7 @@ import { Pack, PackType } from './data';
 export const packs: Pack[] = [
     { id: 71205, wave: 1, year: 1, minifigs: [], name: 'Jurassic World(tm)',
         type: PackType.TeamPack, image: '03_LD_PO_TP_JurassicWorld' },
-    { id: 71170, wave: 1, year: 1, minifigs: [], name: 'Starter Pack',
+    { id: 71170, wave: 1, year: 1, minifigs: [], name: 'Lego Dimensions',
         type: PackType.StarterSet, image: 'Dimensions_71170_PS3_680x404' },
     { id: 71201, wave: 1, year: 1, minifigs: [], name: 'Back to the Future(tm)',
         type: PackType.LevelPack, image: '03_LD_PO_LP_BTTF_Marty' },

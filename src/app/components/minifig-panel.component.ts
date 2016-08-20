@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import { Minifig } from './../data/index';
+import { Piece, DataService, packTypeStrings } from './../data/index';
 
 @Component({
 	moduleId: module.id,
@@ -11,5 +11,23 @@ import { Minifig } from './../data/index';
 })
 
 export class MinifigPanelComponent {
-    @Input() minifig: Minifig;
+    private packName: string;
+    private _piece: Piece;
+
+    constructor(private data: DataService) {
+    }
+
+    @Input() set piece(value: Piece) {
+        let pack = this.data.getPack(value.packId);
+        if (pack !== undefined) {
+            this.packName = pack.name + " " + packTypeStrings[pack.type];
+        } else {
+            this.packName = value.packId.toString();
+        }
+        this._piece = value;
+    }
+
+    get piece() {
+        return this._piece;
+    }
 }
