@@ -9,8 +9,8 @@ class SkillList {
     }
 
     init(ids: number[]) {
-        //let skills = this.dataService.getSkills(ids);
-        let skills = this.dataService.getAllSkills();
+        let skills = this.dataService.getSkills(ids);
+        //let skills = this.dataService.getAllSkills();
         for (let skill of skills) {
             if (skill.providers.length > 0) {
                 let filterSkill = Object.assign({}, skill);
@@ -38,7 +38,8 @@ class SkillList {
 })
 export class AbilitySelectComponent implements OnInit {
     skillIds: number[] = [];
-    skills: SkillList = new SkillList(this.dataService);
+    skillLists: SkillList[] = [];
+    skills: FilterSkill[] = [];
 
     @Output() changed: EventEmitter<FilterSkill[]> = new EventEmitter<FilterSkill[]>();
 
@@ -46,11 +47,26 @@ export class AbilitySelectComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.skills.init([46, 32, 36, 35, 31, 37, 38, 42]);
-        this.changed.emit(this.skills.list);
+        let list = new SkillList(this.dataService);
+        list.init([46, 32, 36, 35, 31, 37, 38, 42]);
+        this.skillLists.push(list);
+
+        list = new SkillList(this.dataService);
+        list.init([2, 4, 5, 6, 7, 10, 12, 13, 14, 17, 18]);
+        this.skillLists.push(list);
+
+        this.changed.emit(this.getAllSkills());
     }
 
     onChanged() {
-        this.changed.emit(this.skills.list);
+        this.changed.emit(this.getAllSkills());
+    }
+
+    private getAllSkills() {
+        this.skills = [];
+        for (let list of this.skillLists) {
+            this.skills = this.skills.concat(list.list);
+        }
+        return this.skills;
     }
 }
