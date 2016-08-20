@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Minifig, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
+import { Piece, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
 import { MinifigPanelComponent, AbilitySelectComponent } from '../components/index';
 
 @Component({
@@ -31,12 +31,12 @@ export class TeamBuilderComponent implements OnInit {
         this._updateProposal();
     }
 
-    addMember(member: Minifig) {
+    addMember(member: Piece) {
         this.team.add(member);
         this._updateProposal();
     }
 
-    removeMember(member: Minifig) {
+    removeMember(member: Piece) {
         this.team.remove(member);
         this._updateProposal();
     }

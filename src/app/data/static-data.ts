@@ -48,13 +48,21 @@ export const packs: Pack[] = [
     { id: 71227, wave: 2, year: 1, minifigs: [], name: 'Krusty', type: PackType.FunPack, image: '03_LD_PO_FP_Simpsons_Krusty'}
 ];
 
-export class MinifigData {
+export class PieceData {
     id: number;
     name: string;
     skillIds: number[];
     packId: number;
     image: string;
+}
+
+export class MinifigData extends PieceData {
 };
+
+export class VehicleData extends PieceData {
+    stage: number;
+    vehicleId: number;
+}
 
 export const minifigs: MinifigData[] = [
     { id: 7120401, name: 'The Doctor', skillIds: [7, 10, 23], packId: 71204, image: '712041to1MFMUGSHOTDr Who168' },
@@ -114,6 +122,10 @@ export const minifigs: MinifigData[] = [
     { id: 7117003, name: 'Wildstyle', skillIds: [32, 38, 42], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' }
 ];
 
+export const vehicles: VehicleData[] = [
+    { id: 71170041, name: 'Batmobile', skillIds: [18, 25, 50], packId: 71170, image: '', stage: 1, vehicleId: 7117004 }
+];
+
 export class SkillData {
     id: number;
     name: string;
@@ -170,5 +182,6 @@ export const skills: SkillData[] = [
     { id: 46, name: 'Magic', desc: ''},
     { id: 47, name: 'Magic Shield', desc: ''},
     { id: 48, name: 'Ice', desc: ''},
-    { id: 49, name: 'Gliding', desc: '' }
+    { id: 49, name: 'Gliding', desc: '' },
+    { id: 50, name: 'Accelerator Switch', desc: '' }
 ];

@@ -13,7 +13,7 @@ export class Skill {
     id: number;
     name: string;
     desc: string;
-    providers: Minifig[];
+    providers: Piece[];
 }
 
 export class FilterSkill extends Skill {
@@ -21,12 +21,20 @@ export class FilterSkill extends Skill {
     fullfilled: boolean = false;
 };
 
-export class Minifig {
+export class Piece {
     id: number;
     name: string;
     packId: number;
     skills: Skill[];
     skillIds: number[];
+}
+
+export class Minifig extends Piece {
+}
+
+export class Vehicle extends Piece {
+    vehicleId: number;
+    stage: number;
 }
 
 declare global {

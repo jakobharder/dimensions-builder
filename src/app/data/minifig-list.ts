@@ -1,7 +1,7 @@
-import { Minifig, Skill } from './data';
+import { Minifig, Vehicle, Piece, Skill } from './data';
 
 export class MinifigList {
-    list: Minifig[] = [];
+    list: Piece[] = [];
     skills: number[] = [];
 
     clear() {
@@ -9,13 +9,13 @@ export class MinifigList {
         this.skills = [];
     }
 
-    add(fig: Minifig) {
+    add(fig: Piece) {
         this.list.push(fig);
 
         this._updateSkills();
     }
 
-    remove(fig: Minifig) {
+    remove(fig: Piece) {
         let index = this.list.indexOf(fig);
         if (index !== -1) {
             this.list.splice(index, 1);
@@ -24,7 +24,7 @@ export class MinifigList {
         this._updateSkills();
     }
 
-    contains(fig: Minifig) {
+    contains(fig: Piece) {
         return (-1 !== this.list.indexOf(fig));
     }
 

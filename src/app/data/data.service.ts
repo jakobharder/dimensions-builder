@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Pack, Minifig, Skill } from './data';
+import { Pack, Minifig, Vehicle, Skill } from './data';
 import { Abilities } from './ability';
-import { minifigs, skills, packs } from './static-data';
+import { minifigs, vehicles, skills, packs } from './static-data';
 
 @Injectable()
 export class DataService {
@@ -10,6 +10,7 @@ export class DataService {
     minifigs: Minifig[];
     skillMap: { [id: number] : Skill; } = null;
     skills: Skill[];
+
 
     constructor() {
         this.ensureLoaded();
@@ -54,6 +55,14 @@ export class DataService {
 
                 this.minifigMap[minifig.id] = minifig;
                 this.minifigs.push(minifig);
+            }
+
+            for (let data of vehicles) {
+                let vehicle: Vehicle = Object.assign({}, data);
+                vehicle.skills = this.getSkills(data.skillIds);
+                for (let skill of vehicle.skills) {
+                    skill.providers.push(vehicle);
+                }
             }
         }
     }
