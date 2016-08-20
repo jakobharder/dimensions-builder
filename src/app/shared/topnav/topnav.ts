@@ -13,7 +13,7 @@ import { DROPDOWN_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
 
 export class TopNavComponent {
 	changeTheme(color: string): void {
-		var link: any = $('<link>');
+		var link: any = jQuery('<link>');
 		link
 			.appendTo('head')
 			.attr({type : 'text/css', rel : 'stylesheet'})
@@ -21,13 +21,13 @@ export class TopNavComponent {
 	}
 
 	rtl(): void {
-		var body: any = $('body');
+		var body: any = jQuery('body');
 		body.toggleClass('rtl');
 	}
 
 	sidebarToggler(): void  {
-		var sidebar: any = $('#sidebar');
-		var mainContainer: any = $('.main-container');
+		var sidebar: any = jQuery('#sidebar');
+		var mainContainer: any = jQuery('.main-container');
 		sidebar.toggleClass('sidebar-left-zero');
 		mainContainer.toggleClass('main-container-ml-zero');
 	}

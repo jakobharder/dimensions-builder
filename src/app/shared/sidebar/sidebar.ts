@@ -16,7 +16,7 @@ export class SidebarComponent implements OnInit {
 	constructor(private router: Router) {}
 
 	ngOnInit() {
-		var sidebar: any = $('.sidenav-outer');
+		var sidebar: any = jQuery('.sidenav-outer');
 		sidebar.perfectScrollbar();
 	}
 
