@@ -50,4 +50,39 @@ export class Abilities {
         }
         return ids;
     }
+
+    getOrdered() {
+        return new AbilitiesOrdered(this);
+    }
+}
+
+export class AbilitiesOrdered {
+    list: Skill[];
+
+    constructor(abilities: Abilities) {
+        this.list = abilities.clone().list;
+
+    }
+
+    byRarity() {
+        this.list.sort(function(a, b) {
+            return a.providers.length - b.providers.length;
+        });
+        return this;
+    }
+
+    byName() {
+        this.list.sort(function(a, b) {
+            let nameA = a.name.toUpperCase();
+            let nameB = b.name.toUpperCase();
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        });
+        return this;
+    }
 }

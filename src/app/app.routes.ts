@@ -5,7 +5,7 @@ import {
 	PackDetailsComponent,
 	MinifigListComponent,
 	MinifigDetailsComponent,
-	SkillListComponent,
+	AbilityListComponent,
 	HomeComponent
 } from './pages/index';
 import { TeamBuilderComponent } from './team-builder/index';
@@ -35,7 +35,7 @@ export const routes: RouterConfig = [
 	},
 	{
 		path: 'abilities',
-		component: SkillListComponent
+		component: AbilityListComponent
 	},
 	{
 		path: 'team-builder',
