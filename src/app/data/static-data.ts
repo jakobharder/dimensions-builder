@@ -246,6 +246,27 @@ export const vehicles: VehicleData[] = [
     { id: 71235021, name: 'G-6155 Spy Hunter', skillIds: [25, 50], packId: 71235, image: 'none', stage: 1, vehicleId: 7123502 },
     { id: 71235022, name: 'Interdiver', skillIds: [17], packId: 71235, image: 'none', stage: 2, vehicleId: 7123502 },
     { id: 71235023, name: 'Aerial Spyhunter', skillIds: [8, 12, 43, 51], packId: 71235, image: 'none', stage: 3, vehicleId: 7123502 },
+    { id: 71219021, name: 'Arrow Launcher', skillIds: [50], packId: 71219, image: 'none', stage: 1, vehicleId: 7121902 },
+    { id: 71219022, name: 'Seeking Shooter', skillIds: [25, 50], packId: 71219, image: 'none', stage: 2, vehicleId: 7121902 },
+    { id: 71219023, name: 'Triple Ballista', skillIds: [50], packId: 71219, image: 'none', stage: 3, vehicleId: 7121902 },
+    { id: 71203031, name: 'Companion Cube', skillIds: [29], packId: 71203, image: 'none', stage: 1, vehicleId: 7120303 },
+    { id: 71203032, name: 'Laser Deflector', skillIds: [29, 39], packId: 71203, image: 'none', stage: 2, vehicleId: 7120303 },
+    { id: 71203033, name: 'Gold Heart Emitter', skillIds: [29], packId: 71203, image: 'none', stage: 3, vehicleId: 7120303 },
+    { id: 71206031, name: 'Scooby Snack', skillIds: [2], packId: 71206, image: 'none', stage: 1, vehicleId: 7120603 },
+    { id: 71206032, name: 'Scooby Fire Snack', skillIds: [12], packId: 71206, image: 'none', stage: 2, vehicleId: 7120603 },
+    { id: 71206033, name: 'Scooby Ghost Snack', skillIds: [37], packId: 71206, image: 'none', stage: 3, vehicleId: 7120603 },
+    { id: 71202021, name: 'Taunt-o-Vision', skillIds: [17], packId: 71202, image: 'none', stage: 1, vehicleId: 7120202 },
+    { id: 71202022, name: 'Blast Cam', skillIds: [], packId: 71202, image: 'none', stage: 2, vehicleId: 7120202 },
+    { id: 71202023, name: 'The MechaHomer', skillIds: [12], packId: 71202, image: 'none', stage: 3, vehicleId: 7120202 },
+    { id: 71241021, name: 'Slime Shooter', skillIds: [], packId: 71241, image: 'none', stage: 1, vehicleId: 7124102 }, // nothing?
+    { id: 71241022, name: 'Slime Exploder', skillIds: [], packId: 71241, image: 'none', stage: 2, vehicleId: 7124102 },
+    { id: 71241023, name: 'Slime Streamer', skillIds: [17], packId: 71241, image: 'none', stage: 3, vehicleId: 7124102 },
+    { id: 71288031, name: 'Ghost Trap', skillIds: [19], packId: 71288, image: 'none', stage: 1, vehicleId: 7128803 },
+    { id: 71288032, name: 'Ghost Stun \'n\' Trap', skillIds: [19], packId: 71288, image: 'none', stage: 2, vehicleId: 7128803 },
+    { id: 71288033, name: 'Proton Zapper', skillIds: [19], packId: 71288, image: 'none', stage: 3, vehicleId: 7128803 },
+    { id: 71235031, name: 'Arcade Machine', skillIds: [55], packId: 71235, image: 'none', stage: 1, vehicleId: 7123503 },
+    { id: 71235032, name: '8-Bit Shooter', skillIds: [55], packId: 71235, image: 'none', stage: 2, vehicleId: 7123503 },
+    { id: 71235033, name: 'The Pixelator', skillIds: [55], packId: 71235, image: 'none', stage: 3, vehicleId: 7123503 }, // nothing?
 /*
     { id: 021, name: '', skillIds: [], packId: , image: 'none', stage: 1, vehicleId:  },
     { id: 022, name: '', skillIds: [], packId: , image: 'none', stage: 2, vehicleId:  },
@@ -278,7 +299,7 @@ export const skills: SkillData[] = [
     { id: 16, name: 'Rainbow LEGO', desc: 'Smash rainbow LEGO objects' },
     { id: 17, name: 'Silver Destroy', desc: 'Destroy silver LEGO objects' },
     { id: 18, name: 'Sonar Smash', desc: 'Destroy sonar glass' },
-    { id: 19, name: 'Suspend Ghost', desc: 'Clear ghostly swarms' },
+    { id: 19, name: 'Trap Ghosts', desc: 'Clear ghostly swarms' },
     { id: 20, name: 'Spinjitzu', desc: 'Use Spinjitzu switches' },
     { id: 22, name: 'Target', desc: 'Target switches' },
     { id: 23, name: 'Technology', desc: 'Use techno panels' },
@@ -311,5 +332,6 @@ export const skills: SkillData[] = [
     { id: 51, name: 'Cargo Hook', desc: '' },
     { id: 52, name: 'Growth', desc: '' },
     { id: 53, name: 'Time Travel Switch', desc: '' },
-    { id: 54, name: 'TARDIS Pad', desc: '' }
+    { id: 54, name: 'TARDIS Pad', desc: '' },
+    { id: 55, name: 'Arcade Station', desc: '' }
 ];
