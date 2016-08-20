@@ -65,12 +65,12 @@ export class VehicleData extends PieceData {
 }
 
 export const minifigs: MinifigData[] = [
-    { id: 7120401, name: 'The Doctor', skillIds: [7, 10, 23], packId: 71204, image: '712041to1MFMUGSHOTDr Who168' },
+    { id: 7120401, name: 'The Doctor', skillIds: [7, 10, 18, 23], packId: 71204, image: '712041to1MFMUGSHOTDr Who168' },
     { id: 7120201, name: 'Homer Simpson', skillIds: [2, 18, 33], packId: 71202, image: '71005_Portrait_Homer' },
     { id: 7120301, name: 'Chell', skillIds: [15, 38], packId: 71203, image: '71203_1to1_MF_MUGSHOT_Chell_168' },
     { id: 7120101, name: 'Marty McFly', skillIds: [18], packId: 71201, image: '71201_1to1_MF_MUGSHOT_Marty_168' },
     { id: 7123501, name: 'Gamer Kid', skillIds: [2, 12, 37, 44, 45], packId: 71235, image: '71235_1to1_MF_MUGSHOT_Retro_Gamer_168' },
-    { id: 7122801, name: 'Peter Venkman', skillIds: [12, 19, 34], packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168' },
+    { id: 7122801, name: 'Peter Venkman', skillIds: [12, 19, 34, 56], packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168' },
     //{ id: 7124801, name: 'Ethan Hunt', skillIds: [], packId: 71248, image: '' },
     //{ id: 7124501, name: 'Finn', skillIds: [], packId: 71245, image: '' },
     //{ id: 7124401, name: 'Sonic the Hedgehog', skillIds: [], packId: 71244, image: '' },
@@ -80,7 +80,7 @@ export const minifigs: MinifigData[] = [
     { id: 7120602, name: 'Shaggy', skillIds: [26, 31, 37, 49], packId: 71206, image: '75901_Shaggy_Mugshot_168x224' },//stealth??
     { id: 7120701, name: 'Kai', skillIds: [20, 37, 38, 39], packId: 71207, image: '71207_1to1_MF_MUGSHOT_Kai_168' }, // fire?
     { id: 7120702, name: 'Cole', skillIds: [2, 20, 38, 39, 37], packId: 71207, image: '71207_1to1_MF_MUGSHOT_Cole_168' },
-    { id: 7122901, name: 'Joker', skillIds: [6, 22, 31, 36], packId: 71229, image: '71229_1to1_MF_MUGSHOT_Joker_168' },
+    { id: 7122901, name: 'Joker', skillIds: [6, 22, 34, 36], packId: 71229, image: '71229_1to1_MF_MUGSHOT_Joker_168' },
     { id: 7122902, name: 'Harley Quinn', skillIds: [2, 38], packId: 71229, image: '71229_1to1_MF_MUGSHOT_Harley_Quinn_168' },
     //{ id: 7124601, name: 'Jake', skillIds: [], packId: 71246, image: '' },
     //{ id: 7124602, name: 'Jumpy Space Princess', skillIds: [], packId: 71246, image: '' },
@@ -92,34 +92,34 @@ export const minifigs: MinifigData[] = [
     { id: 7121101, name: 'Bart Simpson', skillIds: [13, 22], packId: 71211, image: '71211_1to1_MF_MUGSHOT_Bart_168' },
     { id: 7121201, name: 'Emmet', skillIds: [5, 7, 42], packId: 71212, image: '70810_MF_Mugshot_Emmet_168' },
     { id: 7121301, name: 'Bad Cop', skillIds: [12, 22, 32], packId: 71213, image: '70819_MF_Mugshot_BadCop_168' },
-    { id: 7121401, name: 'Benny', skillIds: [10, 18, 22, 23, 42], packId: 71214, image: '70810_MF_Mugshot_Benny_168' },
+    { id: 7121401, name: 'Benny', skillIds: [10, 18, 22, 23, 42, 49], packId: 71214, image: '70810_MF_Mugshot_Benny_168' },
     { id: 7121501, name: 'Jay', skillIds: [6, 7, 20, 37, 38], packId: 71215, image: '71215_1to1_MF_MUGSHOT_Jay_168' },
-    { id: 7121601, name: 'Nya', skillIds: [2, 7, 20, 38, 39], packId: 71216, image: '71216_1to1_MF_MUGSHOT_Nya_168' },//7 fix-it?
+    { id: 7121601, name: 'Nya', skillIds: [7, 20, 37, 38, 39], packId: 71216, image: '71216_1to1_MF_MUGSHOT_Nya_168' },//7 fix-it?
     { id: 7121701, name: 'Zane', skillIds: [4, 20, 30, 35, 37, 38], packId: 71217, image: '71217_1to1_MF_MUGSHOT_Zane_168' },
     { id: 7121801, name: 'Gollum', skillIds: [4, 13, 35, 38], packId: 71218, image: '9470_1to1_MF_MUGSHOT_Gollum_168' },
     { id: 7121901, name: 'Legolas', skillIds: [14, 22, 38], packId: 71219, image: '9473_1to1_MF_MUGSHOT_Legolas_168' },//14?
     { id: 7122001, name: 'Gimli', skillIds: [2, 13], packId: 71220, image: '79008_Gimli_168' },
-    { id: 7122101, name: 'Wicked Witch of the West', skillIds: [17, 31, 41, 43, 46, 47], packId: 71221,
+    { id: 7122101, name: 'Wicked Witch', skillIds: [17, 31, 41, 43, 46, 47], packId: 71221,
         image: '71221_1to1_MF_MUGSHOT_WickedWitch_168' },
-    { id: 7122201, name: 'Laval', skillIds: [1, 2, 18, 38, 39], packId: 71222, image: '70144_1to1_MF_Laval_01_336_744w' },
+    { id: 7122201, name: 'Laval', skillIds: [1, 2, 38, 39], packId: 71222, image: '70144_1to1_MF_Laval_01_336_744w' },
     { id: 7122301, name: 'Cragger', skillIds: [1, 2, 4, 34], packId: 71223, image: '70150_1to1_MF_Cragger_336_744w' },
-    { id: 7122701, name: 'Krusty the Clown', skillIds: [11, 28], packId: 71227, image: '71005_Portrait_Krusty' },
+    { id: 7122701, name: 'Krusty', skillIds: [11, 28, 52], packId: 71227, image: '71005_Portrait_Krusty' },
     { id: 7123001, name: 'Doc Brown', skillIds: [7, 10, 23, 40], packId: 71230, image: '71230_1to1_MF_MUGSHOT_Doc_Brown_168' },
     { id: 7123101, name: 'Unikitty', skillIds: [16, 33, 42], packId: 71231, image: '70803_MF_Mugshot_Unikitty_168' },
     { id: 7123201, name: 'Eris', skillIds: [1, 2, 22, 43], packId: 71232, image: '70142_1to1_MF_Eris_01_168' },
     { id: 7123301, name: 'Stay Puft', skillIds: [2, 33, 34], packId: 71233, image: '71233_1to1_MF_MUGSHOT_Stay_Puft_168' },
     { id: 7123401, name: 'Sensei Wu', skillIds: [14, 20, 37, 38, 49], packId: 71234, image: '71234_1to1_MF_MUGSHOT_Sensei_Wu_168' },
     { id: 7123601, name: 'Superman', skillIds: [2, 4, 12, 30, 43, 44, 48], packId: 71236, image: '71236_1to1_MF_MUGSHOT_Superman_168' },
-    { id: 7123701, name: 'Aquaman', skillIds: [0, 4, 11, 28], packId: 71237, image: '71237_1to1_MF_MUGSHOT_Aquaman_168' },
+    { id: 7123701, name: 'Aquaman', skillIds: [0, 4, 11, 28, 52], packId: 71237, image: '71237_1to1_MF_MUGSHOT_Aquaman_168' },
     { id: 7123801, name: 'Cyberman', skillIds: [4, 10, 17, 23, 30, 40, 41], packId: 71238, image: '71238_1to1_MF_MUGSHOT_Gyberman_168' },
-    { id: 7123901, name: 'Lloyd Garmadon', skillIds: [20, 31, 37, 38, 39], packId: 71239, image: '71239_1to1_MF_MUGSHOT_Lloyd_168' },
+    { id: 7123901, name: 'Lloyd', skillIds: [20, 31, 37, 38, 39], packId: 71239, image: '71239_1to1_MF_MUGSHOT_Lloyd_168' },
     { id: 7124001, name: 'Bane', skillIds: [2, 33, 34], packId: 71240, image: '71240_1to1_MF_MUGSHOT_Bane_168' },
     { id: 7124101, name: 'Slimer', skillIds: [4, 11, 13, 18, 31, 34, 35, 43], packId: 71241, image: '71241_1to1_MF_MUGSHOT_Slimer_168' },
     //{ id: 7125101, name: 'B.A. Baracus', skillIds: [], packId: 71251, image: '' },
     //{ id: 7128501, name: 'Marceline', skillIds: [], packId: 71285, image: '' },
     { id: 7117001, name: 'Batman', skillIds: [35, 36, 37], packId: 71170, image: '71200_1to1_MF_MUGSHOT_Batman_168' },
     { id: 7117002, name: 'Gandalf', skillIds: [31, 46, 47], packId: 71170, image: '10237_1to1_MF_MUGSHOT_GandalfTheGrey_168' },
-    { id: 7117003, name: 'Wildstyle', skillIds: [32, 38, 42], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' }
+    { id: 7117003, name: 'Wyldstyle', skillIds: [32, 38, 42], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' }
 ];
 
 export const vehicles: VehicleData[] = [
@@ -280,7 +280,7 @@ export class SkillData {
 };
 
 export const skills: SkillData[] = [
-    { id: 0, name: 'Atlantis Ability', desc: 'Speak to the fishes' },
+    { id: 0, name: 'Atlantis Pools', desc: 'Speak to the fishes' },
     { id: 1, name: 'Chi Power', desc: 'Use \'Chi Up\'' },
     { id: 2, name: 'Super Strength', desc: 'Destroy cracked LEGO walls' },
     { id: 3, name: 'Digging', desc: 'Use dig spots' },
@@ -333,5 +333,6 @@ export const skills: SkillData[] = [
     { id: 52, name: 'Growth', desc: '' },
     { id: 53, name: 'Time Travel Switch', desc: '' },
     { id: 54, name: 'TARDIS Pad', desc: '' },
-    { id: 55, name: 'Arcade Station', desc: '' }
+    { id: 55, name: 'Arcade Station', desc: '' },
+    { id: 56, name: 'Suspend Ghost', desc: '' }
 ];

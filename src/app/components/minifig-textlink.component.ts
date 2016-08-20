@@ -5,9 +5,7 @@ import { Minifig } from './../data/index';
 @Component({
 	moduleId: module.id,
 	selector: 'minifig-textlink',
-	template: `
-        <a [routerLink]="[\'/minifig/\' + minifig.id]">{{minifig.name}}</a>
-    `,
+	template: `<a [routerLink]="[\'/minifig/\' + minifig.id]">{{minifig.name}}</a>`,
     directives: [ROUTER_DIRECTIVES]
 })
 

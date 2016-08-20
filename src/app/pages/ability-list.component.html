@@ -1,8 +1,12 @@
-<h1>Complete list of all Lego Dimensions character abilities.</h1>
-<section *ngIf="abilities"> 
-    <div *ngFor="let ability of abilities.list">
-        <b>{{ability.name}}</b> {{ability.desc}}<br>
-        Characters having this skill:
-        <span *ngFor="let minifig of ability.providers; let isLast = last"><minifig-textlink [minifig]="minifig"></minifig-textlink>{{isLast ? '' : ', '}}</span>
+<div class="card">
+    <div class="card-block">
+        <h1>Complete list of all Lego Dimensions character abilities.</h1>
+        <section *ngIf="abilities"> 
+            <div *ngFor="let ability of abilities.list">
+                <b>{{ability.name}}</b> {{ability.desc}}<br>
+                Characters having this skill:
+                <span *ngFor="let minifig of ability.providers; let isLast = last"><minifig-textlink [minifig]="minifig"></minifig-textlink>{{isLast ? '' : ', '}}</span>
+            </div>
+        </section>
     </div>
-</section>
+</div>
