@@ -14,7 +14,7 @@
     "build": "webpack",
     "build:prod": "webpack --progress -p",
     "prestart": "npm run build",
-    "server": "nodemon dist/server/index.js",
+    "server": "node dist/server/index.js",
     "start": "npm run server",
     "predebug": "npm run build",
     "debug:build": "node-nightly --inspect --debug-brk node_modules/webpack/bin/webpack.js",
