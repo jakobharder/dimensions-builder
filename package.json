@@ -7,6 +7,8 @@
     "url": "https://github.com/angular/universal-starter.git"
   },
   "scripts": {
+    "clean": "rm -rf dist",
+    "typings": "typings install",
     "watch": "webpack --watch",
     "prebuild": "rimraf dist",
     "build": "webpack",
@@ -17,7 +19,8 @@
     "predebug": "npm run build",
     "debug:build": "node-nightly --inspect --debug-brk node_modules/webpack/bin/webpack.js",
     "debug": "node --debug-brk dist/server/index.js",
-    "postinstall": "typings install"
+    "postinstall": "npm run typings",
+    "minify": "uglifyjs dist/client/index.js --screw-ie8 --compress --mangle --output dist/client/index.min.js && uglifyjs dist/server/index.js --screw-ie8 --compress --mangle --output dist/server/index.min.js"
   },
   "license": "MIT",
   "contributors": [
@@ -45,7 +48,8 @@
     "ng2-bootstrap": "^1.0.17",
     "parse5": "^1.5.0",
     "preboot": "^2.1.2",
-    "rxjs": "5.0.0-beta.6"
+    "rxjs": "5.0.0-beta.6",
+    "uglifyjs": "^2.4.10"
   },
   "devDependencies": {
     "@types/body-parser": "0.0.29",
