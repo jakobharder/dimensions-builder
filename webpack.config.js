@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 var commonConfig = {
   resolve: {
@@ -37,6 +38,13 @@ var commonConfig = {
       mangle: { screw_ie8 : true }, //prod
       compress: { screw_ie8: true }, //prod
       comments: false //prod
+    }),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
     })
     ]
 
