@@ -12,7 +12,7 @@
     "predebug": "npm run build",
     "debug:build": "node-nightly --inspect --debug-brk node_modules/webpack/bin/webpack.js",
     "debug": "node --debug-brk dist/server/index.js",
-    "postinstall": "rimraf dist && webpack --progress -p"
+    "postinstall": "npm run typings && rimraf dist && webpack --progress -p"
   },
   "license": "MIT",
   "contributors": [
