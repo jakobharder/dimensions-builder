@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Router, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
+declare let ga:Function;
 
 import { TopNavComponent, SidebarComponent } from './shared/index';
 import { DataService } from './data/index';
@@ -13,7 +14,12 @@ import { DataService } from './data/index';
 	providers: [DataService]
 })
 export class AppComponent {
-	constructor(private dataService: DataService) {
-
+	constructor(public router: Router, private dataService: DataService) {
+        this.router.events.subscribe(
+            (event:Event) => {
+                if (event instanceof NavigationEnd) {
+                    ga('send', 'pageview', event.urlAfterRedirects);
+                }
+            });
 	}
 }
