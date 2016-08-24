@@ -4,7 +4,7 @@
   "description": "A Lego Dimensions Team Builder tool",
   "scripts": {
     "typings": "typings install",
-    "watch": "webpack --watch",
+    "watch": "nodemon dist/server/index.js",
     "build": ";",
     "build:prod": ";",
     "server": "node dist/server/index.js",
