@@ -17,8 +17,8 @@ export class AppComponent {
 	constructor(public router: Router, private dataService: DataService) {
         this.router.events.subscribe(
             (event:Event) => {
-                if (event instanceof NavigationEnd) {
-                    ga('send', 'pageview', event.urlAfterRedirects);
+                if (event instanceof NavigationEnd && typeof ga === "function") {
+					ga('send', 'pageview', event.urlAfterRedirects);
                 }
             });
 	}
