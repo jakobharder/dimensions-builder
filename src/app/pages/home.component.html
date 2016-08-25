@@ -6,7 +6,7 @@
     <img src="assets/images/dimensions-logo.png" class="m-l-1" />
     <div class="card-block">
         <div><a [routerLink]="['/packs']">List of all Dimension packs</a></div>
-        <div><a [routerLink]="['/minifigs']">List of all Dimension minifig characters</a></div>
+        <div><a [routerLink]="['/characters']">List of all Dimension minifig characters</a></div>
         <div><a [routerLink]="['/abilities']">List of all character abilities</a></div>
     </div>
 </div>
@@ -33,7 +33,7 @@
         <h2>Characters with 6+ abilities</h2>
         <ul>
             <li *ngFor="let minifig of mostSkills">
-                <b><a [routerLink]="['/minifig/' + minifig.id]">{{minifig.name}}</a></b>
+                <b><a [routerLink]="['/character/' + minifig.id]">{{minifig.name}}</a></b>
                 (<span *ngFor="let skill of minifig.skills; let isLast = last">{{skill.name}}{{isLast ? '' : ', '}}</span>)
             </li>
         </ul>

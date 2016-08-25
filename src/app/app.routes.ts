@@ -26,11 +26,11 @@ export const routes: RouterConfig = [
 		component: PackDetailsComponent
 	},
 	{
-		path: 'minifigs',
+		path: 'characters',
 		component: MinifigListComponent
 	},
 	{
-		path: 'minifig/:id',
+		path: 'character/:id',
 		component: MinifigDetailsComponent
 	},
 	{

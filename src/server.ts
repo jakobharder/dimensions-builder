@@ -43,8 +43,8 @@ import { ngApp } from './main.node';
 app.get('/', ngApp);
 app.get('/packs', ngApp);
 app.get('/pack/*', ngApp);
-app.get('/minifigs', ngApp);
-app.get('/minifig/*', ngApp);
+app.get('/characters', ngApp);
+app.get('/character/*', ngApp);
 app.get('/team-builder', ngApp);
 app.get('/abilities', ngApp);
 
@@ -57,7 +57,7 @@ var sitemap = sm.createSitemap ({
         { url: '/', changefreq: 'daily', priority: 0.7 },
         { url: '/team-builder', changefreq: 'daily', priority: 0.5 },
         { url: '/packs', changefreq: 'daily', priority: 0.5 },
-        { url: '/minifigs', changefreq: 'daily', priority: 0.5 },   
+        { url: '/characters', changefreq: 'daily', priority: 0.5 },   
         { url: '/abilities', changefreq: 'daily', priority: 0.5 }
       ]
     });

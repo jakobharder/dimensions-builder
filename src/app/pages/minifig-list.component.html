@@ -7,7 +7,7 @@
                     <tbody>
                         <tr *ngFor="let minifig of minifigs">
                             <td><minifig-head [minifig]="minifig"></minifig-head></td>
-                            <td><a [routerLink]="['/minifig/' + minifig.id]">{{minifig.name}}</a></td>
+                            <td><a [routerLink]="['/character/' + minifig.id]">{{minifig.name}}</a></td>
                             <td>
                                 <span *ngFor="let skill of minifig.skills">{{skill.name}}, </span>
                             </td>

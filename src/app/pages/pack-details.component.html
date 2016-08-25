@@ -3,7 +3,7 @@
     <img src="assets/images/{{pack.image}}.jpg">
 </div>
 <div *ngIf="minifigs">minifigs: 
-    <div *ngFor="let minifig of minifigs"><a [routerLink]="['/minifig/' + minifig.id]"><minifig-panel [minifig]="minifig"></minifig-panel></a></div>
+    <div *ngFor="let minifig of minifigs"><a [routerLink]="['/character/' + minifig.id]"><minifig-panel [minifig]="minifig"></minifig-panel></a></div>
 </div>
 <ul *ngIf="skills">
     <li *ngFor="let skill of skills">{{skill.name}}</li>
