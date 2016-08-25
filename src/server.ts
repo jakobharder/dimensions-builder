@@ -48,6 +48,30 @@ app.get('/minifig/*', ngApp);
 app.get('/team-builder', ngApp);
 app.get('/abilities', ngApp);
 
+var sm = require('sitemap');
+var sitemap = sm.createSitemap ({
+      hostname: 'http://dimensions-builder.com',
+      cacheTime: 600000,        // 600 sec - cache purge period 
+      urls: [
+        // changefreq: 'weekly',  priority: 0.5 
+        { url: '/', changefreq: 'daily', priority: 0.7 },
+        { url: '/team-builder', changefreq: 'daily', priority: 0.5 },
+        { url: '/packs', changefreq: 'daily', priority: 0.5 },
+        { url: '/minifigs', changefreq: 'daily', priority: 0.5 },   
+        { url: '/abilities', changefreq: 'daily', priority: 0.5 }
+      ]
+    });
+ 
+app.get('/sitemap.xml', function(req, res) {
+  sitemap.toXML( function (err, xml) {
+      if (err) {
+        return res.status(500).end();
+      }
+      res.header('Content-Type', 'application/xml');
+      res.send( xml );
+  });
+});
+
 // use indexFile over ngApp only when there is too much load on the server
 function indexFile(req, res) {
   // when there is too much load on the server just send
