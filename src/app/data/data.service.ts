@@ -121,7 +121,7 @@ export class DataService {
     }
 
     getImportantAbilities(except: Abilities) {
-        let result = new Abilities(this.getSkills([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 33, 39, 40, 41, 43, 44, 45, 51, 52, 53, 54]));
+        let result = new Abilities(this.getSkills([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 33, 39, 40, 41, 43, 44, 45, 51, 52, 53, 54, 55, 56]));
         if (except !== null) {
             result.removeRange(except);
         }
