@@ -11,6 +11,8 @@ import { enableProdMode } from '@angular/core';
 // Angular 2 Universal
 import { expressEngine } from 'angular2-universal';
 
+import { skills } from './app/data/static-data';
+
 var compression = require('compression');
 
 // enable prod for faster renders
@@ -49,18 +51,23 @@ app.get('/team-builder', ngApp);
 app.get('/abilities', ngApp);
 app.get('/ability/*', ngApp);
 
+var urls = [
+        // changefreq: 'weekly',  priority: 0.5 
+        { url: '/', changefreq: 'weekly', priority: 0.7 },
+        { url: '/team-builder', changefreq: 'weekly', priority: 0.5 },
+        { url: '/packs', changefreq: 'weekly', priority: 0.5 },
+        { url: '/characters', changefreq: 'weekly', priority: 0.5 },   
+        { url: '/abilities', changefreq: 'weekly', priority: 0.5 }
+      ];
+for (let ability of skills) {
+  urls.push({ url: '/ability/' + ability.url, changefreq: 'weekly', priority: 0.5});
+}
+
 var sm = require('sitemap');
 var sitemap = sm.createSitemap ({
       hostname: 'http://dimensions-builder.com',
       cacheTime: 600000,        // 600 sec - cache purge period 
-      urls: [
-        // changefreq: 'weekly',  priority: 0.5 
-        { url: '/', changefreq: 'daily', priority: 0.7 },
-        { url: '/team-builder', changefreq: 'daily', priority: 0.5 },
-        { url: '/packs', changefreq: 'daily', priority: 0.5 },
-        { url: '/characters', changefreq: 'daily', priority: 0.5 },   
-        { url: '/abilities', changefreq: 'daily', priority: 0.5 }
-      ]
+      urls: urls
     });
  
 app.get('/sitemap.xml', function(req, res) {
