@@ -24,8 +24,10 @@ export class AbilityDetailsComponent implements OnInit {
             let id = params['id'];
             this.ability = this.data.getAbilityByUrl(id);
 
-            this.builds = new Pieces(this.ability.providers).getBuilds();
-            this.characters = new Pieces(this.ability.providers).getCharacters();
+            if (this.ability != undefined) {
+                this.builds = new Pieces(this.ability.providers).getBuilds();
+                this.characters = new Pieces(this.ability.providers).getCharacters();
+            }
         });
     }
 }
