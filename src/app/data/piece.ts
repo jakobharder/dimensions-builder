@@ -1,4 +1,4 @@
-import { Piece } from './data';
+import { Piece, PieceType, Vehicle, Minifig } from './data';
 
 export class Pieces {
     list: Piece[];
@@ -21,6 +21,26 @@ export class Pieces {
 
     getOrdered() {
         return new PiecesOrdered(this);
+    }
+
+    getBuilds() {
+        let builds: Vehicle[] = [];
+        for (let piece of this.list) {
+            if (piece.type === PieceType.Build) {
+                builds.push(piece as Vehicle);
+            }
+        }
+        return builds;
+    }
+
+    getCharacters() {
+        let characters: Minifig[] = [];
+        for (let piece of this.list) {
+            if (piece.type === PieceType.Character) {
+                characters.push(piece as Minifig);
+            }
+        }
+        return characters;
     }
 }
 

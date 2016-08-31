@@ -13,6 +13,7 @@ export class Skill {
     id: number;
     name: string;
     desc: string;
+    url: string;
     providers: Piece[];
 }
 
@@ -21,12 +22,18 @@ export class FilterSkill extends Skill {
     fullfilled: boolean = false;
 };
 
+export enum PieceType {
+    Character,
+    Build
+}
+
 export class Piece {
     id: number;
     name: string;
     packId: number;
     skills: Skill[];
     skillIds: number[];
+    type: PieceType;
 }
 
 export class Minifig extends Piece {

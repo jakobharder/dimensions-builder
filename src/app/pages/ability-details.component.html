@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-block" *ngIf="ability">
+        <h1>{{ability.name}} Ability</h1>
+        <p>Characters having this skill can {{ability.desc}}.</p>
+    </div>
+
+    <div class="card-block">
+    <div class="card card-inverse">
+        <div class="card-block">
+            <h4 class="card-title">Looking for the best combination of characters?</h4>
+            <p class="card-text">Try out the team builder tool. Choose the abilities you want, then let the tool guide you to your team.</p>
+            <a class="btn btn-primary" [routerLink]="['/team-builder']">Go to the team builder now</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="card-block" *ngIf="ability">
+        <h2>Characters having {{ability.name}} ability</h2>
+        <p>Click on a character to get more details.</p>
+        <div class="m-t-2">
+            <a class="pull-md-left" *ngFor="let character of characters" [routerLink]="['/character/' + character.id]"><minifig-panel [piece]="character"></minifig-panel></a>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="card-block" *ngIf="ability">
+        <h2>Vehicles and gadgets having {{ability.name}} ability</h2>
+        <div class="m-t-2">
+            <minifig-panel class="pull-md-left" *ngFor="let character of builds" [piece]="character">{{character.name}}</minifig-panel>
+            <div class="clearfix"></div>
+        </div>        
+    </div>
+    <div class="card-block" *ngIf="ability == undefined">
+        <h1>Unknown Ability</h1>
+        <p>Please have a look at the <a [routerLink]="['/abilities']">complete list of abilities</a>.</p>
+    </div>
+</div>

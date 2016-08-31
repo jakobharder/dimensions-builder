@@ -5,6 +5,9 @@ body {
 .card {
   background: #324065;
 }
+.card.card-inverse {
+  background: #16203B;
+}
 .card-title, h1, h2, h3, h4, h5 {
   color: #EDF2F6;
 }
@@ -19,4 +22,7 @@ a {
 .btn-primary:hover, .btn-primary:active, .btn-primary:checked {
   background: #cc324b !important;
   border: 1px solid #cc324b;
+}
+a, a:hover, a:active, a:focus {
+  text-decoration: none !important;
 }

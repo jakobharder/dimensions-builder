@@ -47,6 +47,7 @@ app.get('/characters', ngApp);
 app.get('/character/*', ngApp);
 app.get('/team-builder', ngApp);
 app.get('/abilities', ngApp);
+app.get('/ability/*', ngApp);
 
 var sm = require('sitemap');
 var sitemap = sm.createSitemap ({

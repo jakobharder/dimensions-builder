@@ -5,6 +5,8 @@
     box-sizing: border-box;
     cursor: pointer;
     color: #EDF2F6;
+    display: block;
+    text-decoration: none !important;
 }
 .panel:hover {
     background: #11a8ab;

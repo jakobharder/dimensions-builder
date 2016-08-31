@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Pack, Piece, Minifig, Vehicle, Skill } from './data';
+import { Pack, Piece, PieceType, Minifig, Vehicle, Skill } from './data';
 import { Abilities } from './ability';
 import { Pieces } from './piece';
 import { minifigs, vehicles, skills, packs } from './static-data';
@@ -11,7 +11,7 @@ export class DataService {
     minifigs: Minifig[];
     skillMap: { [id: number] : Skill; } = null;
     skills: Skill[];
-
+    urlToAbility: { [url: string] : Skill } = null;
 
     constructor() {
         this.ensureLoaded();
@@ -30,11 +30,13 @@ export class DataService {
             }
 
             this.skillMap = {};
+            this.urlToAbility = {};
             this.skills = [];
             for (let data of skills) {
                 let skill = Object.assign({}, data);
                 skill.providers = [];
                 this.skillMap[skill.id] = skill;
+                this.urlToAbility[skill.url] = skill;
                 this.skills.push(skill);
             }
 
@@ -42,6 +44,7 @@ export class DataService {
             this.minifigs = [];
             for (let data of minifigs) {
                 let minifig: Minifig = Object.assign({}, data);
+                minifig.type = PieceType.Character;
                 minifig.skills = this.getSkills(data.skillIds);
                 for (let skill of minifig.skills) {
                     skill.providers.push(minifig);
@@ -60,6 +63,7 @@ export class DataService {
 
             for (let data of vehicles) {
                 let vehicle: Vehicle = Object.assign({}, data);
+                vehicle.type = PieceType.Build;
                 vehicle.skills = this.getSkills(data.skillIds);
                 for (let skill of vehicle.skills) {
                     skill.providers.push(vehicle);
@@ -96,6 +100,14 @@ export class DataService {
 
     getAllMinifigs() {
         return this.minifigs;
+    }
+
+    getAbility(id: number) {
+        return this.skillMap[id];
+    }
+
+    getAbilityByUrl(url: string) {
+        return this.urlToAbility[url];
     }
 
     getSkills(ids: number[]) {
