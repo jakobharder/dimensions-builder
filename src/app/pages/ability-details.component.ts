@@ -15,6 +15,9 @@ export class AbilityDetailsComponent implements OnInit {
     ability: Skill;
     builds: Piece[] = [];
     characters: Piece[] = [];
+    rare: boolean = false;
+    unique: Piece = null;
+    buildsOnly: boolean = false;
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
@@ -30,6 +33,12 @@ export class AbilityDetailsComponent implements OnInit {
             if (this.ability != undefined) {
                 this.builds = new Pieces(this.ability.providers).getBuilds();
                 this.characters = new Pieces(this.ability.providers).getCharacters();
+
+                this.rare = this.characters.length < 4;
+                if (this.characters.length == 1) {
+                    this.unique = this.characters[0];
+                }
+                this.buildsOnly = this.characters.length == 0;
 
                 this.title.setTitle(this.ability.name + ' Ability - details, character list');
             }
