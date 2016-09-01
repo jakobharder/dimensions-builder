@@ -14,8 +14,7 @@
     "!node_modules/@types/**/*.d.ts",
     "dist",
     "typings/index.d.ts",
-    "typings/modules",
-    "src"
+    "typings/modules"
   ],
   "compileOnSave": false,
   "buildOnSave": false,
