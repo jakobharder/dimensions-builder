@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Piece, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
 import { MinifigPanelComponent, AbilitySelectComponent } from '../components/index';
@@ -19,11 +20,13 @@ export class TeamBuilderComponent implements OnInit {
     currentSkillIndex: number = 0;
 
     constructor(private route: ActivatedRoute,
-                private dataService: DataService) {
+                private dataService: DataService,
+                private title: Title) {
 
     }
 
     ngOnInit() {
+        this.title.setTitle("Team Builder - which character, vehicle and gadget to use");
     }
 
     onAbilitiesChanged(skills: FilterSkill[]) {

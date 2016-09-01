@@ -1,4 +1,5 @@
 import {Component, Pipe, Injectable, PipeTransform, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { Pack, DataService } from './../data/index';
 import { PackComponent } from './../components/index';
@@ -46,10 +47,13 @@ export class WaveListComponent implements OnInit {
 	waves: number[] = [5, 4, 3, 2, 1];
 	packs: Pack[];
 
-	constructor(private router: Router, private dataService: DataService) {
+	constructor(private router: Router, 
+				private dataService: DataService,
+				private title: Title) {
 	}
 
 	ngOnInit() {
+		this.title.setTitle("List of all Lego Dimensions packs - Lego Dimensions Builder");
 		this.packs = this.dataService.getAllPacks();
 	}
 

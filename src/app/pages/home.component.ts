@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { Minifig, DataService } from '../data/index';
 
@@ -11,10 +12,14 @@ import { Minifig, DataService } from '../data/index';
 export class HomeComponent implements OnInit {
 	mostSkills: Minifig[];
 
-	constructor(private router: Router, private dataService: DataService) {
+	constructor(private router: Router, 
+				private dataService: DataService,
+				private title: Title) {
 	}
 
 	ngOnInit() {
+		this.title.setTitle("Lego Dimensions Builder - characters, vehicles, gadgets, abilities, ...");
+
 		let mostSkills: Minifig[] = [];
 		for (let minifig of this.dataService.getAllMinifigs()) {
 			if (minifig.skills.length > 5) {
