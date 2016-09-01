@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="card-block" *ngIf="ability">
+    <div class="card-block" *ngIf="ability && !charactersOnly">
         <h3>Vehicles and gadgets with {{ability.name}} ability</h3>
         <div class="m-t-2">
             <minifig-panel class="pull-md-left" *ngFor="let character of builds" [piece]="character">{{character.name}}</minifig-panel>

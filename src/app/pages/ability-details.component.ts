@@ -18,6 +18,7 @@ export class AbilityDetailsComponent implements OnInit {
     rare: boolean = false;
     unique: Piece = null;
     buildsOnly: boolean = false;
+    charactersOnly: boolean = false;
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
@@ -39,6 +40,7 @@ export class AbilityDetailsComponent implements OnInit {
                     this.unique = this.characters[0];
                 }
                 this.buildsOnly = this.characters.length == 0;
+                this.charactersOnly = this.builds.length == 0;
 
                 this.title.setTitle(this.ability.name + ' Ability - details, character list');
             }
