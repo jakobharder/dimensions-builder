@@ -1,9 +1,17 @@
 <section *ngIf="skills">
     <div class="card">
         <div class="card-block">
-            <h2 class="card-title">Team Builder <small>beta</small></h2>
-            <p>At the moment this is a proof-of-concept. Be aware some of the character stats may be incorrect.</p>
-            <p>The character proposals show up in order of rarity. Abilities with one character first, and abilities with many potential characters later.</p>
+            <h2 class="card-title">Team Builder <small>v4</small></h2>
+            <p>The team builder currently includes all data from year 1 (waves 1 to 5). I will add newer waves as soon as I get enough data about their abilities.</p>
+            <h5>How to use the team builder</h5>
+            <ul>
+                <li>Select the abilities you want to cover in your team</li>
+                <li>Select a character from the shown group below</li>
+                <li>Repeat until no character is shown anymore</li>
+
+                <li>Hint: the character proposals show up in order of rarity</li>
+                <li>Hint: you can change the ability selection later on as well</li>
+            </ul>
             <ability-select (changed)="onAbilitiesChanged($event)"></ability-select>
         </div>
     </div>
