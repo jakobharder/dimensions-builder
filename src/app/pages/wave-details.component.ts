@@ -45,12 +45,12 @@ class PackTypeOrder implements PipeTransform {
 
 export class WaveDetailsComponent implements OnInit {
 	sub: any;
-	waves: number[] = [];
+	wave: number;
 	packs: Pack[];
 
 	constructor(private route: ActivatedRoute,
 				private router: Router, 
-				private dataService: DataService,
+				private data: DataService,
 				private title: Title) {
 	}
 
@@ -59,8 +59,8 @@ export class WaveDetailsComponent implements OnInit {
 
 		this.sub = this.route.params.subscribe(params => {
 			let id = +params['id'];
-			this.waves = [id];
-			this.packs = this.dataService.getAllPacks();
+			this.wave = id;
+			this.packs = this.data.getAllPacks();
 		});
 	}
 
