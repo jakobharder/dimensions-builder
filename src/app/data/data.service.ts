@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Pack, Piece, PieceType, Minifig, Vehicle, Skill } from './data';
 import { Abilities } from './ability';
 import { Pieces } from './piece';
-import { minifigs, vehicles, skills, packs, combos } from './static-data';
+import { minifigs, vehicles, skills, packs, VehicleData } from './static-data';
 
 @Injectable()
 export class DataService {
@@ -65,7 +65,8 @@ export class DataService {
                 this.minifigs.push(minifig);
             }
 
-            for (let data of vehicles) {
+            let mergedBuilds = this.mergeBuilds();
+            for (let data of mergedBuilds) {
                 let vehicle: Vehicle = Object.assign({}, data);
                 vehicle.type = PieceType.Build;
                 vehicle.skills = this.getSkills(data.skillIds);
@@ -168,20 +169,43 @@ export class DataService {
             result.removeRange(except);
         }
         return result;
-/*        let result = new Abilities([]);
-        for (let combo of combos) {
-            let ability = new Skill;
-            ability.id = combo.id;
-            ability.oneId = combo.oneId;
-            ability.twoId = combo.twoId;
-            ability.name = this.skillMap[combo.oneId].name + ' ' + this.skillMap[combo.twoId].name;
-            ability.providers = [];
-            result.add(ability);
-        }
-        return result;*/
     }
 
-    private loadAbilityCombos() {
+    private unionArrays(a: number[], b: number[]) {
+        let result: number[] = [].concat(a);
+        for (let i of b) {
+            if (!result.includes(i)) {
+                result.push(i);
+            }
+        }
+        return result;
+    }
 
+    private mergeBuilds() {
+        let result: VehicleData[] = [];
+        let one: VehicleData, two: VehicleData;
+        for (let vehicle of vehicles) {
+            if (one === undefined) {
+                one = vehicle;
+                continue;
+            } else if (two === undefined) {
+                two = vehicle;
+                continue;
+            } else {
+                let newBuild = new VehicleData;
+                newBuild.id = one.vehicleId;
+                newBuild.name = one.name;
+                newBuild.image = one.image;
+                newBuild.packId = one.packId;
+                newBuild.stage = 0;
+                newBuild.vehicleId = one.vehicleId;
+                newBuild.skillIds = this.unionArrays(this.unionArrays(one.skillIds, two.skillIds), vehicle.skillIds);
+                result.push(newBuild);
+
+                one = undefined;
+                two = undefined;
+            }
+        }
+        return result;
     }
 }
