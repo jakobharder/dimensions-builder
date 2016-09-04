@@ -45,7 +45,13 @@ export const packs: Pack[] = [
     { id: 71223, wave: 1, year: 1, minifigs: [], name: 'Cragger', type: PackType.FunPack, image: '03_LD_PO_FP_Chima_Cragger'},
     { id: 71232, wave: 1, year: 1, minifigs: [], name: 'Eris', type: PackType.FunPack, image: '03_LD_PO_FP_Chima_Eris'},
     { id: 71211, wave: 2, year: 1, minifigs: [], name: 'Bart Simpson', type: PackType.FunPack, image: '03_LD_PO_FP_Simpsons_Bart'},
-    { id: 71227, wave: 2, year: 1, minifigs: [], name: 'Krusty', type: PackType.FunPack, image: '03_LD_PO_FP_Simpsons_Krusty'}
+    { id: 71227, wave: 2, year: 1, minifigs: [], name: 'Krusty', type: PackType.FunPack, image: '03_LD_PO_FP_Simpsons_Krusty'},
+    { id: 71245, wave: 6, year: 2, minifigs: [], name: 'Adventure Time', type: PackType.LevelPack, image: 'adventure-time-level-pack'},
+    { id: 71248, wave: 6, year: 2, minifigs: [], name: 'Mission: Impossible', type: PackType.LevelPack, image: 'mission-impossible-level-pack'},
+    { id: 71242, wave: 6, year: 2, minifigs: [], name: 'Ghostbusters™', type: PackType.StoryPack, image: 'ghostbusters-story-pack'},
+    { id: 71246, wave: 6, year: 2, minifigs: [], name: 'Adventure Time', type: PackType.TeamPack, image: 'adventure-time-team-pack'},
+    { id: 71247, wave: 6, year: 2, minifigs: [], name: 'Harry Potter', type: PackType.TeamPack, image: 'harry-potter-team-pack'},
+    { id: 71251, wave: 6, year: 2, minifigs: [], name: 'the A-Team', type: PackType.FunPack, image: 'a-team-fun-pack'}
 ];
 
 export class PieceData {
