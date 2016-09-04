@@ -53,14 +53,14 @@ app.get('/ability/*', ngApp);
 
 var urls = [
         // changefreq: 'weekly',  priority: 0.5 
-        { url: '/', changefreq: 'weekly', priority: 0.7 },
-        { url: '/team-builder', changefreq: 'weekly', priority: 0.5 },
-        { url: '/packs', changefreq: 'weekly', priority: 0.5 },
-        { url: '/characters', changefreq: 'weekly', priority: 0.5 },   
-        { url: '/abilities', changefreq: 'weekly', priority: 0.5 }
+        { url: '/', changefreq: 'weekly', priority: 0.5 },
+        { url: '/team-builder', changefreq: 'daily', priority: 0.7 },
+        { url: '/packs', changefreq: 'daily', priority: 0.5 },
+        { url: '/characters', changefreq: 'daily', priority: 0.5 },   
+        { url: '/abilities', changefreq: 'daily', priority: 0.5 }
       ];
 for (let ability of skills) {
-  urls.push({ url: '/ability/' + ability.url, changefreq: 'weekly', priority: 0.5});
+  urls.push({ url: '/ability/' + ability.url, changefreq: 'daily', priority: 0.5});
 }
 
 var sm = require('sitemap');
