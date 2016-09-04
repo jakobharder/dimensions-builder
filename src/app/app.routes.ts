@@ -19,7 +19,7 @@ export const routes: RouterConfig = [
 		component: HomeComponent
 	},
 	{
-		path: 'packs',
+		path: 'all-waves-and-packs',
 		component: WaveListComponent
 	},
 	{

@@ -43,7 +43,7 @@ import { ngApp } from './main.node';
 // Routes with html5pushstate
 // ensure routes match client-side-app
 app.get('/', ngApp);
-app.get('/packs', ngApp);
+app.get('/all-waves-and-packs', ngApp);
 app.get('/pack/*', ngApp);
 app.get('/characters', ngApp);
 app.get('/character/*', ngApp);
@@ -55,7 +55,7 @@ var urls = [
         // changefreq: 'weekly',  priority: 0.5 
         { url: '/', changefreq: 'weekly', priority: 0.5 },
         { url: '/team-builder', changefreq: 'daily', priority: 0.7 },
-        { url: '/packs', changefreq: 'daily', priority: 0.5 },
+        { url: '/all-waves-and-packs', changefreq: 'daily', priority: 0.5 },
         { url: '/characters', changefreq: 'daily', priority: 0.5 },   
         { url: '/abilities', changefreq: 'daily', priority: 0.5 }
       ];
