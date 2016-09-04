@@ -1,0 +1,16 @@
+<div class="conter-wrapper animate">
+    <div class="row" *ngIf="packs">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card" *ngFor="let wave of waves">
+                <div class="card-header card-primary card-inverse">
+                    <span class="card-title">Wave {{wave}}</span>
+                </div>
+                <div class="card-block">
+                    <ul class="packs">
+                        <lego-pack *ngFor="let pack of packs | wavesFilter:wave | packTypeOrder" [pack]="pack" (click)="gotoDetail(pack)"></lego-pack>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

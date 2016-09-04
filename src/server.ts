@@ -44,6 +44,7 @@ import { ngApp } from './main.node';
 // ensure routes match client-side-app
 app.get('/', ngApp);
 app.get('/all-waves-and-packs', ngApp);
+app.get('/wave/*', ngApp);
 app.get('/pack/*', ngApp);
 app.get('/characters', ngApp);
 app.get('/character/*', ngApp);
@@ -61,6 +62,9 @@ var urls = [
       ];
 for (let ability of skills) {
   urls.push({ url: '/ability/' + ability.url, changefreq: 'daily', priority: 0.5});
+}
+for (let i of [1, 2, 3, 4, 5]) {
+  urls.push({ url: '/wave/' + i, changefreq: 'daily', priority: 0.5});
 }
 
 var sm = require('sitemap');

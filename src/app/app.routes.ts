@@ -2,6 +2,7 @@ import { provideRouter, RouterConfig } from '@angular/router';
 
 import {
 	WaveListComponent,
+	WaveDetailsComponent,
 	PackDetailsComponent,
 	MinifigListComponent,
 	MinifigDetailsComponent,
@@ -21,6 +22,10 @@ export const routes: RouterConfig = [
 	{
 		path: 'all-waves-and-packs',
 		component: WaveListComponent
+	},
+	{
+		path: 'wave/:id',
+		component: WaveDetailsComponent
 	},
 	{
 		path: 'pack/:id',
