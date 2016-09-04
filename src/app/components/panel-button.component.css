@@ -1,0 +1,47 @@
+.panel {
+    width: 100%;
+    height: 63px;
+    background: #4B597C;
+    /*border: 1px solid slategray;*/
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #EDF2F6;
+    display: block;
+    text-decoration: none !important;
+}
+.panel:hover {
+    background: #11a8ab;
+}
+.panel > img 
+{ 
+    width: 48px;
+    height: 63px;
+    float: left;
+}
+.panel-text {
+    margin-left: 70px;
+    padding: 4px 0px;
+    height: 55px;
+    overflow: hidden;
+}
+.panel-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 27px;
+    word-wrap: nowrap;
+}
+.panel-desc {
+    line-height: 25px;
+    word-wrap: nowrap;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .panel {
+        width: 434px;
+    }
+}
+@media (min-width: 992px) {
+    .panel {
+        width: 355px;
+    }
+}

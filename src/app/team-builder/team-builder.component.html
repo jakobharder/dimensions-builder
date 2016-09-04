@@ -36,7 +36,9 @@
                 <h2 class="card-title">Select a character for {{skills[currentSkillIndex].name}}</h2>
                 <p>Click on a minifig to add it to your team.</p>
                 <div *ngIf="proposedMinifigs">
-                    <minifig-panel class="pull-md-left" *ngFor="let minifig of proposedMinifigs.get()" (click)="addMember(minifig)" [piece]="minifig">{{minifig.name}}</minifig-panel>
+                    <panel-button *ngIf="proposedMinifigs.list.length==1" class="pull-md-left" [title]="'add obvious choices'" [desc]="'for all unique abilities and combos'" [image]="'add-obvious.png'" (click)="addObvious()"></panel-button>
+                    <minifig-panel class="pull-md-left" *ngFor="let minifig of proposedMinifigs.get()" (click)="addMember(minifig)" [piece]="minifig"></minifig-panel>
+                    <panel-button class="pull-md-left" [title]="'skip this ability'" [desc]="'it will be deselected above'" [image]="'skip.png'" (click)="skipAbility()"></panel-button>
                     <div class="clearfix"></div>
                 </div>
             </div>

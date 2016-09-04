@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Piece, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
-import { MinifigPanelComponent, AbilitySelectComponent } from '../components/index';
+import { MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent } from '../components/index';
 
 @Component({
 	moduleId: module.id,
 	selector: 'team-builder',
 	templateUrl: 'team-builder.component.html',
-    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilitySelectComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent]
 })
 export class TeamBuilderComponent implements OnInit {
     skills: FilterSkill[] = [];
@@ -42,6 +42,19 @@ export class TeamBuilderComponent implements OnInit {
     removeMember(member: Piece) {
         this.team.remove(member);
         this._updateProposal();
+    }
+
+    addObvious() {
+        while (this.proposedMinifigs.list.length == 1) {
+            this.addMember(this.proposedMinifigs.list[0]);
+        }
+    }
+
+    skipAbility() {
+        if (this.currentSkillIndex < this.skills.length) {
+            this.skills[this.currentSkillIndex].checked = false;  
+            this._updateProposal();
+        }
     }
 
     private _updateProposal() {

@@ -4,3 +4,4 @@ export * from './minifig-panel.component';
 export * from './minifig-textlink.component';
 export * from './ability-select.component';
 export * from './share-section.component';
+export * from './panel-button.component';
