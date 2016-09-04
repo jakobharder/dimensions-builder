@@ -15,6 +15,9 @@ export class Skill {
     desc: string;
     url: string;
     providers: Piece[];
+
+    oneId: number;
+    twoId: number;
 }
 
 export class FilterSkill extends Skill {

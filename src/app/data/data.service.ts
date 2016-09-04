@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Pack, Piece, PieceType, Minifig, Vehicle, Skill } from './data';
 import { Abilities } from './ability';
 import { Pieces } from './piece';
-import { minifigs, vehicles, skills, packs } from './static-data';
+import { minifigs, vehicles, skills, packs, combos } from './static-data';
 
 @Injectable()
 export class DataService {
@@ -12,6 +12,8 @@ export class DataService {
     skillMap: { [id: number] : Skill; } = null;
     skills: Skill[];
     urlToAbility: { [url: string] : Skill } = null;
+
+
 
     constructor() {
         this.ensureLoaded();
@@ -36,7 +38,9 @@ export class DataService {
                 let skill = Object.assign({}, data);
                 skill.providers = [];
                 this.skillMap[skill.id] = skill;
-                this.urlToAbility[skill.url] = skill;
+                if (skill.url !== undefined) {
+                    this.urlToAbility[skill.url] = skill;
+                }
                 this.skills.push(skill);
             }
 
@@ -156,5 +160,28 @@ export class DataService {
             result.removeRange(except);
         }
         return result;
+    }
+
+    getAbilityCombos(except: Abilities) {
+        let result = new Abilities(this.getSkills([1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019]));
+        if (except !== null) {
+            result.removeRange(except);
+        }
+        return result;
+/*        let result = new Abilities([]);
+        for (let combo of combos) {
+            let ability = new Skill;
+            ability.id = combo.id;
+            ability.oneId = combo.oneId;
+            ability.twoId = combo.twoId;
+            ability.name = this.skillMap[combo.oneId].name + ' ' + this.skillMap[combo.twoId].name;
+            ability.providers = [];
+            result.add(ability);
+        }
+        return result;*/
+    }
+
+    private loadAbilityCombos() {
+
     }
 }

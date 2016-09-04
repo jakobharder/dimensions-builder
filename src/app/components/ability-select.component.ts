@@ -5,18 +5,13 @@ import { Skill, FilterSkill, DataService, Abilities } from './../data/index';
 class SkillList { 
     list: FilterSkill[] = [];
     name: string;
-    
-    constructor(private dataService: DataService) {
-    }
 
-    init(name: string, ids: number[]) {
+    init(name: string, abilities: Abilities) {
         this.name = name;
         
-        let skills = this.dataService.getSkills(ids);
-        //let skills = this.dataService.getAllSkills();
-        for (let skill of skills) {
-            if (skill.providers.length > 0) {
-                let filterSkill = Object.assign({}, skill);
+        for (let ability of abilities.list) {
+            /*if (ability.providers.length > 0)*/ {
+                let filterSkill = Object.assign({}, ability);
                 filterSkill.checked = false;
                 this.list.push(filterSkill);
             }
@@ -75,22 +70,23 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
-        let list = new SkillList(this.dataService);
-        list.init("main story", this.dataService.getMainAbilities(null).ids());
+        let list = new SkillList();
+        list.init("main story", this.dataService.getMainAbilities(null));
         list.check(true);
         this.skillLists.push(list);
 
-        list = new SkillList(this.dataService);
-        list.init("complete", this.dataService.getImportantAbilities(new Abilities(this.getAllSkills())).ids());
+        list = new SkillList();
+        list.init("complete", this.dataService.getImportantAbilities(new Abilities(this.getAllSkills())));
         list.check(true);
         this.skillLists.push(list);
 
-        /*list = new SkillList(this.dataService);
-        list.init("unique", this.dataService.getUniqueAbilities(new Abilities(this.getAllSkills())).ids());
-        this.skillLists.push(list);*/
+        list = new SkillList();
+        list.init("combos", this.dataService.getAbilityCombos(new Abilities(this.getAllSkills())));
+        list.check(true);
+        this.skillLists.push(list);
 
-        list = new SkillList(this.dataService);
-        list.init("not needed", this.dataService.getAbilities(new Abilities(this.getAllSkills())).ids());
+        list = new SkillList();
+        list.init("not needed", this.dataService.getAbilities(new Abilities(this.getAllSkills())));
         this.skillLists.push(list);
 
         this.changed.emit(this.getAllSkills());
@@ -100,7 +96,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         this._updateRadios(0);
         this._updateRadios(1);
         this._updateRadios(2);
-        //this._updateRadios(3);
+        this._updateRadios(3);
     }
 
     onChanged(index: number) {
@@ -146,7 +142,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         for (let list of this.skillLists) {
             this.skills = this.skills.concat(list.list);
         }
-        let list = new SkillList(this.dataService);
+        let list = new SkillList();
         list.set(this.skills);
         list.orderByProviders();
         this.skills = list.list;
