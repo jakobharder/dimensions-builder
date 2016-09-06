@@ -3,6 +3,7 @@ import { Pack, Piece, PieceType, Minifig, Vehicle, Skill } from './data';
 import { Abilities } from './ability';
 import { Pieces } from './piece';
 import { minifigs, vehicles, skills, packs, VehicleData } from './static-data';
+import { Levels } from './levels';
 
 @Injectable()
 export class DataService {
@@ -12,8 +13,7 @@ export class DataService {
     skillMap: { [id: number] : Skill; } = null;
     skills: Skill[];
     urlToAbility: { [url: string] : Skill } = null;
-
-
+    levels: Levels;
 
     constructor() {
         this.ensureLoaded();
@@ -78,6 +78,9 @@ export class DataService {
             for (let ability of this.skills) {
                 ability.providers = new Pieces(ability.providers).getOrdered().byName().list;
             }
+
+            this.levels = new Levels();
+            this.levels.init();
         }
     }
 
@@ -169,6 +172,10 @@ export class DataService {
             result.removeRange(except);
         }
         return result;
+    }
+
+    getLevel(url: string) {
+        return this.levels.urlMap[url];
     }
 
     private unionArrays(a: number[], b: number[]) {
