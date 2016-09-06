@@ -54,6 +54,14 @@ export class Abilities {
     getOrdered() {
         return new AbilitiesOrdered(this);
     }
+
+    orderByName() {
+        return new AbilitiesOrdered(this).byName();
+    }
+
+    orderByRarity() {
+        return new AbilitiesOrdered(this).byRarity();
+    }
 }
 
 export class AbilitiesOrdered {

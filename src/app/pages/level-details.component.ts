@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { DataService, Level } from './../data/index';
+import { DataService, Level, Abilities, AbilitiesOrdered } from './../data/index';
 
 @Component({
 	moduleId: module.id,
@@ -11,6 +11,8 @@ import { DataService, Level } from './../data/index';
 export class LevelDetailsComponent implements OnInit {
     sub: any;
     level: Level;
+    minikitAbilities: AbilitiesOrdered;
+    rescueAbilities: AbilitiesOrdered;
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
@@ -23,8 +25,15 @@ export class LevelDetailsComponent implements OnInit {
             let id = params['id'];
             this.level = this.data.getLevel(id);
             if (this.level !== undefined) {
-                this.title.setTitle(this.level.name);
+                this._initLevel();
             }
         });
+    }
+
+    private _initLevel() {
+        this.title.setTitle(this.level.name);
+
+        this.minikitAbilities = new Abilities(this.data.getSkills(this.level.abilitiesMinikits)).orderByName();
+        this.rescueAbilities = new Abilities(this.data.getSkills(this.level.abilitiesRescue)).orderByName();
     }
 }
