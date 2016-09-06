@@ -2,5 +2,7 @@
     <div class="card-block" *ngIf="level">
         <h1>{{level.name}}</h1>
         <p *ngIf="level.chapter != 0">This level is chapter {{level.chapter}} of the {{level.story}}.</p>
+        <p *ngIf="level.previous">The previous level is: <a [routerLink]="'/level/' + level.previous.url">{{level.previous.name}}</a></p>
+        <p *ngIf="level.next">The next level is: <a [routerLink]="'/level/' + level.next.url">{{level.next.name}}</a></p>
     </div>
 </div>
