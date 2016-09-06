@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Pack, Piece, PieceType, Minifig, Vehicle, Skill } from './data';
 import { Abilities } from './ability';
 import { Pieces } from './piece';
-import { minifigs, vehicles, skills, packs, VehicleData } from './static-data';
+import { minifigs, vehicles, packs, VehicleData } from './static-data';
+import { abilities } from './static-abilities';
 import { Levels } from './levels';
 
 @Injectable()
@@ -34,8 +35,8 @@ export class DataService {
             this.skillMap = {};
             this.urlToAbility = {};
             this.skills = [];
-            for (let data of skills) {
-                let skill = Object.assign({}, data);
+            for (let data of abilities) {
+                let skill = new Skill(data);
                 skill.providers = [];
                 this.skillMap[skill.id] = skill;
                 if (skill.url !== undefined) {

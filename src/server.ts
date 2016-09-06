@@ -11,7 +11,7 @@ import { enableProdMode } from '@angular/core';
 // Angular 2 Universal
 import { expressEngine } from 'angular2-universal';
 
-import { skills } from './app/data/static-data';
+import { abilities } from './app/data/static-abilities';
 
 var compression = require('compression');
 
@@ -61,7 +61,7 @@ var urls = [
         { url: '/characters', changefreq: 'daily', priority: 0.5 },   
         { url: '/abilities', changefreq: 'daily', priority: 0.5 }
       ];
-for (let ability of skills) {
+for (let ability of abilities) {
   urls.push({ url: '/ability/' + ability.url, changefreq: 'daily', priority: 0.5});
 }
 for (let i of [1, 2, 3, 4, 5]) {

@@ -1,3 +1,4 @@
+import { AbilityData } from './static-abilities';
 
 export class Pack {
     id: number;
@@ -18,6 +19,10 @@ export class Skill {
 
     oneId: number;
     twoId: number;
+
+    constructor(data: AbilityData) {
+        Object.assign(this, data);
+    }
 }
 
 export class FilterSkill extends Skill {
