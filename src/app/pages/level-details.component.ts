@@ -13,6 +13,8 @@ export class LevelDetailsComponent implements OnInit {
     level: Level;
     minikitAbilities: AbilitiesOrdered;
     rescueAbilities: AbilitiesOrdered;
+    extraAbilities: AbilitiesOrdered;
+    storyAbilities: AbilitiesOrdered;
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
@@ -35,5 +37,7 @@ export class LevelDetailsComponent implements OnInit {
 
         this.minikitAbilities = new Abilities(this.data.getSkills(this.level.abilitiesMinikits)).orderByName();
         this.rescueAbilities = new Abilities(this.data.getSkills(this.level.abilitiesRescue)).orderByName();
+        this.extraAbilities = new Abilities(this.data.getSkills(this.level.abilitiesExtra)).orderByName();
+        this.storyAbilities = new Abilities(this.data.getSkills(this.level.abilitiesStory)).orderByName();
     }
 }
