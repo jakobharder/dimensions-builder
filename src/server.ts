@@ -51,6 +51,7 @@ app.get('/character/*', ngApp);
 app.get('/team-builder', ngApp);
 app.get('/abilities', ngApp);
 app.get('/ability/*', ngApp);
+app.get('/level/*', ngApp);
 
 var urls = [
         // changefreq: 'weekly',  priority: 0.5 

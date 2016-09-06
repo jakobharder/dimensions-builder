@@ -8,7 +8,8 @@ import {
 	MinifigDetailsComponent,
 	AbilityListComponent,
 	HomeComponent,
-	AbilityDetailsComponent
+	AbilityDetailsComponent,
+	LevelDetailsComponent
 } from './pages/index';
 import { TeamBuilderComponent } from './team-builder/index';
 
@@ -50,6 +51,10 @@ export const routes: RouterConfig = [
 	{
 		path: 'team-builder',
 		component: TeamBuilderComponent
+	},
+	{
+		path: 'level/:id',
+		component: LevelDetailsComponent
 	},
 	{
 		path: '**',
