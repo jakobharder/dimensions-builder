@@ -3,4 +3,4 @@ export * from './data.service';
 export * from './minifig-list';
 export * from './ability';
 export * from './piece';
-export * from './static-levels';
+export * from './levels';

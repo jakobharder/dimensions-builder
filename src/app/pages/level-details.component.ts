@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { DataService, LevelData } from './../data/index';
+import { DataService, Level } from './../data/index';
 
 @Component({
 	moduleId: module.id,
@@ -10,7 +10,7 @@ import { DataService, LevelData } from './../data/index';
 })
 export class LevelDetailsComponent implements OnInit {
     sub: any;
-    level: LevelData;
+    level: Level;
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
