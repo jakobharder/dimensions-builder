@@ -48,7 +48,7 @@ app.get('/wave/*', ngApp);
 app.get('/pack/*', ngApp);
 app.get('/characters', ngApp);
 app.get('/character/*', ngApp);
-app.get('/team-builder', ngApp);
+app.get('/team-builder*', ngApp);
 app.get('/abilities', ngApp);
 app.get('/ability/*', ngApp);
 app.get('/level/*', ngApp);

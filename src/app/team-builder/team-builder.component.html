@@ -18,7 +18,7 @@
                 <li>Hint: the character proposals show up in order of rarity</li>
                 <li>Hint: you can change the ability selection later on as well</li>
             </ul>
-            <ability-select (changed)="onAbilitiesChanged($event)"></ability-select>
+            <ability-select (changed)="onAbilitiesChanged($event)" [query]="queryAbilities"></ability-select>
         </div>
     </div>
     <div class="card">

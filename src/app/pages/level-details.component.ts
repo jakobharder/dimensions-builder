@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { DataService, Level, Abilities, AbilitiesOrdered } from './../data/index';
+import { Serializer } from './../data/serializer';
 
 @Component({
 	moduleId: module.id,
@@ -15,6 +16,10 @@ export class LevelDetailsComponent implements OnInit {
     rescueAbilities: AbilitiesOrdered;
     extraAbilities: AbilitiesOrdered;
     storyAbilities: AbilitiesOrdered;
+
+    allAbilities: Abilities;
+
+    serialized: string;
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
@@ -39,5 +44,12 @@ export class LevelDetailsComponent implements OnInit {
         this.rescueAbilities = new Abilities(this.data.getSkills(this.level.abilitiesRescue)).orderByName();
         this.extraAbilities = new Abilities(this.data.getSkills(this.level.abilitiesExtra)).orderByName();
         this.storyAbilities = new Abilities(this.data.getSkills(this.level.abilitiesStory)).orderByName();
+
+        this.allAbilities = new Abilities(this.minikitAbilities.list);
+        this.allAbilities.addRange(this.rescueAbilities);
+        this.allAbilities.addRange(this.extraAbilities);
+        this.allAbilities.addRange(this.storyAbilities);
+
+        this.serialized = new Serializer().abilitiesToString(this.allAbilities);
     }
 }

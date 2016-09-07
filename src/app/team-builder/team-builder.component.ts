@@ -16,6 +16,8 @@ export class TeamBuilderComponent implements OnInit {
     proposedMinifigs = new MinifigList;
     teamSkills: Skill[] = [];
     extraSkills: number[] = [];
+    sub: any;
+    queryAbilities: string;
 
     currentSkillIndex: number = 0;
 
@@ -27,6 +29,9 @@ export class TeamBuilderComponent implements OnInit {
 
     ngOnInit() {
         this.title.setTitle("Team Builder - which character, vehicle and gadget to use");
+        this.sub = this.route.params.subscribe(params => {
+            this.queryAbilities = params['a'];
+        });
     }
 
     onAbilitiesChanged(skills: FilterSkill[]) {
@@ -54,6 +59,7 @@ export class TeamBuilderComponent implements OnInit {
         if (this.currentSkillIndex < this.skills.length) {
             this.skills[this.currentSkillIndex].checked = false;  
             this._updateProposal();
+            // TODO update ui
         }
     }
 

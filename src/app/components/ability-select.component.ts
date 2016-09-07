@@ -1,6 +1,7 @@
 import { Component, Input, Output, OnInit, EventEmitter, AfterViewInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Skill, FilterSkill, DataService, Abilities } from './../data/index';
+import { Serializer } from '../data/serializer';
 
 class SkillList { 
     list: FilterSkill[] = [];
@@ -66,6 +67,12 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
 
     @Output() changed: EventEmitter<FilterSkill[]> = new EventEmitter<FilterSkill[]>();
 
+    _query: string;
+    @Input() set query(value: string) {
+        this._query = value;
+        this._selectAbilities();
+    }
+
     constructor(private dataService: DataService) {
     }
 
@@ -89,7 +96,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         list.init("not needed", this.dataService.getAbilities(new Abilities(this.getAllSkills())));
         this.skillLists.push(list);
 
-        this.changed.emit(this.getAllSkills());
+        this._selectAbilities();
     }
 
     ngAfterViewInit() {
@@ -122,6 +129,10 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
     }
 
     private _updateRadios(index: number) {
+        if (index >= this.skillLists.length) {
+            return;
+        }
+
         let skills = this.skillLists[index];
 
         let checked = skills.list[0].checked;
@@ -147,5 +158,27 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         list.orderByProviders();
         this.skills = list.list;
         return this.skills;
+    }
+
+    private _selectAbilities() {
+        if (this.skillLists.length == 0) {
+            return;
+        }
+
+        if (this._query !== undefined && this._query.length > 0) {
+            let query = new Serializer().stringToAbilities(this._query);
+            
+            let skills = this.getAllSkills();
+            for (let ability of skills) {
+                ability.checked = (-1 != query.indexOf(ability.id));
+            }
+
+            this.changed.emit(skills);
+        }
+
+        this._updateRadios(0);
+        this._updateRadios(1);
+        this._updateRadios(2);
+        this._updateRadios(3);
     }
 }

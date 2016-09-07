@@ -19,7 +19,9 @@ export class Abilities {
 
     addRange(abilities: Abilities) {
         for (let ability of abilities.list) {
-            this.list.push(ability);
+            if (!this.contains(ability)) {
+                this.list.push(ability);
+            }
         }
     }
 
@@ -64,12 +66,9 @@ export class Abilities {
     }
 }
 
-export class AbilitiesOrdered {
-    list: Skill[];
-
+export class AbilitiesOrdered extends Abilities {
     constructor(abilities: Abilities) {
-        this.list = abilities.clone().list;
-
+        super(abilities.clone().list);
     }
 
     byRarity() {
