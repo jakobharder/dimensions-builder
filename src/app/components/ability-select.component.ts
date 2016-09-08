@@ -53,6 +53,11 @@ class SkillList {
     }
 }
 
+export class AbilitySelection {
+    abilities: FilterSkill[];
+    urlParameter: string;
+}
+
 @Component({
 	moduleId: module.id,
 	selector: 'ability-select',
@@ -65,7 +70,10 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
     skillLists: SkillList[] = [];
     skills: FilterSkill[] = [];
 
-    @Output() changed: EventEmitter<FilterSkill[]> = new EventEmitter<FilterSkill[]>();
+    selection: Abilities = new Abilities([]);
+
+    @Output() changed: EventEmitter<AbilitySelection> = new EventEmitter<AbilitySelection>();
+    urlParameter = "";
 
     _query: string;
     @Input() set query(value: string) {
@@ -83,17 +91,17 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         this.skillLists.push(list);
 
         list = new SkillList();
-        list.init("complete", this.dataService.getImportantAbilities(new Abilities(this.getAllSkills())));
+        list.init("complete", this.dataService.getImportantAbilities(new Abilities(this._updateAllSkills())));
         list.check(true);
         this.skillLists.push(list);
 
         list = new SkillList();
-        list.init("combos", this.dataService.getAbilityCombos(new Abilities(this.getAllSkills())));
+        list.init("combos", this.dataService.getAbilityCombos(new Abilities(this._updateAllSkills())));
         list.check(true);
         this.skillLists.push(list);
 
         list = new SkillList();
-        list.init("not needed", this.dataService.getAbilities(new Abilities(this.getAllSkills())));
+        list.init("not needed", this.dataService.getAbilities(new Abilities(this._updateAllSkills())));
         this.skillLists.push(list);
 
         this._selectAbilities();
@@ -107,7 +115,9 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
     }
 
     onChanged(index: number) {
-        this.changed.emit(this.getAllSkills());
+        this._updateAllSkills();
+        this.urlParameter = new Serializer().abilitiesToString(this.selection);
+        this.changed.emit({ abilities: this.skills, urlParameter: this.urlParameter });
 
         this._updateRadios(index);
     }
@@ -148,11 +158,20 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         radio.parent().addClass("active");
     }
 
-    private getAllSkills() {
+    private _updateAllSkills() {
         this.skills = [];
+        this.selection = new Abilities([]);
+
         for (let list of this.skillLists) {
             this.skills = this.skills.concat(list.list);
         }
+        for (let ability of this.skills) {
+            if (ability.checked) {
+                this.selection.add(ability);
+            }
+        }
+        this.selection.orderByName();
+
         let list = new SkillList();
         list.set(this.skills);
         list.orderByProviders();
@@ -168,12 +187,13 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         if (this._query !== undefined && this._query.length > 0) {
             let query = new Serializer().stringToAbilities(this._query);
             
-            let skills = this.getAllSkills();
-            for (let ability of skills) {
+            this._updateAllSkills();
+            for (let ability of this.skills) {
                 ability.checked = (-1 != query.indexOf(ability.id));
             }
 
-            this.changed.emit(skills);
+            this.urlParameter = this._query;
+            this.changed.emit({ abilities: this.skills, urlParameter: this.urlParameter });
         }
 
         this._updateRadios(0);

@@ -12,10 +12,10 @@ import { Serializer } from './../data/serializer';
 export class LevelDetailsComponent implements OnInit {
     sub: any;
     level: Level;
-    minikitAbilities: AbilitiesOrdered;
-    rescueAbilities: AbilitiesOrdered;
-    extraAbilities: AbilitiesOrdered;
-    storyAbilities: AbilitiesOrdered;
+    minikitAbilities: Abilities;
+    rescueAbilities: Abilities;
+    extraAbilities: Abilities;
+    storyAbilities: Abilities;
 
     allAbilities: Abilities;
 
@@ -49,6 +49,7 @@ export class LevelDetailsComponent implements OnInit {
         this.allAbilities.addRange(this.rescueAbilities);
         this.allAbilities.addRange(this.extraAbilities);
         this.allAbilities.addRange(this.storyAbilities);
+        this.allAbilities.orderByName();
 
         this.serialized = new Serializer().abilitiesToString(this.allAbilities);
     }

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Piece, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
-import { MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent } from '../components/index';
+import { Abilities, Piece, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
+import { MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent, AbilitySelection } from '../components/index';
+import { Serializer } from '../data/serializer';
 
 @Component({
 	moduleId: module.id,
@@ -20,6 +21,8 @@ export class TeamBuilderComponent implements OnInit {
     queryAbilities: string;
 
     currentSkillIndex: number = 0;
+    
+    urlAbilities: string;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -34,8 +37,13 @@ export class TeamBuilderComponent implements OnInit {
         });
     }
 
-    onAbilitiesChanged(skills: FilterSkill[]) {
-        this.skills = skills;
+    ngOnDestroy() {
+        this.sub.unsubscribe();
+    }
+
+    onAbilitiesChanged(selection: AbilitySelection) {
+        this.urlAbilities = selection.urlParameter;
+        this.skills = selection.abilities;
         this._updateProposal();
     }
 
