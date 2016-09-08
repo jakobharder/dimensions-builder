@@ -45,7 +45,7 @@ export class LevelDetailsComponent implements OnInit {
         this.extraAbilities = new Abilities(this.data.getSkills(this.level.abilitiesExtra)).orderByName();
         this.storyAbilities = new Abilities(this.data.getSkills(this.level.abilitiesStory)).orderByName();
 
-        this.allAbilities = new Abilities(this.minikitAbilities.list);
+        this.allAbilities = this.minikitAbilities.clone();
         this.allAbilities.addRange(this.rescueAbilities);
         this.allAbilities.addRange(this.extraAbilities);
         this.allAbilities.addRange(this.storyAbilities);
