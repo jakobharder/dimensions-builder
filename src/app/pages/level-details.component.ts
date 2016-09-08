@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { DataService, Level, Abilities, AbilitiesOrdered } from './../data/index';
-import { Serializer } from './../data/serializer';
+import * as Serializer from './../data/serializer';
 
 @Component({
 	moduleId: module.id,
@@ -51,6 +51,6 @@ export class LevelDetailsComponent implements OnInit {
         this.allAbilities.addRange(this.storyAbilities);
         this.allAbilities.orderByName();
 
-        this.serialized = new Serializer().abilitiesToString(this.allAbilities);
+        this.serialized = Serializer.abilitiesToString(this.allAbilities);
     }
 }
