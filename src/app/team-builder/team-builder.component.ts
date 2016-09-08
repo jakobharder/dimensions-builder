@@ -3,7 +3,6 @@ import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Abilities, Piece, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
 import { MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent, AbilitySelection } from '../components/index';
-import { Serializer } from '../data/serializer';
 
 @Component({
 	moduleId: module.id,

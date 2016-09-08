@@ -1,7 +1,8 @@
 import { Component, Input, Output, OnInit, EventEmitter, AfterViewInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Skill, FilterSkill, DataService, Abilities } from './../data/index';
-import { Serializer } from '../data/serializer';
+
+import * as Serializer from '../data/serializer';
 
 class SkillList { 
     list: FilterSkill[] = [];
@@ -116,7 +117,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
 
     onChanged(index: number) {
         this._updateAllSkills();
-        this.urlParameter = new Serializer().abilitiesToString(this.selection);
+        this.urlParameter = Serializer.abilitiesToString(this.selection);
         this.changed.emit({ abilities: this.skills, urlParameter: this.urlParameter });
 
         this._updateRadios(index);
@@ -185,7 +186,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         }
 
         if (this._query !== undefined && this._query.length > 0) {
-            let query = new Serializer().stringToAbilities(this._query);
+            let query = Serializer.stringToAbilities(this._query);
             
             this._updateAllSkills();
             for (let ability of this.skills) {
