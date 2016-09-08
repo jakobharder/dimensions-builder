@@ -62,8 +62,8 @@ export enum Ability {
     Arcade,
     SuspendGhost,
 
-    DivePlusDigging = 1001,
-    DivePlusBoomerang = 1003,
+    DivePlusDigging,
+    DivePlusBoomerang,
     DivePlusChi,
     DivePlusDrone,
     DivePlusGhostImmunity,
@@ -80,6 +80,8 @@ export enum Ability {
     DivePlusTracking,
     DivePlusXRay,
     FlightPlusLaser,
+
+    /* end of year 1 */
 }
 
 export const abilities: AbilityData[] = [
@@ -139,24 +141,24 @@ export const abilities: AbilityData[] = [
     { id: 55, url: 'arcade-station', name: 'Arcade Station', desc: 'use the arcade station apds' },
     { id: 56, url: 'suspend-ghost', name: 'Suspend Ghost', desc: 'prepare ghosts for capturing' },
 
-    { id: 1001, url: 'dive+digging', name: 'Dive + Digging', desc: 'use dig spots underwater' },
-    { id: 1003, url: 'dive+boomerang', name: 'Dive + Boomerang', desc: '' },
-    { id: 1004, url: 'dive+chi', name: 'Dive + Chi', desc: '' },
-    { id: 1005, url: 'dive+drone-access', name: 'Dive + Drone Access', desc: '' },
-    { id: 1006, url: 'dive+ghost-immunity', name: 'Dive + Ghost Immunity', desc: '' },
-    { id: 1007, url: 'dive+grapple', name: 'Dive + Grapple', desc: '' },
-    { id: 1008, url: 'dive+hacking', name: 'Dive + Hacking', desc: '' },
-    { id: 1009, url: 'dive+hazard-cleaner', name: 'Dive + Hazard Cleaner', desc: '' },
-    { id: 1010, url: 'dive+laser', name: 'Dive + Laser', desc: '' },
-    { id: 1011, url: 'dive+mini-access', name: 'Dive + Mini Access', desc: '' },
-    { id: 1012, url: 'dive+silver-destroy', name: 'Dive + Silver Destroy', desc: '' },
-    { id: 1013, url: 'dive+sonar-smash', name: 'Dive + Sonar Smash', desc: '' },
-    { id: 1014, url: 'dive+super-strength', name: 'Dive + Super Strength', desc: '' },
-    { id: 1015, url: 'dive+target', name: 'Dive + Target', desc: '' },
-    { id: 1016, url: 'dive+technology', name: 'Dive + Technology', desc: '' },
-    { id: 1017, url: 'dive+tracking', name: 'Dive + Tracking', desc: '' },
-    { id: 1018, url: 'dive+x-ray-vision', name: 'Dive + X-Ray Vision', desc: '' },
-    { id: 1019, url: 'flight+laser', name: 'Flight + Laser', desc: '' },
+    { id: 57, url: 'dive+digging', name: 'Dive + Digging', desc: 'use dig spots underwater' },
+    { id: 58, url: 'dive+boomerang', name: 'Dive + Boomerang', desc: '' },
+    { id: 59, url: 'dive+chi', name: 'Dive + Chi', desc: '' },
+    { id: 60, url: 'dive+drone-access', name: 'Dive + Drone Access', desc: '' },
+    { id: 61, url: 'dive+ghost-immunity', name: 'Dive + Ghost Immunity', desc: '' },
+    { id: 62, url: 'dive+grapple', name: 'Dive + Grapple', desc: '' },
+    { id: 63, url: 'dive+hacking', name: 'Dive + Hacking', desc: '' },
+    { id: 64, url: 'dive+hazard-cleaner', name: 'Dive + Hazard Cleaner', desc: '' },
+    { id: 65, url: 'dive+laser', name: 'Dive + Laser', desc: '' },
+    { id: 66, url: 'dive+mini-access', name: 'Dive + Mini Access', desc: '' },
+    { id: 67, url: 'dive+silver-destroy', name: 'Dive + Silver Destroy', desc: '' },
+    { id: 68, url: 'dive+sonar-smash', name: 'Dive + Sonar Smash', desc: '' },
+    { id: 69, url: 'dive+super-strength', name: 'Dive + Super Strength', desc: '' },
+    { id: 70, url: 'dive+target', name: 'Dive + Target', desc: '' },
+    { id: 71, url: 'dive+technology', name: 'Dive + Technology', desc: '' },
+    { id: 72, url: 'dive+tracking', name: 'Dive + Tracking', desc: '' },
+    { id: 73, url: 'dive+x-ray-vision', name: 'Dive + X-Ray Vision', desc: '' },
+    { id: 74, url: 'flight+laser', name: 'Flight + Laser', desc: '' },
 /*
     { id: , url: '', name: '', desc: '' },
 */

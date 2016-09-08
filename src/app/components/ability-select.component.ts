@@ -140,7 +140,8 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
     }
 
     private _updateRadios(index: number) {
-        if (index >= this.skillLists.length) {
+        if (index >= this.skillLists.length || this.skillLists[index].list.length == 0) {
+            console.error("_updateRadios");
             return;
         }
 

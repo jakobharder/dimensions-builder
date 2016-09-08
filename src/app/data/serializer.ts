@@ -21,13 +21,10 @@ export function stringToAbilities(query: string) {
 
     let j = 0;
     for (let s of strings) {
-        console.log(s);
         let n: number = toNumber(s);
-        console.log(n);
         for (let i = 0; n > 0; i++) {
             if ((n % 2) == 1) {
                 abilities.push(j * _bits + i);
-                console.log(j * _bits + i);
             }
             n = n >> 1;
         }
