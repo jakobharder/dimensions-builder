@@ -5,6 +5,7 @@ import { Pieces } from './piece';
 import { minifigs, vehicles, packs, VehicleData } from './static-data';
 import { abilities } from './static-abilities';
 import { Levels } from './levels';
+import { Ability } from './static-abilities';
 
 @Injectable()
 export class DataService {
@@ -168,7 +169,10 @@ export class DataService {
     }
 
     getAbilityCombos(except: Abilities) {
-        let result = new Abilities(this.getSkills([1001, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019]));
+        let result = new Abilities(this.getSkills([Ability.DivePlusDigging, Ability.DivePlusBoomerang, Ability.DivePlusChi, Ability.DivePlusDrone, 
+        Ability.DivePlusGhostImmunity, Ability.DivePlusGrapple, Ability.DivePlusHacking, Ability.DivePlusHazardCleaner, Ability.DivePlusLazer, 
+        Ability.DivePlusMini, Ability.DivePlusSilverDestroy, Ability.DivePlusSonarSmash, Ability.DivePlusSuperStrength, Ability.DivePlusTarget, 
+        Ability.DivePlusTechnology, Ability.DivePlusTracking, Ability.DivePlusXRay, Ability.FlightPlusLaser]));
         if (except !== null) {
             result.removeRange(except);
         }
