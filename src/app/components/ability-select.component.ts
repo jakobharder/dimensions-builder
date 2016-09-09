@@ -117,7 +117,6 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
 
     onChanged(index: number) {
         this._updateAllSkills();
-        this.urlParameter = Serializer.abilitiesToString(this.selection);
         this.changed.emit({ abilities: this.skills, urlParameter: this.urlParameter });
 
         this._updateRadios(index);
@@ -161,6 +160,10 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
     }
 
     private _updateAllSkills() {
+        if (this.skillLists.length == 0) {
+            return;
+        }
+        
         this.skills = [];
         this.selection = new Abilities([]);
 
@@ -173,6 +176,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
             }
         }
         this.selection.orderByName();
+        this.urlParameter = Serializer.abilitiesToString(this.selection);
 
         let list = new SkillList();
         list.set(this.skills);
@@ -186,17 +190,17 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
             return;
         }
 
+        this._updateAllSkills();
         if (this._query !== undefined && this._query.length > 0) {
             let query = Serializer.stringToAbilities(this._query);
             
-            this._updateAllSkills();
             for (let ability of this.skills) {
                 ability.checked = (-1 != query.indexOf(ability.id));
             }
-
             this.urlParameter = this._query;
-            this.changed.emit({ abilities: this.skills, urlParameter: this.urlParameter });
+            this._query = undefined;
         }
+        this.changed.emit({ abilities: this.skills, urlParameter: this.urlParameter });
 
         this._updateRadios(0);
         this._updateRadios(1);
