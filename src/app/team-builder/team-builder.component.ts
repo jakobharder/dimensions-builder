@@ -22,6 +22,7 @@ export class TeamBuilderComponent implements OnInit {
     currentSkillIndex: number = 0;
     
     urlAbilities: string;
+    skip = false;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -65,8 +66,7 @@ export class TeamBuilderComponent implements OnInit {
     skipAbility() {
         if (this.currentSkillIndex < this.skills.length) {
             this.skills[this.currentSkillIndex].checked = false;  
-            this._updateProposal();
-            // TODO update ui
+            this.skip = true;
         }
     }
 

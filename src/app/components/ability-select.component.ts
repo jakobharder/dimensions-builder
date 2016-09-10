@@ -82,6 +82,17 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         this._selectAbilities();
     }
 
+    // hack to trigger update from the outside
+    @Input() set skip(value: boolean) {
+        if (value == true) {
+            this._updateAllSkills();
+            this.changed.emit({ abilities: this.skills, urlParameter: this.urlParameter });
+
+            for (let i = 0; i < this.skillLists.length; i++)
+                this._updateRadios(i);
+        }        
+    }
+
     constructor(private dataService: DataService) {
     }
 
@@ -109,10 +120,8 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
-        this._updateRadios(0);
-        this._updateRadios(1);
-        this._updateRadios(2);
-        this._updateRadios(3);
+        for (let i = 0; i < this.skillLists.length; i++)
+            this._updateRadios(i);
     }
 
     onChanged(index: number) {

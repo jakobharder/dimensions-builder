@@ -18,7 +18,7 @@
     <div class="card">
         <div class="card-block">
             <h2 class="card-title">Choose Your Abilities</h2>
-            <ability-select class="like-p" (changed)="onAbilitiesChanged($event)" [query]="queryAbilities" (urlParameter)="urlAbilities"></ability-select>
+            <ability-select class="like-p" (changed)="onAbilitiesChanged($event)" [query]="queryAbilities" (urlParameter)="urlAbilities" [skip]="skip"></ability-select>
             <p>
                 Link to this ability selection:<br>http://dimensions-builder.com/team-builder/{{urlAbilities}}
             </p>
