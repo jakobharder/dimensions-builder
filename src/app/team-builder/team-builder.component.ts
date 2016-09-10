@@ -32,7 +32,7 @@ export class TeamBuilderComponent implements OnInit {
     ngOnInit() {
         this.title.setTitle("Team Builder - which character, vehicle and gadget to use");
         this.sub = this.route.params.subscribe(params => {
-            this.queryAbilities = params['a'];
+            this.queryAbilities = params['abilities'];
         });
     }
 

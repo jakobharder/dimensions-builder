@@ -23,6 +23,10 @@ export const routes: RouterConfig = [
 	{ path: 'abilities', component: AbilityListComponent },
 	{ path: 'ability/:id', component: AbilityDetailsComponent },
 	{ path: 'team-builder', component: TeamBuilderComponent },
+	{ path: 'team-builder/level/:level' , component: TeamBuilderComponent },
+	{ path: 'team-builder/level/:level/:team' , component: TeamBuilderComponent },
+	{ path: 'team-builder/:abilities', component: TeamBuilderComponent },
+	{ path: 'team-builder/:abilities/:team', component: TeamBuilderComponent },
 	{ path: 'level/:id', component: LevelDetailsComponent },
 	{ path: '**', redirectTo: '/' }
 ];
