@@ -26,3 +26,7 @@ a {
 a, a:hover, a:active, a:focus {
   text-decoration: none !important;
 }
+.like-p {
+  display: block;
+  margin-bottom: 1rem;
+}
