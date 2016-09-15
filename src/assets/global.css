@@ -2,6 +2,9 @@ body {
   background: #16203B;
   color: #BAC2D5;
 }
+.text-muted {
+  color: #7F88A6;
+}
 .card {
   background: #324065;
 }
@@ -9,7 +12,14 @@ body {
   background: #16203B;
 }
 .card-title, h1, h2, h3, h4, h5 {
-  color: #EDF2F6;
+  /*color: #EDF2F6;*/
+  color: #fff;
+}
+.card-title {
+  font-size: 1.5rem;
+}
+.card-block {
+  /*text-align: center;*/
 }
 a {
   color: #4baad9;
