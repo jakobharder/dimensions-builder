@@ -21,6 +21,17 @@ body {
 .card-block {
   /*text-align: center;*/
 }
+.character-portrait {
+  border: solid 6px #475072;
+  border-radius: 112px;
+  width: 224px;
+  height: 224px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.character-portrait img {
+  margin-top: -6px;
+}
 a {
   color: #4baad9;
 }
