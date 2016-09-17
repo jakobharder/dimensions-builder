@@ -7,6 +7,7 @@ import {
 	MinifigListComponent,
 	MinifigDetailsComponent,
 	AbilityListComponent,
+	AbilityListType,
 	HomeComponent,
 	AbilityDetailsComponent,
 	LevelDetailsComponent
@@ -20,7 +21,9 @@ export const routes: RouterConfig = [
 	{ path: 'pack/:id', component: PackDetailsComponent },
 	{ path: 'characters', component: MinifigListComponent },
 	{ path: 'character/:id', component: MinifigDetailsComponent },
-	{ path: 'abilities', component: AbilityListComponent },
+	{ path: 'abilities', component: AbilityListComponent, data: { type: AbilityListType.All } },
+	{ path: 'rare-abilities', component: AbilityListComponent, data: { type: AbilityListType.Rare } },
+	{ path: 'combo-abilities', component: AbilityListComponent, data: { type: AbilityListType.Combos } },
 	{ path: 'ability/:id', component: AbilityDetailsComponent },
 	{ path: 'team-builder', component: TeamBuilderComponent },
 	{ path: 'team-builder/level/:level' , component: TeamBuilderComponent },

@@ -75,6 +75,26 @@ export class Abilities {
     orderByRarity() {
         return new AbilitiesOrdered(this).byRarity();
     }
+
+    getFilteredByCombo(combo: boolean) {
+        let newlist = []; 
+        for (let item of this.list) {
+            if (item.combo == combo) {
+                newlist.push(item);
+            }
+        }
+        return new Abilities(newlist);
+    }
+
+    getRare() {
+        let newlist = [];
+        for (let item of this.list) {
+            if (item.providers.length < 4) {
+                newlist.push(item);
+            }
+        }
+        return new Abilities(newlist);
+    }
 }
 
 export class AbilitiesOrdered extends Abilities {
