@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Skill, Abilities, AbilitiesOrdered, DataService } from './../data/index';
+import { Abilities, DataService } from './../data/index';
+import { MetaService } from './../shared/index';
 import { MinifigTextlinkComponent } from './../components/index';
 
 export enum AbilityListType {
@@ -37,10 +38,10 @@ export class AbilityListComponent implements OnInit, OnDestroy {
 
     constructor(private data: DataService,
                 private route: ActivatedRoute,
-                private title: Title) {
+                private meta: MetaService) {
     }
     ngOnInit() {
-        this.title.setTitle("Character Abilities - Lego Dimensions Builder");
+        this.meta.setTitle("Character Abilities - Lego Dimensions Builder");
 
         this.allAbilities = this.data.getAbilities(null);
 
@@ -53,20 +54,23 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                 case AbilityListType.Combos:
                     this.abilities = this.allAbilities.getFilteredByCombo(true).orderByName();
                     this.listTitle = "Important Ability Combos Needed to Unlock Everything";
-                    this.title.setTitle(this.listTitle);
+                    this.meta.setTitle(this.listTitle);
+                    this.meta.setDescription("A complete list of all important Character and Vehicle ability combinations like dive + digging. They are required to unlock everyting in the game.");
                     this.isCombo = true;
                     break;
                 case AbilityListType.Rare:
                     this.abilities = this.allAbilities.getRare().getFilteredByCombo(false).orderByName();
                     this.listTitle = "Exclusive and Rare Character and Vehicle Abilities";
-                    this.title.setTitle(this.listTitle);
+                    this.meta.setTitle(this.listTitle);
+                    this.meta.setDescription("A complete list of all unique and rare Character and Vehicle abilities and which Piece has them.");
                     this.isRare = true;
                     break;
                 case AbilityListType.All:
                 default:
                     this.abilities = this.allAbilities.getFilteredByCombo(false).orderByName();
                     this.listTitle = "Complete Character and Vehicle Ability List";
-                    this.title.setTitle(this.listTitle);
+                    this.meta.setTitle(this.listTitle);
+                    this.meta.setDescription("A complete overview list of all Character and Vehicle abilities and which Piece has them.");
                     this.isAll = true;
                     break;
                 }
@@ -76,15 +80,15 @@ export class AbilityListComponent implements OnInit, OnDestroy {
         this.comboCount = 0;
         this.uniqueAbilitiesCount = 0;
         this.uniqueCombosCount = 0;
-        for (let i of this.allAbilities.list) {
-            if (!i.combo) {
+        for (let ability of this.allAbilities.list) {
+            if (!ability.combo) {
                 this.abilityCount++;
-                if (i.providers.length == 1) {
+                if (ability.providers.length == 1) {
                     this.uniqueAbilitiesCount++;
                 }
             } else {
                 this.comboCount++;
-                if (i.providers.length == 1) {
+                if (ability.providers.length == 1) {
                     this.uniqueCombosCount++;
                 }
             }

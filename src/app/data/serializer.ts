@@ -22,9 +22,9 @@ export function stringToAbilities(query: string) {
     let j = 0;
     for (let s of strings) {
         let n: number = toNumber(s);
-        for (let i = 0; n > 0; i++) {
+        for (let k = 0; n > 0; k++) {
             if ((n % 2) == 1) {
-                abilities.push(j * _bits + i);
+                abilities.push(j * _bits + k);
             }
             n = n >> 1;
         }

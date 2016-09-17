@@ -88,8 +88,8 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
             this._updateAllSkills();
             this.changed.emit({ abilities: this.skills, urlParameter: this.urlParameter });
 
-            for (let i = 0; i < this.skillLists.length; i++)
-                this._updateRadios(i);
+            for (let listIndex = 0; listIndex < this.skillLists.length; listIndex++)
+                this._updateRadios(listIndex);
         }        
     }
 
@@ -120,8 +120,8 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
-        for (let i = 0; i < this.skillLists.length; i++)
-            this._updateRadios(i);
+        for (let listIndex = 0; listIndex < this.skillLists.length; listIndex++)
+            this._updateRadios(listIndex);
     }
 
     onChanged(index: number) {

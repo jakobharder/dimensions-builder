@@ -99,9 +99,9 @@ export class TeamBuilderComponent implements OnInit {
 
     private _filter(input: number[], filter: number[]) {
         let output = [];
-        for (let i of input) {
-            if (-1 === filter.indexOf(i)) {
-                output.push(i);
+        for (let index of input) {
+            if (-1 === filter.indexOf(index)) {
+                output.push(index);
             }
         }
         return output;

@@ -1,32 +1,32 @@
 
-<div *ngFor="let skills of skillLists; let i = index;">
+<div *ngFor="let skills of skillLists; let iter = index;">
     <div class="input-group">
         <radio-group class="input-group-btn" data-toggle="buttons">
-            <label class="btn btn-primary" (click)="onGroupChanged(i, 1, $event);">
-                <input type="radio" name="options" [attr.id]="'option1-' + i" autocomplete="off" value="1">all
+            <label class="btn btn-primary" (click)="onGroupChanged(iter, 1, $event);">
+                <input type="radio" name="options" [attr.id]="'option1-' + iter" autocomplete="off" value="1">all
             </label>
-            <label class="btn btn-primary" (click)="onGroupChanged(i, 2, $event);">
-                <input type="radio" name="options" [attr.id]="'option2-' + i" autocomplete="off" value="2">some
+            <label class="btn btn-primary" (click)="onGroupChanged(iter, 2, $event);">
+                <input type="radio" name="options" [attr.id]="'option2-' + iter" autocomplete="off" value="2">some
             </label>
-            <label class="btn btn-primary" (click)="onGroupChanged(i, 0, $event);">
-                <input type="radio" name="options" [attr.id]="'option0-' + i" autocomplete="off" value="0">none
+            <label class="btn btn-primary" (click)="onGroupChanged(iter, 0, $event);">
+                <input type="radio" name="options" [attr.id]="'option0-' + iter" autocomplete="off" value="0">none
             </label>
         </radio-group>
         <label class="title hidden-xs-down">{{skills.name}}</label>
         <span class="input-group-btn hidden-xs-down">
-            <button class="btn btn-secondary" data-toggle="collapse" [attr.data-target]="'#abilityCollapse' + i">show</button>
+            <button class="btn btn-secondary" data-toggle="collapse" [attr.data-target]="'#abilityCollapse' + iter">show</button>
         </span>
     </div>
     <div class="input-group">
         <label class="title hidden-sm-up">{{skills.name}}</label>
         <span class="input-group-btn hidden-sm-up">
-            <button class="btn btn-secondary" data-toggle="collapse" [attr.data-target]="'#abilityCollapse' + i">show</button>
+            <button class="btn btn-secondary" data-toggle="collapse" [attr.data-target]="'#abilityCollapse' + iter">show</button>
         </span>
     </div>
-    <div class="collapse" [attr.id]="'abilityCollapse' + i">
+    <div class="collapse" [attr.id]="'abilityCollapse' + iter">
         <div class="btn-group-vertical" role="group">
             <label class="btn form-check-label" *ngFor="let skill of skills.list">
-                <input class="form-check-input" type="checkbox" value="" [ngModel]="skill.checked" (ngModelChange)="skill.checked=$event;onChanged(i)">
+                <input class="form-check-input" type="checkbox" value="" [ngModel]="skill.checked" (ngModelChange)="skill.checked=$event;onChanged(iter)">
                 {{skill.name}}{{skill.fullfilled ? ' (ok)' : ''}}
             </label>
         </div>

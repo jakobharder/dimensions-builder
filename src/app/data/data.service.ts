@@ -185,9 +185,9 @@ export class DataService {
 
     private unionArrays(a: number[], b: number[]) {
         let result: number[] = [].concat(a);
-        for (let i of b) {
-            if (result.indexOf(i) == -1) {
-                result.push(i);
+        for (let index of b) {
+            if (result.indexOf(index) == -1) {
+                result.push(index);
             }
         }
         return result;

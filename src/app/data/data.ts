@@ -69,8 +69,8 @@ Array.prototype.getSkills = function() {
 };
 
 Array.prototype.isMember = function(member: any) {
-    for (let i of this) {
-        if (i === member) {
+    for (let item of this) {
+        if (item === member) {
             return true;
         }
     }

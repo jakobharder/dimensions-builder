@@ -36,8 +36,8 @@ export class Abilities {
     }
 
     contains(skill: Skill) {
-        for (let i of this.list) {
-            if (i.id === skill.id) {
+        for (let item of this.list) {
+            if (item.id === skill.id) {
                 return true;
             }
         }
