@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
+import { ButtonComponent } from './basic';
 
 @Component({
 	moduleId: module.id,
 	selector: 'share-section',
-	templateUrl: './share-section.component.html'
+	templateUrl: './share-section.component.html',
+	directives: [ButtonComponent]
 })
 export class ShareSectionComponent {
 	private site = "http://dimensions-builder.com";
