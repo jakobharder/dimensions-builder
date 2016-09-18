@@ -9,6 +9,7 @@ body {
 .card {
   background: #324065;
   overflow: hidden;
+  border: none;
 }
 .card.card-inverse {
   background: #16203B;
