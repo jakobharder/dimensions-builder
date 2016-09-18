@@ -17,6 +17,9 @@ export class Skill {
     url: string;
     combo: boolean;
     providers: Piece[];
+    extra: string;
+    characters: Piece[];
+    builds: Piece[];
 
     oneId: number;
     twoId: number;

@@ -35,7 +35,7 @@ export class AbilityDetailsComponent implements OnInit {
             let id = params['id'];
             this.ability = this.data.getAbilityByUrl(id);
 
-            if (this.ability != undefined) {
+            if (this.ability !== undefined && this.ability !== null) {
                 this.builds = new Pieces(this.ability.providers).getBuilds();
                 this.characters = new Pieces(this.ability.providers).getCharacters();
 
@@ -50,7 +50,7 @@ export class AbilityDetailsComponent implements OnInit {
                 this.charactersOnly = this.builds.length == 0;
 
                 let desc = "";
-                if (this.unique !== undefined) {
+                if (this.unique !== null) {
                     desc = this.ability.name + " is a unique ability. Only " + this.unique.name + " has this power.";
                 }
                 else {

@@ -7,6 +7,12 @@
         </div>
     </div>
 </div>
+<div class="card" *ngIf="mustHave">
+    <div class="card-block text-xs-center">
+        <h2 class="card-title">must-have for 100%</h2>
+        <p class="m-b-0">This {{type}} is a must-have to unlock everything in Lego Dimensions.</p>
+    </div>
+</div>
 <div class="card">
     <div class="card-block">
         <h2 class="card-title card-title-prim">Characters included in this {{type}}</h2>
@@ -18,8 +24,6 @@
 <div class="card">
     <div class="card-block">
         <h2 class="card-title card-title-prim">Abilities included in this {{type}}</h2>
-        <ul *ngIf="skills">
-            <li *ngFor="let skill of skills">{{skill.name}}</li>
-        </ul>
     </div>
+    <cmp-ability-table [abilities]="skills"></cmp-ability-table>
 </div>

@@ -1,0 +1,10 @@
+<table *ngIf="abilities">
+    <tr *ngFor="let ability of abilities">
+        <td class="title"><span>{{ability.name}}</span> <span>{{ability.extra}}</span></td>
+        <td class="providers">
+            <div *ngIf="ability.characters.length > 0"><span class="text-muted">characters:</span> <span *ngFor="let piece of ability.characters | limitFilter; let isLast = last">{{piece}}{{isLast ? '' : ', '}}</span></div>
+            <div *ngIf="ability.builds.length > 0"><span class="text-muted">builds:</span> <span *ngFor="let piece of ability.builds | limitFilter; let isLast = last">{{piece}}{{isLast ? '' : ', '}}</span></div>
+        </td>
+        <td><a class="btn btn-secondary" [title]="'more about ' + ability.name" [routerLink]="['/ability/' + ability.url]">details</a></td>
+    </tr>
+</table>

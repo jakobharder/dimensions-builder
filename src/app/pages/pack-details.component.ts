@@ -3,14 +3,14 @@ import { MetaService } from '../meta';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Pack, Minifig, Skill, DataService, packTypeStrings } from '../data';
 import { MinifigPanelComponent } from '../components';
+import { AbilityTableComponent } from '../components/tables';
 
 @Component({
 	moduleId: module.id,
 	selector: 'pack-details',
     styleUrls: ['pack-details.component.css'],
 	templateUrl: 'pack-details.component.html',
-    styles: ['img { max-width: 100%; }'],
-    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilityTableComponent]
 })
 export class PackDetailsComponent implements OnInit, OnDestroy {
     sub: any;
@@ -18,6 +18,7 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
     characters: Minifig[];
     skills: Skill[];
     private type: string;
+    private mustHave: boolean = false;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -42,6 +43,12 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
                 description: ""
             });
             this.type = packTypeStrings[this.pack.type];
+
+            for (let ability of this.skills) {
+                if (ability.providers.length == 1) {
+                    this.mustHave = true; // TODO same pack but two providers?
+                }
+            }
         });
     }
 

@@ -79,6 +79,16 @@ export class DataService {
 
             for (let ability of this.skills) {
                 ability.providers = new Pieces(ability.providers).getOrdered().byName().list;
+                if (ability.providers.length == 1) {
+                    ability.extra = "unique";
+                } else if (ability.providers.length < 4) {
+                    ability.extra = "rare";
+                }
+                else {
+                    ability.extra = "";
+                }
+                ability.characters = new Pieces(ability.providers).getCharacters();
+                ability.builds = new Pieces(ability.providers).getBuilds();
             }
 
             this.levels = new Levels();
