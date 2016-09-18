@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
 
 @Component({
 	moduleId: module.id,
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
 	templateUrl: './share-section.component.html'
 })
 export class ShareSectionComponent {
-	private url = "http://dimensions-builder.com";
+	private site = "http://dimensions-builder.com";
+	private url;
+
+	constructor(public router: Router) {
+        this.router.events.subscribe(
+            (event:Event) => {
+                if (event instanceof NavigationEnd) {
+					this.url = this.site + event.urlAfterRedirects;
+                }
+            });
+	}
 }
