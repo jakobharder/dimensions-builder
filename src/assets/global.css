@@ -6,6 +6,9 @@ body {
 .text-muted {
   color: #7B83A2 !important;
 }
+.text-highlight {
+  color: #CC324B;
+}
 .card {
   background: #324065;
   overflow: hidden;
@@ -57,7 +60,7 @@ a {
   border: none;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:checked {
-  background: #cc324b !important;
+  background: #CC324B !important;
   border: none;
 }
 a, a:hover, a:active, a:focus {

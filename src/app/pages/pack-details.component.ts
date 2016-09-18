@@ -40,7 +40,7 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
             this.skills = this.dataService.getSkills(this.characters.getSkills());
             this.meta.set({
                 title: this.pack.name + " " + packTypeStrings[this.pack.type],
-                description: ""
+                description: "See all characters, builds and abilities included in the " + this.pack.name + " " + packTypeStrings[this.pack.type] + "."
             });
             this.type = packTypeStrings[this.pack.type];
 
