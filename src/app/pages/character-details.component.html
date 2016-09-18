@@ -5,9 +5,16 @@
                 <img src="/assets/images/{{character.image}}.png">
             </div>
             <h2 class="card-title">{{character.name}}</h2>
+            <p class="m-b-0">{{description}}</p>
         </div>
         <div class="card-block">
             <div class="m-x-auto" style="max-width: 400px" *ngIf="pack"><a [routerLink]="['/pack/' + pack.id]"><lego-pack [pack]="pack"></lego-pack></a></div>
+        </div>
+    </div>
+    <div class="card" *ngIf="mustHave">
+        <div class="card-block text-xs-center">
+            <h2 class="card-title">must-have for 100%</h2>
+            <p class="m-b-0">{{character.name}} is a must-have character to unlock everything in Lego Dimensions.</p>
         </div>
     </div>
     <div class="card">

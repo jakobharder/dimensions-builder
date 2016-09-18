@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
+import { MetaService } from '../meta';
 import { Pack, Minifig, DataService } from '../data';
 import { PackComponent } from '../components';
 import { AbilityTableComponent } from '../components/tables';
@@ -15,21 +15,42 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
     sub: any;
     pack: Pack;
     character: Minifig;
+    private mustHave: boolean = false;
+    private description: string;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
-                private title: Title) {
+                private meta: MetaService) {
 
     }
 
     ngOnInit() {
-        this.title.setTitle("Character Details - Lego Dimensions Builder");
+        this.meta.set({
+            title: "Character Details",
+            description: ""
+        });
+
         this.sub = this.route.params.subscribe(params => {
             let id = +params['id'];
             this.character = this.dataService.getMinifig(id);
             if (this.character !== undefined) {
                 this.pack = this.dataService.getPack(this.character.packId);
-                this.title.setTitle(this.character.name + " - abilities and other details");
+                for (let ability of this.character.skills) {
+                    if (ability.providers.length == 1) {
+                        this.mustHave = true;
+                        break;
+                    }
+                }
+                let desc = this.character.name + " has " + this.character.skills.length + " abilities.";
+                if (this.mustHave) {
+                    desc += " At least one of then is a unique ability. You need " + this.character.name + " to unlock everything in Lego Dimensions.";
+                }
+                this.description = desc;
+
+                this.meta.set({
+                    title: this.character.name + "'s abilities and more",
+                    description: desc
+                });
             }
         });
     }
