@@ -70,7 +70,7 @@ var urls = [
 for (let ability of abilities) {
   urls.push({ url: '/ability/' + ability.url, changefreq: 'daily', priority: 0.5});
 }
-for (let i of [1, 2, 3, 4, 5]) {
+for (let i of [1, 2, 3, 4, 5, 6]) {
   urls.push({ url: '/wave/' + i, changefreq: 'daily', priority: 0.5});
 }
 

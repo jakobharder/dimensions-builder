@@ -44,7 +44,7 @@ export class PackTypeOrder implements PipeTransform {
 })
 
 export class WaveListComponent implements OnInit {
-	waves: number[] = [5, 4, 3, 2, 1];
+	waves: number[] = [6, 5, 4, 3, 2, 1];
 	packs: Pack[];
 
 	constructor(private router: Router, 
