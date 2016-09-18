@@ -13,7 +13,6 @@ import {
 
 import { provideRouter } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { HeadComponent, MetaService } from './app/shared/index';
 import { Title } from '@angular/platform-browser';
 
 // Application
@@ -26,8 +25,7 @@ export function ngApp(req, res) {
 
   let config: ExpressEngineConfig = {
     directives: [
-      AppComponent,
-      HeadComponent
+      AppComponent
     ],
     platformProviders: [
       {provide: ORIGIN_URL, useValue: 'http://localhost:3000'},
@@ -38,7 +36,6 @@ export function ngApp(req, res) {
       NODE_HTTP_PROVIDERS,
       provideRouter(routes),
       NODE_LOCATION_PROVIDERS,
-      MetaService,
       Title
     ],
     async: true,

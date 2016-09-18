@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Abilities, DataService } from './../data/index';
-import { MetaService } from './../shared/index';
+//import { MetaService } from './../shared/index';
 import { MinifigTextlinkComponent } from './../components/index';
 
 export enum AbilityListType {
@@ -38,7 +38,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
 
     constructor(private data: DataService,
                 private route: ActivatedRoute,
-                private meta: MetaService) {
+                private meta: Title) {
     }
     ngOnInit() {
         this.meta.setTitle("Character Abilities - Lego Dimensions Builder");
@@ -62,7 +62,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     this.abilities = this.allAbilities.getRare().getFilteredByCombo(false).orderByName();
                     this.listTitle = "Exclusive and Rare Character and Vehicle Abilities";
                     this.meta.setTitle(this.listTitle);
-                    this.meta.setDescription("A complete list of all unique and rare Character and Vehicle abilities and which Piece has them.");
+                    //this.meta.setDescription("A complete list of all unique and rare Character and Vehicle abilities and which Piece has them.");
                     this.isRare = true;
                     break;
                 case AbilityListType.All:
@@ -70,7 +70,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     this.abilities = this.allAbilities.getFilteredByCombo(false).orderByName();
                     this.listTitle = "Complete Character and Vehicle Ability List";
                     this.meta.setTitle(this.listTitle);
-                    this.meta.setDescription("A complete overview list of all Character and Vehicle abilities and which Piece has them.");
+                    //this.meta.setDescription("A complete overview list of all Character and Vehicle abilities and which Piece has them.");
                     this.isAll = true;
                     break;
                 }
