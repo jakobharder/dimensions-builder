@@ -1,14 +1,15 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Pack, Minifig, DataService } from '../data/index';
-import { PackComponent } from '../components/index';
+import { Pack, Minifig, DataService } from '../data';
+import { PackComponent } from '../components';
+import { AbilityTableComponent } from '../components/tables';
 
 @Component({
 	moduleId: module.id,
 	selector: 'page-character-details',
 	templateUrl: 'character-details.component.html',
-    directives: [ROUTER_DIRECTIVES, PackComponent]
+    directives: [ROUTER_DIRECTIVES, PackComponent, AbilityTableComponent]
 })
 export class CharacterDetailsComponent implements OnInit, OnDestroy {
     sub: any;

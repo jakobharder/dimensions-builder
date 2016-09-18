@@ -12,10 +12,8 @@
     </div>
     <div class="card">
         <div class="card-block">
-            <h2 class="card-title text-xs-center">Abilities</h2>
-            <ul>
-                <li *ngFor="let skill of character.skills"><b>{{skill.name}}</b>: {{character.name}} can {{skill.desc}}.</li>
-            </ul>
+            <h2 class="card-title card-title-prim text-xs-center">{{character.name}}'s Abilities</h2>
         </div>
+        <cmp-ability-table [abilities]="character.skills"></cmp-ability-table>
     </div>
 </section>
