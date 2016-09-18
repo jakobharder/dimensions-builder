@@ -35,7 +35,6 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
             let id = +params['id'];
             this.pack = this.dataService.getPack(id);
             this.characters = this.dataService.getMinifigs(this.pack.minifigs);
-            console.log(this.characters);
 
             this.skills = this.dataService.getSkills(this.characters.getSkills());
             this.meta.set({

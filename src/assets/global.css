@@ -1,6 +1,7 @@
 body {
   background: #16203B;
   color: #BAC2D5;
+  font-family: 'Arimo',Arial,sans-serif;
 }
 .text-muted {
   color: #7F88A6;
@@ -13,7 +14,8 @@ body {
   background: #16203B;
 }
 .card-title, h1, h2, h3, h4, h5 {
-  /*color: #EDF2F6;*/
+  font-family: 'Bebas Neue Bold',Arial,sans-serif;
+  font-weight: 600;
   color: #fff;
 }
 .card-title {
