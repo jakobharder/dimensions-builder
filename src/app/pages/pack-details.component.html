@@ -19,10 +19,8 @@
 <div class="card">
     <div class="card-block">
         <h2 class="card-title card-title-prim">Characters included in this {{type}}</h2>
-        <div *ngIf="characters">
-            <div *ngFor="let char of characters"><a [routerLink]="['/character/' + char.id]"><minifig-panel [piece]="char"></minifig-panel></a></div>
-        </div>
     </div>
+    <cmp-piece-table [pieces]="characters"></cmp-piece-table>
 </div>
 <div class="card">
     <div class="card-block">

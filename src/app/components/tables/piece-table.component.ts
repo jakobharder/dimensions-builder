@@ -1,6 +1,6 @@
 import { Component, Input, Pipe, Injectable, PipeTransform } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import { Skill, DataService } from '../../data';
+import { DataService, Piece, PieceType } from '../../data';
 
 @Pipe({
     name: 'limitFilter',
@@ -13,7 +13,10 @@ class LimitFilter implements PipeTransform {
 		for (let i = 0; i < 3 && items.length > i; i++) {
 			texts.push(items[i].name);
 		}
-		if (items.length > 3) {
+		if (items.length == 4) {
+			texts.push(items[3].name);
+		}
+		else if (items.length > 3) {
 			texts.push("and " + (items.length - 3) + " more");
 		}
 		else if (items.length == 0) {
@@ -25,12 +28,12 @@ class LimitFilter implements PipeTransform {
 
 @Component({
 	moduleId: module.id,
-	selector: 'cmp-ability-table',
-	styleUrls: ['ability-table.component.css'],
-	templateUrl: 'ability-table.component.html',
+	selector: 'cmp-piece-table',
+	styleUrls: ['piece-table.component.css'],
+	templateUrl: 'piece-table.component.html',
 	pipes: [LimitFilter],
 	directives: [ROUTER_DIRECTIVES]
 })
-export class AbilityTableComponent {
-    @Input() abilities: Skill[];
+export class PieceTableComponent {
+    @Input() pieces: Piece[];
 }
