@@ -6,14 +6,14 @@ import { PackComponent } from '../components/index';
 
 @Component({
 	moduleId: module.id,
-	selector: 'minifig-details',
-	templateUrl: 'minifig-details.component.html',
+	selector: 'page-character-details',
+	templateUrl: 'character-details.component.html',
     directives: [ROUTER_DIRECTIVES, PackComponent]
 })
-export class MinifigDetailsComponent implements OnInit, OnDestroy {
+export class CharacterDetailsComponent implements OnInit, OnDestroy {
     sub: any;
     pack: Pack;
-    minifig: Minifig;
+    character: Minifig;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -25,10 +25,10 @@ export class MinifigDetailsComponent implements OnInit, OnDestroy {
         this.title.setTitle("Character Details - Lego Dimensions Builder");
         this.sub = this.route.params.subscribe(params => {
             let id = +params['id'];
-            this.minifig = this.dataService.getMinifig(id);
-            if (this.minifig !== undefined) {
-                this.pack = this.dataService.getPack(this.minifig.packId);
-                this.title.setTitle(this.minifig.name + " - abilities and other details");
+            this.character = this.dataService.getMinifig(id);
+            if (this.character !== undefined) {
+                this.pack = this.dataService.getPack(this.character.packId);
+                this.title.setTitle(this.character.name + " - abilities and other details");
             }
         });
     }

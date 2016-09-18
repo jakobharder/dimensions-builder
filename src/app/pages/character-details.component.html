@@ -1,10 +1,10 @@
-<section *ngIf="minifig">
+<section *ngIf="character">
     <div class="card">
         <div class="card-block text-xs-center">
             <div class="character-portrait m-x-auto">
-                <img src="/assets/images/{{minifig.image}}.png">
+                <img src="/assets/images/{{character.image}}.png">
             </div>
-            <h2 class="card-title">{{minifig.name}}</h2>
+            <h2 class="card-title">{{character.name}}</h2>
         </div>
         <div class="card-block">
             <div class="m-x-auto" style="max-width: 400px" *ngIf="pack"><a [routerLink]="['/pack/' + pack.id]"><lego-pack [pack]="pack"></lego-pack></a></div>
@@ -14,7 +14,7 @@
         <div class="card-block">
             <h2 class="card-title text-xs-center">Abilities</h2>
             <ul>
-                <li *ngFor="let skill of minifig.skills"><b>{{skill.name}}</b>: {{minifig.name}} can {{skill.desc}}.</li>
+                <li *ngFor="let skill of character.skills"><b>{{skill.name}}</b>: {{character.name}} can {{skill.desc}}.</li>
             </ul>
         </div>
     </div>
