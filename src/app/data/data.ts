@@ -47,6 +47,7 @@ export class Piece {
     skills: Skill[];
     skillIds: number[];
     type: PieceType;
+    extra: string;
 }
 
 export class Minifig extends Piece {

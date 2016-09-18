@@ -65,6 +65,9 @@ export class DataService {
 
                 this.minifigMap[minifig.id] = minifig;
                 this.minifigs.push(minifig);
+                if (minifig.skillIds.length > 5) {
+                    minifig.extra = "all-rounder";
+                }
             }
 
             let mergedBuilds = this.mergeBuilds();
@@ -81,8 +84,14 @@ export class DataService {
                 ability.providers = new Pieces(ability.providers).getOrdered().byName().list;
                 if (ability.providers.length == 1) {
                     ability.extra = "unique";
+                    ability.providers[0].extra = "unique";
                 } else if (ability.providers.length < 4) {
                     ability.extra = "rare";
+                    /*for (let iter = 0; iter < 3 && iter < ability.providers.length; iter++) {
+                        if (ability.providers[iter].extra != "unique") {
+                            ability.providers[iter].extra = "rare";
+                        }
+                    }*/
                 }
                 else {
                     ability.extra = "";
