@@ -37,7 +37,6 @@ export function ngApp(req, res) {
       NODE_HTTP_PROVIDERS,
       provideRouter(routes),
       NODE_LOCATION_PROVIDERS,
-      MetaService,
       Title
     ],
     async: true,

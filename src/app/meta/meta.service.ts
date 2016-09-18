@@ -35,6 +35,7 @@ export class MetaService {
     <meta property="og:description" content="Description Here" />
     */
     private ogDescription: HTMLElement;
+    private description: HTMLElement;
 
     /**
      * Inject the Angular 2 Title Service
@@ -43,50 +44,31 @@ export class MetaService {
     constructor(@Inject(DOCUMENT) private document, element: ElementRef, renderer: Renderer) {
         this._el = element;
         this._r = renderer;
-        //super();
+        
         this._document = document;
         this.headElement = this._document.head;
 
-        this.ogTitle = this.getOrCreateMetaElement('og:title','property');
-        this.ogType = this.getOrCreateMetaElement('og:type','property');
-        this.ogUrl = this.getOrCreateMetaElement('og:url','property');
-        this.ogImage = this.getOrCreateMetaElement('og:image','property');
-        this.ogDescription = this.getOrCreateMetaElement('og:description','property');
-        
+        this.ogTitle = this.getOrCreateMetaElement('og:title', 'property');
+        this.ogDescription = this.getOrCreateMetaElement('og:description', 'property');
+        this.description = this.getOrCreateMetaElement('description', 'name');
     }
 
     public set(model: MetaModel) {
-        this.setOgDescription(model.description);
+        this.setTitle(model.title, "Lego Dimensions Builder");
+        this.setAttr(this.description, model.description);
+
+        this.setAttr(this.ogTitle, model.title);
+        this.setAttr(this.ogDescription, model.description);
     }
 
-    public setTitle(siteTitle = '',pageTitle ='',separator = ' / '){
+    public setTitle(siteTitle = '', pageTitle ='', separator = ' - '){
         let title = siteTitle;
-        if(pageTitle != '') title += separator + pageTitle;
+        if (pageTitle != '') {
+            title += separator + pageTitle;
+        }
         this._document.title = title;
     }
-    /*
-    *  Open graph
-    */
-    public setOgTitle(value: string) {
-        this._r.setElementAttribute(this.ogTitle,'content',value);
-    }
-    public setOgType(value: string) {
-        this._r.setElementAttribute(this.ogType,'content',value);
-    }
-    public setOgUrl(value: string) {
-        this._r.setElementAttribute(this.ogUrl,'content',value);
-    }
-    public setOgImage(value: string) {
-        this._r.setElementAttribute(this.ogImage,'content',value);
-    }
-    public setOgDescription(value: string) {
-        this._r.setElementAttribute(this.ogDescription,'content',value);
-    }
-    /**
-     * get the HTML Element when it is in the markup, or create it.
-     * @param name
-     * @returns {HTMLElement}
-     */
+
     private getOrCreateMetaElement(name: string,attr: string): HTMLElement {
 
         let el: HTMLElement;
@@ -95,5 +77,9 @@ export class MetaService {
         this._r.setElementAttribute(el,prop,name);
         
         return el;
+    }
+
+    private setAttr(el: HTMLElement, value: string) {
+        this._r.setElementAttribute(el, 'content', value);
     }
 }

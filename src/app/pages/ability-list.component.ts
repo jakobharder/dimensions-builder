@@ -41,11 +41,10 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                 private meta: MetaService) {
     }
     ngOnInit() {
-        let meta : MetaModel = <MetaModel> {
-            title: "Character Abilities - Lego Dimensions Builder", 
-            description: ""
-        };
-        this.meta.set(meta);
+        this.meta.set({
+            title: "Character Abilities", 
+            description: "A complete overview list of all Character and Vehicle abilities and which Piece has them."
+        });
 
         this.allAbilities = this.data.getAbilities(null);
 
@@ -59,23 +58,29 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                 case AbilityListType.Combos:
                     this.abilities = this.allAbilities.getFilteredByCombo(true).orderByName();
                     this.listTitle = "Important Ability Combos Needed to Unlock Everything";
-                    //this.meta.set({this.listTitle, ""});
-                    //this.meta.setDescription("A complete list of all important Character and Vehicle ability combinations like dive + digging. They are required to unlock everyting in the game.");
+                    this.meta.set({
+                        title: this.listTitle, 
+                        description: "A complete list of all important Character and Vehicle ability combinations like dive + digging. They are required to unlock everyting in the game."
+                    });
                     this.isCombo = true;
                     break;
                 case AbilityListType.Rare:
                     this.abilities = this.allAbilities.getRare().getFilteredByCombo(false).orderByName();
                     this.listTitle = "Exclusive and Rare Character and Vehicle Abilities";
-                    //this.meta.set({this.listTitle, ""});
-                    //this.meta.setDescription("A complete list of all unique and rare Character and Vehicle abilities and which Piece has them.");
+                    this.meta.set({
+                        title: this.listTitle, 
+                        description: "A complete list of all unique and rare Character and Vehicle abilities and which Piece has them."
+                    });
                     this.isRare = true;
                     break;
                 case AbilityListType.All:
                 default:
                     this.abilities = this.allAbilities.getFilteredByCombo(false).orderByName();
                     this.listTitle = "Complete Character and Vehicle Ability List";
-                    //this.meta.set({this.listTitle, ""});
-                    //this.meta.setDescription("A complete overview list of all Character and Vehicle abilities and which Piece has them.");
+                    this.meta.set({
+                        title: this.listTitle, 
+                        description: "A complete overview list of all Character and Vehicle abilities and which Piece has them."
+                    });
                     this.isAll = true;
                     break;
                 }

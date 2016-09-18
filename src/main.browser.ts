@@ -14,7 +14,6 @@ export function ngApp() {
   return bootstrap(AppComponent, [
     ...HTTP_PROVIDERS,
     provideRouter(routes),
-    MetaService,
     Title
   ]);
 }
