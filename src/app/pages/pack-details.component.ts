@@ -45,8 +45,15 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
             this.type = packTypeStrings[this.pack.type];
 
             for (let ability of this.skills) {
-                if (ability.providers.length == 1) {
-                    this.mustHave = true; // TODO same pack but two providers?
+                let thisPack = false;
+                for (let provider of ability.providers) {
+                    thisPack = provider.packId == this.pack.id;
+                    if (!thisPack) {
+                        break;
+                    }
+                }
+                if (thisPack) {
+                    this.mustHave = true;
                 }
             }
         });
