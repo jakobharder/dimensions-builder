@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Abilities, DataService } from './../data/index';
 import { MetaModel, MetaService } from './../meta';
-import { MinifigTextlinkComponent } from './../components/index';
+import { MinifigTextlinkComponent, ShareSectionComponent } from './../components';
 
 export enum AbilityListType {
     Rare,
@@ -15,7 +15,7 @@ export enum AbilityListType {
 	moduleId: module.id,
 	selector: 'ability-list',
 	templateUrl: 'ability-list.component.html',
-    directives: [ROUTER_DIRECTIVES, MinifigTextlinkComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigTextlinkComponent, ShareSectionComponent]
 })
 export class AbilityListComponent implements OnInit, OnDestroy {
     sub: any;
