@@ -19,6 +19,12 @@ body {
 .card-title {
   font-size: 1.5rem;
 }
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
 .card-title-prim {
   background-color: #11A8AB;
   margin: -1.25rem -1.25rem 1.25rem -1.25rem;

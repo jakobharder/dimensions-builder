@@ -54,15 +54,19 @@ app.get('/rare-abilities', ngApp);
 app.get('/combo-abilities', ngApp);
 app.get('/ability/*', ngApp);
 app.get('/level/*', ngApp);
+app.get('/all-year2-packs-and-characters', ngApp);
 
 var urls = [
-        // changefreq: 'weekly',  priority: 0.5 
-        { url: '/', changefreq: 'weekly', priority: 0.5 },
-        { url: '/team-builder', changefreq: 'daily', priority: 0.7 },
-        { url: '/all-waves-and-packs', changefreq: 'daily', priority: 0.5 },
-        { url: '/characters', changefreq: 'daily', priority: 0.5 },   
-        { url: '/abilities', changefreq: 'daily', priority: 0.7 }
-      ];
+  // changefreq: 'weekly',  priority: 0.5 
+  { url: '/', changefreq: 'weekly', priority: 0.5 },
+  { url: '/team-builder', changefreq: 'daily', priority: 0.7 },
+  { url: '/all-waves-and-packs', changefreq: 'daily', priority: 0.5 },
+  { url: '/characters', changefreq: 'daily', priority: 0.5 },   
+  { url: '/abilities', changefreq: 'daily', priority: 0.7 },
+  { url: '/rare-abilities', changefreq: 'daily', priority: 0.5 },
+  { url: '/combo-abilities', changefreq: 'daily', priority: 0.5 },
+  { url: '/all-year2-packs-and-characters', changefreq: 'daily', priority: 0.5 }
+];
 for (let ability of abilities) {
   urls.push({ url: '/ability/' + ability.url, changefreq: 'daily', priority: 0.5});
 }

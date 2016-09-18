@@ -11,8 +11,11 @@ import {
 	HomeComponent,
 	AbilityDetailsComponent,
 	LevelDetailsComponent
-} from './pages/index';
-import { TeamBuilderComponent } from './team-builder/index';
+} from './pages';
+import {
+	Year2Component
+} from './blog';
+import { TeamBuilderComponent } from './team-builder';
 
 export const routes: RouterConfig = [
 	{ path: '', component: HomeComponent, pathMatch: 'full' },
@@ -31,5 +34,6 @@ export const routes: RouterConfig = [
 	{ path: 'team-builder/:abilities', component: TeamBuilderComponent },
 	{ path: 'team-builder/:abilities/:team', component: TeamBuilderComponent },
 	{ path: 'level/:id', component: LevelDetailsComponent },
+	{ path: 'all-year2-packs-and-characters', component: Year2Component },
 	{ path: '**', redirectTo: '/' }
 ];

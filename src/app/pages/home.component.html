@@ -1,7 +1,7 @@
-<div class="card">
+<div class="card text-xs-center">
     <div class="card-block">
         <h1>Lego Dimensions Builder</h1>
-        <h6 class="card-subtitle text-muted">Your tool to decide which characters and vehicles to play with!</h6>
+        <h6 class="card-subtitle">Your tool to decide which characters and vehicles to play with!</h6>
     </div>
     <img src="assets/images/dimensions-logo.png" class="m-l-1" />
     <div class="card-block">
@@ -11,14 +11,14 @@
     </div>
 </div>
 
-<div class="card">
+<div class="card text-xs-center">
     <div class="card-block">
-        <h2>Wave 6 in September</h2>
-        <p>September 27th 2016 in the US, 30th of September in the UK</p>
+        <h2 class="card-title">All about Year 2</h2>
+        <div><a [routerLink]="['/all-year2-packs-and-characters']">All Packs and Characters of Year 2</a></div>
     </div>
 </div>
 
-<div class="card">
+<div class="card text-xs-center">
     <div class="card-block">
         <h2 class="card-title">Team Builder</h2>
         <p>
@@ -28,10 +28,10 @@
     </div>
 </div>
 
-<div class="card">
+<div class="card text-xs-center">
     <div class="card-block">
-        <h2>Characters with 6+ abilities</h2>
-        <ul>
+        <h2 class="card-title">Characters with 6+ abilities</h2>
+        <ul class="text-xs-left">
             <li *ngFor="let minifig of mostSkills">
                 <b><a [routerLink]="['/character/' + minifig.id]">{{minifig.name}}</a></b>
                 (<span *ngFor="let skill of minifig.skills; let isLast = last">{{skill.name}}{{isLast ? '' : ', '}}</span>)
