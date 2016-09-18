@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
 declare let ga:Function;
 
-import { TopNavComponent } from './shared/index';
-import { DataService } from './data/index';
-import { MetaService } from './shared/index';
-import { ShareSectionComponent } from './components/index';
+import { TopNavComponent } from './shared';
+import { DataService } from './data';
+import { MetaService } from './meta';
+import { ShareSectionComponent } from './components';
 
 @Component({
 	moduleId: module.id,

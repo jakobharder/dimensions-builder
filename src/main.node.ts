@@ -14,6 +14,7 @@ import {
 import { provideRouter } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { Title } from '@angular/platform-browser';
+import { MetaService } from './app/meta';
 
 // Application
 import {AppComponent} from './app/app.component';
@@ -36,6 +37,7 @@ export function ngApp(req, res) {
       NODE_HTTP_PROVIDERS,
       provideRouter(routes),
       NODE_LOCATION_PROVIDERS,
+      MetaService,
       Title
     ],
     async: true,
