@@ -1,10 +1,25 @@
-<h1>{{pack.id}} {{pack.name}}</h1>
-<div>
-    <img src="assets/images/{{pack.image}}.jpg">
+<div class="card">
+    <div class="card-block text-xs-center">
+        <h2 class="card-title">{{pack.name}} {{type}}</h2>
+        <h6 class="card-subtitle">{{pack.id}}</h6>
+        <div>
+            <img class="pack-img" src="assets/images/{{pack.image}}.jpg">
+        </div>
+    </div>
 </div>
-<div *ngIf="minifigs">minifigs: 
-    <div *ngFor="let minifig of minifigs"><a [routerLink]="['/character/' + minifig.id]"><minifig-panel [minifig]="minifig"></minifig-panel></a></div>
+<div class="card">
+    <div class="card-block">
+        <h2 class="card-title card-title-prim">Characters included in this {{type}}</h2>
+        <div *ngIf="characters">
+            <div *ngFor="let char of characters"><a [routerLink]="['/character/' + char.id]"><minifig-panel [piece]="char"></minifig-panel></a></div>
+        </div>
+    </div>
 </div>
-<ul *ngIf="skills">
-    <li *ngFor="let skill of skills">{{skill.name}}</li>
-</ul>
+<div class="card">
+    <div class="card-block">
+        <h2 class="card-title card-title-prim">Abilities included in this {{type}}</h2>
+        <ul *ngIf="skills">
+            <li *ngFor="let skill of skills">{{skill.name}}</li>
+        </ul>
+    </div>
+</div>
