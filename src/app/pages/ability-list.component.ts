@@ -55,7 +55,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     this.abilities = this.allAbilities.getFilteredByCombo(true).orderByName();
                     this.listTitle = "Important Ability Combos Needed to Unlock Everything";
                     this.meta.setTitle(this.listTitle);
-                    this.meta.setDescription("A complete list of all important Character and Vehicle ability combinations like dive + digging. They are required to unlock everyting in the game.");
+                    //this.meta.setDescription("A complete list of all important Character and Vehicle ability combinations like dive + digging. They are required to unlock everyting in the game.");
                     this.isCombo = true;
                     break;
                 case AbilityListType.Rare:
