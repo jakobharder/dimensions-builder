@@ -8,6 +8,7 @@ export class Pack {
     year: number;
     image: string;
     minifigs: number[];
+    builds: number[];
     desc: string;
 }
 

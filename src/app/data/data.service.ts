@@ -11,6 +11,7 @@ import { waves } from './static-waves';
 
 @Injectable()
 export class DataService {
+    packs: Pack[];
     packMap: { [id: number] : Pack; } = null;
     minifigMap: { [id: number] : Minifig; } = null;
     minifigs: Minifig[];
@@ -26,15 +27,7 @@ export class DataService {
 
     ensureLoaded() {
         if (this.packMap === null) {
-            this.packMap = {};
-            for (let pack of packs) {
-                let p = Object.assign({}, pack);
-                p.minifigs = [];
-                if (pack.id in this.packMap) {
-                    console.log('pack ' + pack.id + ' is already in packMap');
-                }
-                this.packMap[pack.id] = p;
-            }
+            this._initPacks();
 
             this.skillMap = {};
             this.urlToAbility = {};
@@ -73,15 +66,7 @@ export class DataService {
                 }
             }
 
-            let mergedBuilds = this.mergeBuilds();
-            for (let data of mergedBuilds) {
-                let vehicle: Vehicle = Object.assign({}, data);
-                vehicle.type = PieceType.Build;
-                vehicle.skills = this.getSkills(data.skillIds);
-                for (let skill of vehicle.skills) {
-                    skill.providers.push(vehicle);
-                }
-            }
+            this._initBuilds();
 
             for (let ability of this.skills) {
                 ability.providers = new Pieces(ability.providers).getOrdered().byName().list;
@@ -122,12 +107,21 @@ export class DataService {
         return this.waves;
     }
 
+    getWave(id: number) {
+        for (let wave of this.waves) {
+            if (wave.number == id) {
+                return wave;
+            }
+        }
+        return undefined;
+    }
+
     getMinifig(id: number) {
         return this.minifigMap[id];
     }
 
     getMinifigs(ids: number[]) {
-        let a: Minifig[] = [];
+        let a: Piece[] = [];
         for (let id of ids) {
             if (id in this.minifigMap) {
                 a.push(this.minifigMap[id]);
@@ -249,9 +243,43 @@ export class DataService {
         return result;
     }
 
+    private _initPacks() {
+        this.packMap = {};
+        this.packs = [];
+        for (let pack of packs) {
+            let p = Object.assign({}, pack);
+            p.minifigs = [];
+            p.builds = [];
+            if (pack.id in this.packMap) {
+                console.log('pack ' + pack.id + ' is already in packMap');
+            }
+            this.packMap[pack.id] = p;
+            this.packs.push(p);
+        }        
+    }
+
+    private _initBuilds() {
+        let mergedBuilds = this.mergeBuilds();
+        for (let data of mergedBuilds) {
+            let vehicle: Vehicle = Object.assign({}, data);
+            vehicle.type = PieceType.Build;
+            vehicle.skills = this.getSkills(data.skillIds);
+            for (let skill of vehicle.skills) {
+                skill.providers.push(vehicle);
+            }
+
+            let pack = this.packMap[vehicle.packId];
+            if (pack !== undefined) {
+                pack.builds.push(vehicle.id);
+            } else {
+                console.log('cannot find pack ' + vehicle.packId);
+            }
+        }
+    }
+
     private _initWaves() {
         this.waves = [];
-        for (let pack of packs) {
+        for (let pack of this.packs) {
             if (this.waves[pack.wave - 1] === undefined) {
                 this.waves[pack.wave - 1] = <Wave>{ packs: [], number: pack.wave, year: waves[pack.wave - 1].year, release: waves[pack.wave - 1].release };
             }

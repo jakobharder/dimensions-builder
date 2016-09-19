@@ -1,8 +1,18 @@
+<div class="card text-xs-center">
+    <div class="card-block">
+        <h2>Wave {{wave.number}} - Year {{wave.year}} ({{wave.release}})</h2>
+        <p class="m-b-0">{{description}}</p>
+    </div>
+</div>
 <div class="card">
     <div class="card-block">
-        <h2 class="card-title">All packs in Wave {{wave}}</h2>
-        <div class="packs" *ngIf="packs">
-            <lego-pack *ngFor="let pack of packs | wavesFilter:wave | packTypeOrder" [pack]="pack" (click)="gotoDetail(pack)"></lego-pack>
-        </div>
+        <h2 [attr.class]="'card-title card-title-prim year' + wave.year">All packs in wave {{wave.number}}</h2>
     </div>
+    <cmp-pack-table [packs]="wave.packs"></cmp-pack-table>
+</div>
+<div class="card">
+    <div class="card-block">
+        <h2 class="card-title card-title-prim">Characters included in wave {{wave.number}}</h2>
+    </div>
+    <cmp-piece-table [pieces]="characters"></cmp-piece-table>
 </div>
