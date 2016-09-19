@@ -2,8 +2,6 @@
     <tr *ngFor="let pack of packs">
         <td class="icon"><img src="/assets/images/63/{{pack.image}}.jpg" alt="{{pack.name}}"></td>
         <td class="title"><span>{{pack.name}}</span> <span [attr.class]="'badge text-pack-' + pack.type">{{typeStrings[pack.type]}}</span></td>
-        <td class="providers">
-        </td>
         <td><a class="btn btn-secondary" [title]="'more about ' + pack.name" [routerLink]="['/pack/' + pack.id]" >details</a></td>
     </tr>
 </table>
