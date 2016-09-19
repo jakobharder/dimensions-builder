@@ -1,7 +1,19 @@
-import { Pack, PackType } from './data';
+import { PackType } from './data';
 import { Ability } from './static-abilities';
 
-export const packs: Pack[] = [
+export class PackData {
+    id: number;
+    name: string;
+    type: PackType;
+    wave: number;
+    year: number;
+    image: string;
+    minifigs: number[];
+    builds: number[];
+    desc: string;
+}
+
+export const packs: PackData[] = [
     { id: 71205, wave: 1, year: 1, minifigs: [], builds: [], name: 'Jurassic World™',
         type: PackType.TeamPack, image: '03_LD_PO_TP_JurassicWorld', desc: '' },
     { id: 71170, wave: 1, year: 1, minifigs: [], builds: [], name: 'Lego Dimensions',

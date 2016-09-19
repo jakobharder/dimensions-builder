@@ -10,6 +10,7 @@ export class Pack {
     minifigs: number[];
     builds: number[];
     desc: string;
+    mustHave: boolean;
 }
 
 export class Skill {

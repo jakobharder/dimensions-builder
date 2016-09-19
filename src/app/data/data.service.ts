@@ -73,6 +73,7 @@ export class DataService {
                 if (ability.providers.length == 1) {
                     ability.extra = "unique";
                     ability.providers[0].extra = "unique";
+                    this.packMap[ability.providers[0].packId].mustHave = true;
                 } else if (ability.providers.length < 4) {
                     ability.extra = "rare";
                     /*for (let iter = 0; iter < 3 && iter < ability.providers.length; iter++) {
@@ -247,9 +248,10 @@ export class DataService {
         this.packMap = {};
         this.packs = [];
         for (let pack of packs) {
-            let p = Object.assign({}, pack);
+            let p: Pack = Object.assign({}, pack);
             p.minifigs = [];
             p.builds = [];
+            p.mustHave = false;
             if (pack.id in this.packMap) {
                 console.log('pack ' + pack.id + ' is already in packMap');
             }
