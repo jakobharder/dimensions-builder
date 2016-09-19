@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { MetaService } from '../meta';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
-import { Minifig, DataService } from '../data/index';
+import { Piece, Pieces, DataService } from '../data';
+import { PieceTableComponent } from '../components/tables';
 
 @Component({
 	moduleId: module.id,
 	selector: 'home-cmp',
 	templateUrl: 'home.component.html',
-	directives: [ROUTER_DIRECTIVES],
+	directives: [ROUTER_DIRECTIVES, PieceTableComponent],
 })
 export class HomeComponent implements OnInit {
-	mostSkills: Minifig[];
+	private mostSkills: Piece[];
 
 	constructor(private router: Router, 
 				private dataService: DataService,
@@ -23,12 +24,12 @@ export class HomeComponent implements OnInit {
 			description: "Lego Dimensions Builder is a Dimensions Character and Vehicle Ability Guide."
 		});
 
-		let mostSkills: Minifig[] = [];
+		let mostSkills: Piece[] = [];
 		for (let minifig of this.dataService.getAllMinifigs()) {
 			if (minifig.skills.length > 5) {
 				mostSkills.push(minifig);
 			}
 		}
-		this.mostSkills = mostSkills;
+		this.mostSkills = new Pieces(mostSkills).getOrdered().byName().list;
 	}
 }

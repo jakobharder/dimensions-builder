@@ -29,14 +29,9 @@
     </div>
 </div>
 
-<div class="card text-xs-center">
-    <div class="card-block">
-        <h2 class="card-title">Characters with 6+ abilities</h2>
-        <ul class="text-xs-left">
-            <li *ngFor="let minifig of mostSkills">
-                <b><a [routerLink]="['/character/' + minifig.id]">{{minifig.name}}</a></b>
-                (<span *ngFor="let skill of minifig.skills; let isLast = last">{{skill.name}}{{isLast ? '' : ', '}}</span>)
-            </li>
-        </ul>
+<div class="card">
+    <div class="card-block text-xs-center">
+        <h2 class="card-title card-title-prim">Characters with 6+ abilities</h2>
     </div>
+    <cmp-piece-table [pieces]="mostSkills"></cmp-piece-table>
 </div>
