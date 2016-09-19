@@ -4,3 +4,4 @@ export * from './minifig-list';
 export * from './ability';
 export * from './piece';
 export * from './levels';
+export * from './wave';

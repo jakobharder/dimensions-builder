@@ -90,11 +90,3 @@ export const enum PackType {
     FunPack
 }
 export const packTypeStrings = ['Starter Set', 'Story Pack', 'Level Pack', 'Team Pack', 'Fun Pack'];
-
-/* 
-wave 1 09/27/2015
-Wave 2 (11/03/2015)
-Wave 3 (01/19/2016)
-Wave 4 (03/15/2016)
-Wave 5 (05/10/2016)
-*/

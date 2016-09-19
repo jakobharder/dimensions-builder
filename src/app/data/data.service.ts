@@ -6,6 +6,8 @@ import { minifigs, vehicles, packs, VehicleData } from './static-data';
 import { abilities } from './static-abilities';
 import { Levels } from './levels';
 import { Ability } from './static-abilities';
+import { Wave } from './wave';
+import { waves } from './static-waves';
 
 @Injectable()
 export class DataService {
@@ -16,6 +18,7 @@ export class DataService {
     skills: Skill[];
     urlToAbility: { [url: string] : Skill } = null;
     levels: Levels;
+    waves: Wave[];
 
     constructor() {
         this.ensureLoaded();
@@ -102,6 +105,8 @@ export class DataService {
 
             this.levels = new Levels();
             this.levels.init();
+
+            this._initWaves();
         }
     }
 
@@ -111,6 +116,10 @@ export class DataService {
 
     getAllPacks() {
         return packs;
+    }
+
+    getWaves() {
+        return this.waves;
     }
 
     getMinifig(id: number) {
@@ -238,5 +247,29 @@ export class DataService {
             }
         }
         return result;
+    }
+
+    private _initWaves() {
+        this.waves = [];
+        for (let pack of packs) {
+            if (this.waves[pack.wave - 1] === undefined) {
+                this.waves[pack.wave - 1] = <Wave>{ packs: [], number: pack.wave, year: waves[pack.wave - 1].year, release: waves[pack.wave - 1].release };
+            }
+
+            this.waves[pack.wave - 1].packs.push(pack);
+        }
+        this.waves.reverse();
+
+        for (let wave of this.waves) {
+            wave.packs.sort((a: Pack, b: Pack) => {
+                if (a.type > b.type) {
+                    return 1;
+                } else if (a.type < b.type) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            });
+        }
     }
 }

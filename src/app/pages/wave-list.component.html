@@ -1,16 +1,13 @@
-<div class="conter-wrapper animate">
-    <div class="row" *ngIf="packs">
-        <div class="col-lg-6 offset-lg-3">
-            <div class="card" *ngFor="let wave of waves">
-                <div class="card-header card-primary card-inverse">
-                    <span class="card-title">Wave {{wave}}</span>
-                </div>
-                <div class="card-block">
-                    <ul class="packs">
-                        <lego-pack *ngFor="let pack of packs | wavesFilter:wave | packTypeOrder" [pack]="pack" (click)="gotoDetail(pack)"></lego-pack>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<div class="card text-xs-center">
+    <div class="card-block">
+        <h2>Complete list of all Lego Dimensions packs</h2>
+        <p class="m-b-0">{{description}}</p>
     </div>
+</div>
+<share-section></share-section>
+<div class="card" *ngFor="let wave of waves">
+    <div class="card-block">
+        <h2 [attr.class]="'card-title card-title-prim year' + wave.year">Wave {{wave.number}} - Year {{wave.year}} ({{wave.release}})</h2>
+    </div>
+    <cmp-pack-table [packs]="wave.packs"></cmp-pack-table>
 </div>

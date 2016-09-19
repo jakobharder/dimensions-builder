@@ -1,64 +1,42 @@
-import {Component, Pipe, Injectable, PipeTransform, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component, Pipe, Injectable, PipeTransform, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
-import { Pack, DataService } from './../data/index';
-import { PackComponent } from './../components/index';
-
-@Pipe({
-    name: 'wavesFilter',
-    pure: false
-})
-@Injectable()
-export class WavesFilter implements PipeTransform {
-    transform(items: Pack[], args: number): any {
-        // filter items array, items which match and return true will be kept, false will be filtered out
-        return items.filter(item => item.wave === args);
-    }
-}
-
-@Pipe({
-	name: 'packTypeOrder',
-	pure: false
-})
-@Injectable()
-export class PackTypeOrder implements PipeTransform {
-	transform(items: Pack[], args: string): any {
-		return items.sort((a: Pack, b: Pack) => {
-			if (a.type > b.type) {
-				return 1;
-			} else if (a.type < b.type) {
-				return -1;
-			} else {
-				return 0;
-			}
-		});
-	}
-}
+import { MetaService } from '../meta';
+import { Wave, DataService } from '../data';
+import { ShareSectionComponent } from '../components';
+import { PackTableComponent } from '../components/tables';
 
 @Component({
 	moduleId: module.id,
-	selector: 'wave-list',
+	selector: 'page-wave-list',
 	templateUrl: 'wave-list.component.html',
-	directives: [ROUTER_DIRECTIVES, PackComponent],
-	pipes: [WavesFilter, PackTypeOrder],
+	directives: [ROUTER_DIRECTIVES, PackTableComponent, ShareSectionComponent],
 })
-
 export class WaveListComponent implements OnInit {
-	waves: number[] = [6, 5, 4, 3, 2, 1];
-	packs: Pack[];
+	private waves: Wave[] = [];
+	private description: string;
 
 	constructor(private router: Router, 
 				private dataService: DataService,
-				private title: Title) {
+				private meta: MetaService) {
 	}
 
 	ngOnInit() {
-		this.title.setTitle("List of all Lego Dimensions packs - Lego Dimensions Builder");
-		this.packs = this.dataService.getAllPacks();
-	}
+		this.waves = this.dataService.getWaves();
 
-	gotoDetail(pack: Pack) {
-		let link = ['/pack', pack.id];
-		this.router.navigate(link);
+		let releasedWaves = 5;
+		let releasedPacks = 0;
+		for (let wave of this.waves) {
+			if (wave.number <= 5) {
+				releasedPacks += wave.packs.length;
+			}
+		}
+
+		let desc = "There are currently " + releasedPacks + " packs released in " + releasedWaves + " waves.";
+		this.description = desc;
+
+		this.meta.set({
+			title: "Complete list of all Lego Dimensions packs",
+			description: desc
+		});	
 	}
 }

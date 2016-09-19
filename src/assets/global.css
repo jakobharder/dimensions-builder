@@ -38,6 +38,12 @@ h4 {
   text-align: center; 
   line-height: 1.5rem;
 }
+.card-title-prim.year1 {
+  background-color: #1A4E95;
+}
+.card-title-prim.year2 {
+  background-color: #EDB742;
+}
 .card-block {
   padding: 1rem 1.5rem;
 }
