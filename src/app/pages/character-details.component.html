@@ -5,11 +5,9 @@
                 <img src="/assets/images/{{character.image}}.png">
             </div>
             <h2 class="card-title">{{character.name}}</h2>
-            <p class="m-b-0">{{description}}</p>
+            <p>{{description}}</p>
         </div>
-        <div class="card-block">
-            <div class="m-x-auto" style="max-width: 400px" *ngIf="pack"><a [routerLink]="['/pack/' + pack.id]"><lego-pack [pack]="pack"></lego-pack></a></div>
-        </div>
+        <cmp-pack-table [packs]="[pack]" class="delimiter m-t-1"></cmp-pack-table>
     </div>
     <div class="card" *ngIf="mustHave">
         <div class="card-block text-xs-center">
