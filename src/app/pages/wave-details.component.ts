@@ -44,9 +44,14 @@ export class WaveDetailsComponent implements OnInit {
 				//this.builds = this.builds.concat(builds);
 			}
 
-			let desc = "Wave " + this.wave.number + " contains " + this.wave.packs.length + " packs, " + numCharacters + " characters and " + numBuilds + " builds. Wave " + this.wave.number + 
-				" was released in " + this.wave.release + " as part of the year " +
-				this.wave.year + " waves.";
+			let desc = "Wave " + this.wave.number + " contains " + this.wave.packs.length + " packs, " + numCharacters + " characters and " + numBuilds + " builds.";
+			if (this.wave.released) {
+				desc += " Wave " + this.wave.number + " was released in " + this.wave.release + " as part of the year " +
+					this.wave.year + " waves.";
+			} else {
+				desc += " Wave " + this.wave.number + " will be released in " + this.wave.release + " as part of the year " +
+					this.wave.year + " waves.";
+			}
 			this.description = desc;
 
 			this.meta.set({

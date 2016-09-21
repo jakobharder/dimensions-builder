@@ -16,6 +16,7 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
     character: Minifig;
     private mustHave: boolean = false;
     private description: string;
+    private workInProgress: string;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -43,6 +44,9 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
                 let desc = this.character.name + " has " + this.character.skills.length + " abilities.";
                 if (this.mustHave) {
                     desc += " At least one of then is a unique ability. You need " + this.character.name + " to unlock everything in Lego Dimensions.";
+                }
+                if (this.character.workInProgress) {
+                    this.workInProgress = "\nThe ability data for this character are still work-in-progress and not confirmed yet.";
                 }
                 this.description = desc;
 

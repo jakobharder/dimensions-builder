@@ -5,4 +5,5 @@ export class Wave {
     number: number;
     year: number;
     release: string;
+    released: boolean;
 };

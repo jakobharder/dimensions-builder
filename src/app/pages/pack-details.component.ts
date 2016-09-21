@@ -19,6 +19,7 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
     skills: Skill[];
     private type: string;
     private mustHave: boolean = false;
+    private description: string;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -55,6 +56,11 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
                 if (thisPack) {
                     this.mustHave = true;
                 }
+            }
+
+            this.description = "";
+            if (!this.pack.released) {
+                this.description += "This pack has not been released yet. The content is work-in-progress.";
             }
         });
     }

@@ -11,6 +11,7 @@ export class Pack {
     builds: number[];
     desc: string;
     mustHave: boolean;
+    released: boolean;
 }
 
 export class Skill {
@@ -60,6 +61,7 @@ export class Piece {
     skillIds: number[];
     type: PieceType;
     extra: string;
+    workInProgress: boolean;
 }
 
 export class Minifig extends Piece {

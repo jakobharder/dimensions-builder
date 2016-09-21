@@ -28,6 +28,7 @@ export class DataService {
 
     ensureLoaded() {
         if (this.packMap === null) {
+            this._initWaves();
             this._initPacks();
 
             this.skillMap = {};
@@ -63,6 +64,8 @@ export class DataService {
                     console.log('cannot find pack ' + minifig.packId);
                 }
 
+                minifig.workInProgress = !pack.released;
+
                 this.minifigMap[minifig.id] = minifig;
                 this.minifigs.push(minifig);
                 if (minifig.skillIds.length > 5) {
@@ -95,8 +98,6 @@ export class DataService {
 
             this.levels = new Levels();
             this.levels.init();
-
-            this._initWaves();
         }
     }
 
@@ -254,9 +255,24 @@ export class DataService {
             if (pack.id in this.packMap) {
                 console.log('pack ' + pack.id + ' is already in packMap');
             }
+            p.released = this.waveMap[p.wave].released;
             this.packMap[pack.id] = p;
             this.packs.push(p);
         }        
+        for (let pack of this.packs) {
+            this.waveMap[pack.wave].packs.push(pack);
+        }
+        for (let wave of this.waves) {
+            wave.packs.sort((a: Pack, b: Pack) => {
+                if (a.type > b.type) {
+                    return 1;
+                } else if (a.type < b.type) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            });
+        }
     }
 
     private _initBuilds() {
@@ -283,14 +299,11 @@ export class DataService {
         this.waveMap = {};
 
         for (let data of waves) {
-            let wave = <Wave>{ packs: [], number: data.wave, year: data.year, release: data.release };
+            let wave = <Wave>{ packs: [], number: data.wave, year: data.year, release: data.release, released: data.released };
             this.waveMap[data.wave] = wave;
             this.waves.push(wave);
         }
 
-        for (let pack of this.packs) {
-            this.waveMap[pack.wave].packs.push(pack);
-        }
         this.waves.sort((a: Wave, b: Wave) => {
                 if (a.number > b.number) {
                     return -1;
@@ -300,17 +313,5 @@ export class DataService {
                     return 0;
                 }
         });
-
-        for (let wave of this.waves) {
-            wave.packs.sort((a: Pack, b: Pack) => {
-                if (a.type > b.type) {
-                    return 1;
-                } else if (a.type < b.type) {
-                    return -1;
-                } else {
-                    return 0;
-                }
-            });
-        }
     }
 }

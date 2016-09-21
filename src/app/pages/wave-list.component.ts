@@ -26,7 +26,7 @@ export class WaveListComponent implements OnInit {
 		let releasedWaves = 5;
 		let releasedPacks = 0;
 		for (let wave of this.waves) {
-			if (wave.number <= 5) {
+			if (wave.released) {
 				releasedPacks += wave.packs.length;
 			}
 		}

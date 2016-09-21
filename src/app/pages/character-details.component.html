@@ -6,6 +6,7 @@
             </div>
             <h2 class="card-title">{{character.name}}</h2>
             <p>{{description}}</p>
+            <p *ngIf="workInProgress">{{workInProgress}}</p>
         </div>
         <cmp-pack-table [packs]="[pack]" class="delimiter"></cmp-pack-table>
     </div>
