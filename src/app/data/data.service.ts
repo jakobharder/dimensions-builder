@@ -36,12 +36,15 @@ export class DataService {
             for (let data of abilities) {
                 let skill = new Skill(data);
                 skill.providers = [];
+                skill.unimportant = false;
                 this.skillMap[skill.id] = skill;
                 if (skill.url !== undefined) {
                     this.urlToAbility[skill.url] = skill;
                 }
                 this.skills.push(skill);
             }
+            this.skillMap[Ability.Dodging].unimportant = true;
+            this.skillMap[Ability.SwordSwitching].unimportant = true;
 
             this.minifigMap = {};
             this.minifigs = [];
@@ -71,11 +74,11 @@ export class DataService {
 
             for (let ability of this.skills) {
                 ability.providers = new Pieces(ability.providers).getOrdered().byName().list;
-                if (ability.providers.length == 1) {
+                if (ability.isUnique()) {
                     ability.extra = "unique";
                     ability.providers[0].extra = "unique";
                     this.packMap[ability.providers[0].packId].mustHave = true;
-                } else if (ability.providers.length < 4) {
+                } else if (ability.isRare()) {
                     ability.extra = "rare";
                     /*for (let iter = 0; iter < 3 && iter < ability.providers.length; iter++) {
                         if (ability.providers[iter].extra != "unique") {

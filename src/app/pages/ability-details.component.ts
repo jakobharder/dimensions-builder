@@ -39,12 +39,14 @@ export class AbilityDetailsComponent implements OnInit {
                 this.builds = new Pieces(this.ability.providers).getBuilds();
                 this.characters = new Pieces(this.ability.providers).getCharacters();
 
-                this.rare = (this.characters.length + this.builds.length) < 4;
-                if (this.characters.length == 1 && this.builds.length == 0) {
-                    this.unique = this.characters[0];
-                }
-                else if (this.characters.length == 0 && this.builds.length == 1) {
-                    this.unique = this.builds[0];
+                this.rare = this.ability.isRare();
+                if (this.ability.isUnique()) {
+                    if (this.characters.length == 1 && this.builds.length == 0) {
+                        this.unique = this.characters[0];
+                    }
+                    else if (this.characters.length == 0 && this.builds.length == 1) {
+                        this.unique = this.builds[0];
+                    }
                 }
                 this.buildsOnly = this.characters.length == 0;
                 this.charactersOnly = this.builds.length == 0;

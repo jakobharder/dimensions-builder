@@ -35,7 +35,7 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
             if (this.character !== undefined) {
                 this.pack = this.dataService.getPack(this.character.packId);
                 for (let ability of this.character.skills) {
-                    if (ability.providers.length == 1) {
+                    if (ability.isUnique()) {
                         this.mustHave = true;
                         break;
                     }

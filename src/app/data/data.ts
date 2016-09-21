@@ -24,11 +24,21 @@ export class Skill {
     characters: Piece[];
     builds: Piece[];
 
+    unimportant: boolean;
+
     oneId: number;
     twoId: number;
 
     constructor(data: AbilityData) {
         Object.assign(this, data);
+    }
+
+    isUnique() {
+        return !this.unimportant && this.providers.length == 1;
+    }
+
+    isRare() {
+        return !this.unimportant && this.providers.length < 4;
     }
 }
 
