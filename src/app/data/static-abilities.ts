@@ -82,6 +82,9 @@ export enum Ability {
     DivePlusXRay,
     FlightPlusLaser,
 
+    Dodging,
+    SwordSwitching
+
     /* end of year 1 */
 }
 
@@ -119,7 +122,7 @@ export const abilities: AbilityData[] = [
     { id: 32, url: 'relic-detector', name: 'Relic Detector', desc: 'unhide objects that are indicated by purple sparkles', combo: false },
     { id: 33, url: 'big-transformation', name: 'Big Transformation', desc: 'become big and more powerful', combo: false },
     { id: 34, url: 'hazard-protection', name: 'Hazard Protection', desc: 'enter toxic areas without damage', combo: false },
-    { id: 35, url: 'boomerang', name: 'Boomerang', desc: 'throw a boomerang at a switch', combo: false },
+    { id: 35, url: 'boomerang', name: 'Batarang', desc: 'throw a boomerang at a switch', combo: false },
     { id: 36, url: 'grapple', name: 'Grapple', desc: 'use an orange grab point to pull or climb', combo: false },
     { id: 37, url: 'stealth', name: 'Stealth', desc: 'hide from security cameras', combo: false },
     { id: 38, url: 'acrobat', name: 'Acrobat', desc: 'jump extra high, climb special walls and grab poles', combo: false },
@@ -160,6 +163,9 @@ export const abilities: AbilityData[] = [
     { id: 72, url: 'dive+tracking', name: 'Dive + Tracking', desc: '', combo: true },
     { id: 73, url: 'dive+x-ray-vision', name: 'Dive + X-Ray Vision', desc: '', combo: true },
     { id: 74, url: 'flight+laser', name: 'Flight + Laser', desc: '', combo: true },
+
+    { id: 75, url: 'dodging', name: 'Dodging', desc: 'dodge (not confirmed ability)', combo: false },
+    { id: 76, url: 'sword-switching', name: 'Sword Switching', desc: 'sword switching (not confirmed ability)', combo: false }
 /*
     { id: , url: '', name: '', desc: '' },
 */
