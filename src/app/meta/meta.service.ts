@@ -49,6 +49,7 @@ export class MetaService {
         this.headElement = this._document.head;
 
         this.ogTitle = this.getOrCreateMetaElement('og:title', 'property');
+        this.ogImage = this.getOrCreateMetaElement('og:image', 'property');
         this.ogDescription = this.getOrCreateMetaElement('og:description', 'property');
         this.description = this.getOrCreateMetaElement('description', 'name');
     }
@@ -59,6 +60,7 @@ export class MetaService {
 
         this.setAttr(this.ogTitle, model.title);
         this.setAttr(this.ogDescription, model.description);
+        this.setAttr(this.ogImage, 'http://dimensions-builder.com' + model.image);
     }
 
     public setTitle(siteTitle = '', pageTitle ='', separator = ' - '){

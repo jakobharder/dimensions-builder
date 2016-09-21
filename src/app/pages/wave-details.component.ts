@@ -29,7 +29,8 @@ export class WaveDetailsComponent implements OnInit {
 	ngOnInit() {
 		this.meta.set({
 			title: "List of all Lego Dimensions packs",
-			description: ""
+			description: "",
+			image: ''
 		});
 
 		this.sub = this.route.params.subscribe(params => {
@@ -60,7 +61,8 @@ export class WaveDetailsComponent implements OnInit {
 
 			this.meta.set({
 				title: "All packs in wave " + this.wave.number,
-				description: desc
+				description: desc,
+				image: '/assets/images/' + this.wave.image + '.jpg'
 			});	
 		});
 	}

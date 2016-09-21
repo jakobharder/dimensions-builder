@@ -32,7 +32,8 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.meta.set({
             title: "Pack Details",
-            description: ""
+            description: "", 
+            image: ''
         });
 
         this.sub = this.route.params.subscribe(params => {
@@ -46,7 +47,8 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
 
             this.meta.set({
                 title: this.pack.name + " " + packTypeStrings[this.pack.type],
-                description: "See all characters, builds and abilities included in the " + this.pack.name + " " + packTypeStrings[this.pack.type] + "."
+                description: "See all characters, builds and abilities included in the " + this.pack.name + " " + packTypeStrings[this.pack.type] + ".",
+                image: '/assets/images/' + this.pack.image + '.jpg'
             });
             this.type = packTypeStrings[this.pack.type];
 

@@ -62,6 +62,7 @@ export class Piece {
     type: PieceType;
     extra: string;
     workInProgress: boolean;
+    image: string;
 }
 
 export class Minifig extends Piece {

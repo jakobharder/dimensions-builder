@@ -36,7 +36,8 @@ export class WaveListComponent implements OnInit {
 
 		this.meta.set({
 			title: "Complete list of all Lego Dimensions packs",
-			description: desc
+			description: desc,
+			image: ''
 		});	
 	}
 }

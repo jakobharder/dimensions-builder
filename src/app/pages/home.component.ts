@@ -21,7 +21,8 @@ export class HomeComponent implements OnInit {
 	ngOnInit() {
 		this.meta.set({
 			title: "Home",
-			description: "Lego Dimensions Builder is a Dimensions Character and Vehicle Ability Guide."
+			description: "Lego Dimensions Builder is a Dimensions Character and Vehicle Ability Guide.",
+			image: ''
 		});
 
 		let mostSkills: Piece[] = [];

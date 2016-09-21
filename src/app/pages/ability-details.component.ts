@@ -28,7 +28,8 @@ export class AbilityDetailsComponent implements OnInit {
     ngOnInit() {
         this.meta.set({
             title: "Ability Details",
-            description: ""
+            description: "",
+            image: ''
         });
 
         this.sub = this.route.params.subscribe(params => {
@@ -66,7 +67,8 @@ export class AbilityDetailsComponent implements OnInit {
 
                 this.meta.set({
                     title: this.ability.name + ' Ability with character list',
-                    description: desc
+                    description: desc,
+                    image: ''
                 });
             }
         });

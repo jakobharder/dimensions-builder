@@ -42,7 +42,8 @@ export class AbilityListComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.meta.set({
             title: "Character Abilities", 
-            description: "A complete overview list of all Character and Vehicle abilities and which Piece has them."
+            description: "A complete overview list of all Character and Vehicle abilities and which Piece has them.",
+            image: ''
         });
 
         this.unfiltered = this.data.getAbilities(null);
@@ -59,7 +60,8 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     this.listTitle = "Important Ability Combos Needed to Unlock Everything";
                     this.meta.set({
                         title: this.listTitle, 
-                        description: "A complete list of all important Character and Vehicle ability combinations like dive + digging. They are required to unlock everyting in the game."
+                        description: "A complete list of all important Character and Vehicle ability combinations like dive + digging. They are required to unlock everyting in the game.",
+            image: ''
                     });
                     this.isCombo = true;
                     break;
@@ -68,7 +70,8 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     this.listTitle = "Exclusive and Rare Character and Vehicle Abilities";
                     this.meta.set({
                         title: this.listTitle, 
-                        description: "A complete list of all unique and rare Character and Vehicle abilities and which Piece has them."
+                        description: "A complete list of all unique and rare Character and Vehicle abilities and which Piece has them.",
+            image: ''
                     });
                     this.isRare = true;
                     break;
@@ -78,7 +81,8 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     this.listTitle = "Complete Character and Vehicle Ability List";
                     this.meta.set({
                         title: this.listTitle, 
-                        description: "A complete overview list of all Character and Vehicle abilities and which Piece has them."
+                        description: "A complete overview list of all Character and Vehicle abilities and which Piece has them.",
+            image: ''
                     });
                     this.isAll = true;
                     break;

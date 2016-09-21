@@ -16,7 +16,8 @@ export class Year2Component implements OnInit {
         this.title = "Packs, Characters and Vehicles we get in Year 2";
         this.meta.set({
             title: this.title,
-            description: "An overview of all the Lego Dimensions packs coming in year 2 with details about the characters, vehicles and their abilities."
+            description: "An overview of all the Lego Dimensions packs coming in year 2 with details about the characters, vehicles and their abilities.",
+            image: ''
         });
     }
 }

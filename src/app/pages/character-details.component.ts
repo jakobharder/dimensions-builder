@@ -27,7 +27,8 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.meta.set({
             title: "Character Details",
-            description: ""
+            description: "",
+            image: ''
         });
 
         this.sub = this.route.params.subscribe(params => {
@@ -52,7 +53,8 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
 
                 this.meta.set({
                     title: this.character.name + "'s abilities and more",
-                    description: desc
+                    description: desc,
+                    image: '/assets/images/' + this.character.image + '.png'
                 });
             }
         });

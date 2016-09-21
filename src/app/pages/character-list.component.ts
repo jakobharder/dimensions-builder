@@ -21,7 +21,8 @@ export class CharacterListComponent implements OnInit {
     ngOnInit() {
         this.meta.set({
             title: "Complete list of all characters",
-            description: "Overview of all Lego Dimensions characters."
+            description: "Overview of all Lego Dimensions characters.",
+            image: ''
         });
         this.characters = new Pieces(this.dataService.getAllMinifigs()).getOrdered().byName().list;
     }
