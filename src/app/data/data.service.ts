@@ -22,6 +22,9 @@ export class DataService {
     waves: Wave[];
     waveMap: { [wave: number] : Wave; } = null;
 
+    buildMap: { [id: number] : Vehicle; } = null;
+    builds: Vehicle[];
+
     constructor() {
         this.ensureLoaded();
     }
@@ -126,6 +129,16 @@ export class DataService {
         for (let id of ids) {
             if (id in this.minifigMap) {
                 a.push(this.minifigMap[id]);
+            }
+        }
+        return a;
+    }
+
+    getBuilds(ids: number[]) {
+        let a: Piece[] = [];
+        for (let id of ids) {
+            if (id in this.buildMap) {
+                a.push(this.buildMap[id]);
             }
         }
         return a;
@@ -276,6 +289,9 @@ export class DataService {
     }
 
     private _initBuilds() {
+        this.builds = [];
+        this.buildMap = {};
+
         let mergedBuilds = this.mergeBuilds();
         for (let data of mergedBuilds) {
             let vehicle: Vehicle = Object.assign({}, data);
@@ -291,6 +307,9 @@ export class DataService {
             } else {
                 console.log('cannot find pack ' + vehicle.packId);
             }
+
+            this.builds.push(vehicle);
+            this.buildMap[vehicle.id] = vehicle;
         }
     }
 

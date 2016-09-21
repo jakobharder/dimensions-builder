@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MetaService } from '../meta';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Pack, Minifig, Skill, DataService, packTypeStrings } from '../data';
+import { Pack, Piece, Skill, DataService, packTypeStrings } from '../data';
 import { MinifigPanelComponent } from '../components';
 import { AbilityTableComponent, PieceTableComponent } from '../components/tables';
 
@@ -15,8 +15,10 @@ import { AbilityTableComponent, PieceTableComponent } from '../components/tables
 export class PackDetailsComponent implements OnInit, OnDestroy {
     sub: any;
     pack: Pack;
-    characters: Minifig[];
-    skills: Skill[];
+    characters: Piece[];
+    builds: Piece[];
+    private skills: Skill[];
+    private buildAbilities: Skill[];
     private type: string;
     private mustHave: boolean = false;
     private description: string;
@@ -37,8 +39,11 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
             let id = +params['id'];
             this.pack = this.dataService.getPack(id);
             this.characters = this.dataService.getMinifigs(this.pack.minifigs);
+            this.builds = this.dataService.getBuilds(this.pack.builds);
 
             this.skills = this.dataService.getSkills(this.characters.getSkills());
+            this.buildAbilities = this.dataService.getSkills(this.builds.getSkills());
+
             this.meta.set({
                 title: this.pack.name + " " + packTypeStrings[this.pack.type],
                 description: "See all characters, builds and abilities included in the " + this.pack.name + " " + packTypeStrings[this.pack.type] + "."

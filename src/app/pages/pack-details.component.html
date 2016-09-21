@@ -24,7 +24,13 @@
 </div>
 <div class="card">
     <div class="card-block">
-        <h2 class="card-title card-title-prim">Abilities included in this {{type}}</h2>
+        <h2 class="card-title card-title-prim">Character Abilities included in this {{type}}</h2>
     </div>
     <cmp-ability-table [abilities]="skills"></cmp-ability-table>
+</div>
+<div class="card">
+    <div class="card-block">
+        <h2 class="card-title card-title-prim">Build Abilities included in this {{type}}</h2>
+    </div>
+    <cmp-ability-table [abilities]="buildAbilities"></cmp-ability-table>
 </div>
