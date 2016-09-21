@@ -64,7 +64,17 @@ export const packs: PackData[] = [
     { id: 71242, wave: 6, year: 2, minifigs: [], builds: [], name: 'Ghostbusters™', type: PackType.StoryPack, image: 'ghostbusters-story-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
     { id: 71246, wave: 6, year: 2, minifigs: [], builds: [], name: 'Adventure Time', type: PackType.TeamPack, image: 'adventure-time-team-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
     { id: 71247, wave: 6, year: 2, minifigs: [], builds: [], name: 'Harry Potter', type: PackType.TeamPack, image: 'harry-potter-team-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
-    { id: 71251, wave: 6, year: 2, minifigs: [], builds: [], name: 'the A-Team', type: PackType.FunPack, image: 'a-team-fun-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' }
+    { id: 71251, wave: 6, year: 2, minifigs: [], builds: [], name: 'the A-Team', type: PackType.FunPack, image: 'a-team-fun-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
+    { id: 71253, wave: 7, year: 2, minifigs: [], builds: [], name: 'Fantastic Beasts and Where to Find Them', type: PackType.StoryPack, image: 'wave-7-fantastic-beasts-story-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
+    { id: 71257, wave: 7, year: 2, minifigs: [], builds: [], name: 'Tina Goldstein', type: PackType.FunPack, image: 'wave-7-tina-goldstein-fun-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
+    { id: 71244, wave: 7, year: 2, minifigs: [], builds: [], name: 'Sonic the Hedgehog', type: PackType.LevelPack, image: 'wave-7-sonic-level-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
+    { id: 71256, wave: 7, year: 2, minifigs: [], builds: [], name: 'Gremlins', type: PackType.TeamPack, image: 'wave-7-gremlins-team-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
+    { id: 71258, wave: 7, year: 2, minifigs: [], builds: [], name: 'E.T. The Extra-Terrestrial', type: PackType.FunPack, image: 'wave-7-et-fun-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
+    { id: 71285, wave: 7, year: 2, minifigs: [], builds: [], name: 'Marceline', type: PackType.FunPack, image: 'wave-7-marceline-fun-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
+
+/*
+    { id: , wave: , year: , minifigs: [], builds: [], name: '', type: PackType.FunPack, image: '', desc: '' },
+*/
 ];
 
 export class PieceData {

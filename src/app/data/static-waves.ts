@@ -11,4 +11,5 @@ export const waves: WaveData[] = [
     { year: 1, release: "March 2016" },
     { year: 1, release: "May 2016" },
     { year: 2, release: "September 2016" },
+    { year: 2, release: "November 2016" },
 ];
