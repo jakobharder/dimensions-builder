@@ -11,6 +11,6 @@
     </div>
     <cmp-pack-table [packs]="wave.packs" class="delimiter-b"></cmp-pack-table>
     <div class="card-block text-xs-center">
-        <a class="btn btn-secondary" [attr.href]="'/wave/' + wave.number">Show all Characters and Abilities of Wave {{wave.number}}</a>
+        <a class="btn btn-secondary" [routerLink]="'/wave/' + wave.number">Show all Characters and Abilities of Wave {{wave.number}}</a>
     </div>
 </div>

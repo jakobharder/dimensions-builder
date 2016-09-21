@@ -153,7 +153,9 @@ export const minifigs: MinifigData[] = [
     { id: 7117002, name: 'Gandalf', skillIds: [31, 46, 47], packId: 71170, image: '10237_1to1_MF_MUGSHOT_GandalfTheGrey_168' },
     { id: 7117003, name: 'Wyldstyle', skillIds: [32, 38, 42], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' },
     { id: 7128601, name: 'Michael Knight', skillIds: [], packId: 71286, image: 'wave-7.5-knight-rider' },
-    { id: 7134401, name: 'Excalibur Batman™', skillIds: [], packId: 71344, image: 'wave-7.5-excalibur-batman' }
+    { id: 7134401, name: 'Excalibur Batman', skillIds: [], packId: 71344, image: 'wave-7.5-excalibur-batman' },
+    { id: 7126401, name: 'Batgirl', skillIds: [], packId: 71264, image: 'wave-7.5-batgirl' },
+    { id: 7126402, name: 'Robin', skillIds: [], packId: 71264, image: 'wave-7.5-robin' }
 ];
 
 export const vehicles: VehicleData[] = [
