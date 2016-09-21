@@ -9,7 +9,7 @@
     <div class="card-block">
         <h2 [attr.class]="'card-title card-title-prim year' + wave.year">Wave {{wave.number}} - Year {{wave.year}} ({{wave.release}})</h2>
     </div>
-    <cmp-pack-table [packs]="wave.packs"></cmp-pack-table>
+    <cmp-pack-table [packs]="wave.packs" class="delimiter-b"></cmp-pack-table>
     <div class="card-block text-xs-center">
         <a class="btn btn-secondary" [attr.href]="'/wave/' + wave.number">Show all Characters and Abilities of Wave {{wave.number}}</a>
     </div>

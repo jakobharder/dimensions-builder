@@ -105,3 +105,6 @@ a, a:hover, a:active, a:focus {
 .delimiter table {
     border-top: 1px solid #16203B;
 }
+.delimiter-b table {
+    border-bottom: 1px solid #16203B;
+}

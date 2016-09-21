@@ -1,13 +1,13 @@
 <section *ngIf="character">
     <div class="card">
-        <div class="card-block text-xs-center">
+        <div class="card-block text-xs-center m-b-1">
             <div class="character-portrait m-x-auto">
                 <img src="/assets/images/{{character.image}}.png">
             </div>
             <h2 class="card-title">{{character.name}}</h2>
             <p>{{description}}</p>
         </div>
-        <cmp-pack-table [packs]="[pack]" class="delimiter m-t-1"></cmp-pack-table>
+        <cmp-pack-table [packs]="[pack]" class="delimiter"></cmp-pack-table>
     </div>
     <div class="card" *ngIf="mustHave">
         <div class="card-block text-xs-center">
