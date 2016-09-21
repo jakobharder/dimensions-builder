@@ -71,6 +71,7 @@ export const packs: PackData[] = [
     { id: 71256, wave: 7, year: 2, minifigs: [], builds: [], name: 'Gremlins', type: PackType.TeamPack, image: 'wave-7-gremlins-team-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
     { id: 71258, wave: 7, year: 2, minifigs: [], builds: [], name: 'E.T. The Extra-Terrestrial', type: PackType.FunPack, image: 'wave-7-et-fun-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
     { id: 71285, wave: 7, year: 2, minifigs: [], builds: [], name: 'Marceline', type: PackType.FunPack, image: 'wave-7-marceline-fun-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
+    { id: 71264, wave: 7.5, year: 2, minifigs: [], builds: [], name: 'LEGO Batman Movie', type: PackType.StoryPack, image: 'wave-7.5-batman-story-pack', desc: 'This pack has not been released yet. The content is work-in-progress.' },
 
 /*
     { id: , wave: , year: , minifigs: [], builds: [], name: '', type: PackType.FunPack, image: '', desc: '' },

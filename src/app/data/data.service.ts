@@ -20,6 +20,7 @@ export class DataService {
     urlToAbility: { [url: string] : Skill } = null;
     levels: Levels;
     waves: Wave[];
+    waveMap: { [wave: number] : Wave; } = null;
 
     constructor() {
         this.ensureLoaded();
@@ -109,12 +110,7 @@ export class DataService {
     }
 
     getWave(id: number) {
-        for (let wave of this.waves) {
-            if (wave.number == id) {
-                return wave;
-            }
-        }
-        return undefined;
+        return this.waveMap[id];
     }
 
     getMinifig(id: number) {
@@ -281,14 +277,26 @@ export class DataService {
 
     private _initWaves() {
         this.waves = [];
-        for (let pack of this.packs) {
-            if (this.waves[pack.wave - 1] === undefined) {
-                this.waves[pack.wave - 1] = <Wave>{ packs: [], number: pack.wave, year: waves[pack.wave - 1].year, release: waves[pack.wave - 1].release };
-            }
+        this.waveMap = {};
 
-            this.waves[pack.wave - 1].packs.push(pack);
+        for (let data of waves) {
+            let wave = <Wave>{ packs: [], number: data.wave, year: data.year, release: data.release };
+            this.waveMap[data.wave] = wave;
+            this.waves.push(wave);
         }
-        this.waves.reverse();
+
+        for (let pack of this.packs) {
+            this.waveMap[pack.wave].packs.push(pack);
+        }
+        this.waves.sort((a: Wave, b: Wave) => {
+                if (a.number > b.number) {
+                    return -1;
+                } else if (a.number < b.number) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+        });
 
         for (let wave of this.waves) {
             wave.packs.sort((a: Pack, b: Pack) => {
