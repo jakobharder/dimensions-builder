@@ -8,6 +8,10 @@ import { PackTableComponent, PieceTableComponent } from '../components/tables';
 	moduleId: module.id,
 	selector: 'page-wave-details',
 	templateUrl: 'wave-details.component.html',
+	styles: [`.wave-img {
+		max-height: 200px;
+		max-width: 100%;
+	}`],
 	directives: [ROUTER_DIRECTIVES, PackTableComponent, PieceTableComponent],
 })
 export class WaveDetailsComponent implements OnInit {

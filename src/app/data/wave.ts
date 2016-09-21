@@ -6,4 +6,5 @@ export class Wave {
     year: number;
     release: string;
     released: boolean;
+    image: string;
 };
