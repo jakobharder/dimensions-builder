@@ -44,6 +44,13 @@ h4 {
 .card-title-prim.year2 {
   background-color: #EDB742;
 }
+.card-title-prim.red {
+  background-color: #1A4E95;/*#CC324B;*/
+}
+.card.red {
+  background-color: #3468AF;/*#e64c65;*/
+  color: #fff;
+}
 .card-block {
   padding: 1rem 1.5rem;
 }
@@ -83,6 +90,15 @@ a, a:hover, a:active, a:focus {
 }
 .btn-secondary:hover, .btn-secondary:active, .btn-secondary:checked {
   background: #11A8AB !important;
+  border: none;
+}
+.btn-info, .btn-info:link, .btn-info:visited {
+  background: #4FC4F6;
+  color: #fff;
+  border: none;
+}
+.btn-info:hover, .btn-info:active, .btn-info:checked {
+  background: #35A5D6 !important;
   border: none;
 }
 .badge {

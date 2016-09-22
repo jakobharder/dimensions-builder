@@ -5,27 +5,29 @@
     </div>
     <img src="assets/images/dimensions-logo.png" class="m-l-1" />
     <div class="card-block">
-        <div><a [routerLink]="['/all-waves-and-packs']">List of all Dimension packs</a></div>
-        <div><a [routerLink]="['/characters']">List of all Dimension minifig characters</a></div>
-        <div><a [routerLink]="['/abilities']">List of all character abilities</a></div>
+        <p class="m-b-0 m-t-1">
+            <a class="btn btn-secondary m-b-1" [routerLink]="['/all-waves-and-packs']" title="List of all waves and packs">Overview Waves & Packs</a>
+            <a class="btn btn-secondary m-b-1" [routerLink]="['/characters']" title="List of all playable characters">Overview Characters</a>
+            <a class="btn btn-secondary m-b-1" [routerLink]="['/abilities']" title="List of all character abilities and build abilities">Overview Abilities</a>
+        </p>
     </div>
 </div>
 
-<div class="card text-xs-center">
+<div class="card text-xs-center red">
     <div class="card-block">
-        <h2 class="card-title">Team Builder</h2>
+        <h2 class="card-title card-title-prim red">Team Builder</h2>
         <p>
             Use the Team Builder to put together a team with all the abilities you want.
         </p>
-        <a class="btn btn-primary" [routerLink]="['/team-builder']">Go to the team builder now</a>
+        <a class="btn btn-info" [routerLink]="['/team-builder']">Go to the team builder now</a>
     </div>
 </div>
 
 <div class="card text-xs-center">
     <div class="card-block">
-        <h2 class="card-title">All about Year 2</h2>
-        <div><a [routerLink]="['/all-year2-packs-and-characters']">All Packs and Characters of Year 2</a></div>
-        <div><a [routerLink]="['/wave/6']">Wave 6 details</a></div>
+        <h2 class="card-title">New Wave 7.5 announced</h2>
+        <p><img src="/assets/images/wave-7.5.jpg" style="max-height: 200px; max-width: 100%;"></p>
+        <p class="m-b-0"><a class="btn btn-secondary" [routerLink]="['/wave/7.5']">Wave 7.5 details</a></p>
     </div>
 </div>
 
