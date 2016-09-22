@@ -12,6 +12,7 @@ export class Pack {
     desc: string;
     mustHave: boolean;
     released: boolean;
+    amazon: string;
 }
 
 export class Skill {

@@ -23,6 +23,11 @@
     </div>
     <cmp-piece-table [pieces]="characters"></cmp-piece-table>
 </div>
+<div class="card text-xs-center" *ngIf="pack.amazon">
+    <div class="card-block">
+        <a class="btn btn-primary" [attr.href]="pack.amazon">See more details at Amazon</a>
+    </div>
+</div>
 <div class="card">
     <div class="card-block">
         <h2 class="card-title card-title-prim">Character Abilities included in this {{type}}</h2>
