@@ -21,6 +21,7 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
     private buildAbilities: Skill[];
     private type: string;
     private mustHave: boolean = false;
+    private mustHaveText: string;
     private description: string;
 
     constructor(private route: ActivatedRoute,
@@ -52,7 +53,11 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
             });
             this.type = packTypeStrings[this.pack.type];
 
+            this.mustHaveText = null;
             for (let ability of this.skills) {
+                if (ability.unimportant) {
+                    continue;
+                }
                 let thisPack = false;
                 for (let provider of ability.providers) {
                     thisPack = provider.packId == this.pack.id;
@@ -62,6 +67,11 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
                 }
                 if (thisPack) {
                     this.mustHave = true;
+                    if (this.mustHaveText === null) {
+                        this.mustHaveText = ability.name;
+                    } else {
+                        this.mustHaveText += ", " + ability.name;
+                    }
                 }
             }
 
