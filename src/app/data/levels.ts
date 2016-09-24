@@ -23,9 +23,9 @@ export class LevelCollection {
 
 export class Levels {
     public list: Level[];
+    public urlMap: { [url: string] : Level } = null;
 
     private data: any;
-    private urlMap: { [url: string] : Level } = null;
     private collections: LevelCollection[];
 
     init(data: any) {

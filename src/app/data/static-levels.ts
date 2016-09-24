@@ -17,10 +17,10 @@ export const levels: LevelData[] = [
         abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.WaterSpray], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.SilverDestroy, Ability.Arcade], abilitiesStory: [Ability.SonarSmash, Ability.Accelerator, Ability.TimeTravel, Ability.Flying], walkthrough: 'https://www.youtube.com/watch?v=6X6F7J2aZxo' }, /* hover or fly, Marty McFly, car */
 
     { url: 'portal-2-level', name: 'Aperture Science', chapter: 0, story: 'Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
+        abilitiesMinikits: [Ability.LaserDeflector, Ability.XRay, Ability.Flying, Ability.Target, Ability.Grapple, Ability.Boomerang, Ability.Illumination, Ability.RelicDetector, Ability.Laser, Ability.VineCutting], abilitiesRescue: [Ability.Chi], abilitiesExtra: [], abilitiesStory: [Ability.PortalGun, Ability.WeightSwitch, Ability.SentryTurret], walkthrough: '' }, /* chell, turret */
 
-    { url: 'doctor-who-level', name: 'An Adventure in Space and Time', chapter: 0, story: 'Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
+    { url: 'doctor-who-level', name: 'The Dalek Extermination of Earth', chapter: 0, story: 'Level Packs',
+        abilitiesMinikits: [Ability.VineCutting, Ability.RelicDetector, Ability.Grapple, Ability.Magic, Ability.Digging, Ability.Laser, Ability.MasterBuild, Ability.Boomerang, Ability.Stealth, Ability.Electricity], abilitiesRescue: [Ability.WaterSpray, Ability.Magic], abilitiesExtra: [], abilitiesStory: [Ability.FixIt, Ability.Tardis, Ability.SilverDestroy, Ability.Technology, Ability.Stealth, Ability.Flying], walkthrough: '' }, /* water spray or ice */
 
     { url: 'the-simpsons-level', name: 'The Mysterious Voyage of Homer', chapter: 0, story: 'Level Packs',
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
