@@ -1,7 +1,7 @@
 import { Abilities } from './ability';
 
 let _Rixits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_";
-let _bits = 31;
+let _bits = 30;
 
 export function abilitiesToString(abilities: Abilities) {
     let numbers = [0, 0, 0]; // 32bit per number
