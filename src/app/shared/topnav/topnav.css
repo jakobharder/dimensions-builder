@@ -6,15 +6,6 @@
 li.nav-item {
     margin-left: 0 !important;
 }
-@media (max-width: 545px) {
-    div.collapse a.navbar-brand {
-        width: 100%;
-    }
-}
-.navbar-brand {
-    float: none;
-    display: block;
-}
 .navbar a.nav-link, .navbar a.navbar-brand {
     font-family: 'Bebas Neue Bold',Arial,sans-serif;
     font-weight: 600;

@@ -1,8 +1,15 @@
 <table *ngIf="levels">
     <tr *ngFor="let level of levels">
-        <td class="title"><span *ngIf="level.chapter != 0">Chapter {{level.chapter}}</span> <span class="title-span">{{level.name}}</span></td>
-        <td class="second-button"><a *ngIf="level.builderFinish" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderFinish]" >Team for Play</a></td>
-        <td class="second-button"><a *ngIf="level.builderComplete" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderComplete]" >Team for 100%</a></td>
-        <td><a class="btn btn-secondary" [title]="'more about ' + level.name" [routerLink]="['/level/' + level.url]" >Details</a></td>
+        <td class="title">
+            <span *ngIf="level.chapter != 0" class="hidden-sm-down">Chapter {{level.chapter}}</span> <span class="title-span">{{level.name}}</span>
+            <div class="hidden-lg-up btn-group">
+                <a class="btn btn-secondary" [title]="'more about ' + level.name" [routerLink]="['/level/' + level.url]" >Details</a>
+                <a *ngIf="level.builderComplete" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderComplete]" ><span class="hidden-xs-down">Team for </span>100%</a>
+                <a *ngIf="level.builderFinish" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderFinish]" ><span class="hidden-xs-down">Team for </span>Story</a>
+            </div>
+        </td>
+        <td class="second-button hidden-md-down"><a *ngIf="level.builderFinish" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderFinish]" >Team for Story</a></td>
+        <td class="second-button hidden-md-down"><a *ngIf="level.builderComplete" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderComplete]" >Team for 100%</a></td>
+        <td class="hidden-md-down"><a class="btn btn-secondary" [title]="'more about ' + level.name" [routerLink]="['/level/' + level.url]" >Details</a></td>
     </tr>
 </table>
