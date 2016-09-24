@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { DataService, Level, Abilities, AbilitiesOrdered } from './../data/index';
+import { DataService, Level, Abilities, AbilitiesOrdered } from '../data';
+import { AbilityTableComponent } from '../components/tables';
 import * as Serializer from './../data/serializer';
 
 @Component({
 	moduleId: module.id,
 	templateUrl: 'level-details.component.html',
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES, AbilityTableComponent]
 })
 export class LevelDetailsComponent implements OnInit {
     sub: any;
@@ -48,6 +49,8 @@ export class LevelDetailsComponent implements OnInit {
         this.allAbilities = this.minikitAbilities.clone();
         this.allAbilities.addRange(this.rescueAbilities);
         this.allAbilities.addRange(this.extraAbilities);
+        this.extraAbilities = this.allAbilities.clone();
+
         this.allAbilities.addRange(this.storyAbilities);
         this.allAbilities.orderByName();
 

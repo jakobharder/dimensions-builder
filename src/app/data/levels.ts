@@ -7,7 +7,8 @@ export class Level extends LevelData {
     previous: Level;
     completeAbilities: Abilities;
     finishAbilities: Abilities;
-    builderCode: string;
+    builderComplete: string;
+    builderFinish: string;
 
     constructor(data: LevelData) {
         super();
@@ -90,7 +91,10 @@ export class Levels {
             level.completeAbilities.orderByName();
 
             if (level.completeAbilities.list.length > 0) {
-                level.builderCode = Serializer.abilitiesToString(level.completeAbilities);
+                level.builderComplete = Serializer.abilitiesToString(level.completeAbilities);
+            }
+            if (level.finishAbilities.list.length > 0) {
+                level.builderFinish = Serializer.abilitiesToString(level.finishAbilities);
             }
         }
     }

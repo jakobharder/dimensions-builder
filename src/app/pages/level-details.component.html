@@ -8,22 +8,17 @@
         <p>
             <a class="btn btn-primary" [routerLink]="['/team-builder', serialized]">Build a team for this level</a>
         </p>
-
-        <h5>Abilities required to finish the level:</h5>
-        <ul>
-            <li *ngFor="let ability of storyAbilities.list">{{ability.name}}</li>
-        </ul>
-        <h5>Abilities required to collect all minikits:</h5>
-        <ul>
-            <li *ngFor="let ability of minikitAbilities.list">{{ability.name}}</li>
-        </ul>
-        <h5>Abilities required to rescue citizens in peril:</h5>
-        <ul>
-            <li *ngFor="let ability of rescueAbilities.list">{{ability.name}}</li>
-        </ul>
-        <h5>Remaining abilities required to 100% complete the level:</h5>
-        <ul>
-            <li *ngFor="let ability of extraAbilities.list">{{ability.name}}</li>
-        </ul>
     </div>
+</div>
+<div class="card" *ngIf="storyAbilities.list.length > 0">
+    <div class="card-block">
+        <h2 class="card-title card-title-prim">Abilities needed to finish:</h2>
+    </div>
+    <cmp-ability-table [abilities]="storyAbilities.list"></cmp-ability-table>
+</div>
+<div class="card" *ngIf="extraAbilities.list.length > 0">
+    <div class="card-block">
+        <h2 class="card-title card-title-prim">Abilities needed to collect 100%:</h2>
+    </div>
+    <cmp-ability-table [abilities]="extraAbilities.list"></cmp-ability-table>
 </div>
