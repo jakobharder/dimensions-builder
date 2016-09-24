@@ -1,5 +1,5 @@
-<div class="card">
+<div class="card" *ngFor="let collection of collections">
     <div class="card-block" *ngIf="levels">
-        <p *ngFor="let level of levels.list"><a [routerLink]="['/level/' + level.url]">{{level.name}}</a></p>
+        <p *ngFor="let level of collection.levels"><a [routerLink]="['/level/' + level.url]">{{level.name}}</a></p>
     </div>
 </div>

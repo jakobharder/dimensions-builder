@@ -10,13 +10,34 @@ export class Level extends LevelData {
     }
 }
 
+export class LevelCollection {
+    name: string;
+    levels: Level[];
+}
+
 export class Levels {
-    list: Level[];
-    urlMap: { [url: string] : Level } = null;
+    public list: Level[];
+
+    private urlMap: { [url: string] : Level } = null;
+    private collections: LevelCollection[];
 
     init() {
         this._copyData();
         this._linkLevels();
+        this._createCollections();
+    }
+
+    getCollections() {
+        return this.collections;
+    }
+
+    getCollection(name: string) {
+        for (let collection of this.collections) {
+            if (collection.name === name) {
+                return collection;
+            }
+        }
+        return undefined;
     }
 
     private _copyData() {
@@ -44,6 +65,22 @@ export class Levels {
                 }
             }
             previous = level;
+        }
+    }
+
+    private _createCollections() {
+        this.collections = [];
+
+        let collection = undefined;
+        for (let level of this.list) {
+            if (collection === undefined || collection.name !== level.story) {
+                collection = this.getCollection(level.story);
+            }
+            if (collection === undefined) {
+                collection = <LevelCollection>{ name: level.story, levels: [] };
+                this.collections.push(collection);
+            }
+            collection.levels.push(level);
         }
     }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { MetaService } from '../meta';
-import { Level, Levels, DataService } from '../data';
+import { Level, Levels, LevelCollection, DataService } from '../data';
 
 @Component({
 	moduleId: module.id,
@@ -9,7 +9,8 @@ import { Level, Levels, DataService } from '../data';
     directives: [ROUTER_DIRECTIVES]
 })
 export class LevelListComponent implements OnInit {
-    levels: Levels;
+    private levels: Levels;
+    private collections: LevelCollection[];
 
     constructor(private data: DataService,
                 private meta: MetaService ) {
@@ -23,5 +24,6 @@ export class LevelListComponent implements OnInit {
         });
 
         this.levels = this.data.getLevels();
+        this.collections = this.levels.getCollections();
     }
 }
