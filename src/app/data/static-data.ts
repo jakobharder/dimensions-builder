@@ -106,7 +106,7 @@ export const minifigs: MinifigData[] = [
     { id: 7122801, name: 'Peter Venkman', skillIds: [12, 34, 56], packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168' },
     { id: 7124801, name: 'Ethan Hunt', skillIds: [Ability.Target, Ability.SilverDestroy, Ability.Stealth, Ability.XRay, Ability.Grapple, Ability.Technology, Ability.Drone, Ability.Disguise, Ability.Invisibility, Ability.Climb], packId: 71248, image: 'wave-6-ethan-hunt' },
     { id: 7124501, name: 'Finn', skillIds: [Ability.SwordSwitching, Ability.Acrobat, Ability.VineCutting, Ability.DemonDestroy, Ability.Grapple, Ability.LaserDeflector, Ability.Laser, Ability.Target, Ability.Electricity], packId: 71245, image: 'wave-6-finn' }, /* vine cutting = gras sword */
-    { id: 7124401, name: 'Sonic the Hedgehog', skillIds: [], packId: 71244, image: 'wave-6-sonic-the-hedgehog' },
+    /*{ id: 7124401, name: 'Sonic the Hedgehog', skillIds: [], packId: 71244, image: 'wave-6-sonic-the-hedgehog' },*/
     { id: 7120501, name: 'Owen', skillIds: [22, 26, 27, 37], packId: 71205, image: '75917_1to1_MF_OWEN_MUGSHOT_168' },
     { id: 7120502, name: 'ACU Trooper', skillIds: [6, 31], packId: 71205, image: '75916_1to1_MF_ACU_MUGSHOT_168' },
     { id: 7120601, name: 'Scooby Doo', skillIds: [3, 4, 26, 37, 49, Ability.DivePlusDigging, Ability.DivePlusTracking], packId: 71206, image: '75900_Scooby_ft_Mugshot_168x224' },// stealth?
@@ -147,9 +147,9 @@ export const minifigs: MinifigData[] = [
     { id: 7123801, name: 'Cyberman', skillIds: [4, 10, 17, 23, 30, 40, 41, Ability.DivePlusDrone, Ability.DivePlusHacking, Ability.DivePlusLazer, Ability.DivePlusSilverDestroy, Ability.DivePlusTechnology, Ability.DivePlusXRay], packId: 71238, image: '71238_1to1_MF_MUGSHOT_Gyberman_168' },
     { id: 7123901, name: 'Lloyd', skillIds: [20, 31, 37, 38, 39], packId: 71239, image: '71239_1to1_MF_MUGSHOT_Lloyd_168' },
     { id: 7124001, name: 'Bane', skillIds: [2, 33, 34], packId: 71240, image: '71240_1to1_MF_MUGSHOT_Bane_168' },
-    { id: 7124101, name: 'Slimer', skillIds: [4, 11, 13, 18, 31, 34, 35, 43, Ability.DivePlusBoomerang, Ability.DivePlusGhostImmunity, Ability.DivePlusHazardCleaner, Ability.DivePlusMini, Ability.DivePlusSonarSmash], packId: 71241, image: '71241_1to1_MF_MUGSHOT_Slimer_168' },
+    { id: 7124101, name: 'Slimer', skillIds: [4, 11, 13, 18, 31, 34, 35, 43, Ability.DivePlusBoomerang, Ability.DivePlusGhostImmunity, Ability.DivePlusHazardCleaner, Ability.DivePlusMini, Ability.DivePlusSonarSmash, Ability.SlurpAccess], packId: 71241, image: '71241_1to1_MF_MUGSHOT_Slimer_168' },
     { id: 7125101, name: 'B.A. Baracus', skillIds: [Ability.FixIt, Ability.SuperStrength, Ability.LaserDeflector, Ability.MasterBuild, Ability.Target, Ability.SilverDestroy], packId: 71251, image: 'wave-6-ba-baracus' },
-    { id: 7128501, name: 'Marceline', skillIds: [], packId: 71285, image: 'wave-6-marceline' },
+    /*{ id: 7128501, name: 'Marceline', skillIds: [], packId: 71285, image: 'wave-6-marceline' },*/
     { id: 7117001, name: 'Batman', skillIds: [35, 36, 37], packId: 71170, image: '71200_1to1_MF_MUGSHOT_Batman_168' },
     { id: 7117002, name: 'Gandalf', skillIds: [31, 46, 47], packId: 71170, image: '10237_1to1_MF_MUGSHOT_GandalfTheGrey_168' },
     { id: 7117003, name: 'Wyldstyle', skillIds: [32, 38, 42], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' },
