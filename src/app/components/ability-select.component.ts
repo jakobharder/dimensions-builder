@@ -113,7 +113,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         this.skillLists.push(list);
 
         list = new SkillList();
-        list.init("not needed", this.dataService.getAbilities(new Abilities(this._updateAllSkills())));
+        list.init("not needed / new & unconfirmed", this.dataService.getAbilities(new Abilities(this._updateAllSkills())));
         this.skillLists.push(list);
 
         this._selectAbilities();
