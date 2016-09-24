@@ -86,7 +86,16 @@ export enum Ability {
     SwordSwitching,
     SentryTurret,
     WaterSprayOrIce,
-    DemonSword
+    DemonDestroy,
+    Disguise,
+    Climb,
+    Invisibility,
+    SlurpAccess,
+    Diffindo,
+    Parseltongue,
+    DarkArts,
+    IntelligenceAccess,
+    ChargeTransfer
 
     /* end of year 1 */
 }
@@ -171,7 +180,16 @@ export const abilities: AbilityData[] = [
     { id: Ability.SwordSwitching, url: 'sword-switch', name: 'Sword Switch', desc: 'use sword switches', combo: false },
     { id: 77, url: 'sentry-turret', name: 'Sentry Turret', desc: 'automatically shoot', combo: false },
     { id: Ability.WaterSprayOrIce, url: null, name: 'Water Spray or Ice', desc: '', combo: true },
-    { id: Ability.DemonSword, url: null, name: 'Demon Sword', desc: '', combo: false }
+    { id: Ability.DemonDestroy, url: null, name: 'Demon Destroy', desc: '', combo: false },
+    { id: Ability.Disguise, url: null, name: 'Disguise', desc: '', combo: false },
+    { id: Ability.Invisibility, url: null, name: 'Invisibility', desc: '', combo: false },
+    { id: Ability.Climb, url: null, name: 'Climb', desc: '', combo: false },
+    { id: Ability.SlurpAccess, url: null, name: 'Slurp Access', desc: '', combo: false },
+    { id: Ability.Diffindo, url: null, name: 'Diffindo', desc: '', combo: false },
+    { id: Ability.Parseltongue, url: null, name: 'Parseltongue', desc: '', combo: false },
+    { id: Ability.DarkArts, url: null, name: 'Dark Arts', desc: '', combo: false },
+    { id: Ability.IntelligenceAccess, url: null, name: 'Intelligence Access', desc: '', combo: false },
+    { id: Ability.ChargeTransfer, url: null, name: 'Charge Transfer', desc: '', combo: false }
 /*
     { id: , url: '', name: '', desc: '' },
 */
