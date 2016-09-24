@@ -5,9 +5,9 @@
         <p>{{uniqueAbilitiesCount}} abilities are unique, there is only character or build providing this power.<br>{{uniqueCombosCount}} ability combos are unique, there is only character or build providing this power.</p>
     </div>
     <div class="card-block">
-        <a class="btn" [ngClass]="{'btn-primary': isAll, 'btn-secondary': !isAll}" href="/abilities">All Abilities</a>
-        <a class="btn" [ngClass]="{'btn-primary': isRare, 'btn-secondary': !isRare}" href="/rare-abilities">Rare Abilities</a>
-        <a class="btn" [ngClass]="{'btn-primary': isCombo, 'btn-secondary': !isCombo}" href="/combo-abilities">Combo Abilities</a>
+        <a class="btn" [ngClass]="{'btn-primary': isAll, 'btn-secondary': !isAll}" [routerLink]="['/abilities']">All Abilities</a>
+        <a class="btn" [ngClass]="{'btn-primary': isRare, 'btn-secondary': !isRare}" [routerLink]="['/rare-abilities']">Rare Abilities</a>
+        <a class="btn" [ngClass]="{'btn-primary': isCombo, 'btn-secondary': !isCombo}" [routerLink]="['/combo-abilities']">Combo Abilities</a>
     </div>
 </div>
 <share-section></share-section>
