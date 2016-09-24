@@ -1,5 +1,13 @@
+<div class="card text-xs-center">
+    <div class="card-block" *ngIf="levels">
+        <h1 class="card-title">All Levels, Adventure Worlds and Battle Areanas</h1>
+        <p class="m-b-0">{{description}}</p>
+    </div>
+</div>
+
 <div class="card" *ngFor="let collection of collections">
     <div class="card-block" *ngIf="levels">
+        <h2 class="card-title card-title-prim">{{collection.name}}</h2>
         <p *ngFor="let level of collection.levels"><a [routerLink]="['/level/' + level.url]">{{level.name}}</a></p>
     </div>
 </div>

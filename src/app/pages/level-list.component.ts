@@ -11,19 +11,22 @@ import { Level, Levels, LevelCollection, DataService } from '../data';
 export class LevelListComponent implements OnInit {
     private levels: Levels;
     private collections: LevelCollection[];
+    private description: string;
 
     constructor(private data: DataService,
                 private meta: MetaService ) {
     }
 
     ngOnInit() {
-        this.meta.set({
-            title: "List of all Lego Dimensions Levels, Worlds and Battle Areanas",
-            description: '',
-            image: ''
-        });
-
         this.levels = this.data.getLevels();
         this.collections = this.levels.getCollections();
+
+        this.description = "There are " + this.levels.list.length + " released levels for Lego Dimensions so far.";
+
+        this.meta.set({
+            title: "List of all Lego Dimensions Levels, Worlds and Battle Areanas",
+            description: this.description,
+            image: ''
+        });
     }
 }
