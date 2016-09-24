@@ -14,7 +14,7 @@ td.icon img {
     height: 61px;
     margin: -0.75rem 0;
 }
-td.title span:first-child {
+td.title span.title-span {
   font-family: 'Bebas Neue Bold',Arial,sans-serif;
   font-weight: 600;
   color: #fff;

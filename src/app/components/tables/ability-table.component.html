@@ -1,6 +1,6 @@
 <table *ngIf="abilities">
     <tr *ngFor="let ability of abilities">
-        <td class="title"><span>{{ability.name}}</span> <span class="badge">{{ability.extra}}</span></td>
+        <td class="title"><span class="title-span">{{ability.name}}</span> <span class="badge">{{ability.extra}}</span></td>
         <td class="providers">
             <div *ngIf="ability.characters.length > 0"><span class="text-muted">characters:</span> <span *ngFor="let piece of ability.characters | limitFilter; let isLast = last">{{piece}}{{isLast ? '' : ', '}}</span></div>
             <div *ngIf="ability.builds.length > 0"><span class="text-muted">builds:</span> <span *ngFor="let piece of ability.builds | limitFilter; let isLast = last">{{piece}}{{isLast ? '' : ', '}}</span></div>
