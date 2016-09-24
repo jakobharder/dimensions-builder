@@ -13,6 +13,24 @@ export class LevelData {
 }
 
 export const levels: LevelData[] = [
+    { url: 'back-to-the-future-level', name: 'A Hill Valley Time Travel Adventure', chapter: 0, story: 'Level Packs',
+        abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Target, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.WaterSpray], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.SilverDestroy, Ability.Arcade], abilitiesStory: [], walkthrough: '' },
+
+    { url: 'portal-2-level', name: 'Aperture Science', chapter: 0, story: 'Level Packs',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
+
+    { url: 'doctor-who-level', name: 'An Adventure in Space and Time', chapter: 0, story: 'Level Packs',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
+
+    { url: 'the-simpsons-level', name: 'The Mysterious Voyage of Homer', chapter: 0, story: 'Level Packs',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
+
+    { url: 'ghostbusters-level', name: 'Ghostbusters Level', chapter: 0, story: 'Level Packs',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
+
+    { url: 'midway-arcade-level', name: 'Midway Arcade Level', chapter: 0, story: 'Level Packs',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
+        
     { url: 'main-story-1-follow-the-lego-brick-road', name: 'Follow The Lego Brick Road – Wizard Of Oz', chapter: 1, story: 'Main Story',
         abilitiesMinikits: [Ability.SilverDestroy, Ability.Hacking, Ability.HazardCleaner, Ability.Grapple, Ability.RelicDetector, Ability.SuperStrength, Ability.Tracking, 
         Ability.TrapGhosts, Ability.SuspendGhost, Ability.Magic, Ability.Laser, Ability.TowBar], abilitiesRescue: [Ability.TrapGhosts, Ability.SuspendGhost, Ability.Laser], 
@@ -58,24 +76,6 @@ export const levels: LevelData[] = [
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
 
     { url: 'main-story-14-the-final-dimension', name: 'The Final Dimension', chapter: 14, story: 'Main Story',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
-
-    { url: 'back-to-the-future-level', name: 'A Hill Valley Time Travel Adventure', chapter: 0, story: 'Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
-
-    { url: 'portal-2-level', name: 'Aperture Science', chapter: 0, story: 'Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
-
-    { url: 'doctor-who-level', name: 'An Adventure in Space and Time', chapter: 0, story: 'Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
-
-    { url: 'the-simpsons-level', name: 'The Mysterious Voyage of Homer', chapter: 0, story: 'Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
-
-    { url: 'ghostbusters-level', name: 'Ghostbusters Level', chapter: 0, story: 'Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
-
-    { url: 'midway-arcade-level', name: 'Midway Arcade Level', chapter: 0, story: 'Level Packs',
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], walkthrough: '' },
 
 ];
