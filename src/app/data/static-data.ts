@@ -154,9 +154,9 @@ export const minifigs: MinifigData[] = [
     { id: 7117002, name: 'Gandalf', skillIds: [31, 46, 47], packId: 71170, image: '10237_1to1_MF_MUGSHOT_GandalfTheGrey_168' },
     { id: 7117003, name: 'Wyldstyle', skillIds: [32, 38, 42], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' },
     { id: 7128601, name: 'Michael Knight', skillIds: [Ability.Dodging, Ability.Speed, Ability.XRay, Ability.Hacking, Ability.Tracking], packId: 71286, image: 'wave-7.5-knight-rider' }, // doging, dash=speed?
-    { id: 7134401, name: 'Excalibur Batman', skillIds: [Ability.SwordSwitching, Ability.MasterBuild], packId: 71344, image: 'wave-7.5-excalibur-batman' }, // sword switching
+    { id: 7134401, name: 'Excalibur Batman', skillIds: [Ability.SwordSwitching, Ability.MasterBuild, Ability.VineCutting], packId: 71344, image: 'wave-7.5-excalibur-batman' },
     { id: 7126401, name: 'Batgirl', skillIds: [Ability.Boomerang, Ability.Gliding, Ability.Stealth], packId: 71264, image: 'wave-7.5-batgirl' },
-    { id: 7126402, name: 'Robin', skillIds: [Ability.Dive, Ability.VineCutting], packId: 71264, image: 'wave-7.5-robin' }, // deflect moves, agility
+    { id: 7126402, name: 'Robin', skillIds: [Ability.Dive, Ability.VineCutting, Ability.LaserDeflector, Ability.Acrobat], packId: 71264, image: 'wave-7.5-robin' },
     { id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.IntelligenceAccess, Ability.ChargeTransfer], packId: 71242, image: 'wave-6-abby-yates' }
 ];
 
