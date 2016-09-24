@@ -8,6 +8,6 @@
 <div class="card" *ngFor="let collection of collections">
     <div class="card-block" *ngIf="levels">
         <h2 class="card-title card-title-prim">{{collection.name}}</h2>
-        <p *ngFor="let level of collection.levels"><a [routerLink]="['/level/' + level.url]">{{level.name}}</a></p>
     </div>
+    <cmp-level-table [levels]="collection.levels"></cmp-level-table>
 </div>

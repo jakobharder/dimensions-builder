@@ -24,6 +24,10 @@ td.providers {
     width: 50%;
     padding: 0.25rem 0.75rem;
 }
+td.second-button {
+    text-align: right;
+    width: 48px;
+}
 td:last-child {
     text-align: right;
     width: 48px;

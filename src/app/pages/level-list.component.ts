@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { MetaService } from '../meta';
 import { Level, Levels, LevelCollection, DataService } from '../data';
+import { LevelTableComponent } from '../components/tables';
 
 @Component({
 	moduleId: module.id,
 	templateUrl: 'level-list.component.html',
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES, LevelTableComponent]
 })
 export class LevelListComponent implements OnInit {
     private levels: Levels;

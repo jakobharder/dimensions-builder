@@ -1,0 +1,7 @@
+<table *ngIf="levels">
+    <tr *ngFor="let level of levels">
+        <td class="title"><span>{{level.name}}</span></td>
+        <td class="second-button"><a class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/level/' + level.url]" >Team for 100%</a></td>
+        <td><a class="btn btn-secondary" [title]="'more about ' + level.name" [routerLink]="['/level/' + level.url]" >Details</a></td>
+    </tr>
+</table>
