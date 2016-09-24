@@ -1,8 +1,13 @@
 import { levels, LevelData } from './static-levels';
+import { Abilities } from './ability';
+import * as Serializer from './../data/serializer';
 
 export class Level extends LevelData {
     next: Level;
     previous: Level;
+    completeAbilities: Abilities;
+    finishAbilities: Abilities;
+    builderCode: string;
 
     constructor(data: LevelData) {
         super();
@@ -18,12 +23,15 @@ export class LevelCollection {
 export class Levels {
     public list: Level[];
 
+    private data: any;
     private urlMap: { [url: string] : Level } = null;
     private collections: LevelCollection[];
 
-    init() {
+    init(data: any) {
+        this.data = data;
         this._copyData();
         this._linkLevels();
+        this._checkAbilities();
         this._createCollections();
     }
 
@@ -65,6 +73,25 @@ export class Levels {
                 }
             }
             previous = level;
+        }
+    }
+
+    private _checkAbilities() {
+        for (let level of this.list) {
+            let minikitAbilities = new Abilities(this.data.getSkills(level.abilitiesMinikits)).orderByName();
+            let rescueAbilities = new Abilities(this.data.getSkills(level.abilitiesRescue)).orderByName();
+            let extraAbilities = new Abilities(this.data.getSkills(level.abilitiesExtra)).orderByName();
+            level.finishAbilities = new Abilities(this.data.getSkills(level.abilitiesStory)).orderByName();
+
+            level.completeAbilities = minikitAbilities.clone();
+            level.completeAbilities.addRange(rescueAbilities);
+            level.completeAbilities.addRange(extraAbilities);
+            level.completeAbilities.addRange(level.finishAbilities);
+            level.completeAbilities.orderByName();
+
+            if (level.completeAbilities.list.length > 0) {
+                level.builderCode = Serializer.abilitiesToString(level.completeAbilities);
+            }
         }
     }
 

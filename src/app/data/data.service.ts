@@ -100,7 +100,7 @@ export class DataService {
             }
 
             this.levels = new Levels();
-            this.levels.init();
+            this.levels.init(this);
         }
     }
 
