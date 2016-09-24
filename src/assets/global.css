@@ -17,9 +17,12 @@ body {
 .card.card-inverse {
   background: #16203B;
 }
-.card-title, h1, h2, h3, h4, h5 {
+.card-title, h1, h2, h3 {
   font-family: 'Bebas Neue Bold',Arial,sans-serif;
   font-weight: 600;
+  color: #fff;
+}
+h4, h5 {
   color: #fff;
 }
 h1.card-title {
@@ -33,6 +36,7 @@ h3 {
 }
 h4 {
   font-size: 1rem;
+  margin-bottom: 0rem;
 }
 .card-title-prim {
   background-color: #11A8AB;

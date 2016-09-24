@@ -8,6 +8,7 @@ import { MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent, Ab
 	moduleId: module.id,
 	selector: 'team-builder',
 	templateUrl: 'team-builder.component.html',
+    styleUrls: ['team-builder.component.css'],
     directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent]
 })
 export class TeamBuilderComponent implements OnInit {
