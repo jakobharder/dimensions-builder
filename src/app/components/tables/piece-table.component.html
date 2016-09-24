@@ -1,6 +1,6 @@
 <table *ngIf="pieces">
     <tr *ngFor="let piece of pieces">
-        <td class="icon"><img src="/assets/images/63/{{piece.image}}.png" alt="{{piece.name}}"></td>
+        <td class="piece-icon"><img src="/assets/images/63/{{piece.image}}.png" alt="{{piece.name}}"></td>
         <td class="title"><span class="title-span">{{piece.name}}</span> <span class="badge">{{piece.extra}}</span></td>
         <td class="providers">
             <div *ngIf="piece.skills.length > 0"><span *ngFor="let ability of piece.skills | limitFilter; let isLast = last">{{ability}}{{isLast ? '' : ', '}}</span></div>

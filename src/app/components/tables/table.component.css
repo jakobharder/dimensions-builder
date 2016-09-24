@@ -10,6 +10,13 @@ td {
 td.icon {
     width: 32px;
 }
+td.piece-icon {
+    width: 32px;
+}
+td.piece-icon img {
+    width: 46px;
+    height: 61px;
+}
 td.icon img {
     height: 61px;
     margin: -0.75rem 0;
