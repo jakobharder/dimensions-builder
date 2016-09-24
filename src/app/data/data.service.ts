@@ -215,6 +215,10 @@ export class DataService {
         return result;
     }
 
+    getLevels() {
+        return this.levels;
+    }
+
     getLevel(url: string) {
         return this.levels.urlMap[url];
     }
