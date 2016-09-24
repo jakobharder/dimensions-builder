@@ -12,6 +12,7 @@ import { enableProdMode } from '@angular/core';
 import { expressEngine } from 'angular2-universal';
 
 import { abilities } from './app/data/static-abilities';
+import { levels } from './app/data/static-levels';
 
 var compression = require('compression');
 
@@ -61,15 +62,19 @@ var urls = [
   // changefreq: 'weekly',  priority: 0.5 
   { url: '/', changefreq: 'weekly', priority: 0.5 },
   { url: '/team-builder', changefreq: 'daily', priority: 0.7 },
-  { url: '/all-waves-and-packs', changefreq: 'daily', priority: 0.5 },
-  { url: '/characters', changefreq: 'daily', priority: 0.5 },   
+  { url: '/all-waves-and-packs', changefreq: 'daily', priority: 0.7 },
+  { url: '/characters', changefreq: 'daily', priority: 0.7 },   
   { url: '/abilities', changefreq: 'daily', priority: 0.7 },
   { url: '/rare-abilities', changefreq: 'daily', priority: 0.5 },
   { url: '/combo-abilities', changefreq: 'daily', priority: 0.5 },
+  { url: '/levels', changefreq: 'daily', priority: 0.7 },
   { url: '/all-year2-packs-and-characters', changefreq: 'daily', priority: 0.5 }
 ];
 for (let ability of abilities) {
   urls.push({ url: '/ability/' + ability.url, changefreq: 'daily', priority: 0.5});
+}
+for (let level of levels) {
+  urls.push({ url: '/ability/' + level.url, changefreq: 'daily', priority: 0.5});
 }
 for (let i of [1, 2, 3, 4, 5, 6]) {
   urls.push({ url: '/wave/' + i, changefreq: 'daily', priority: 0.5});

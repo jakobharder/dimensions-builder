@@ -22,7 +22,10 @@ body {
   font-weight: 600;
   color: #fff;
 }
-.card-title {
+h1.card-title {
+  font-size: 2rem;
+}
+h2.card-title {
   font-size: 1.5rem;
 }
 h3 {
