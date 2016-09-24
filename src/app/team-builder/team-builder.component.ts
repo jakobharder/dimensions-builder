@@ -24,6 +24,8 @@ export class TeamBuilderComponent implements OnInit {
     urlAbilities: string;
     skip = false;
 
+    private levelName: string;
+
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
                 private title: Title) {
@@ -95,6 +97,18 @@ export class TeamBuilderComponent implements OnInit {
                 }
             }
         }
+
+        let level = this.dataService.getLevels().getLevelByAbilities(this.urlAbilities);
+        if (level === undefined) {
+            this.levelName = "your custom selection";
+        } else {
+            if (level.builderComplete == this.urlAbilities) {
+                this.levelName = "100% of " + level.name;
+            } else {
+                this.levelName = "Story of " + level.name;
+            }
+        }
+        this.route.params['abilities'] = this.urlAbilities;
     }
 
     private _filter(input: number[], filter: number[]) {

@@ -1,7 +1,7 @@
 <section *ngIf="skills">
     <div class="card">
         <div class="card-block">
-            <h2 class="card-title">Team Builder <small>v6</small></h2>
+            <h1 class="card-title">Team Builder <small>v7</small></h1>
             <p>The team builder currently includes all data from year 1 (waves 1 to 5). I will add newer waves as soon as I get enough data about their abilities.<br><a href="/team-builder#changelog">See change history</a></p>
             
             <h5>How to use the team builder</h5>
@@ -17,17 +17,20 @@
     </div>
     <div class="card">
         <div class="card-block">
-            <h2 class="card-title">Choose Your Abilities</h2>
+            <h2 class="card-title card-title-prim">Select Your Abilities</h2>
+            <p class="text-xs-center">
+                <a class="btn btn-primary" [routerLink]="['/levels']">Select by level to play</a>
+            </p>
             <ability-select class="like-p" (changed)="onAbilitiesChanged($event)" [query]="queryAbilities" (urlParameter)="urlAbilities" [skip]="skip"></ability-select>
             <p>
                 Link to this ability selection:<br>http://dimensions-builder.com/team-builder/{{urlAbilities}}
             </p>
         </div>
     </div>
-    <div class="card">
+    <div class="card text-xs-center">
         <div class="card-block">
-            <h2 class="card-title">Your Team</h2>
-            <p>Click on a minifig to remove it from your team.</p>
+            <h2 class="card-title card-title-prim">Your Team for {{levelName}}</h2>
+            <p>Click on a character to remove it from your team.</p>
             <div *ngIf="team">
                 <minifig-panel class="pull-md-left" *ngFor="let minifig of team.get()" (click)="removeMember(minifig)" [piece]="minifig">{{minifig.name}}</minifig-panel>
                 <div class="clearfix"></div>
@@ -35,10 +38,10 @@
         </div>
     </div>
     <section *ngIf="(currentSkillIndex < skills.length)">
-        <div class="card">
+        <div class="card text-xs-center">
             <div class="card-block">
-                <h2 class="card-title">Select a character for {{skills[currentSkillIndex].name}}</h2>
-                <p>Click on a minifig to add it to your team.</p>
+                <h2 class="card-title card-title-prim">{{skills[currentSkillIndex].name}}</h2>
+                <p>Click on a character to add {{skills[currentSkillIndex].name}} and other abilities to your team.</p>
                 <div *ngIf="proposedMinifigs">
                     <panel-button *ngIf="proposedMinifigs.list.length==1" class="pull-md-left" [title]="'add obvious choices'" [desc]="'for all unique abilities and combos'" [image]="'add-obvious.png'" (click)="addObvious()"></panel-button>
                     <minifig-panel class="pull-md-left" *ngFor="let minifig of proposedMinifigs.get()" (click)="addMember(minifig)" [piece]="minifig"></minifig-panel>
@@ -51,6 +54,11 @@
     <div class="card">
         <div class="card-block">
             <h2 id="changelog" class="card-title">Change History</h2>
+            <h5>v7 changes</h5>
+            <ul>
+                <li>Select abilities by level</li>
+                <li>Wave 7.5 characters</li>
+            </ul>
             <h5>v6 changes</h5>
             <ul>
                 <li>Url generator to share an ability selection</li>

@@ -49,6 +49,15 @@ export class Levels {
         return undefined;
     }
 
+    getLevelByAbilities(abilities: string) {
+        for (let level of this.list) {
+            if (level.builderFinish == abilities || level.builderComplete == abilities) {
+                return level;
+            }
+        }
+        return undefined;
+    }
+
     private _copyData() {
         this.urlMap = {};
         this.list = [];
