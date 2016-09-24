@@ -56,7 +56,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
 
                 switch (this.type) {
                 case AbilityListType.Combos:
-                    this.abilities = this.unfiltered.getFilteredByCombo(true).orderByName();
+                    this.abilities = this.unfiltered.getFilteredByCombo(true).getWithoutHidden().orderByName();
                     this.listTitle = "Important Ability Combos Needed to Unlock Everything";
                     this.meta.set({
                         title: this.listTitle, 
@@ -66,7 +66,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     this.isCombo = true;
                     break;
                 case AbilityListType.Rare:
-                    this.abilities = this.unfiltered.getRare().getFilteredByCombo(false).orderByName();
+                    this.abilities = this.unfiltered.getRare().getFilteredByCombo(false).getWithoutHidden().orderByName();
                     this.listTitle = "Exclusive and Rare Character and Vehicle Abilities";
                     this.meta.set({
                         title: this.listTitle, 
@@ -77,7 +77,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     break;
                 case AbilityListType.All:
                 default:
-                    this.abilities = this.unfiltered.getFilteredByCombo(false).orderByName();
+                    this.abilities = this.unfiltered.getFilteredByCombo(false).getWithoutHidden().orderByName();
                     this.listTitle = "Complete Character and Vehicle Ability List";
                     this.meta.set({
                         title: this.listTitle, 

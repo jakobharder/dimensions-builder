@@ -76,6 +76,16 @@ export class Abilities {
         return new AbilitiesOrdered(this).byRarity();
     }
 
+    getWithoutHidden() {
+        let newlist = []; 
+        for (let item of this.list) {
+            if (item.url !== null) {
+                newlist.push(item);
+            }
+        }
+        return new Abilities(newlist);        
+    }
+
     getFilteredByCombo(combo: boolean) {
         let newlist = []; 
         for (let item of this.list) {
