@@ -13,8 +13,8 @@ export class LevelData {
 }
 
 export const levels: LevelData[] = [
-    { url: 'back-to-the-future-level', name: 'A Hill Valley Time Travel Adventure', chapter: 0, story: 'Level Packs',
-        abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.WaterSpray], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.SilverDestroy, Ability.Arcade], abilitiesStory: [Ability.SonarSmash, Ability.Accelerator, Ability.TimeTravel, Ability.Flying], walkthrough: 'https://www.youtube.com/watch?v=6X6F7J2aZxo' }, /* hover or fly, Marty McFly, car */
+    { url: 'back-to-the-future-level', name: 'Back to the Future', chapter: 0, story: 'Level Packs',
+        abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.Atlantis], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.SilverDestroy, Ability.Arcade], abilitiesStory: [Ability.SonarSmash, Ability.Accelerator, Ability.TimeTravel, Ability.Flying], walkthrough: 'https://www.youtube.com/watch?v=6X6F7J2aZxo' }, /* hover or fly, Marty McFly, car */
 
     { url: 'portal-2-level', name: 'Aperture Science', chapter: 0, story: 'Level Packs',
         abilitiesMinikits: [Ability.LaserDeflector, Ability.XRay, Ability.Flying, Ability.Target, Ability.Grapple, Ability.Boomerang, Ability.Illumination, Ability.RelicDetector, Ability.Laser, Ability.VineCutting], abilitiesRescue: [Ability.Chi], abilitiesExtra: [], abilitiesStory: [Ability.PortalGun, Ability.WeightSwitch, Ability.SentryTurret], walkthrough: '' }, /* chell, turret */
