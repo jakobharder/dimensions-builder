@@ -124,3 +124,6 @@ a, a:hover, a:active, a:focus {
 .delimiter-b table {
     border-bottom: 1px solid #16203B;
 }
+.m-b-negative {
+  margin-bottom: -1rem;
+}
