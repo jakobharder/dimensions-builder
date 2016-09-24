@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
 		let mostSkills: Piece[] = [];
 		for (let minifig of this.dataService.getAllMinifigs()) {
-			if (minifig.skills.length > 5) {
+			if (minifig.skills.length > 6) {
 				mostSkills.push(minifig);
 			}
 		}

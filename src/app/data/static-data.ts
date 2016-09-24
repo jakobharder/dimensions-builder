@@ -105,7 +105,7 @@ export const minifigs: MinifigData[] = [
     { id: 7123501, name: 'Gamer Kid', skillIds: [2, 12, 37, 44, 45], packId: 71235, image: '71235_1to1_MF_MUGSHOT_Retro_Gamer_168' },
     { id: 7122801, name: 'Peter Venkman', skillIds: [12, 34, 56], packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168' },
     { id: 7124801, name: 'Ethan Hunt', skillIds: [], packId: 71248, image: '' },
-    { id: 7124501, name: 'Finn', skillIds: [Ability.SwordSwitching, Ability.Acrobat, Ability.VineCutting, Ability.DemonSword], packId: 71245, image: '' }, /* vine cutting = gras sword */
+    { id: 7124501, name: 'Finn', skillIds: [Ability.SwordSwitching, Ability.Acrobat, Ability.VineCutting, Ability.DemonSword, Ability.Grapple, Ability.LaserDeflector, Ability.Laser, Ability.Target, Ability.Electricity], packId: 71245, image: 'wave-6-finn' }, /* vine cutting = gras sword */
     { id: 7124401, name: 'Sonic the Hedgehog', skillIds: [], packId: 71244, image: '' },
     { id: 7120501, name: 'Owen', skillIds: [22, 26, 27, 37], packId: 71205, image: '75917_1to1_MF_OWEN_MUGSHOT_168' },
     { id: 7120502, name: 'ACU Trooper', skillIds: [6, 31], packId: 71205, image: '75916_1to1_MF_ACU_MUGSHOT_168' },

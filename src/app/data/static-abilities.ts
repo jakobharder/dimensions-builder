@@ -168,7 +168,7 @@ export const abilities: AbilityData[] = [
     { id: 74, url: 'flight+laser', name: 'Flight + Laser', desc: '', combo: true },
 
     { id: 75, url: 'dodging', name: 'Dodging', desc: 'dodge (not confirmed ability)', combo: false },
-    { id: Ability.SwordSwitching, url: 'sword-switching', name: 'Sword Switching', desc: 'use sword switches', combo: false },
+    { id: Ability.SwordSwitching, url: 'sword-switch', name: 'Sword Switch', desc: 'use sword switches', combo: false },
     { id: 77, url: 'sentry-turret', name: 'Sentry Turret', desc: 'automatically shoot', combo: false },
     { id: Ability.WaterSprayOrIce, url: null, name: 'Water Spray or Ice', desc: '', combo: true },
     { id: Ability.DemonSword, url: null, name: 'Demon Sword', desc: '', combo: false }
