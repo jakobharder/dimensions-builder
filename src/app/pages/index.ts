@@ -7,3 +7,4 @@ export * from './home.component';
 export * from './ability-details.component';
 export * from './wave-details.component';
 export * from './level-details.component';
+export * from './level-list.component';

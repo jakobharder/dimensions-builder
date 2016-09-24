@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { MetaService } from '../meta';
 import { Piece, DataService, Pieces } from '../data';
 import { PieceTableComponent } from '../components/tables';
@@ -13,6 +13,7 @@ import { PieceTableComponent } from '../components/tables';
 
 export class CharacterListComponent implements OnInit {
     characters: Piece[];
+    private scrollUp: any;
 
     constructor(private dataService: DataService,
                 private meta: MetaService) {

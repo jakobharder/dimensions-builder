@@ -10,7 +10,8 @@ import {
 	AbilityListType,
 	HomeComponent,
 	AbilityDetailsComponent,
-	LevelDetailsComponent
+	LevelDetailsComponent,
+	LevelListComponent
 } from './pages';
 import {
 	Year2Component
@@ -33,6 +34,7 @@ export const routes: RouterConfig = [
 	{ path: 'team-builder/level/:level/:team' , component: TeamBuilderComponent },
 	{ path: 'team-builder/:abilities', component: TeamBuilderComponent },
 	{ path: 'team-builder/:abilities/:team', component: TeamBuilderComponent },
+	{ path: 'levels', component: LevelListComponent },
 	{ path: 'level/:id', component: LevelDetailsComponent },
 	{ path: 'all-year2-packs-and-characters', component: Year2Component },
 	{ path: '**', redirectTo: '/' }

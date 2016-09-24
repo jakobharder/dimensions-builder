@@ -54,6 +54,7 @@ app.get('/rare-abilities', ngApp);
 app.get('/combo-abilities', ngApp);
 app.get('/ability/*', ngApp);
 app.get('/level/*', ngApp);
+app.get('/levels', ngApp);
 app.get('/all-year2-packs-and-characters', ngApp);
 
 var urls = [
