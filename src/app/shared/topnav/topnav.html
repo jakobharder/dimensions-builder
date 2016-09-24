@@ -1,27 +1,29 @@
-<nav class="navbar navbar-dark bg-inverse">
+<nav class="navbar">
     <div class="container">
-        <button class="navbar-toggler navbar-dark bg-inverse hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
-        &#9776;
-        </button>
-        <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-            <a class="navbar-brand" [routerLink]="['/']">Dimensions Builder</a>
-            <ul class="nav navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/team-builder']">Team Builder</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/all-waves-and-packs']">Packs</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/characters']">Characters</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/abilities']">Abilities</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/levels']">Levels</a>
-                </li>
-            </ul>
+        <div>
+            <button class="navbar-toggler navbar-dark bg-inverse hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+            &#9776;
+            </button>
+            <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+                <a class="nav-link navbar-brand" [routerLink]="['/']">Home</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/team-builder']">Team Builder</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/all-waves-and-packs']">Packs</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/characters']">Characters</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/abilities']">Abilities</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/levels']">Levels</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

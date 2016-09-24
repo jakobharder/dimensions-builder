@@ -1,0 +1,45 @@
+.navbar {
+    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
+    padding: 0;
+}
+li.nav-item {
+    margin-left: 0 !important;
+}
+@media (max-width: 545px) {
+    div.collapse a.navbar-brand {
+        width: 100%;
+    }
+}
+.navbar-brand {
+    float: none;
+    display: block;
+}
+.navbar a.nav-link, .navbar a.navbar-brand {
+    font-family: 'Bebas Neue Bold',Arial,sans-serif;
+    font-weight: 600;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    margin: 0;
+    font-size: 1.5rem;
+}
+.navbar a, .navbar a:link, .navbar a:visited {
+  color: #fff;
+  border: none;
+}
+.navbar a:hover, .navbar a:active, .navbar a:checked {
+  background: #11A8AB !important;
+  border: none;
+}
+.navbar div.container>div {
+    border-radius: 4px;
+    background: #324065;
+    overflow: hidden;
+}
+button.bg-inverse {
+    background-color: #324065;
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
