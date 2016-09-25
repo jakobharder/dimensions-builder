@@ -4,7 +4,7 @@ let _Rixits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_"
 let _bits = 30;
 
 export function abilitiesToString(abilities: Abilities) {
-    let numbers = [0, 0, 0]; // 32bit per number
+    let numbers = [0, 0, 0, 0, 0]; // 32bit per number
     for (let skill of abilities.list) {
         numbers[(skill.id - skill.id % _bits) / _bits] |= 1 << (skill.id % _bits);
     }
