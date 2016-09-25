@@ -69,6 +69,7 @@ export class Piece {
     extra: string;
     workInProgress: boolean;
     image: string;
+    isYear2: boolean;
 }
 
 export class Minifig extends Piece {

@@ -63,6 +63,7 @@ export class DataService {
                 let pack = this.packMap[minifig.packId];
                 if (pack !== undefined) {
                     pack.minifigs.push(minifig.id);
+                    minifig.isYear2 = pack.year == 2;
                 } else {
                     console.log('cannot find pack ' + minifig.packId);
                 }
