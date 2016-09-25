@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
+import { MetaService } from '../meta';
 import { ButtonComponent } from './basic';
 
 @Component({
@@ -8,16 +9,22 @@ import { ButtonComponent } from './basic';
 	templateUrl: './share-section.component.html',
 	directives: [ButtonComponent]
 })
-export class ShareSectionComponent {
+export class ShareSectionComponent implements OnInit, OnDestroy {
 	private site = "http://dimensions-builder.com";
-	private url;
+	private url: string;
+	private sub: any;
 
-	constructor(public router: Router) {
-        this.router.events.subscribe(
-            (event:Event) => {
-                if (event instanceof NavigationEnd) {
-					this.url = this.site + event.urlAfterRedirects;
-                }
+	constructor(private meta: MetaService) {
+	}
+
+	ngOnInit() {
+        this.sub = this.meta.url.subscribe(
+            (url: string) => {
+				this.url = url;
             });
+	}
+
+	ngOnDestroy() {
+		this.sub.unsubscribe();
 	}
 }

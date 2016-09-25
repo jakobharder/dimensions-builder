@@ -1,11 +1,12 @@
-import { Injectable, Inject, ElementRef, Renderer } from '@angular/core';
+import { Injectable, EventEmitter, Inject, ElementRef, Renderer } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { MetaModel } from './meta.model';
 
 @Injectable()
 export class MetaService {
-    public url: string;
+    public url: EventEmitter<string> = new EventEmitter<string>();
+    private _url: string;
 
     private _r: Renderer;
     private _el: ElementRef;
@@ -72,12 +73,13 @@ export class MetaService {
         this.setAttr(this.ogImage, 'http://dimensions-builder.com' + model.image);
 
         if (canonical !== null && canonical !== undefined) {
-            this.url = 'http://dimensions-builder.com' + canonical;
+            this._url = 'http://dimensions-builder.com' + canonical;
         } else {
-            this.url = 'http://dimensions-builder.com' + this.router.url;
+            this._url = 'http://dimensions-builder.com' + this.router.url;
         }
-        this.setAttr(this.ogUrl, this.url);
-        this.setAttr(this.canonical, this.url, 'href');
+        this.setAttr(this.ogUrl, this._url);
+        this.setAttr(this.canonical, this._url, 'href');
+        this.url.emit(this._url);
     }
 
     public setTitle(siteTitle = '', pageTitle ='', separator = ' - '){
