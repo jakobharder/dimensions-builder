@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Abilities, DataService } from '../data';
+import { Abilities, AbilityType, DataService } from '../data';
 import { MetaModel, MetaService } from '../meta';
 import { ShareSectionComponent } from '../components';
 import { AbilityTableComponent } from '../components/tables';
@@ -56,7 +56,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
 
                 switch (this.type) {
                 case AbilityListType.Combos:
-                    this.abilities = this.unfiltered.getFilteredByCombo(true).getWithoutHidden().orderByName();
+                    this.abilities = this.unfiltered.getFilteredByType(AbilityType.Combo).getWithoutHidden().orderByName();
                     this.listTitle = "Important Ability Combos Needed to Unlock Everything";
                     this.meta.set({
                         title: this.listTitle, 
@@ -66,7 +66,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     this.isCombo = true;
                     break;
                 case AbilityListType.Rare:
-                    this.abilities = this.unfiltered.getRare().getFilteredByCombo(false).getWithoutHidden().orderByName();
+                    this.abilities = this.unfiltered.getRare().getFilteredByType(AbilityType.Normal).getWithoutHidden().orderByName();
                     this.listTitle = "Exclusive and Rare Character and Vehicle Abilities";
                     this.meta.set({
                         title: this.listTitle, 
@@ -77,7 +77,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                     break;
                 case AbilityListType.All:
                 default:
-                    this.abilities = this.unfiltered.getFilteredByCombo(false).getWithoutHidden().orderByName();
+                    this.abilities = this.unfiltered.getFilteredByType(AbilityType.Normal).getWithoutHidden().orderByName();
                     this.listTitle = "Complete Character and Vehicle Ability List";
                     this.meta.set({
                         title: this.listTitle, 
@@ -94,12 +94,12 @@ export class AbilityListComponent implements OnInit, OnDestroy {
         this.uniqueAbilitiesCount = 0;
         this.uniqueCombosCount = 0;
         for (let ability of this.unfiltered.list) {
-            if (!ability.combo) {
+            if (ability.type === AbilityType.Normal) {
                 this.abilityCount++;
                 if (ability.providers.length == 1) {
                     this.uniqueAbilitiesCount++;
                 }
-            } else {
+            } else if (ability.type === AbilityType.Combo) {
                 this.comboCount++;
                 if (ability.providers.length == 1) {
                     this.uniqueCombosCount++;

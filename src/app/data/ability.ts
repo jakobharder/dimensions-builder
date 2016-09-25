@@ -1,4 +1,5 @@
 import { Skill } from './data';
+import { AbilityType } from './static-abilities';
 
 export class Abilities {
     list: Skill[];
@@ -86,10 +87,10 @@ export class Abilities {
         return new Abilities(newlist);        
     }
 
-    getFilteredByCombo(combo: boolean) {
+    getFilteredByType(type: AbilityType) {
         let newlist = []; 
         for (let item of this.list) {
-            if (item.combo == combo) {
+            if (item.type === type) {
                 newlist.push(item);
             }
         }

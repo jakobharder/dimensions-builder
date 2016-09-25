@@ -1,4 +1,4 @@
-import { AbilityData } from './static-abilities';
+import { AbilityData, AbilityType } from './static-abilities';
 
 export class Pack {
     id: number;
@@ -20,7 +20,7 @@ export class Skill {
     name: string;
     desc: string;
     url: string;
-    combo: boolean;
+    type: AbilityType;
     providers: Piece[];
     extra: string;
     characters: Piece[];
