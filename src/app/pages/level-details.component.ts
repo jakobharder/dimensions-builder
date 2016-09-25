@@ -21,6 +21,7 @@ export class LevelDetailsComponent implements OnInit {
     allAbilities: Abilities;
 
     serialized: string;
+    private levelAccess: string;
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
@@ -55,5 +56,7 @@ export class LevelDetailsComponent implements OnInit {
         this.allAbilities.orderByName();
 
         this.serialized = Serializer.abilitiesToString(this.allAbilities);
+
+        this.levelAccess = this.data.getAbility(this.level.access).name;
     }
 }
