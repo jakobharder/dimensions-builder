@@ -24,7 +24,9 @@ export const levels: LevelData[] = [
         abilitiesMinikits: [Ability.VineCutting, Ability.RelicDetector, Ability.Grapple, Ability.Magic, Ability.Digging, Ability.Laser, Ability.MasterBuild, Ability.Boomerang, Ability.Stealth, Ability.Electricity], abilitiesRescue: [Ability.WaterSpray, Ability.Magic], abilitiesExtra: [], abilitiesStory: [Ability.FixIt, Ability.Tardis, Ability.SilverDestroy, Ability.Technology, Ability.Stealth, Ability.Flying], access: Ability.Level_DoctorWho, walkthrough: '' }, /* water spray or ice */
 
     { url: 'the-simpsons-level', name: 'The Mysterious Voyage of Homer', chapter: 0, story: 'Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], access: 0, walkthrough: '' },
+        abilitiesMinikits: [Ability.Tracking, Ability.RelicDetector, Ability.TowBar, Ability.Laser, Ability.Hacking, Ability.Tardis, Ability.Electricity, Ability.PortalGun /* or fly */, Ability.WeightSwitch], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [Ability.SonarSmash, Ability.Level_Simpsons, Ability.SuperStrength, Ability.SilverDestroy, Ability.Magic, Ability.Accelerator /* vehicle */], access: 0, walkthrough: '' }, /* story television?? */
+        /* extra gyrosphete, target, chima, poul valt, acrobat */
+        /* atlantis is for rescue? */
 
     { url: 'ghostbusters-level', name: 'Ghostbusters Level', chapter: 0, story: 'Level Packs',
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], access: 0, walkthrough: '' },
