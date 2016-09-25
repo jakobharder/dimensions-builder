@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
+import { MetaService } from '../meta';
 import { Abilities, Piece, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
 import { MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent, AbilitySelection } from '../components/index';
 
@@ -28,13 +28,17 @@ export class TeamBuilderComponent implements OnInit {
     private levelName: string;
 
     constructor(private route: ActivatedRoute,
-                private dataService: DataService,
-                private title: Title) {
+                private data: DataService,
+                private meta: MetaService) {
 
     }
 
     ngOnInit() {
-        this.title.setTitle("Team Builder - which character, vehicle and gadget to use");
+        this.meta.set({
+            title: 'Identify your characters to play with',
+            description: '',
+            image: ''
+        }, '/team-builder');
         this.sub = this.route.params.subscribe(params => {
             this.queryAbilities = params['abilities'];
         });
@@ -79,7 +83,7 @@ export class TeamBuilderComponent implements OnInit {
         }
 
         //this.extraSkills = this._filter(this.team.getSkills(), this.skillIds);
-        this.teamSkills = this.dataService.getSkills(this.extraSkills);
+        this.teamSkills = this.data.getSkills(this.extraSkills);
 
         this.currentSkillIndex = 0;
         while (this.currentSkillIndex < this.skills.length && 
@@ -99,7 +103,7 @@ export class TeamBuilderComponent implements OnInit {
             }
         }
 
-        let level = this.dataService.getLevels().getLevelByAbilities(this.urlAbilities);
+        let level = this.data.getLevels().getLevelByAbilities(this.urlAbilities);
         if (level === undefined) {
             this.levelName = "your custom selection";
         } else {
