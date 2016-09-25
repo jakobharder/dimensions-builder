@@ -1,4 +1,4 @@
-import { AbilityData, AbilityType } from './static-abilities';
+import { AbilityData, AbilityType, BuilderTag } from './data-types';
 
 export class Pack {
     id: number;
@@ -25,6 +25,7 @@ export class Skill {
     extra: string;
     characters: Piece[];
     builds: Piece[];
+    tags: BuilderTag[];
 
     unimportant: boolean;
 
@@ -41,6 +42,10 @@ export class Skill {
 
     isRare() {
         return !this.unimportant && this.providers.length < 4;
+    }
+
+    isYear2() {
+        return this.tags.indexOf(BuilderTag.Year2) !== -1;
     }
 }
 

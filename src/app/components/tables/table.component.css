@@ -87,3 +87,7 @@ tr:last-child {
 .btn-group .btn:first-child {
     width: 33.4%;
 }
+
+.badge-year2 {
+    background-color: #EDB742;
+}

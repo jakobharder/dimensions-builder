@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import { Skill, DataService } from '../../data';
+import { Skill, BuilderTag, DataService } from '../../data';
 import { LimitFilter } from './common';
 
 @Component({
