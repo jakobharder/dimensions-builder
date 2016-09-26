@@ -1,4 +1,5 @@
 import { AbilityData, AbilityType, BuilderTag } from './data-types';
+import { Level } from './levels';
 
 export class Pack {
     id: number;
@@ -26,6 +27,7 @@ export class Skill {
     characters: Piece[];
     builds: Piece[];
     tags: BuilderTag[];
+    level: Level;
 
     unimportant: boolean;
 
@@ -37,11 +39,11 @@ export class Skill {
     }
 
     isUnique() {
-        return !this.unimportant && this.providers.length == 1;
+        return !this.unimportant && this.type !== AbilityType.LocationAccess && this.providers.length == 1;
     }
 
     isRare() {
-        return !this.unimportant && this.providers.length < 4;
+        return !this.unimportant && this.type !== AbilityType.LocationAccess && this.providers.length < 4;
     }
 
     isYear2() {

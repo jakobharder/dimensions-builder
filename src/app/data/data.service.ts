@@ -87,11 +87,6 @@ export class DataService {
                     this.packMap[ability.providers[0].packId].mustHave = true;
                 } else if (ability.isRare()) {
                     ability.extra = "rare";
-                    /*for (let iter = 0; iter < 3 && iter < ability.providers.length; iter++) {
-                        if (ability.providers[iter].extra != "unique") {
-                            ability.providers[iter].extra = "rare";
-                        }
-                    }*/
                 }
                 else {
                     ability.extra = "";

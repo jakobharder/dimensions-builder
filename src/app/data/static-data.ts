@@ -99,12 +99,12 @@ export class VehicleData extends PieceData {
 
 export const minifigs: MinifigData[] = [
     { id: 7120401, name: 'The Doctor', skillIds: [7, 10, 18, 23], packId: 71204, image: '712041to1MFMUGSHOTDr Who168' },
-    { id: 7120201, name: 'Homer Simpson', skillIds: [2, 18, 33], packId: 71202, image: '71005_Portrait_Homer' },
+    { id: 7120201, name: 'Homer Simpson', skillIds: [2, 18, 33, Ability.Level_Simpsons, Ability.Adventure_Simpsons], packId: 71202, image: '71005_Portrait_Homer' },
     { id: 7120301, name: 'Chell', skillIds: [15, 38], packId: 71203, image: '71203_1to1_MF_MUGSHOT_Chell_168' },
     { id: 7120101, name: 'Marty McFly', skillIds: [18], packId: 71201, image: '71201_1to1_MF_MUGSHOT_Marty_168' },
     { id: 7123501, name: 'Gamer Kid', skillIds: [2, 12, 37, 44, 45], packId: 71235, image: '71235_1to1_MF_MUGSHOT_Retro_Gamer_168' },
     { id: 7122801, name: 'Peter Venkman', skillIds: [12, 34, 56], packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168' },
-    { id: 7124801, name: 'Ethan Hunt', skillIds: [Ability.Target, Ability.SilverDestroy, Ability.Stealth, Ability.XRay, Ability.Grapple, Ability.Technology, Ability.Drone, Ability.Disguise, Ability.Invisibility, Ability.Climb], packId: 71248, image: 'wave-6-ethan-hunt' },
+    { id: 7124801, name: 'Ethan Hunt', skillIds: [Ability.Target, Ability.SilverDestroy, Ability.Stealth, Ability.XRay, Ability.Grapple, Ability.Technology, Ability.Drone, Ability.Disguise, Ability.Invisibility, Ability.Climb, Ability.Acrobat, Ability.Dive], packId: 71248, image: 'wave-6-ethan-hunt' },
     { id: 7124501, name: 'Finn', skillIds: [Ability.SwordSwitching, Ability.Acrobat, Ability.VineCutting, Ability.DemonDestroy, Ability.Grapple, Ability.LaserDeflector, Ability.Laser, Ability.Target, Ability.Electricity], packId: 71245, image: 'wave-6-finn' }, /* vine cutting = gras sword */
     /*{ id: 7124401, name: 'Sonic the Hedgehog', skillIds: [], packId: 71244, image: 'wave-6-sonic-the-hedgehog' },*/
     { id: 7120501, name: 'Owen', skillIds: [22, 26, 27, 37], packId: 71205, image: '75917_1to1_MF_OWEN_MUGSHOT_168' },

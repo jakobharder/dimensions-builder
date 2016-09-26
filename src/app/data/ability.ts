@@ -1,5 +1,5 @@
 import { Skill } from './data';
-import { AbilityType } from './static-abilities';
+import { AbilityType } from './data-types';
 
 export class Abilities {
     list: Skill[];
