@@ -59,7 +59,9 @@ export class LevelDetailsComponent implements OnInit {
         this.serialized = Serializer.abilitiesToString(this.allAbilities);
 
         let level = this.data.getAbility(this.level.access);
-        this.levelAccess = level.name;
-        this.charactersWithAccess = level.providers;
+        if (level !== undefined) {
+            this.levelAccess = level.name;
+            this.charactersWithAccess = level.providers;
+        }
     }
 }
