@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { DataService, Level, Abilities, AbilitiesOrdered } from '../data';
-import { AbilityTableComponent } from '../components/tables';
+import { DataService, Level, Abilities, Piece } from '../data';
+import { AbilityTableComponent, PieceTableComponent } from '../components/tables';
 import * as Serializer from './../data/serializer';
 
 @Component({
 	moduleId: module.id,
 	templateUrl: 'level-details.component.html',
-    directives: [ROUTER_DIRECTIVES, AbilityTableComponent]
+    directives: [ROUTER_DIRECTIVES, AbilityTableComponent, PieceTableComponent]
 })
 export class LevelDetailsComponent implements OnInit {
     sub: any;
@@ -22,6 +22,7 @@ export class LevelDetailsComponent implements OnInit {
 
     serialized: string;
     private levelAccess: string;
+    private charactersWithAccess: Piece[];
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
@@ -57,6 +58,8 @@ export class LevelDetailsComponent implements OnInit {
 
         this.serialized = Serializer.abilitiesToString(this.allAbilities);
 
-        this.levelAccess = this.data.getAbility(this.level.access).name;
+        let level = this.data.getAbility(this.level.access);
+        this.levelAccess = level.name;
+        this.charactersWithAccess = level.providers;
     }
 }

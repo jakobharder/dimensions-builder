@@ -54,6 +54,9 @@ h4 {
 .card-title-prim.red {
   background-color: #1A4E95;/*#CC324B;*/
 }
+.card-title-prim.light {
+  background-color: #475072;
+}
 .card.red {
   background-color: #3468AF;/*#e64c65;*/
   color: #fff;
