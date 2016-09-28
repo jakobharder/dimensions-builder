@@ -269,6 +269,7 @@ export class DataService {
             p.minifigs = [];
             p.builds = [];
             p.mustHave = false;
+            p.access = [];
             if (pack.id in this.packMap) {
                 console.log('pack ' + pack.id + ' is already in packMap');
             }
@@ -353,7 +354,7 @@ export class DataService {
                 if (packId !== piece.packId) {
                     packId = -1;
                 }
-                this.packMap[piece.packId].access = level;
+                this.packMap[piece.packId].access.push(level);
             }
             if (packId !== -1) {
                 this.packMap[packId].exclusiveAccess = true;

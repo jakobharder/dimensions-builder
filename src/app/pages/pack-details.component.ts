@@ -3,14 +3,14 @@ import { MetaService } from '../meta';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Pack, Piece, Skill, DataService, packTypeStrings } from '../data';
 import { MinifigPanelComponent } from '../components';
-import { AbilityTableComponent, PieceTableComponent } from '../components/tables';
+import { AbilityTableComponent, PieceTableComponent, LevelTableComponent } from '../components/tables';
 
 @Component({
 	moduleId: module.id,
 	selector: 'pack-details',
     styleUrls: ['pack-details.component.css'],
 	templateUrl: 'pack-details.component.html',
-    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilityTableComponent, PieceTableComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilityTableComponent, PieceTableComponent, LevelTableComponent]
 })
 export class PackDetailsComponent implements OnInit, OnDestroy {
     sub: any;

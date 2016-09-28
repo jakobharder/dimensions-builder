@@ -14,7 +14,7 @@ export class Pack {
     mustHave: boolean;
     released: boolean;
     amazon: string;
-    access: Level;
+    access: Level[];
     exclusiveAccess: boolean;
 
     get mustBuy(): boolean {

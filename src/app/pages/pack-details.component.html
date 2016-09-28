@@ -1,14 +1,18 @@
-<div class="card text-xs-center">
-    <div class="card-block">
+<div class="card">
+    <div class="card-block text-xs-center">
         <h2 class="card-title">{{pack.name}} {{type}}</h2>
         <h6 class="card-subtitle">{{pack.id}}</h6>
     </div>
-    <div class="card-block">
+    <div class="card-block text-xs-center">
         <div class="m-b-1">
             <img class="pack-img" src="assets/images/{{pack.image}}.jpg">
         </div>
         <p class="m-b-0">{{pack.desc}} {{description}}</p>
     </div>
+    <div class="card-block" *ngIf="pack.access.length > 0">
+        <h2 class="card-title card-title-prim light">Comes with Access to Levels</h2>
+    </div>
+    <cmp-level-table [levels]="pack.access" *ngIf="pack.access.length > 0"></cmp-level-table>
 </div>
 <div class="card" *ngIf="mustHave">
     <div class="card-block text-xs-center">
