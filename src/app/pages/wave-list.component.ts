@@ -23,11 +23,12 @@ export class WaveListComponent implements OnInit {
 	ngOnInit() {
 		this.waves = this.dataService.getWaves();
 
-		let releasedWaves = 5;
+		let releasedWaves = 0;
 		let releasedPacks = 0;
 		for (let wave of this.waves) {
 			if (wave.released) {
 				releasedPacks += wave.packs.length;
+				releasedWaves ++;
 			}
 		}
 
