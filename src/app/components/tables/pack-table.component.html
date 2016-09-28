@@ -1,7 +1,7 @@
 <table *ngIf="packs">
     <tr *ngFor="let pack of packs">
         <td class="icon"><img src="/assets/images/63/{{pack.image}}.jpg" alt="{{pack.name}}"></td>
-        <td class="title"><span class="title-span">{{pack.name}}</span> <span [attr.class]="'badge text-pack-' + pack.type">{{typeStrings[pack.type]}}</span> <span *ngIf="pack.mustHave" class="badge">must-buy</span></td>
+        <td class="title"><span class="title-span">{{pack.name}}</span> <span [attr.class]="'badge text-pack-' + pack.type">{{typeStrings[pack.type]}}</span> <span *ngIf="pack.mustBuy" class="badge">must-buy</span></td>
         <td><a class="btn btn-secondary" [title]="'more about ' + pack.name" [routerLink]="['/pack/' + pack.id]" >details</a></td>
     </tr>
 </table>

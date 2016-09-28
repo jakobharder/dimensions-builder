@@ -8,6 +8,7 @@ import { Levels } from './levels';
 import { Ability } from './static-abilities';
 import { Wave } from './wave';
 import { waves } from './static-waves';
+import { AbilityType } from './data-types';
 
 @Injectable()
 export class DataService {
@@ -56,8 +57,12 @@ export class DataService {
                 let minifig: Minifig = Object.assign({}, data);
                 minifig.type = PieceType.Character;
                 minifig.skills = this.getSkills(data.skillIds);
+                minifig.locationAccess = [];
                 for (let skill of minifig.skills) {
                     skill.providers.push(minifig);
+                    if (skill.type == AbilityType.LocationAccess) {
+                        minifig.locationAccess.push(skill);
+                    }
                 }
 
                 let pack = this.packMap[minifig.packId];
@@ -95,8 +100,7 @@ export class DataService {
                 ability.builds = new Pieces(ability.providers).getBuilds();
             }
 
-            this.levels = new Levels();
-            this.levels.init(this);
+            this._initLevels();
         }
     }
 
@@ -332,5 +336,28 @@ export class DataService {
                     return 0;
                 }
         });
+    }
+
+    private _initLevels() {
+        this.levels = new Levels();
+        this.levels.init(this);
+
+        // link levels to packs
+        for (let level of this.levels.list) {
+            let accessAbility = this.getAbility(level.access);
+            if (accessAbility === undefined) {
+                continue;
+            }
+            let packId = accessAbility.providers[0].packId;
+            for (let piece of accessAbility.providers) {
+                if (packId !== piece.packId) {
+                    packId = -1;
+                }
+                this.packMap[piece.packId].access = level;
+            }
+            if (packId !== -1) {
+                this.packMap[packId].exclusiveAccess = true;
+            }
+        }
     }
 }

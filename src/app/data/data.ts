@@ -14,6 +14,16 @@ export class Pack {
     mustHave: boolean;
     released: boolean;
     amazon: string;
+    access: Level;
+    exclusiveAccess: boolean;
+
+    get mustBuy(): boolean {
+        return this.mustHave || this.exclusiveAccess;
+    }
+
+    hasExclusiveAccess() {
+        return this.exclusiveAccess;
+    }
 }
 
 export class Skill {
@@ -72,6 +82,8 @@ export class Piece {
     workInProgress: boolean;
     image: string;
     isYear2: boolean;
+
+    locationAccess: Skill[];
 }
 
 export class Minifig extends Piece {
