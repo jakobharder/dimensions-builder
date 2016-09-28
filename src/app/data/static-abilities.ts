@@ -249,7 +249,7 @@ export const abilities: AbilityData[] = [
     { id: Ability.Level_Ghostbusters, url: null, name: 'Ghostbusters Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_Ghostbusters, url: null, name: 'Ghostbusters Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_ScoobyDoo, url: null, name: 'Scooby Doo Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] },
-    { id: Ability.Adventure_Oz, url: null, name: '', desc: 'Wizard of Oz Adventure World', type: AbilityType.LocationAccess, tags: [] }
+    { id: Ability.Adventure_Oz, url: null, name: 'Wizard of Oz Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] }
 
 /*
     { id: , url: '', name: '', desc: '' },

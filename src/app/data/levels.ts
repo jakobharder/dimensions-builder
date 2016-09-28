@@ -92,6 +92,10 @@ export class Levels {
             let rescueAbilities = new Abilities(this.data.getSkills(level.abilitiesRescue)).orderByName();
             let extraAbilities = new Abilities(this.data.getSkills(level.abilitiesExtra)).orderByName();
             level.finishAbilities = new Abilities(this.data.getSkills(level.abilitiesStory)).orderByName();
+            let access = this.data.getAbility(level.access);
+            if (access !== undefined) {
+                level.finishAbilities.add(access);
+            }
 
             level.completeAbilities = minikitAbilities.clone();
             level.completeAbilities.addRange(rescueAbilities);
@@ -99,10 +103,10 @@ export class Levels {
             level.completeAbilities.addRange(level.finishAbilities);
             level.completeAbilities.orderByName();
 
-            if (level.completeAbilities.list.length > 0) {
+            if (level.completeAbilities.list.length > 1) {
                 level.builderComplete = Serializer.abilitiesToString(level.completeAbilities);
             }
-            if (level.finishAbilities.list.length > 0) {
+            if (level.finishAbilities.list.length > 1) {
                 level.builderFinish = Serializer.abilitiesToString(level.finishAbilities);
             }
         }
