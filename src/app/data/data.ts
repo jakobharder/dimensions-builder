@@ -37,7 +37,7 @@ export class Skill {
     characters: Piece[];
     builds: Piece[];
     tags: BuilderTag[];
-    level: Level;
+    levels: Level[];
 
     unimportant: boolean;
 

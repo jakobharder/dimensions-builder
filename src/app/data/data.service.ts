@@ -360,15 +360,33 @@ export class DataService {
         // link levels to packs
         for (let level of this.levels.list) {
             let accessAbility = this.getAbility(level.access);
-            if (accessAbility === undefined) {
+            if (accessAbility !== undefined) {
+                if (accessAbility.levels === undefined) {
+                    accessAbility.levels = [];
+                }
+                accessAbility.levels.push(level);
+            }
+        }
+
+        this._linkAbilitiesToLevels();
+    }
+
+    private _linkAbilitiesToLevels() {
+        for (let ability of this.skills) {
+            if (ability.providers.length == 0 || ability.type != AbilityType.LocationAccess) {
                 continue;
             }
-            let packId = accessAbility.providers[0].packId;
-            for (let piece of accessAbility.providers) {
+
+
+            let packId = ability.providers[0].packId;
+            for (let piece of ability.providers) {
                 if (packId !== piece.packId) {
                     packId = -1;
                 }
-                this.packMap[piece.packId].access.push(level);
+
+                if (ability.levels !== undefined) {
+                    this.packMap[piece.packId].access = this.packMap[piece.packId].access.concat(ability.levels);
+                }
             }
             if (packId !== -1) {
                 this.packMap[packId].exclusiveAccess = true;

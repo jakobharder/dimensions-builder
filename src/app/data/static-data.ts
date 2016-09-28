@@ -148,16 +148,16 @@ export const minifigs: MinifigData[] = [
     { id: 7123901, name: 'Lloyd', skillIds: [20, 31, 37, 38, 39, Ability.Adventure_Ninjago], packId: 71239, image: '71239_1to1_MF_MUGSHOT_Lloyd_168' },
     { id: 7124001, name: 'Bane', skillIds: [2, 33, 34, Ability.Adventure_DC], packId: 71240, image: '71240_1to1_MF_MUGSHOT_Bane_168' },
     { id: 7124101, name: 'Slimer', skillIds: [4, 11, 13, 18, 31, 34, 35, 43, Ability.DivePlusBoomerang, Ability.DivePlusGhostImmunity, Ability.DivePlusHazardCleaner, Ability.DivePlusMini, Ability.DivePlusSonarSmash, Ability.SlurpAccess, Ability.Adventure_Ghostbusters], packId: 71241, image: '71241_1to1_MF_MUGSHOT_Slimer_168' },
-    { id: 7125101, name: 'B.A. Baracus', skillIds: [Ability.FixIt, Ability.SuperStrength, Ability.LaserDeflector, Ability.MasterBuild, Ability.Target, Ability.SilverDestroy], packId: 71251, image: 'wave-6-ba-baracus' },
+    { id: 7125101, name: 'B.A. Baracus', skillIds: [Ability.FixIt, Ability.SuperStrength, Ability.LaserDeflector, Ability.MasterBuild, Ability.Target, Ability.SilverDestroy, Ability.Adventure_ATeam], packId: 71251, image: 'wave-6-ba-baracus' },
     /*{ id: 7128501, name: 'Marceline', skillIds: [], packId: 71285, image: 'wave-6-marceline' },*/
     { id: 7117001, name: 'Batman', skillIds: [35, 36, 37, Ability.Adventure_DC], packId: 71170, image: '71200_1to1_MF_MUGSHOT_Batman_168' },
     { id: 7117002, name: 'Gandalf', skillIds: [31, 46, 47, Ability.Adventure_LordOfTheRing], packId: 71170, image: '10237_1to1_MF_MUGSHOT_GandalfTheGrey_168' },
-    { id: 7117003, name: 'Wyldstyle', skillIds: [32, 38, 42, Ability.Adventure_LegoMovie], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' },
-    { id: 7128601, name: 'Michael Knight', skillIds: [Ability.Dodging, Ability.Speed, Ability.XRay, Ability.Hacking, Ability.Tracking], packId: 71286, image: 'wave-7.5-knight-rider' }, // doging, dash=speed?
-    { id: 7134401, name: 'Excalibur Batman', skillIds: [Ability.SwordSwitching, Ability.MasterBuild, Ability.VineCutting], packId: 71344, image: 'wave-7.5-excalibur-batman' },
-    { id: 7126401, name: 'Batgirl', skillIds: [Ability.Boomerang, Ability.Gliding, Ability.Stealth], packId: 71264, image: 'wave-7.5-batgirl' },
-    { id: 7126402, name: 'Robin', skillIds: [Ability.Dive, Ability.VineCutting, Ability.LaserDeflector, Ability.Acrobat], packId: 71264, image: 'wave-7.5-robin' },
-    { id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.IntelligenceAccess, Ability.ChargeTransfer], packId: 71242, image: 'wave-6-abby-yates' }
+    { id: 7117003, name: 'Wyldstyle', skillIds: [32, 38, 42, Ability.Adventure_LegoMovie, Ability.Adventure_LegoMovie], packId: 71170, image: '70810_MF_Mugshot_WildStyle_168' },
+    { id: 7128601, name: 'Michael Knight', skillIds: [Ability.Dodging, Ability.Speed, Ability.XRay, Ability.Hacking, Ability.Tracking, Ability.Level_KnightRider, Ability.Adventure_KnightRider], packId: 71286, image: 'wave-7.5-knight-rider' }, // doging, dash=speed?
+    { id: 7134401, name: 'Excalibur Batman', skillIds: [Ability.SwordSwitching, Ability.MasterBuild, Ability.VineCutting, Ability.Adventure_Batman], packId: 71344, image: 'wave-7.5-excalibur-batman' },
+    { id: 7126401, name: 'Batgirl', skillIds: [Ability.Boomerang, Ability.Gliding, Ability.Stealth, Ability.Story_Batman, Ability.Adventure_Batman], packId: 71264, image: 'wave-7.5-batgirl' },
+    { id: 7126402, name: 'Robin', skillIds: [Ability.Dive, Ability.VineCutting, Ability.LaserDeflector, Ability.Acrobat, Ability.Story_Batman, Ability.Adventure_Batman], packId: 71264, image: 'wave-7.5-robin' },
+    { id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.IntelligenceAccess, Ability.ChargeTransfer, Ability.Story_Ghostbusters2016, Ability.Adventure_Ghostbusters2016], packId: 71242, image: 'wave-6-abby-yates' }
 ];
 
 export const vehicles: VehicleData[] = [
