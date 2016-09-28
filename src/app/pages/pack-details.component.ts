@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MetaService } from '../meta';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Pack, Piece, Skill, DataService, packTypeStrings } from '../data';
+import { Pack, Piece, Pieces, Skill, DataService, packTypeStrings, Abilities } from '../data';
 import { MinifigPanelComponent } from '../components';
 import { AbilityTableComponent, PieceTableComponent, LevelTableComponent } from '../components/tables';
 
@@ -15,10 +15,10 @@ import { AbilityTableComponent, PieceTableComponent, LevelTableComponent } from 
 export class PackDetailsComponent implements OnInit, OnDestroy {
     sub: any;
     pack: Pack;
-    characters: Piece[];
-    builds: Piece[];
-    private skills: Skill[];
-    private buildAbilities: Skill[];
+    characters: Pieces;
+    builds: Pieces;
+    private skills: Abilities;
+    private buildAbilities: Abilities;
     private type: string;
     private mustHave: boolean = false;
     private mustHaveText: string;
@@ -40,11 +40,11 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
         this.sub = this.route.params.subscribe(params => {
             let id = +params['id'];
             this.pack = this.dataService.getPack(id);
-            this.characters = this.dataService.getMinifigs(this.pack.minifigs);
-            this.builds = this.dataService.getBuilds(this.pack.builds);
+            this.characters = new Pieces(this.dataService.getMinifigs(this.pack.minifigs));
+            this.builds = new Pieces(this.dataService.getBuilds(this.pack.builds));
 
-            this.skills = this.dataService.getSkills(this.characters.getSkills());
-            this.buildAbilities = this.dataService.getSkills(this.builds.getSkills());
+            this.skills = this.characters.getAbilities().orderByName();
+            this.buildAbilities = this.builds.getAbilities().orderByName();
 
             this.meta.set({
                 title: this.pack.name + " " + packTypeStrings[this.pack.type],
@@ -54,7 +54,7 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
             this.type = packTypeStrings[this.pack.type];
 
             this.mustHaveText = null;
-            for (let ability of this.skills) {
+            for (let ability of this.skills.list) {
                 if (ability.unimportant) {
                     continue;
                 }

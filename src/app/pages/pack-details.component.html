@@ -25,7 +25,7 @@
     <div class="card-block">
         <h2 class="card-title card-title-prim">Characters included in this {{type}}</h2>
     </div>
-    <cmp-piece-table [pieces]="characters"></cmp-piece-table>
+    <cmp-piece-table [pieces]="characters.list"></cmp-piece-table>
 </div>
 <div class="card text-xs-center" *ngIf="pack.amazon">
     <div class="card-block">
@@ -36,11 +36,11 @@
     <div class="card-block">
         <h2 class="card-title card-title-prim">Character Abilities included in this {{type}}</h2>
     </div>
-    <cmp-ability-table [abilities]="skills"></cmp-ability-table>
+    <cmp-ability-table [abilities]="skills.list"></cmp-ability-table>
 </div>
 <div class="card">
     <div class="card-block">
         <h2 class="card-title card-title-prim">Build Abilities included in this {{type}}</h2>
     </div>
-    <cmp-ability-table [abilities]="buildAbilities"></cmp-ability-table>
+    <cmp-ability-table [abilities]="buildAbilities.list"></cmp-ability-table>
 </div>

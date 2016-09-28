@@ -96,6 +96,20 @@ export class DataService {
                 else {
                     ability.extra = "";
                 }
+
+                if (!ability.unimportant) {
+                    let thisPack = false;
+                    for (let provider of ability.providers) {
+                        thisPack = provider.packId == ability.providers[0].packId;
+                        if (!thisPack) {
+                            break;
+                        }
+                    }
+                    if (thisPack) {
+                        this.packMap[ability.providers[0].packId].mustHave = true;
+                    }
+                }
+
                 ability.characters = new Pieces(ability.providers).getCharacters();
                 ability.builds = new Pieces(ability.providers).getBuilds();
             }

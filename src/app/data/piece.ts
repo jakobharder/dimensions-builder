@@ -1,4 +1,5 @@
-import { Piece, PieceType, Vehicle, Minifig } from './data';
+import { Piece, PieceType, Vehicle, Minifig, Skill } from './data';
+import { Abilities } from './ability';
 
 export class Pieces {
     list: Piece[];
@@ -41,6 +42,18 @@ export class Pieces {
             }
         }
         return characters;
+    }
+
+    getAbilities() {
+        let abilities: Skill[] = [];
+        for (let piece of this.list) {
+            for (let ability of piece.skills) {
+                if (-1 === abilities.indexOf(ability)) {
+                    abilities.push(ability);
+                }
+            }
+        }
+        return new Abilities(abilities);
     }
 }
 
