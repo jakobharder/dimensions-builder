@@ -113,6 +113,11 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         this.skillLists.push(list);
 
         list = new SkillList();
+        list.init("location access", this.dataService.getAbilityAccess(new Abilities(this._updateAllSkills())));
+        list.check(true);
+        this.skillLists.push(list);
+
+        list = new SkillList();
         list.init("not needed / new & unconfirmed", this.dataService.getAbilities(new Abilities(this._updateAllSkills())));
         this.skillLists.push(list);
 
@@ -211,9 +216,8 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         }
         this.changed.emit({ abilities: this.skills, urlParameter: this.urlParameter });
 
-        this._updateRadios(0);
-        this._updateRadios(1);
-        this._updateRadios(2);
-        this._updateRadios(3);
+        for (let iter = 0; iter < this.skillLists.length; iter++) {
+            this._updateRadios(iter);
+        }
     }
 }

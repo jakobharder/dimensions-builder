@@ -229,6 +229,19 @@ export class DataService {
         return result;
     }
 
+    getAbilityAccess(except: Abilities) {
+        let result: Abilities = new Abilities([]);
+        for (let ability of this.skills) {
+            if (ability.type === AbilityType.LocationAccess) {
+                result.add(ability);
+            }
+        }
+        if (except !== null) {
+            result.removeRange(except);
+        }
+        return result;        
+    }
+
     getLevels() {
         return this.levels;
     }
