@@ -49,7 +49,7 @@ export class DataService {
                 this.skills.push(skill);
             }
             this.skillMap[Ability.Dodging].unimportant = true;
-            this.skillMap[Ability.SwordSwitching].unimportant = true;
+            this.skillMap[Ability.SwordSwitch].unimportant = true;
 
             this.minifigMap = {};
             this.minifigs = [];
