@@ -11,5 +11,5 @@
     <div class="card-block" *ngIf="levels">
         <h2 [attr.class]="'card-title card-title-prim year' + collection.year">{{collection.name}}</h2>
     </div>
-    <cmp-level-table [levels]="collection.levels"></cmp-level-table>
+    <cmp-level-table [levels]="collection.levels" [showFranchise]="!collection.sameFranchise || collection.levels.length === 1"></cmp-level-table>
 </div>

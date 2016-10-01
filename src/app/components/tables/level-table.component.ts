@@ -13,4 +13,5 @@ import { LimitFilter } from './common';
 })
 export class LevelTableComponent {
     @Input() levels: Level[];
+	@Input() showFranchise: boolean;
 }

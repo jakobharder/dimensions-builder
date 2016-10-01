@@ -1,7 +1,14 @@
 <table *ngIf="levels">
     <tr *ngFor="let level of levels">
         <td class="title">
-            <span *ngIf="level.chapter != 0" class="hidden-sm-down">Chapter {{level.chapter}}</span> <span class="title-span">{{level.name}}</span>
+            <span *ngIf="level.chapter != 0" class="hidden-sm-down">Chapter {{level.chapter}}</span> 
+            <span class="title-span" *ngIf="showFranchise">
+                <span class="avoidwrap">{{level.franchiseName}}</span> - 
+                <span class="avoidwrap">{{level.name}}</span>
+            </span>
+            <span class="title-span" *ngIf="!showFranchise">
+                <span>{{level.name}}</span>
+            </span>
             <div class="hidden-lg-up btn-group">
                 <a class="btn btn-secondary" [title]="'more about ' + level.name" [routerLink]="['/level/' + level.url]" >Details</a>
                 <a *ngIf="level.builderComplete" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderComplete]" ><span class="hidden-xs-down">Team for </span>100%</a>

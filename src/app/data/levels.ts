@@ -1,6 +1,7 @@
 import { levels, LevelData } from './static-levels';
 import { Abilities } from './ability';
 import * as Serializer from './../data/serializer';
+import { franchises } from './data-types';
 
 export class Level extends LevelData {
     next: Level;
@@ -9,10 +10,12 @@ export class Level extends LevelData {
     finishAbilities: Abilities;
     builderComplete: string;
     builderFinish: string;
+    franchiseName: string;
 
     constructor(data: LevelData) {
         super();
         Object.assign(this, data);
+        this.franchiseName = franchises[this.franchise];
     }
 }
 
@@ -20,6 +23,7 @@ export class LevelCollection {
     name: string;
     levels: Level[];
     year: number;
+    sameFranchise: boolean;
 }
 
 export class Levels {
@@ -122,10 +126,13 @@ export class Levels {
                 collection = this.getCollection(level.story);
             }
             if (collection === undefined) {
-                collection = <LevelCollection>{ name: level.story, levels: [], year: level.year };
+                collection = <LevelCollection>{ name: level.story, levels: [], year: level.year, sameFranchise: true };
                 this.collections.push(collection);
             }
             collection.levels.push(level);
+            if (collection.levels[0].franchise !== level.franchise) {
+                collection.sameFranchise = false;
+            }
         }
     }
 }
