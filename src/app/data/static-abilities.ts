@@ -220,6 +220,7 @@ export const abilities: AbilityData[] = [
     { id: Ability.ChargeTransfer, url: null, name: 'Charge Transfer', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.RopeSwings, url: 'rope-swings', name: 'Rope Swings', desc: 'use Orange Hooks to swing', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.FuseBox, url: 'fuse-box', name: 'Fuse Box', desc: 'rewire a fuse box', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.FlyingDrone, url: 'flying-drone', name: 'Flying Drone', desc: 'use a flying drone', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
     { id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
