@@ -1,4 +1,4 @@
-import { AbilityData, AbilityType, BuilderTag } from './data-types';
+import { AbilityData, AbilityType, BuilderTag, PieceState } from './data-types';
 import { Level } from './levels';
 
 export class Pack {
@@ -82,6 +82,7 @@ export class Piece {
     workInProgress: boolean;
     image: string;
     isYear2: boolean;
+    state: PieceState;
 
     locationAccess: Skill[];
 }

@@ -63,3 +63,9 @@ export const franchises: string[] = [
     'Adventure Time',
     'Harry Potter' 
 ];
+
+export enum PieceState {
+    Done,
+    New,
+    Incomplete
+}

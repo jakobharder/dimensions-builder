@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { MetaService } from '../meta';
-import { Pack, Minifig, DataService } from '../data';
+import { Pack, Minifig, DataService, PieceState } from '../data';
 import { AbilityTableComponent, PackTableComponent } from '../components/tables';
 
 @Component({
@@ -46,8 +46,10 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
                 if (this.mustHave) {
                     desc += " At least one of then is a unique ability. You need " + this.character.name + " to unlock everything in Lego Dimensions.";
                 }
-                if (this.character.workInProgress) {
-                    this.workInProgress = "\nThe ability data for this character are still work-in-progress and not confirmed yet.";
+                if (this.character.state === PieceState.Incomplete) {
+                    this.workInProgress = "The ability data for this character are still work-in-progress and not confirmed yet.";
+                } else if (this.character.state === PieceState.New) {
+                    this.workInProgress = "The abilities for this character were recently added. There may be some changes.";
                 }
                 this.description = desc;
 

@@ -12,6 +12,7 @@ td.icon {
 }
 td.piece-icon {
     width: 32px;
+    position: relative;
 }
 td.piece-icon img {
     width: 46px;
@@ -94,4 +95,22 @@ tr:last-child {
 
 .badge-gray {
     background-color: #475072;
+}
+.icon-banner {
+    position: absolute;
+    display: block;
+    background: #621A95;
+    color: #fff;
+    bottom: 0px;
+    left: 12px;
+    width: 46px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-family: 'Bebas Neue Bold',Arial,sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.icon-banner.incomplete {
+    background: #475072;
 }

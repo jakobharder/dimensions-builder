@@ -1,7 +1,11 @@
 <table *ngIf="pieces">
     <tr *ngFor="let piece of pieces">
-        <td class="piece-icon"><img src="/assets/images/63/{{piece.image}}.png" alt="{{piece.name}}"></td>
-        <td class="title"><span class="title-span">{{piece.name}}</span> <span class="badge">{{piece.extra}}</span> <span *ngIf="piece.isYear2" class="badge badge-year2">year 2</span> <span *ngIf="piece.workInProgress" class="badge badge-gray">wip</span></td>
+        <td class="piece-icon">
+            <img src="/assets/images/63/{{piece.image}}.png" alt="{{piece.name}}">
+            <span *ngIf="piece.state==1" class="icon-banner">new</span>
+            <span *ngIf="piece.state==2" class="icon-banner incomplete">beta</span>
+        </td>
+        <td class="title"><span class="title-span">{{piece.name}}</span> <span class="badge">{{piece.extra}}</span> <span *ngIf="piece.isYear2" class="badge badge-year2">year 2</span></td>
         <td class="providers">
             <div *ngIf="piece.skills.length > 0"><span *ngFor="let ability of piece.skills | limitFilter; let isLast = last">{{ability}}{{isLast ? '' : ', '}}</span></div>
         </td>
