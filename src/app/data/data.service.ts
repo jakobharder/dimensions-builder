@@ -56,7 +56,7 @@ export class DataService {
             for (let data of minifigs) {
                 let minifig: Minifig = Object.assign({}, data);
                 minifig.type = PieceType.Character;
-                minifig.skills = this.getSkills(data.skillIds);
+                minifig.skills = new Abilities(this.getSkills(data.skillIds)).orderByName().list;
                 minifig.locationAccess = [];
                 for (let skill of minifig.skills) {
                     skill.providers.push(minifig);

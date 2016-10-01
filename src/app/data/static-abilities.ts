@@ -125,8 +125,8 @@ export enum Ability {
     Adventure_Oz,
     RopeSwings,
     FuseBox,
-    __LegoFire,
-    __GraffitiWall,
+    SuperStrengthHandles,
+    ATeamMasterBuild,
 
     /* end of year 1 */
 }
@@ -217,11 +217,13 @@ export const abilities: AbilityData[] = [
     { id: Ability.SlurpAccess, url: 'slurp-access', name: 'Vent Access', desc: 'go through vents', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.Diffindo, url: null, name: 'Diffindo', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.Parseltongue, url: null, name: 'Parseltongue', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
-    { id: Ability.Intelligence, url: null, name: 'Intelligence Access', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.Intelligence, url: 'intelligence', name: 'Intelligence', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.ChargeTransfer, url: null, name: 'Charge Transfer', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.RopeSwings, url: 'rope-swings', name: 'Rope Swings', desc: 'use Orange Hooks to swing', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.FuseBox, url: 'fuse-box', name: 'Fuse Box', desc: 'rewire a fuse box', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.FlyingDrone, url: 'flying-drone', name: 'Flying Drone', desc: 'use a flying drone', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.SuperStrengthHandles, url: 'super-strength-handles', name: 'Super Strength Handles', desc: 'use super strength handles', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.ATeamMasterBuild, url: 'a-team-master-build', name: 'A-Team Master Build', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
     { id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
