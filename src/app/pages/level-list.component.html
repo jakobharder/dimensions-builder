@@ -2,14 +2,14 @@
     <div class="card-block" *ngIf="levels">
         <h1 class="card-title">All Levels, Adventure Worlds and Battle Arenas</h1>
         <p>{{description}}</p>
-        <p>The currently has only the year 1 level packs and main story. I will add the adventure worlds and battle arenas soon.</p>
+        <p>The list has currently only a selection of levels and the main story. More will be added some time soon.</p>
         <p class="m-b-0">Click on 'Team for Story' to select a team with all the abilities needed for the story play of that level. Click on 'Team for 100%' to do the same for all abilities to unlock everything.</p>
     </div>
 </div>
 
 <div class="card" *ngFor="let collection of collections">
     <div class="card-block" *ngIf="levels">
-        <h2 class="card-title card-title-prim">{{collection.name}}</h2>
+        <h2 [attr.class]="'card-title card-title-prim year' + collection.year">{{collection.name}}</h2>
     </div>
     <cmp-level-table [levels]="collection.levels"></cmp-level-table>
 </div>

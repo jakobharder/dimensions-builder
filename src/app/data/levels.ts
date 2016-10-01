@@ -19,6 +19,7 @@ export class Level extends LevelData {
 export class LevelCollection {
     name: string;
     levels: Level[];
+    year: number;
 }
 
 export class Levels {
@@ -121,7 +122,7 @@ export class Levels {
                 collection = this.getCollection(level.story);
             }
             if (collection === undefined) {
-                collection = <LevelCollection>{ name: level.story, levels: [] };
+                collection = <LevelCollection>{ name: level.story, levels: [], year: level.year };
                 this.collections.push(collection);
             }
             collection.levels.push(level);
