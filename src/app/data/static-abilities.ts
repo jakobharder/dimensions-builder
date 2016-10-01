@@ -218,7 +218,7 @@ export const abilities: AbilityData[] = [
     { id: Ability.DarkArts, url: null, name: 'Dark Arts', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.IntelligenceAccess, url: null, name: 'Intelligence Access', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.ChargeTransfer, url: null, name: 'Charge Transfer', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
-    { id: Ability.Swing, url: 'swing', name: 'Swing', desc: 'use Orange Hooks to swing', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.Swing, url: 'rope-swings', name: 'Rope Swings', desc: 'use Orange Hooks to swing', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
     { id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
