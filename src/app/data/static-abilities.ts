@@ -122,7 +122,8 @@ export enum Ability {
     Level_Ghostbusters,
     Adventure_Ghostbusters,
     Adventure_ScoobyDoo,
-    Adventure_Oz
+    Adventure_Oz,
+    Swing,
 
     /* end of year 1 */
 }
@@ -153,7 +154,7 @@ export const abilities: AbilityData[] = [
     { id: 23, url: 'technology', name: 'Technology', desc: 'use technology panels', type: AbilityType.Normal, tags: [] },
     { id: 25, url: 'tow-bar', name: 'Tow Bar', desc: 'pull down weak Lego walls', type: AbilityType.Normal, tags: [] },
     { id: 26, url: 'tracking', name: 'Tracking', desc: 'track trails', type: AbilityType.Normal, tags: [] },
-    { id: 27, url: 'vine-cutting', name: 'Vine Cutting', desc: 'cut vines', type: AbilityType.Normal, tags: [] },
+    { id: 27, url: 'vine-cut', name: 'Vine Cutting', desc: 'cut vines', type: AbilityType.Normal, tags: [] },
     { id: 28, url: 'water-spray', name: 'Water Spray', desc: 'grow Lego plants', type: AbilityType.Normal, tags: [] },
     { id: 29, url: 'weight-switch', name: 'Weight Switch', desc: 'place on cube switches', type: AbilityType.Normal, tags: [] },
     { id: 30, url: 'x-ray-vision', name: 'X-Ray Vision', desc: 'see through green Lego walls', type: AbilityType.Normal, tags: [] },
@@ -207,7 +208,7 @@ export const abilities: AbilityData[] = [
     { id: Ability.SwordSwitching, url: 'sword-switch', name: 'Sword Switch', desc: 'use sword switches', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: 77, url: 'sentry-turret', name: 'Sentry Turret', desc: 'automatically shoot', type: AbilityType.Normal, tags: [] },
     { id: Ability.WaterSprayOrIce, url: null, name: 'Water Spray or Ice', desc: '', type: AbilityType.Alternative, tags: [] },
-    { id: Ability.DemonDestroy, url: null, name: 'Demon Destroy', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.DemonDestroy, url: 'red-demon-objects', name: 'Red Demon Objects', desc: 'destroy red demon objects', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.Disguise, url: null, name: 'Disguise', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.Invisibility, url: null, name: 'Invisibility', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.Climb, url: null, name: 'Climb', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
@@ -217,6 +218,7 @@ export const abilities: AbilityData[] = [
     { id: Ability.DarkArts, url: null, name: 'Dark Arts', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.IntelligenceAccess, url: null, name: 'Intelligence Access', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.ChargeTransfer, url: null, name: 'Charge Transfer', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.Swing, url: 'swing', name: 'Swing', desc: 'use Orange Hooks to swing', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
     { id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] },
@@ -249,7 +251,7 @@ export const abilities: AbilityData[] = [
     { id: Ability.Level_Ghostbusters, url: null, name: 'Ghostbusters Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_Ghostbusters, url: null, name: 'Ghostbusters Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_ScoobyDoo, url: null, name: 'Scooby Doo Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] },
-    { id: Ability.Adventure_Oz, url: null, name: 'Wizard of Oz Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] }
+    { id: Ability.Adventure_Oz, url: null, name: 'Wizard of Oz Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] },
 
 /*
     { id: , url: '', name: '', desc: '' },

@@ -14,6 +14,11 @@ export class LevelData {
 }
 
 export const levels: LevelData[] = [
+    { url: 'adventure-time-level', name: 'A Book and a Bad Guy', chapter: 0, story: 'Year 2 Level Packs',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
+        abilitiesStory: [Ability.Target, Ability.SwordSwitching, Ability.Swing, Ability.Accelerator, Ability.VineCutting, Ability.DemonDestroy, Ability.Grapple, Ability.Laser, Ability.LaserDeflector, Ability.Acrobat], 
+        access: Ability.Level_AdventureTime, walkthrough: '' },
+
     { url: 'back-to-the-future-level', name: 'Back to the Future', chapter: 0, story: 'Level Packs',
         abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.Atlantis], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.SilverDestroy, Ability.Arcade], abilitiesStory: [Ability.SonarSmash, Ability.Accelerator, Ability.TimeTravel, Ability.Flying], access: Ability.Level_BackToTheFuture, walkthrough: 'https://www.youtube.com/watch?v=6X6F7J2aZxo' }, /* hover or fly, Marty McFly, car */
 
