@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
+import { MetaService, MetaModel } from '../meta';
 import { DataService, Level, Abilities, Piece } from '../data';
 import { AbilityTableComponent, PieceTableComponent } from '../components/tables';
 import * as Serializer from './../data/serializer';
@@ -23,14 +23,17 @@ export class LevelDetailsComponent implements OnInit {
     serialized: string;
     private levelAccess: string;
     private charactersWithAccess: Piece[];
+    private characterWithAccess: Piece;
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
-                private title: Title ) {
+                private meta: MetaService ) {
     }
 
     ngOnInit() {
-        this.title.setTitle("Level Details")
+        this.meta.set(<MetaModel>{
+            title: 'Level Details'
+        });
         this.sub = this.route.params.subscribe(params => {
             let id = params['id'];
             this.level = this.data.getLevel(id);
@@ -41,7 +44,11 @@ export class LevelDetailsComponent implements OnInit {
     }
 
     private _initLevel() {
-        this.title.setTitle(this.level.name);
+        this.meta.set(<MetaModel>{
+            title: this.level.name + ' - ' + this.level.franchiseName,
+            description: this.level.desc,
+            image: '/assets/images/levels/' + this.level.image + '.jpg'
+        });
 
         this.minikitAbilities = new Abilities(this.data.getSkills(this.level.abilitiesMinikits)).orderByName();
         this.rescueAbilities = new Abilities(this.data.getSkills(this.level.abilitiesRescue)).orderByName();
@@ -62,6 +69,9 @@ export class LevelDetailsComponent implements OnInit {
         if (level !== undefined) {
             this.levelAccess = level.name;
             this.charactersWithAccess = level.providers;
+            if (this.charactersWithAccess.length === 1) {
+                this.characterWithAccess = this.charactersWithAccess[0];
+            }
         }
     }
 }

@@ -154,7 +154,7 @@ export const abilities: AbilityData[] = [
     { id: 23, url: 'technology', name: 'Technology', desc: 'use technology panels', type: AbilityType.Normal, tags: [] },
     { id: 25, url: 'tow-bar', name: 'Tow Bar', desc: 'pull down weak Lego walls', type: AbilityType.Normal, tags: [] },
     { id: 26, url: 'tracking', name: 'Tracking', desc: 'track trails', type: AbilityType.Normal, tags: [] },
-    { id: 27, url: 'vine-cut', name: 'Vine Cutting', desc: 'cut vines', type: AbilityType.Normal, tags: [] },
+    { id: 27, url: 'vine-cut', name: 'Vine Cut', desc: 'cut green vines', type: AbilityType.Normal, tags: [] },
     { id: 28, url: 'water-spray', name: 'Water Spray', desc: 'grow Lego plants', type: AbilityType.Normal, tags: [] },
     { id: 29, url: 'weight-switch', name: 'Weight Switch', desc: 'place on cube switches', type: AbilityType.Normal, tags: [] },
     { id: 30, url: 'x-ray-vision', name: 'X-Ray Vision', desc: 'see through green Lego walls', type: AbilityType.Normal, tags: [] },
