@@ -108,7 +108,7 @@ export class Levels {
             level.completeAbilities.addRange(level.finishAbilities);
             level.completeAbilities.orderByName();
 
-            if (level.completeAbilities.list.length > 1) {
+            if (level.completeAbilities.list.length > level.finishAbilities.list.length) {
                 level.builderComplete = Serializer.abilitiesToString(level.completeAbilities);
             }
             if (level.finishAbilities.list.length > 1) {
