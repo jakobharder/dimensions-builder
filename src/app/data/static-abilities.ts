@@ -65,7 +65,7 @@ export enum Ability {
     DivePlusGrapple,
     DivePlusHacking,
     DivePlusHazardCleaner,
-    DivePlusLazer,
+    DivePlusLaser,
     DivePlusMini,
     DivePlusSilverDestroy,
     DivePlusSonarSmash,
@@ -87,7 +87,7 @@ export enum Ability {
     SlurpAccess,
     Diffindo,
     Parseltongue,
-    __DarkArts,
+    CrackedWalls,
     Intelligence,
     ChargeTransfer,
 
@@ -127,6 +127,15 @@ export enum Ability {
     FuseBox,
     SuperStrengthHandles,
     ATeamMasterBuild,
+
+    Jump,
+    SuperJump,
+    BMODocks,
+    Guardian,
+    Hover,
+    SpecialAttack,
+    SpecialWeapon,
+    SailsOnWater,
 
     /* end of year 1 */
 }
@@ -209,7 +218,7 @@ export const abilities: AbilityData[] = [
 
     { id: 75, url: 'dodging', name: 'Dodging', desc: 'dodge (not confirmed ability)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.SwordSwitch, url: 'sword-switch', name: 'Sword Switch', desc: 'use sword switches', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
-    { id: 77, url: 'sentry-turret', name: 'Sentry Turret', desc: 'automatically shoot', type: AbilityType.Normal, tags: [] },
+    { id: Ability.SentryTurret, url: 'sentry-turret', name: 'Sentry Turret', desc: 'automatically shoot', type: AbilityType.Normal, tags: [] },
     { id: Ability.WaterSprayOrIce, url: null, name: 'Water Spray or Ice', desc: '', type: AbilityType.Alternative, tags: [] },
     { id: Ability.RedDemonObjects, url: 'cursed-red-objects', name: 'Cursed Red Objects', desc: 'destroy cursed red demon objects', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.Disguise, url: 'scan-disguise', name: 'Scan Disguise', desc: 'use a disguise in at the security scan booth', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
@@ -224,6 +233,15 @@ export const abilities: AbilityData[] = [
     { id: Ability.FlyingDrone, url: 'flying-drone', name: 'Flying Drone', desc: 'use a flying drone', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.SuperStrengthHandles, url: 'super-strength-handles', name: 'Super Strength Handles', desc: 'use super strength handles', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.ATeamMasterBuild, url: 'a-team-master-build', name: 'A-Team Master Build', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.Jump, url: null, name: 'Jump', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.SuperJump, url: null, name: 'Super Jump', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.BMODocks, url: 'bmo-docks', name: 'BMO Docks', desc: 'use BMO docks', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.Guardian, url: 'guardian', name: 'Guardian', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.Hover, url: 'hover', name: 'Hover', desc: '', type: AbilityType.Normal, tags: [] },
+    { id: Ability.CrackedWalls, url: 'cracked-walls', name: 'Cracked Lego Walls', desc: '', type: AbilityType.Normal, tags: [] },
+    { id: Ability.SpecialAttack, url: 'special-attack', name: 'Special Attack', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.SpecialWeapon, url: 'special-weapon', name: 'Special Weapon', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.SailsOnWater, url: 'sails-on-water', name: 'Sails on Water', desc: 'sails on water', type: AbilityType.Normal, tags: [] },
 
     { id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },

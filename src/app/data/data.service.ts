@@ -230,7 +230,7 @@ export class DataService {
 
     getAbilityCombos(except: Abilities) {
         let result = new Abilities(this.getSkills([Ability.DivePlusDigging, Ability.DivePlusBoomerang, Ability.DivePlusChi, Ability.DivePlusDrone, 
-        Ability.DivePlusGhostImmunity, Ability.DivePlusGrapple, Ability.DivePlusHacking, Ability.DivePlusHazardCleaner, Ability.DivePlusLazer, 
+        Ability.DivePlusGhostImmunity, Ability.DivePlusGrapple, Ability.DivePlusHacking, Ability.DivePlusHazardCleaner, Ability.DivePlusLaser, 
         Ability.DivePlusMini, Ability.DivePlusSilverDestroy, Ability.DivePlusSonarSmash, Ability.DivePlusSuperStrength, Ability.DivePlusTarget, 
         Ability.DivePlusTechnology, Ability.DivePlusTracking, Ability.DivePlusXRay, Ability.FlightPlusLaser]));
         if (except !== null) {
