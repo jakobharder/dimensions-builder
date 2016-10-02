@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Pack, Piece, PieceType, Minifig, Vehicle, Skill } from './data';
 import { Abilities } from './ability';
 import { Pieces } from './piece';
-import { minifigs, vehicles, packs, VehicleData } from './static-data';
-import { abilities } from './static-abilities';
+import { packs } from './static-data';
+import { minifigs } from './static-characters';
+import { vehicles } from './static-vehicles';
 import { Levels } from './levels';
-import { Ability } from './static-abilities';
+import { Ability, abilities } from './static-abilities';
 import { Wave } from './wave';
 import { waves } from './static-waves';
-import { AbilityType } from './data-types';
+import { AbilityType, VehicleData } from './data-types';
 
 @Injectable()
 export class DataService {
