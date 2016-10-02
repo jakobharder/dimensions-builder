@@ -173,9 +173,9 @@ export const vehicles: VehicleData[] = [
     <VehicleData>{ id: 71247041, name: 'Hogwarts Express', skillIds: [Ability.Accelerator, Ability.TowBar, Ability.SonarSmash], packId: 71247, image: 'wave-6-hogwarts-express', stage: 1, vehicleId: 7124704, state: PieceState.New },
     <VehicleData>{ id: 71247042, name: 'Steam Warrior', skillIds: [Ability.Laser, Ability.SpecialAttack, Ability.FlightDock, Ability.CargoHook, Ability.TowBar], packId: 71247, image: 'none', stage: 2, vehicleId: 7124704, state: PieceState.New },
     <VehicleData>{ id: 71247043, name: 'Soaring Steam Plane', skillIds: [Ability.CrackedWalls, Ability.SuperJump, Ability.SpecialAttack, Ability.Guardian], packId: 71247, image: 'none', stage: 3, vehicleId: 7124704, state: PieceState.New },
-    <VehicleData>{ id: 71242021, name: 'Ecto 1', skillIds: [], packId: 71242, image: 'wave-6-ecto-1-2016', stage: 1, vehicleId: 7124202, state: PieceState.Incomplete },
-    <VehicleData>{ id: 71242022, name: 'Ectozer', skillIds: [], packId: 71242, image: 'none', stage: 2, vehicleId: 7124202, state: PieceState.Incomplete },
-    <VehicleData>{ id: 71242023, name: 'The PerfEcto', skillIds: [], packId: 71242, image: 'none', stage: 3, vehicleId: 7124202, state: PieceState.Incomplete },
+    <VehicleData>{ id: 71242021, name: 'Ecto-1 (2016)', skillIds: [Ability.Accelerator, Ability.TowBar], packId: 71242, image: 'wave-6-ecto-1-2016', stage: 1, vehicleId: 7124202, state: PieceState.New },
+    <VehicleData>{ id: 71242022, name: 'Ectozer', skillIds: [Ability.Accelerator, Ability.TowBar, Ability.SpecialAttack, Ability.CrackedWalls], packId: 71242, image: 'none', stage: 2, vehicleId: 7124202, state: PieceState.New },
+    <VehicleData>{ id: 71242023, name: 'The PerfEcto', skillIds: [Ability.Electricity, Ability.WaterSpray, Ability.WaterSprayOrIce, Ability.Flying, Ability.SailsOnWater], packId: 71242, image: 'none', stage: 3, vehicleId: 7124202, state: PieceState.New },
 /*
     { id: 021, name: '', skillIds: [], packId: , image: 'none', stage: 1, vehicleId:  },
     { id: 022, name: '', skillIds: [], packId: , image: 'none', stage: 2, vehicleId:  },
