@@ -150,7 +150,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: 3, url: 'digging', name: 'Digging', desc: 'use dig spots', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 4, url: 'dive', name: 'Dive', desc: 'dive and swim underwater', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 5, url: 'drilling', name: 'Drilling', desc: 'drill at drill spots', type: AbilityType.Normal, tags: [] },
-    <AbilityData>{ id: 6, url: 'electricity', name: 'Electricity', desc: 'power eletric coils', type: AbilityType.Normal, tags: [] },
+    <AbilityData>{ id: 6, url: 'electricity', name: 'Electricity', desc: 'power electric coils', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 7, url: 'fix-it', name: 'Fix-it', desc: 'fix blue glowing Lego objects', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 8, url: 'flight-dock', name: 'Flight Dock', desc: 'power jet switches', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 9, url: 'gyrosphere-switch', name: 'Gyropshere Switch', desc: 'use gyrosphere switches', type: AbilityType.Normal, tags: [] },
