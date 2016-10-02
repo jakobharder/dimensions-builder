@@ -2,7 +2,7 @@ import { MinifigData, PieceState } from './data-types';
 import { Ability } from './static-abilities';
 
 export const minifigs: MinifigData[] = [
-    <MinifigData>{ id: 7120401, name: 'The Doctor', skillIds: [7, 10, 18, 23, Ability.Level_DoctorWho, Ability.Adventure_DoctorWho], 
+    <MinifigData>{ id: 7120401, name: 'The Doctor', skillIds: [7, 10, 18, 23, Ability.Intelligence, Ability.Level_DoctorWho, Ability.Adventure_DoctorWho], 
         packId: 71204, image: '712041to1MFMUGSHOTDr Who168', url: 'doctor-who' },
     <MinifigData>{ id: 7120201, name: 'Homer Simpson', skillIds: [2, 18, 33, Ability.Level_Simpsons, Ability.Adventure_Simpsons], 
         packId: 71202, image: '71005_Portrait_Homer', url: 'homer-simpson' },
@@ -35,7 +35,7 @@ export const minifigs: MinifigData[] = [
         packId: 71229, image: '71229_1to1_MF_MUGSHOT_Joker_168', url: 'joker' },
     <MinifigData>{ id: 7122902, name: 'Harley Quinn', skillIds: [2, 38, Ability.Adventure_DC], 
         packId: 71229, image: '71229_1to1_MF_MUGSHOT_Harley_Quinn_168', url: 'harley-quinn' },
-    <MinifigData>{ id: 7124601, name: 'Jake', skillIds: [Ability.Grapple, Ability.Illumination, Ability.Digging, Ability.SlurpAccess, Ability.BigTransformation, Ability.Drilling, Ability.Dive, Ability.Gyrosphere, Ability.MiniAccess, Ability.SuperStrength, Ability.RopeSwings, Ability.SonarSmash, Ability.Tracking, Ability.Drone, Ability.Adventure_AdventureTime], 
+    <MinifigData>{ id: 7124601, name: 'Jake', skillIds: [Ability.Grapple, Ability.Illumination, Ability.Digging, Ability.SlurpAccess, Ability.BigTransformation, Ability.Drilling, Ability.Dive, Ability.Gyrosphere, Ability.MiniAccess, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.RopeSwings, Ability.SonarSmash, Ability.Tracking, Ability.Drone, Ability.Adventure_AdventureTime], 
         packId: 71246, image: 'wave-6-jake', state: PieceState.New, url: 'jake' },
     <MinifigData>{ id: 7124602, name: 'Lumpy Space Princess', skillIds: [Ability.Boomerang, Ability.MiniAccess, Ability.SlurpAccess, Ability.RainbowLego, Ability.HazardProtection, Ability.Adventure_AdventureTime], 
         packId: 71246, image: 'wave-6-lumpy-space-princess', state: PieceState.New, url: 'lumpy-space-princess' },
@@ -55,13 +55,13 @@ export const minifigs: MinifigData[] = [
         packId: 71213, image: '70819_MF_Mugshot_BadCop_168', url: 'bad-cop' },
     <MinifigData>{ id: 7121401, name: 'Benny', skillIds: [10, 18, 22, 23, 42, 49, Ability.Adventure_LegoMovie], 
         packId: 71214, image: '70810_MF_Mugshot_Benny_168', url: 'benny' },
-    <MinifigData>{ id: 7121501, name: 'Jay', skillIds: [6, 7, 20, 37, 38, Ability.Adventure_Ninjago], 
+    <MinifigData>{ id: 7121501, name: 'Jay', skillIds: [6, 7, 20, 37, 38, Ability.Intelligence, Ability.Adventure_Ninjago], 
         packId: 71215, image: '71215_1to1_MF_MUGSHOT_Jay_168', url: 'jay' },
     <MinifigData>{ id: 7121601, name: 'Nya', skillIds: [7, 20, 37, 38, 39, Ability.Adventure_Ninjago], 
         packId: 71216, image: '71216_1to1_MF_MUGSHOT_Nya_168', url: 'nya' },//7 fix-it?
     <MinifigData>{ id: 7121701, name: 'Zane', skillIds: [4, 20, 30, 35, 37, 38, Ability.DivePlusXRay, Ability.Adventure_Ninjago], 
         packId: 71217, image: '71217_1to1_MF_MUGSHOT_Zane_168', url: 'zane' },
-    <MinifigData>{ id: 7121801, name: 'Gollum', skillIds: [4, 13, 35, 38, Ability.DivePlusBoomerang, Ability.DivePlusMini, Ability.DivePlusSilverDestroy, Ability.Adventure_LordOfTheRing], 
+    <MinifigData>{ id: 7121801, name: 'Gollum', skillIds: [4, 13, 35, 38, Ability.DivePlusBoomerang, Ability.DivePlusMini, Ability.SilverDestroy, Ability.DivePlusSilverDestroy, Ability.Adventure_LordOfTheRing], 
         packId: 71218, image: '9470_1to1_MF_MUGSHOT_Gollum_168', url: 'gollum' },
     <MinifigData>{ id: 7121901, name: 'Legolas', skillIds: [14, 22, 38, , Ability.Adventure_LordOfTheRing], 
         packId: 71219, image: '9473_1to1_MF_MUGSHOT_Legolas_168', url: 'legolas' },//14?
@@ -69,13 +69,13 @@ export const minifigs: MinifigData[] = [
         packId: 71220, image: '79008_Gimli_168', url: 'gimli' },
     <MinifigData>{ id: 7122101, name: 'The Wicked Witch', skillIds: [17, 31, 41, 43, 46, 47, Ability.Adventure_Oz], 
         packId: 71221, image: '71221_1to1_MF_MUGSHOT_WickedWitch_168', url: 'wicked-witch' },
-    <MinifigData>{ id: 7122201, name: 'Laval', skillIds: [1, 2, 38, 39, Ability.Adventure_Chima], 
+    <MinifigData>{ id: 7122201, name: 'Laval', skillIds: [1, 2, 38, 39, Ability.SonarSmash, Ability.Adventure_Chima], 
         packId: 71222, image: '70144_1to1_MF_Laval_01_336_744w', url: 'laval' },
     <MinifigData>{ id: 7122301, name: 'Cragger', skillIds: [1, 2, 4, 34, Ability.DivePlusChi, Ability.DivePlusSuperStrength, Ability.Adventure_Chima], 
         packId: 71223, image: '70150_1to1_MF_Cragger_336_744w', url: 'cragger' },
     <MinifigData>{ id: 7122701, name: 'Krusty', skillIds: [11, Ability.WaterSpray, 52, Ability.WaterSprayOrIce, Ability.Adventure_Simpsons], 
         packId: 71227, image: '71005_Portrait_Krusty', url: 'krusty' },
-    <MinifigData>{ id: 7123001, name: 'Doc Brown', skillIds: [7, 10, 23, 40, Ability.Adventure_BackToTheFuture], 
+    <MinifigData>{ id: 7123001, name: 'Doc Brown', skillIds: [7, 10, 23, 40, Ability.Intelligence, Ability.Adventure_BackToTheFuture], 
         packId: 71230, image: '71230_1to1_MF_MUGSHOT_Doc_Brown_168', url: 'doc-brown' },
     <MinifigData>{ id: 7123101, name: 'Unikitty', skillIds: [16, 33, 42, Ability.Adventure_LegoMovie], 
         packId: 71231, image: '70803_MF_Mugshot_Unikitty_168', url: 'unikitty' },
@@ -89,7 +89,7 @@ export const minifigs: MinifigData[] = [
         packId: 71236, image: '71236_1to1_MF_MUGSHOT_Superman_168', url: 'superman' },
     <MinifigData>{ id: 7123701, name: 'Aquaman', skillIds: [0, 4, 11, Ability.WaterSpray, 52, Ability.DivePlusHazardCleaner, Ability.WaterSprayOrIce], 
         packId: 71237, image: '71237_1to1_MF_MUGSHOT_Aquaman_168', url: 'aquaman' },
-    <MinifigData>{ id: 7123801, name: 'Cyberman', skillIds: [4, 10, 17, 23, 30, 40, 41, Ability.DivePlusDrone, Ability.DivePlusHacking, Ability.DivePlusLaser, Ability.DivePlusSilverDestroy, Ability.DivePlusTechnology, Ability.DivePlusXRay, Ability.Adventure_DC], 
+    <MinifigData>{ id: 7123801, name: 'Cyberman', skillIds: [4, 10, 17, 23, 30, 40, 41, Ability.DivePlusDrone, Ability.DivePlusHacking, Ability.DivePlusLaser, Ability.DivePlusSilverDestroy, Ability.DivePlusTechnology, Ability.DivePlusXRay, Ability.Adventure_DoctorWho], 
         packId: 71238, image: '71238_1to1_MF_MUGSHOT_Gyberman_168', url: 'cyberman' },
     <MinifigData>{ id: 7123901, name: 'Lloyd', skillIds: [20, 31, 37, 38, 39, Ability.Adventure_Ninjago], 
         packId: 71239, image: '71239_1to1_MF_MUGSHOT_Lloyd_168', url: 'lloyd' },
@@ -104,7 +104,7 @@ export const minifigs: MinifigData[] = [
         packId: 71170, image: '71200_1to1_MF_MUGSHOT_Batman_168', url: 'batman' },
     <MinifigData>{ id: 7117002, name: 'Gandalf', skillIds: [31, 46, 47, Ability.Adventure_LordOfTheRing], 
         packId: 71170, image: '10237_1to1_MF_MUGSHOT_GandalfTheGrey_168', url: 'gandalf' },
-    <MinifigData>{ id: 7117003, name: 'Wyldstyle', skillIds: [32, 38, 42, Ability.Adventure_LegoMovie, Ability.Adventure_LegoMovie], 
+    <MinifigData>{ id: 7117003, name: 'Wyldstyle', skillIds: [32, 38, 42, Ability.Adventure_LegoMovie], 
         packId: 71170, image: '70810_MF_Mugshot_WildStyle_168', url: 'wyldstyle' },
     <MinifigData>{ id: 7128601, name: 'Michael Knight', skillIds: [Ability.Dodging, Ability.Speed, Ability.XRay, Ability.Hacking, Ability.Tracking, Ability.Level_KnightRider, Ability.Adventure_KnightRider], 
         packId: 71286, image: 'wave-7.5-knight-rider', state: PieceState.Incomplete, url: 'michael-knight' }, // doging, dash=speed?
@@ -114,6 +114,6 @@ export const minifigs: MinifigData[] = [
         packId: 71264, image: 'wave-7.5-batgirl', state: PieceState.Incomplete, url: 'batgirl' },
     <MinifigData>{ id: 7126402, name: 'Robin', skillIds: [Ability.Dive, Ability.VineCutting, Ability.LaserDeflector, Ability.Acrobat, Ability.Story_Batman, Ability.Adventure_Batman], 
         packId: 71264, image: 'wave-7.5-robin', state: PieceState.Incomplete, url: 'robin' },
-    <MinifigData>{ id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.HazardProtection, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Intelligence, Ability.ChargeTransfer, Ability.Story_Ghostbusters2016, Ability.Adventure_Ghostbusters2016], 
+    <MinifigData>{ id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.TrapGhosts, Ability.HazardProtection, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Intelligence, Ability.ChargeTransfer, Ability.Story_Ghostbusters2016, Ability.Adventure_Ghostbusters2016], 
         packId: 71242, image: 'wave-6-abby-yates', state: PieceState.New, url: 'abby-yates' }
 ];

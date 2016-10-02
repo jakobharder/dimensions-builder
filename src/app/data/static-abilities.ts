@@ -266,7 +266,7 @@ export const abilities: AbilityData[] = [
     { id: Ability.Adventure_AdventureTime, url: null, name: 'Adventure Time World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Level_AdventureTime, url: null, name: 'Adventure Time Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Level_Midway, url: null, name: 'Midway Arcade Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
-    { id: Ability.Adventure_Midway, url: null, name: 'Midway Arcade Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    { id: Ability.Adventure_Midway, url: null, name: 'Midway Arcade World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_LordOfTheRing, url: null, name: 'Lord of the Rings World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_HarryPotter, url: null, name: 'Harry Potter World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_KnightRider, url: null, name: 'Knight Rider World', desc: '', type: AbilityType.LocationAccess, tags: [] },
