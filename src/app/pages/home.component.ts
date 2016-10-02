@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MetaService } from '../meta';
+import { MetaService, MetaModel } from '../meta';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { Piece, Pieces, DataService } from '../data';
 import { PieceTableComponent } from '../components/tables';
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.meta.set({
+		this.meta.set(<MetaModel>{
 			title: "Home",
 			description: "Lego Dimensions Builder is a Dimensions Character and Vehicle Ability Guide.",
 			image: ''

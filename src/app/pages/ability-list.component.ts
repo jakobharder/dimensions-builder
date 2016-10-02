@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Abilities, AbilityType, DataService } from '../data';
-import { MetaModel, MetaService } from '../meta';
+import { MetaService, MetaModel } from '../meta';
 import { ShareSectionComponent } from '../components';
 import { AbilityTableComponent } from '../components/tables';
 
@@ -40,7 +40,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                 private meta: MetaService) {
     }
     ngOnInit() {
-        this.meta.set({
+        this.meta.set(<MetaModel>{
             title: "Character Abilities", 
             description: "A complete overview list of all Character and Vehicle abilities and which Piece has them.",
             image: ''
@@ -58,7 +58,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                 case AbilityListType.Combos:
                     this.abilities = this.unfiltered.getFilteredByType(AbilityType.Combo).orderByName();
                     this.listTitle = "Important Ability Combos Needed to Unlock Everything";
-                    this.meta.set({
+                    this.meta.set(<MetaModel>{
                         title: this.listTitle, 
                         description: "A complete list of all important Character and Vehicle ability combinations like dive + digging. They are required to unlock everyting in the game.",
             image: ''
@@ -68,7 +68,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                 case AbilityListType.Rare:
                     this.abilities = this.unfiltered.getRare().getFilteredByType(AbilityType.Normal).orderByName();
                     this.listTitle = "Exclusive and Rare Character and Vehicle Abilities";
-                    this.meta.set({
+                    this.meta.set(<MetaModel>{
                         title: this.listTitle, 
                         description: "A complete list of all unique and rare Character and Vehicle abilities and which Piece has them.",
             image: ''
@@ -79,7 +79,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
                 default:
                     this.abilities = this.unfiltered.getFilteredByType(AbilityType.Normal).orderByName();
                     this.listTitle = "Complete Character and Vehicle Ability List";
-                    this.meta.set({
+                    this.meta.set(<MetaModel>{
                         title: this.listTitle, 
                         description: "A complete overview list of all Character and Vehicle abilities and which Piece has them.",
             image: ''

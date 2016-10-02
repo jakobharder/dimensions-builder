@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { MetaService } from '../meta';
+import { MetaService, MetaModel } from '../meta';
 import { Pack, Minifig, DataService, PieceState } from '../data';
 import { AbilityTableComponent, PackTableComponent } from '../components/tables';
 
@@ -25,7 +25,7 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        this.meta.set({
+        this.meta.set(<MetaModel>{
             title: "Character Details",
             description: "",
             image: ''
@@ -53,7 +53,7 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
                 }
                 this.description = desc;
 
-                this.meta.set({
+                this.meta.set(<MetaModel>{
                     title: this.character.name + "'s abilities and more",
                     description: desc,
                     image: '/assets/images/' + this.character.image + '.png'

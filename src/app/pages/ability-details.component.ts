@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MetaService } from '../meta';
+import { MetaService, MetaModel } from '../meta';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Skill, Vehicle, Piece, Pieces, AbilitiesOrdered, DataService } from './../data/index';
 import { MinifigPanelComponent } from './../components/index';
@@ -26,7 +26,7 @@ export class AbilityDetailsComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.meta.set({
+        this.meta.set(<MetaModel>{
             title: "Ability Details",
             description: "",
             image: ''
@@ -65,10 +65,9 @@ export class AbilityDetailsComponent implements OnInit {
                     desc += "There are " + (this.characters.length + this.builds.length) + " characters and builds with it.";
                 }
 
-                this.meta.set({
+                this.meta.set(<MetaModel>{
                     title: this.ability.name + ' Ability with character list',
-                    description: desc,
-                    image: ''
+                    description: desc
                 });
             }
         });

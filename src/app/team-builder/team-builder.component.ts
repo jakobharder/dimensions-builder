@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { MetaService } from '../meta';
+import { MetaService, MetaModel } from '../meta';
 import { Abilities, Piece, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
 import { MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent, AbilitySelection } from '../components/index';
 
@@ -34,11 +34,12 @@ export class TeamBuilderComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.meta.set({
+        this.meta.set(<MetaModel>{
             title: 'Identify your characters to play with',
             description: '',
-            image: ''
-        }, '/team-builder');
+            image: '',
+            canonical: '/team-builder'
+        });
         this.sub = this.route.params.subscribe(params => {
             this.queryAbilities = params['abilities'];
         });

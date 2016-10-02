@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MetaService } from '../meta';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
+import { MetaService, MetaModel } from '../meta';
 import { Pack, Piece, Pieces, Skill, DataService, packTypeStrings, Abilities } from '../data';
 import { MinifigPanelComponent } from '../components';
 import { AbilityTableComponent, PieceTableComponent, LevelTableComponent } from '../components/tables';
@@ -31,10 +31,8 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        this.meta.set({
-            title: "Pack Details",
-            description: "", 
-            image: ''
+        this.meta.set(<MetaModel>{
+            title: "Pack Details"
         });
 
         this.sub = this.route.params.subscribe(params => {
@@ -46,7 +44,7 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
             this.skills = this.characters.getAbilities().orderByName();
             this.buildAbilities = this.builds.getAbilities().orderByName();
 
-            this.meta.set({
+            this.meta.set(<MetaModel>{
                 title: this.pack.name + " " + packTypeStrings[this.pack.type],
                 description: "See all characters, builds and abilities included in the " + this.pack.name + " " + packTypeStrings[this.pack.type] + ".",
                 image: '/assets/images/' + this.pack.image + '.jpg'

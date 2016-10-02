@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
-import { MetaService } from '../meta';
+import { MetaService, MetaModel } from '../meta';
 import { Piece, DataService, Pieces } from '../data';
 import { PieceTableComponent } from '../components/tables';
 
@@ -20,7 +20,7 @@ export class CharacterListComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.meta.set({
+        this.meta.set(<MetaModel>{
             title: "Complete list of all characters",
             description: "Overview of all Lego Dimensions characters.",
             image: ''

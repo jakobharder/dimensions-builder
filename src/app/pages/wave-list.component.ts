@@ -1,6 +1,6 @@
 import { Component, Pipe, Injectable, PipeTransform, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
-import { MetaService } from '../meta';
+import { MetaService, MetaModel } from '../meta';
 import { Wave, DataService } from '../data';
 import { ShareSectionComponent } from '../components';
 import { PackTableComponent } from '../components/tables';
@@ -35,10 +35,9 @@ export class WaveListComponent implements OnInit {
 		let desc = "There are currently " + releasedPacks + " packs released in " + releasedWaves + " waves.";
 		this.description = desc;
 
-		this.meta.set({
+		this.meta.set(<MetaModel>{
 			title: "Complete list of all Lego Dimensions packs",
-			description: desc,
-			image: ''
+			description: desc
 		});	
 	}
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MetaService } from './../meta';
+import { MetaService, MetaModel } from './../meta';
 
 @Component({
 	moduleId: module.id,
@@ -14,10 +14,9 @@ export class Year2Component implements OnInit {
     
     ngOnInit() {
         this.title = "Packs, Characters and Vehicles we get in Year 2";
-        this.meta.set({
+        this.meta.set(<MetaModel>{
             title: this.title,
-            description: "An overview of all the Lego Dimensions packs coming in year 2 with details about the characters, vehicles and their abilities.",
-            image: ''
+            description: "An overview of all the Lego Dimensions packs coming in year 2 with details about the characters, vehicles and their abilities."
         });
     }
 }

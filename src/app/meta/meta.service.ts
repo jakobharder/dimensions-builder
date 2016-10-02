@@ -64,7 +64,7 @@ export class MetaService {
         this.canonical = this.getOrCreateCanonical();
     }
 
-    public set(model: MetaModel, canonical: string = undefined) {
+    public set(model: MetaModel) {
         this.setTitle(model.title, "Lego Dimensions Builder");
         this.setAttr(this.description, model.description);
 
@@ -72,8 +72,8 @@ export class MetaService {
         this.setAttr(this.ogDescription, model.description);
         this.setAttr(this.ogImage, 'http://dimensions-builder.com' + model.image);
 
-        if (canonical !== null && canonical !== undefined) {
-            this._url = 'http://dimensions-builder.com' + canonical;
+        if (model.canonical !== undefined) {
+            this._url = 'http://dimensions-builder.com' + model.canonical;
         } else {
             this._url = 'http://dimensions-builder.com' + this.router.url;
         }

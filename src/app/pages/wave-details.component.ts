@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { MetaService } from '../meta';
+import { MetaService, MetaModel } from '../meta';
 import { Piece, Wave, DataService } from '../data';
 import { PackTableComponent, PieceTableComponent } from '../components/tables';
 
@@ -27,10 +27,8 @@ export class WaveDetailsComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.meta.set({
-			title: "List of all Lego Dimensions packs",
-			description: "",
-			image: ''
+		this.meta.set(<MetaModel>{
+			title: 'List of all Lego Dimensions packs'
 		});
 
 		this.sub = this.route.params.subscribe(params => {
@@ -59,7 +57,7 @@ export class WaveDetailsComponent implements OnInit {
 			}
 			this.description = desc;
 
-			this.meta.set({
+			this.meta.set(<MetaModel>{
 				title: "All packs in wave " + this.wave.number,
 				description: desc,
 				image: '/assets/images/' + this.wave.image + '.jpg'

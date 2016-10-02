@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import { MetaService } from '../meta';
+import { MetaService, MetaModel } from '../meta';
 import { Level, Levels, LevelCollection, DataService } from '../data';
 import { LevelTableComponent } from '../components/tables';
 
@@ -24,10 +24,9 @@ export class LevelListComponent implements OnInit {
 
         this.description = "There are " + this.levels.list.length + " released levels for Lego Dimensions so far.";
 
-        this.meta.set({
+        this.meta.set(<MetaModel>{
             title: "List of all Lego Dimensions Levels, Worlds and Battle Areanas",
-            description: this.description,
-            image: ''
+            description: this.description
         });
     }
 }
