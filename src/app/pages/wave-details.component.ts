@@ -39,12 +39,12 @@ export class WaveDetailsComponent implements OnInit {
 			let numBuilds = 0;
 			for (let pack of this.wave.packs) {
 				let characters = this.data.getMinifigs(pack.minifigs);
-				//let builds = this.data.getVehicles(pack.builds);
+				let builds = this.data.getBuilds(pack.builds);
 				numCharacters += characters.length;
 				numBuilds += pack.builds.length;
 
 				this.characters = this.characters.concat(characters);
-				//this.builds = this.builds.concat(builds);
+				this.builds = this.builds.concat(builds);
 			}
 
 			let desc = "Wave " + this.wave.number + " contains " + this.wave.packs.length + " packs, " + numCharacters + " characters and " + numBuilds + " builds.";
