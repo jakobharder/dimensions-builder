@@ -234,7 +234,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.RopeSwings, url: 'rope-swings', name: 'Rope Swings', desc: 'use Orange Hooks to swing', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.FuseBox, url: 'fuse-box', name: 'Fuse Box', desc: 'rewire a fuse box', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.FlyingDrone, url: 'flying-drone', name: 'Flying Drone', desc: 'use a flying drone', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
-    <AbilityData>{ id: Ability.SuperStrengthHandles, url: 'super-strength-handles', name: 'Super Strength Handles', desc: 'use super strength handles', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    <AbilityData>{ id: Ability.SuperStrengthHandles, url: 'super-strength-handles', name: 'Super Strength Handles', desc: 'use super strength handles', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.ATeamMasterBuild, url: 'a-team-master-build', name: 'A-Team Master Build', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.Jump, url: null, name: 'Jump', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
     <AbilityData>{ id: Ability.SuperJump, url: null, name: 'Super Jump', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
