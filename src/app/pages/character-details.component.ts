@@ -32,8 +32,12 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
         });
 
         this.sub = this.route.params.subscribe(params => {
-            let id = +params['id'];
-            this.character = this.dataService.getMinifig(id);
+            this.character = this.dataService.getCharacterByUrl(params['id']);
+            if (this.character === undefined) {
+                // fall back to numerical id
+                this.character = this.dataService.getMinifig(+params['id']);
+            }
+
             if (this.character !== undefined) {
                 this.pack = this.dataService.getPack(this.character.packId);
                 for (let ability of this.character.skills) {
@@ -56,7 +60,8 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
                 this.meta.set(<MetaModel>{
                     title: this.character.name + "'s abilities and more",
                     description: desc,
-                    image: '/assets/images/' + this.character.image + '.png'
+                    image: '/assets/images/' + this.character.image + '.png',
+                    canonical: this.character.url ? ('/character/' + this.character.url) : undefined
                 });
             }
         });

@@ -17,6 +17,7 @@ export class DataService {
     packMap: { [id: number] : Pack; } = null;
     minifigMap: { [id: number] : Minifig; } = null;
     minifigs: Minifig[];
+    urlToCharacter: { [url: string] : Minifig } = null;
     skillMap: { [id: number] : Skill; } = null;
     skills: Skill[];
     urlToAbility: { [url: string] : Skill } = null;
@@ -53,12 +54,16 @@ export class DataService {
             this.skillMap[Ability.SwordSwitch].unimportant = true;
 
             this.minifigMap = {};
+            this.urlToCharacter = {};
             this.minifigs = [];
             for (let data of minifigs) {
                 let minifig: Minifig = Object.assign({}, data);
                 minifig.type = PieceType.Character;
                 minifig.skills = new Abilities(this.getSkills(data.skillIds)).orderByName().list;
                 minifig.locationAccess = [];
+                if (minifig.url !== undefined) {
+                    this.urlToCharacter[minifig.url] = minifig;
+                }
                 for (let skill of minifig.skills) {
                     skill.providers.push(minifig);
                     if (skill.type == AbilityType.LocationAccess) {
@@ -137,6 +142,10 @@ export class DataService {
 
     getMinifig(id: number) {
         return this.minifigMap[id];
+    }
+
+    getCharacterByUrl(url: string) {
+        return this.urlToCharacter[url];
     }
 
     getMinifigs(ids: number[]) {

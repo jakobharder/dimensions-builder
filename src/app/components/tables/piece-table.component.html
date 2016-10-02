@@ -9,6 +9,6 @@
         <td class="providers">
             <div *ngIf="piece.skills.length > 0"><span *ngFor="let ability of piece.skills | limitFilter; let isLast = last">{{ability}}{{isLast ? '' : ', '}}</span></div>
         </td>
-        <td><a class="btn btn-secondary" [title]="'more about ' + piece.name" [routerLink]="['/character/' + piece.id]" >details</a></td>
+        <td><a class="btn btn-secondary" [title]="'more about ' + piece.name" [routerLink]="['/character/' + (piece.url ? piece.url : piece.id)]" >details</a></td>
     </tr>
 </table>
