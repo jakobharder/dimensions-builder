@@ -70,7 +70,11 @@ export class MetaService {
 
         this.setAttr(this.ogTitle, model.title);
         this.setAttr(this.ogDescription, model.description);
-        this.setAttr(this.ogImage, 'http://dimensions-builder.com' + model.image);
+        if (model.image) {
+            this.setAttr(this.ogImage, 'http://dimensions-builder.com' + model.image);
+        } else {
+            this.setAttr(this.ogImage, '');
+        }
 
         if (model.canonical !== undefined) {
             this._url = 'http://dimensions-builder.com' + model.canonical;
