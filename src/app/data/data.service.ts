@@ -83,7 +83,7 @@ export class DataService {
 
                 this.minifigMap[minifig.id] = minifig;
                 this.minifigs.push(minifig);
-                if (minifig.skillIds.length > 5) {
+                if (minifig.skillIds.length > 7) {
                     minifig.extra = "all-rounder";
                 }
             }

@@ -187,7 +187,7 @@ export const abilities: AbilityData[] = [
     { id: 45, url: 'speed', name: 'Speed', desc: 'move faster', type: AbilityType.Normal, tags: [] },
     { id: 46, url: 'magic', name: 'Magic', desc: 'move objects with blue stars', type: AbilityType.Normal, tags: [] },
     { id: 47, url: 'magic-shield', name: 'Magic Shield', desc: 'prevent damage using a shield', type: AbilityType.Normal, tags: [] },
-    { id: 48, url: 'ice', name: 'Ice', desc: 'freeze other characters and extinguish fire', type: AbilityType.Normal, tags: [] },
+    { id: 48, url: 'ice', name: 'Freeze Breath', desc: 'freeze other characters and extinguish fire', type: AbilityType.Normal, tags: [] },
     { id: 49, url: 'gliding', name: 'Gliding', desc: 'fall down slower', type: AbilityType.Normal, tags: [] },
     { id: 50, url: 'accelerator-switch', name: 'Accelerator Switch', desc: 'use accelerator switches', type: AbilityType.Normal, tags: [] },
     { id: 51, url: 'cargo-hook', name: 'Cargo Hook', desc: 'grab cargo while flying and place it somewhere else', type: AbilityType.Normal, tags: [] },
