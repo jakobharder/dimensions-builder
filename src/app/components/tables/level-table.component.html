@@ -2,11 +2,11 @@
     <tr *ngFor="let level of levels">
         <td class="title">
             <span *ngIf="level.chapter != 0" class="hidden-sm-down">Chapter {{level.chapter}}</span> 
-            <span class="title-span" *ngIf="showFranchise">
+            <span class="title-span" *ngIf="showFranchise && level.franchiseName != level.name">
                 <span class="avoidwrap">{{level.franchiseName}}</span> - 
                 <span class="avoidwrap">{{level.name}}</span>
             </span>
-            <span class="title-span" *ngIf="!showFranchise">
+            <span class="title-span" *ngIf="!showFranchise || level.franchiseName == level.name">
                 <span>{{level.name}}</span>
             </span>
             <div class="hidden-lg-up btn-group">

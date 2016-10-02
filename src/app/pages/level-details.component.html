@@ -1,6 +1,6 @@
 <div class="card text-xs-center">
     <div class="card-block" *ngIf="level">
-        <h1>{{level.name}}<br><small>a {{level.franchiseName}} level</small></h1>
+        <h1>{{level.name}}<br><small>{{level.franchiseName}} level</small></h1>
         <p *ngIf="level.chapter != 0">This level is chapter {{level.chapter}} of the {{level.story}}.</p>
         <p *ngIf="level.desc">{{level.desc}}</p>
         <div class="m-b-1" *ngIf="level.image">

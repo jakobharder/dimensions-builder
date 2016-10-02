@@ -23,8 +23,14 @@ export const levels: LevelData[] = [
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
         abilitiesStory: [Ability.Target, Ability.SwordSwitch, Ability.RopeSwings, Ability.Accelerator, Ability.VineCutting, Ability.RedDemonObjects, Ability.Grapple, Ability.Laser, Ability.LaserDeflector, Ability.Acrobat], 
         access: Ability.Level_AdventureTime, walkthrough: '', year: 2, franchise: Franchise.AdventureTime, 
-        desc: 'If you play through this level you will gain Finn\'s Laser ability (Billy\'s Gauntlet). Also like with all Level packs, you have to play the level in order to get the build instructions of the Jakemobile and the Ancient War Elephant.',
+        desc: 'If you play through this level you will gain Finn\'s Laser ability (Billy\'s Gauntlet). Also like with all Level packs, you have to play the level in order to get the build instructions for the Jakemobile and the Ancient War Elephant.',
         image: 'adventure-time-level' },
+
+    <LevelData>{ url: 'mission-impossible-level', name: 'Mission: Impossible', chapter: 0, story: 'Year 2 Level Packs',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
+        abilitiesStory: [Ability.Grapple, Ability.SilverDestroy, Ability.FuseBox, Ability.Disguise, Ability.Technology, Ability.Stealth, Ability.Accelerator, Ability.MagnoGloves, Ability.Acrobat /* or fly */, Ability.XRay, Ability.Target], /* two characters, vehicle ok? */
+        access: Ability.MissionImpossibleLevel, walkthrough: '', year: 2, franchise: Franchise.MissionImpossible,
+        desc: 'You have to play the level in order to get the build instructions for the IMF Scrambler and the IMF Sport Car.' },
 
     <LevelData>{ url: 'back-to-the-future-level', name: 'Back to the Future', chapter: 0, story: 'Year 1 Level Packs',
         abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.Atlantis], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.SilverDestroy, Ability.Arcade], abilitiesStory: [Ability.SonarSmash, Ability.Accelerator, Ability.TimeTravel, Ability.Flying], 
