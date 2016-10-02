@@ -146,6 +146,18 @@ export const vehicles: VehicleData[] = [
     <VehicleData>{ id: 71235031, name: 'Arcade Machine', skillIds: [55], packId: 71235, image: 'none', stage: 1, vehicleId: 7123503 },
     <VehicleData>{ id: 71235032, name: '8-Bit Shooter', skillIds: [55], packId: 71235, image: 'none', stage: 2, vehicleId: 7123503 },
     <VehicleData>{ id: 71235033, name: 'The Pixelator', skillIds: [55], packId: 71235, image: 'none', stage: 3, vehicleId: 7123503 }, // nothing?
+    <VehicleData>{ id: 71246031, name: 'Lumpy Car', skillIds: [], packId: 71246, image: 'none', stage: 1, vehicleId: 7124603 },
+    <VehicleData>{ id: 71246032, name: 'Lumpy Truck', skillIds: [], packId: 71246, image: 'none', stage: 2, vehicleId: 7124603 },
+    <VehicleData>{ id: 71246033, name: 'Lumpy Land Whale', skillIds: [], packId: 71246, image: 'none', stage: 3, vehicleId: 7124603 },
+    <VehicleData>{ id: 71246041, name: 'BMO', skillIds: [], packId: 71246, image: 'none', stage: 1, vehicleId: 7124604 },
+    <VehicleData>{ id: 71246042, name: 'DOGMO', skillIds: [], packId: 71246, image: 'none', stage: 2, vehicleId: 7124604 },
+    <VehicleData>{ id: 71246043, name: 'SNAKEMO', skillIds: [], packId: 71246, image: 'none', stage: 3, vehicleId: 7124604 },
+    <VehicleData>{ id: 71245021, name: 'Ancient War Elephant', skillIds: [], packId: 71245, image: 'none', stage: 1, vehicleId: 7124502 },
+    <VehicleData>{ id: 71245022, name: 'Cosmic Squid', skillIds: [], packId: 71245, image: 'none', stage: 2, vehicleId: 7124502 },
+    <VehicleData>{ id: 71245023, name: 'Psychic Submarine', skillIds: [], packId: 71245, image: 'none', stage: 3, vehicleId: 7124502 },
+    <VehicleData>{ id: 71245031, name: 'Jakemobile', skillIds: [], packId: 71245, image: 'none', stage: 1, vehicleId: 7124503 },
+    <VehicleData>{ id: 71245032, name: 'Snail Dude Jake', skillIds: [], packId: 71245, image: 'none', stage: 2, vehicleId: 7124503 },
+    <VehicleData>{ id: 71245033, name: 'Hover Jake', skillIds: [], packId: 71245, image: 'none', stage: 3, vehicleId: 7124503 },
 /*
     { id: 021, name: '', skillIds: [], packId: , image: 'none', stage: 1, vehicleId:  },
     { id: 022, name: '', skillIds: [], packId: , image: 'none', stage: 2, vehicleId:  },
