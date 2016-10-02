@@ -81,6 +81,7 @@ export class Piece {
     extra: string;
     workInProgress: boolean;
     image: string;
+    url: string;
     isYear2: boolean;
     state: PieceState;
 

@@ -76,6 +76,7 @@ export class PieceData {
     skillIds: number[];
     packId: number;
     image: string;
+    url: string;
     state: PieceState;
 }
 

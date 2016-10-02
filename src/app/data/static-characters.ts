@@ -2,8 +2,10 @@ import { MinifigData, PieceState } from './data-types';
 import { Ability } from './static-abilities';
 
 export const minifigs: MinifigData[] = [
-    <MinifigData>{ id: 7120401, name: 'The Doctor', skillIds: [7, 10, 18, 23, Ability.Level_DoctorWho, Ability.Adventure_DoctorWho], packId: 71204, image: '712041to1MFMUGSHOTDr Who168' },
-    <MinifigData>{ id: 7120201, name: 'Homer Simpson', skillIds: [2, 18, 33, Ability.Level_Simpsons, Ability.Adventure_Simpsons], packId: 71202, image: '71005_Portrait_Homer' },
+    <MinifigData>{ id: 7120401, name: 'The Doctor', skillIds: [7, 10, 18, 23, Ability.Level_DoctorWho, Ability.Adventure_DoctorWho], 
+        packId: 71204, image: '712041to1MFMUGSHOTDr Who168', url: 'doctor-who' },
+    <MinifigData>{ id: 7120201, name: 'Homer Simpson', skillIds: [2, 18, 33, Ability.Level_Simpsons, Ability.Adventure_Simpsons], 
+        packId: 71202, image: '71005_Portrait_Homer', url: 'homer-simpson' },
     <MinifigData>{ id: 7120301, name: 'Chell', skillIds: [15, 38, Ability.Level_Portal2, Ability.Adventure_Portal2], packId: 71203, image: '71203_1to1_MF_MUGSHOT_Chell_168' },
     <MinifigData>{ id: 7120101, name: 'Marty McFly', skillIds: [18, Ability.Level_BackToTheFuture, Ability.Adventure_BackToTheFuture], packId: 71201, image: '71201_1to1_MF_MUGSHOT_Marty_168' },
     <MinifigData>{ id: 7123501, name: 'Gamer Kid', skillIds: [2, 12, 37, 44, 45, Ability.Level_Midway, Ability.Adventure_Midway], packId: 71235, image: '71235_1to1_MF_MUGSHOT_Retro_Gamer_168' },
