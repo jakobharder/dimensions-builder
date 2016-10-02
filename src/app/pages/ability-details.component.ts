@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { MetaService, MetaModel } from '../meta';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
-import { Skill, Vehicle, Piece, Pieces, AbilitiesOrdered, DataService } from './../data/index';
-import { MinifigPanelComponent } from './../components/index';
+import { Skill, Vehicle, Piece, Pieces, AbilitiesOrdered, DataService } from '../data';
+import { MinifigPanelComponent } from '../components';
+import { PieceTableComponent } from '../components/tables';
 
 @Component({
 	moduleId: module.id,
 	selector: 'ability-list',
 	templateUrl: 'ability-details.component.html',
-    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, PieceTableComponent]
 })
 export class AbilityDetailsComponent implements OnInit {
     sub: any;

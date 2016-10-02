@@ -1,5 +1,5 @@
-<div class="card">
-    <div class="card-block" *ngIf="ability">
+<div class="card" *ngIf="ability">
+    <div class="card-block text-xs-center">
         <h1>{{ability.name}} Ability</h1>
         <p *ngIf="!buildsOnly">Characters with this skill can {{ability.desc}}.
             <span *ngIf="!rare && !unique">There are many characters with this ability.</span>
@@ -7,36 +7,33 @@
         </p>
         <p *ngIf="buildsOnly">Only vehicles and gadgets have this ability. Characters need to use one of the below mentioned builds to {{ability.desc}}.</p>
     </div>
+</div>
 
-    <div class="card-block" *ngIf="ability && !buildsOnly">
-        <h3>Characters with {{ability.name}} ability</h3>
-        <p>Click on a character to get more details.</p>
-        <div class="m-t-2">
-            <a class="pull-md-left" *ngFor="let character of characters" [routerLink]="['/character/' + character.id]"><minifig-panel [piece]="character"></minifig-panel></a>
-            <div class="clearfix"></div>
-        </div>
+<div class="card" *ngIf="ability && !buildsOnly">
+    <div class="card-block text-xs-center">
+        <h2 class="card-title card-title-prim">Characters with {{ability.name}} ability</h2>
     </div>
+    <cmp-piece-table [pieces]="characters"></cmp-piece-table>
+</div>
 
-    <div class="card-block" *ngIf="ability && !charactersOnly">
-        <h3>Vehicles and gadgets with {{ability.name}} ability</h3>
-        <div class="m-t-2">
-            <minifig-panel class="pull-md-left" *ngFor="let character of builds" [piece]="character">{{character.name}}</minifig-panel>
-            <div class="clearfix"></div>
-        </div>        
+<div class="card" *ngIf="ability && !charactersOnly">
+    <div class="card-block">
+        <h2 class="card-title card-title-prim">Vehicles and gadgets with {{ability.name}} ability</h2>
     </div>
+    <cmp-piece-table [pieces]="builds"></cmp-piece-table>
+</div>
 
-    <div class="card-block" *ngIf="ability == undefined">
+<div class="card" *ngIf="ability == undefined">
+    <div class="card-block text-xs-center">
         <h1>Unknown Ability</h1>
         <p>Please have a look at the <a [routerLink]="['/abilities']">complete list of abilities</a>.</p>
     </div>
+</div>
 
+<div class="card text-xs-center red">
     <div class="card-block">
-        <div class="card card-inverse">
-            <div class="card-block">
-                <h4 class="card-title">Looking for the best combination of characters?</h4>
-                <p class="card-text">Try out the team builder tool. Choose the abilities you want, then let the tool guide you to your team.</p>
-                <a class="btn btn-primary" [routerLink]="['/team-builder']">Go to the team builder now</a>
-            </div>
-        </div>
+        <h2 class="card-title card-title-prim red">Team Builder</h2>
+        <p>Use the Team Builder to put together a team with all the abilities you want.</p>
+        <a class="btn btn-info" [routerLink]="['/team-builder']">Go to the team builder now</a>
     </div>
 </div>
