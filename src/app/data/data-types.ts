@@ -10,6 +10,8 @@ export class AbilityData {
     name: string;
     desc: string;
     url: string;
+    image: string;
+    extradesc: string;
     type: AbilityType;
     tags: BuilderTag[];
     unimportant: boolean;

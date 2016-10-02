@@ -230,7 +230,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.Diffindo, url: null, name: 'Diffindo', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.Parseltongue, url: null, name: 'Parseltongue', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.Intelligence, url: 'intelligence', name: 'Intelligence', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
-    <AbilityData>{ id: Ability.ChargeTransfer, url: 'charge-transfer', name: 'Charge Transfer', desc: 'use a Charge Transfer Panel', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    <AbilityData>{ id: Ability.ChargeTransfer, url: 'charge-transfer', name: 'Charge Transfer', desc: 'use a Charge Transfer Panel', type: AbilityType.Normal, tags: [BuilderTag.Year2], image: 'charge-transfer', extradesc: 'This ability was introduced with the Ghostbusters Story Pack (year 2 wave 6).' },
     <AbilityData>{ id: Ability.RopeSwings, url: 'rope-swings', name: 'Rope Swings', desc: 'use Orange Hooks to swing', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.FuseBox, url: 'fuse-box', name: 'Fuse Box', desc: 'rewire a fuse box', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.FlyingDrone, url: 'flying-drone', name: 'Flying Drone', desc: 'use a flying drone', type: AbilityType.Normal, tags: [BuilderTag.Year2] },

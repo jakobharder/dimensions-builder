@@ -1,11 +1,10 @@
 <div class="card" *ngIf="ability">
     <div class="card-block text-xs-center">
         <h1>{{ability.name}} Ability</h1>
-        <p *ngIf="!buildsOnly">Characters with this skill can {{ability.desc}}.
-            <span *ngIf="!rare && !unique">There are many characters with this ability.</span>
-            <span *ngIf="unique">Only {{unique.name}} has this ability.</span>
-        </p>
-        <p *ngIf="buildsOnly">Only vehicles and gadgets have this ability. Characters need to use one of the below mentioned builds to {{ability.desc}}.</p>
+        <p class="m-b-0">{{description}}</p>
+        <div class="m-t-1" *ngIf="ability.image">
+            <img class="rimage" src="/assets/images/abilities/{{ability.image}}.jpg" title="{{ability.name}}" alt="{{ability.name}} ability">
+        </div>
     </div>
 </div>
 

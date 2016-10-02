@@ -31,6 +31,8 @@ export class Skill {
     name: string;
     desc: string;
     url: string;
+    image: string;
+    extradesc: string;
     type: AbilityType;
     providers: Piece[];
     extra: string;

@@ -20,6 +20,7 @@ export class AbilityDetailsComponent implements OnInit {
     unique: Piece = null;
     buildsOnly: boolean = false;
     charactersOnly: boolean = false;
+    private description: string;
 
     constructor(private route: ActivatedRoute,
                 private data: DataService,
@@ -54,21 +55,31 @@ export class AbilityDetailsComponent implements OnInit {
                 this.charactersOnly = this.builds.length == 0;
 
                 let desc = "";
+                if (!this.buildsOnly) {
+                    desc += 'Characters with this skill can ' + this.ability.desc + '. '
+                } else if (this.buildsOnly) {
+                    desc += 'Only vehicles and gadgets have this ability. Characters need to use one of the below mentioned builds to ' + this.ability.desc + '. ';
+                }
                 if (this.unique !== null) {
-                    desc = this.ability.name + " is a unique ability. Only " + this.unique.name + " has this power.";
+                    desc += this.ability.name + " is a unique ability. Only " + this.unique.name + " has this power. ";
                 }
                 else {
                     if (this.rare) {
-                        desc = this.ability.name + " is a rare ability. ";
+                        desc += this.ability.name + " is a rare ability. ";
                     } else {
-                        desc = this.ability.name + " is a common ability. ";
+                        desc += this.ability.name + " is a common ability. ";
                     }
-                    desc += "There are " + (this.characters.length + this.builds.length) + " characters and builds with it.";
+                    desc += "There are " + (this.characters.length + this.builds.length) + " characters and builds with it. ";
                 }
+                if (this.ability.extradesc) {
+                    desc += this.ability.extradesc + " ";
+                }
+                this.description = desc;
 
                 this.meta.set(<MetaModel>{
                     title: this.ability.name + ' Ability with character list',
-                    description: desc
+                    description: desc,
+                    image: this.ability.image ? ('/assets/images/abilities/' + this.ability.image + '.jpg') : undefined
                 });
             }
         });
