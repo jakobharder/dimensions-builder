@@ -43,15 +43,12 @@ export class DataService {
             for (let data of abilities) {
                 let skill = new Skill(data);
                 skill.providers = [];
-                skill.unimportant = false;
                 this.skillMap[skill.id] = skill;
                 if (skill.url !== undefined) {
                     this.urlToAbility[skill.url] = skill;
                 }
                 this.skills.push(skill);
             }
-            this.skillMap[Ability.Dodging].unimportant = true;
-            this.skillMap[Ability.SwordSwitch].unimportant = true;
 
             this.minifigMap = {};
             this.urlToCharacter = {};

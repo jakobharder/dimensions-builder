@@ -12,6 +12,7 @@ export class AbilityData {
     url: string;
     type: AbilityType;
     tags: BuilderTag[];
+    unimportant: boolean;
 };
 
 export enum BuilderTag {
