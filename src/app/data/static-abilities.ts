@@ -136,6 +136,9 @@ export enum Ability {
     SpecialAttack,
     SpecialWeapon,
     SailsOnWater,
+    GoldDestroy,
+    RefillHealth,
+    TauntEnemies,
 
     /* end of year 1 */
 }
@@ -239,9 +242,12 @@ export const abilities: AbilityData[] = [
     { id: Ability.Guardian, url: 'guardian', name: 'Guardian', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     { id: Ability.Hover, url: 'hover', name: 'Hover', desc: '', type: AbilityType.Normal, tags: [] },
     { id: Ability.CrackedWalls, url: 'cracked-walls', name: 'Cracked Lego Walls', desc: '', type: AbilityType.Normal, tags: [] },
-    { id: Ability.SpecialAttack, url: 'special-attack', name: 'Special Attack', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
-    { id: Ability.SpecialWeapon, url: 'special-weapon', name: 'Special Weapon', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    { id: Ability.SpecialAttack, url: 'special-attack', name: 'Special Attack', desc: '', type: AbilityType.Normal, tags: [] },
+    { id: Ability.SpecialWeapon, url: 'special-weapon', name: 'Special Weapon', desc: '', type: AbilityType.Normal, tags: [] },
     { id: Ability.SailsOnWater, url: 'sails-on-water', name: 'Sails on Water', desc: 'sails on water', type: AbilityType.Normal, tags: [] },
+    //{ id: Ability.GoldDestroy, url: 'gold-destroy', name: 'Gold Lego Objects Blowup', desc: 'destroy gold Lego Objects', type: AbilityType.Normal, tags: [] },
+    { id: Ability.RefillHealth, url: 'refill-health', name: 'Refill Health', desc: 'automatically refill health of nearby characters', type: AbilityType.Normal, tags: [] },
+    { id: Ability.TauntEnemies, url: 'taunt-enemies', name: 'Taunt Enemies', desc: 'distract enemies', type: AbilityType.Normal, tags: [] },
 
     { id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     { id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },

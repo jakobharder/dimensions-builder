@@ -39,8 +39,9 @@ export const levels: LevelData[] = [
         access: Ability.Level_DoctorWho, walkthrough: '', year: 1, franchise: Franchise.DoctorWho }, /* water spray or ice */
 
     <LevelData>{ url: 'the-simpsons-level', name: 'The Mysterious Voyage of Homer', chapter: 0, story: 'Year 1 Level Packs',
-        abilitiesMinikits: [Ability.Tracking, Ability.RelicDetector, Ability.TowBar, Ability.Laser, Ability.Hacking, Ability.Tardis, Ability.Electricity, Ability.PortalGun /* or fly */, Ability.WeightSwitch], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [Ability.SonarSmash, Ability.Level_Simpsons, Ability.SuperStrength, Ability.SilverDestroy, Ability.Magic, Ability.Accelerator /* vehicle */], 
-        access: Ability.Level_Simpsons, walkthrough: '', year: 1, franchise: Franchise.TheSimpsons }, /* story television?? */
+        abilitiesMinikits: [Ability.Tracking, Ability.RelicDetector, Ability.TowBar, Ability.Laser, Ability.Hacking, Ability.Tardis, Ability.Electricity, Ability.PortalGun /* or fly */, Ability.WeightSwitch], abilitiesRescue: [], abilitiesExtra: [], 
+        abilitiesStory: [Ability.SonarSmash, Ability.Level_Simpsons, Ability.SuperStrength, Ability.SilverDestroy, Ability.Magic, Ability.Accelerator /* vehicle */, Ability.TauntEnemies], 
+        access: Ability.Level_Simpsons, walkthrough: '', year: 1, franchise: Franchise.TheSimpsons },
         /* extra gyrosphete, target, chima, poul valt, acrobat */
         /* atlantis is for rescue? */
 
