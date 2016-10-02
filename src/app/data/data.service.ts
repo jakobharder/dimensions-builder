@@ -287,6 +287,7 @@ export class DataService {
                 newBuild.image = one.image;
                 newBuild.packId = one.packId;
                 newBuild.stage = 0;
+                newBuild.state = one.state;
                 newBuild.vehicleId = one.vehicleId;
                 newBuild.skillIds = this.unionArrays(this.unionArrays(one.skillIds, two.skillIds), vehicle.skillIds);
                 result.push(newBuild);

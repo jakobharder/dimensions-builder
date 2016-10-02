@@ -15,8 +15,9 @@ import { AbilityTableComponent, PieceTableComponent, LevelTableComponent } from 
 export class PackDetailsComponent implements OnInit, OnDestroy {
     sub: any;
     pack: Pack;
-    characters: Pieces;
-    builds: Pieces;
+    private characters: Pieces;
+    private builds: Pieces;
+    private pieces: Pieces;
     private skills: Abilities;
     private buildAbilities: Abilities;
     private type: string;
@@ -40,6 +41,8 @@ export class PackDetailsComponent implements OnInit, OnDestroy {
             this.pack = this.dataService.getPack(id);
             this.characters = new Pieces(this.dataService.getMinifigs(this.pack.minifigs));
             this.builds = new Pieces(this.dataService.getBuilds(this.pack.builds));
+            this.pieces = this.characters.clone()
+            this.pieces.addRange(this.builds);
 
             this.skills = this.characters.getAbilities().orderByName();
             this.buildAbilities = this.builds.getAbilities().orderByName();
