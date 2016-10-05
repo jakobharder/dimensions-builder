@@ -57,13 +57,14 @@ export class LevelDetailsComponent implements OnInit {
 
         this.allAbilities = this.minikitAbilities.clone();
         this.allAbilities.addRange(this.rescueAbilities);
-        this.allAbilities.addRange(this.extraAbilities);
-        this.extraAbilities = this.allAbilities.clone();
+        //this.allAbilities.addRange(this.extraAbilities);
+        //this.extraAbilities = this.allAbilities.clone();
 
-        this.allAbilities.addRange(this.storyAbilities);
-        this.allAbilities.orderByName();
+        let allAbilities = this.allAbilities.clone();
+        allAbilities.addRange(this.storyAbilities);
+        allAbilities.orderByName();
 
-        this.serialized = Serializer.abilitiesToString(this.allAbilities);
+        this.serialized = Serializer.abilitiesToString(allAbilities);
 
         let level = this.data.getAbility(this.level.access);
         if (level !== undefined) {

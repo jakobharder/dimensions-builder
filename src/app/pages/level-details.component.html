@@ -26,14 +26,23 @@
 </div>
 
 <div class="card" *ngIf="storyAbilities.list.length > 0">
-    <div class="card-block">
+    <div class="card-block text-xs-center">
         <h2 class="card-title card-title-prim">Abilities needed to finish the story:</h2>
+        <p class="m-b-2">You need the following abilities to play through the complete level.</p>
     </div>
-    <cmp-ability-table [abilities]="storyAbilities.list"></cmp-ability-table>
+    <cmp-ability-table [abilities]="storyAbilities.list" class="delimiter"></cmp-ability-table>
+</div>
+<div class="card" *ngIf="allAbilities.list.length > 0">
+    <div class="card-block text-xs-center">
+        <h2 class="card-title card-title-prim">Abilities needed to complete 100%:</h2>
+        <p class="m-b-2">You need the following abilities in addition to the story abilities to collect all minikits and rescue the citizin in peril.</p>
+    </div>
+    <cmp-ability-table [abilities]="allAbilities.list" class="delimiter"></cmp-ability-table>
 </div>
 <div class="card" *ngIf="extraAbilities.list.length > 0">
-    <div class="card-block">
-        <h2 class="card-title card-title-prim">Abilities needed to complete 100%:</h2>
+    <div class="card-block text-xs-center">
+        <h2 class="card-title card-title-prim">Additional abilities:</h2>
+        <p class="m-b-2">You can collect some more extra coins if you have the following abilities, but they are not needed to collect 100%.</p>
     </div>
-    <cmp-ability-table [abilities]="extraAbilities.list"></cmp-ability-table>
+    <cmp-ability-table [abilities]="extraAbilities.list" class="delimiter"></cmp-ability-table>
 </div>

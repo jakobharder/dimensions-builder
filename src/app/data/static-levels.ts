@@ -34,7 +34,8 @@ export const levels: LevelData[] = [
         image: 'mission-impossible-level' },
 
     <LevelData>{ url: 'back-to-the-future-level', name: 'Back to the Future', chapter: 0, story: 'Year 1 Level Packs',
-        abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.Atlantis], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.SilverDestroy, Ability.Arcade], abilitiesStory: [Ability.SonarSmash, Ability.Accelerator, Ability.TimeTravel, Ability.Flying], 
+        abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.Atlantis], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.Arcade], 
+        abilitiesStory: [Ability.SonarSmash, Ability.Accelerator, Ability.TimeTravel, Ability.Flying], 
         access: Ability.Level_BackToTheFuture, walkthrough: 'https://www.youtube.com/watch?v=6X6F7J2aZxo', year: 1, franchise: Franchise.BackToTheFuture }, /* hover or fly, Marty McFly, car */
 
     <LevelData>{ url: 'portal-2-level', name: 'Aperture Science', chapter: 0, story: 'Year 1 Level Packs',
@@ -52,9 +53,12 @@ export const levels: LevelData[] = [
         /* extra gyrosphete, target, chima, poul valt, acrobat */
         /* atlantis is for rescue? */
 
-    <LevelData>{ url: 'ghostbusters-level', name: 'Ghostbusters Level', chapter: 0, story: 'Year 1 Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
-        access: Ability.Level_Ghostbusters, walkthrough: '', year: 1, franchise: Franchise.Ghostbusters },
+    <LevelData>{ url: 'ghostbusters-level', name: 'Ghostbusters!', chapter: 0, story: 'Year 1 Level Packs',
+        abilitiesMinikits: [Ability.RelicDetector, Ability.Drone, Ability.Magic, Ability.XRay, Ability.Technology, Ability.SuperStrength, Ability.LaserDeflector, Ability.Grapple, Ability.Drilling, Ability.CargoHook], abilitiesRescue: [Ability.RelicDetector, Ability.Drone], abilitiesExtra: [Ability.HazardCleaner], 
+        abilitiesStory: [Ability.Laser, Ability.Accelerator, Ability.SuspendGhost, Ability.TrapGhosts, Ability.GhostbustersLevel], 
+        access: Ability.GhostbustersLevel, walkthrough: '', year: 1, franchise: Franchise.Ghostbusters,
+        desc: 'You have to play the level in order to get the build instructions for the Ecto-1 and the Ghost Trap.',
+        image: 'ghostbusters-level' },
 
     <LevelData>{ url: 'midway-arcade-level', name: 'Midway Arcade Level', chapter: 0, story: 'Year 1 Level Packs',
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 

@@ -12,7 +12,7 @@ export const minifigs: MinifigData[] = [
         packId: 71201, image: '71201_1to1_MF_MUGSHOT_Marty_168', url: 'marty-mcfly' },
     <MinifigData>{ id: 7123501, name: 'Gamer Kid', skillIds: [2, 12, 37, 44, 45, Ability.Level_Midway, Ability.Adventure_Midway], 
         packId: 71235, image: '71235_1to1_MF_MUGSHOT_Retro_Gamer_168', url: 'gamer-kid' },
-    <MinifigData>{ id: 7122801, name: 'Peter Venkman', skillIds: [12, 34, 56, Ability.Level_Ghostbusters, Ability.Adventure_Ghostbusters], 
+    <MinifigData>{ id: 7122801, name: 'Peter Venkman', skillIds: [12, 34, 56, Ability.GhostbustersLevel, Ability.Adventure_Ghostbusters], 
         packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168', url: 'peter-venkman' },
     <MinifigData>{ id: 7124801, name: 'Ethan Hunt', skillIds: [Ability.Target, Ability.SilverDestroy, Ability.Stealth, Ability.XRay, Ability.Grapple, Ability.Technology, Ability.Drone, Ability.Disguise, Ability.FlyingDrone, Ability.MagnoGloves, Ability.Acrobat, Ability.Dive, Ability.MissionImpossibleLevel, Ability.MissionImpossibleWorld, Ability.DivePlusGrapple, Ability.DivePlusSilverDestroy, Ability.DivePlusTarget, Ability.DivePlusTechnology, Ability.DivePlusXRay, Ability.FuseBox], 
         packId: 71248, image: 'wave-6-ethan-hunt', state: PieceState.New, url: 'ethan-hunt' },
