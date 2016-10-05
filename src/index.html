@@ -24,9 +24,6 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/fonts/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/global.css">
 
   <base href="/">
 
@@ -39,6 +36,180 @@
 
     ga('create', 'UA-69932960-3', 'auto');
   </script>
+
+<style>
+/* latin-ext */
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arimo'), url(https://fonts.gstatic.com/s/arimo/v9/V41d6938Z8eBLYL302F8Ig.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arimo'), url(https://fonts.gstatic.com/s/arimo/v9/HNu4Nzh6q8Es60EMNZhs9w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+    font-family: 'Bebas Neue Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bebas Neue Bold'), url('assets/fonts/BEBASNEUE BOLD.woff') format('woff');
+}
+</style>
+
+  <style>
+body {
+  background: #16203B;
+  color: #BAC2D5;
+  font-family: 'Arimo',Arial,sans-serif;
+}
+.text-muted {
+  color: #7B83A2 !important;
+}
+.text-highlight {
+  color: #CC324B;
+}
+.card {
+  background: #324065;
+  overflow: hidden;
+  border: none;
+}
+.card.card-inverse {
+  background: #16203B;
+}
+.card-title, h1, h2, h3 {
+  font-family: 'Bebas Neue Bold',Arial,sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+h4, h5 {
+  color: #fff;
+}
+h1.card-title {
+  font-size: 2rem;
+}
+h2.card-title {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+  margin-bottom: 0rem;
+}
+.card-title-prim {
+  background-color: #11A8AB;
+  margin: -1rem -1.5rem 1rem -1.5rem;
+  padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+  text-align: center; 
+  line-height: 1.5rem;
+}
+.card-title-prim.year1 {
+  background-color: #1A4E95;
+}
+.card-title-prim.year2 {
+  background-color: #EDB742;
+}
+.card-title-prim.red {
+  background-color: #1A4E95;/*#CC324B;*/
+}
+.card-title-prim.light {
+  background-color: #475072;
+}
+.card.red {
+  background-color: #3468AF;/*#e64c65;*/
+  color: #fff;
+}
+.card-block {
+  padding: 1rem 1.5rem;
+}
+.character-portrait {
+  border: solid 6px #475072;
+  border-radius: 112px;
+  width: 224px;
+  height: 224px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.character-portrait img {
+  margin-top: -6px;
+}
+a {
+  color: #4baad9;
+}
+.btn-primary, .btn-primary:link, .btn-primary:visited {
+  background: #e64c65;
+  border: none;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:checked {
+  background: #CC324B !important;
+  border: none;
+}
+a, a:hover, a:active, a:focus {
+  text-decoration: none !important;
+}
+.like-p {
+  display: block;
+  margin-bottom: 1rem;
+}
+.btn-secondary, .btn-secondary:link, .btn-secondary:visited {
+  background: #475072;
+  color: #fff;
+  border: none;
+}
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:checked {
+  background: #11A8AB !important;
+  border: none;
+}
+.btn-info, .btn-info:link, .btn-info:visited {
+  background: #4FC4F6;
+  color: #fff;
+  border: none;
+}
+.btn-info:hover, .btn-info:active, .btn-info:checked {
+  background: #35A5D6 !important;
+  border: none;
+}
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: text-bottom;
+    background-color: #CC324B;
+    border-radius: 10px;
+}
+.badge:empty {
+  display: none;
+}
+.delimiter table {
+    border-top: 1px solid #16203B;
+}
+.delimiter-b table {
+    border-bottom: 1px solid #16203B;
+}
+.m-b-negative {
+  margin-bottom: -1rem;
+}
+.avoidwrap {
+  display: inline-block;
+}
+.rimage {
+  max-height: 256px;
+  max-width: 100%;
+}    
+  </style>
 </head>
 <body>
 
