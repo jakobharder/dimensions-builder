@@ -87,7 +87,7 @@ export enum Ability {
     SlurpAccess,
     Diffindo,
     Parseltongue,
-    CrackedWalls,
+    __CrackedWalls,
     Intelligence,
     ChargeTransfer,
 
@@ -146,7 +146,7 @@ export enum Ability {
 export const abilities: AbilityData[] = [
     <AbilityData>{ id: 0, url: 'atlantis', name: 'Atlantis Pools', desc: 'speak to the fishes', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 1, url: 'chi-power', name: 'Chi Power', desc: 'use \'Chi Up\'', type: AbilityType.Normal, tags: [] },
-    <AbilityData>{ id: 2, url: 'super-strength', name: 'Super Strength', desc: 'destroy cracked Lego walls', type: AbilityType.Normal, tags: [] }, // aka cracked wall
+    <AbilityData>{ id: Ability.SuperStrength, url: 'super-strength', name: 'Super Strength', desc: 'destroy cracked Lego walls', type: AbilityType.Normal, tags: [], extradesc: 'Also known as \"cracked walls\" ability.' }, // aka cracked wall
     <AbilityData>{ id: 3, url: 'digging', name: 'Digging', desc: 'use dig spots', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 4, url: 'dive', name: 'Dive', desc: 'dive and swim underwater', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 5, url: 'drilling', name: 'Drilling', desc: 'drill at drill spots', type: AbilityType.Normal, tags: [] },
@@ -234,14 +234,14 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.RopeSwings, url: 'rope-swings', name: 'Rope Swings', desc: 'use Orange Hooks to swing', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.FuseBox, url: 'fuse-box', name: 'Fuse Box', desc: 'rewire a fuse box', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.FlyingDrone, url: 'flying-drone', name: 'Flying Drone', desc: 'use a flying drone', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
-    //<AbilityData>{ id: Ability.SuperStrengthHandles, url: 'super-strength-handles', name: 'Super Strength Handles', desc: 'use super strength handles', type: AbilityType.Normal, tags: [] },
+    <AbilityData>{ id: Ability.SuperStrengthHandles, url: 'super-strength-handles', name: 'Super Strength Handles', desc: 'pull super strength handles', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'This ability was introduced with year 2. Many year 1 characters with super strength ability also got this ability. The vehicles with super strength handles are to be confirmed.' },
     <AbilityData>{ id: Ability.ATeamMasterBuild, url: 'a-team-master-build', name: 'A-Team Master Build', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.Jump, url: null, name: 'Jump', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
     <AbilityData>{ id: Ability.SuperJump, url: null, name: 'Super Jump', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
     <AbilityData>{ id: Ability.BMODocks, url: 'bmo-docks', name: 'BMO Docks', desc: 'use BMO docks', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.Guardian, url: 'guardian', name: 'Guardian', desc: '', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.Hover, url: 'hover', name: 'Hover', desc: '', type: AbilityType.Normal, tags: [] },
-    <AbilityData>{ id: Ability.CrackedWalls, url: 'cracked-walls', name: 'Cracked Lego Walls', desc: '', type: AbilityType.Normal, tags: [] },
+    //<AbilityData>{ id: Ability.CrackedWalls, url: 'cracked-walls', name: 'Cracked Lego Walls', desc: '', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.SpecialAttack, url: 'special-attack', name: 'Special Attack', desc: '', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.SpecialWeapon, url: 'special-weapon', name: 'Special Weapon', desc: '', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.SailsOnWater, url: 'sails-on-water', name: 'Sails on Water', desc: 'sails on water', type: AbilityType.Normal, tags: [], unimportant: true },
