@@ -1,7 +1,7 @@
-<div class="card">
+<div class="card" *ngIf="url">
     <div class="card-block text-xs-center">
         <h2 class="card-title">Do you like this site?</h2>
         <p>Please help me spread the word and share it to your friends.</p>
-        <cmp-btn title="share to Facebook" [url]="url"></cmp-btn>
+        <cmp-btn title="share on Facebook" [url]="url"></cmp-btn>
     </div>
 </div>
