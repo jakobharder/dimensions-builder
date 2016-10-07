@@ -13,6 +13,8 @@ import { expressEngine } from 'angular2-universal';
 
 import { abilities } from './app/data/static-abilities';
 import { levels } from './app/data/static-levels';
+import { waves } from './app/data/static-waves';
+import { minifigs } from './app/data/static-characters';
 
 var compression = require('compression');
 
@@ -71,13 +73,18 @@ var urls = [
   { url: '/all-year2-packs-and-characters', changefreq: 'daily', priority: 0.5 }
 ];
 for (let ability of abilities) {
-  urls.push({ url: '/ability/' + ability.url, changefreq: 'daily', priority: 0.5});
+  if (ability.url) {
+    urls.push({ url: '/ability/' + ability.url, changefreq: 'daily', priority: 0.5});
+  }
 }
 for (let level of levels) {
-  urls.push({ url: '/ability/' + level.url, changefreq: 'daily', priority: 0.5});
+  urls.push({ url: '/level/' + level.url, changefreq: 'daily', priority: 0.5});
 }
-for (let i of [1, 2, 3, 4, 5, 6]) {
-  urls.push({ url: '/wave/' + i, changefreq: 'daily', priority: 0.5});
+for (let wave of waves) {
+  urls.push({ url: '/wave/' + wave.wave, changefreq: 'daily', priority: 0.5});
+}
+for (let character of minifigs) {
+  urls.push({ url: '/character/' + character.url, changefreq: 'daily', priority: 0.5})
 }
 
 var sm = require('sitemap');
