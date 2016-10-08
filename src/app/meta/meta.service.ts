@@ -73,7 +73,7 @@ export class MetaService {
         if (model.image) {
             this.setAttr(this.ogImage, 'http://dimensions-builder.com' + model.image);
         } else {
-            this.setAttr(this.ogImage, '');
+            this.setAttr(this.ogImage, 'http://dimensions-builder.com/assets/images/lego-dimensions.jpg');
         }
 
         if (model.canonical !== undefined) {

@@ -5,3 +5,4 @@ export * from './minifig-textlink.component';
 export * from './ability-select.component';
 export * from './share-section.component';
 export * from './panel-button.component';
+export * from './comment-section.component';
