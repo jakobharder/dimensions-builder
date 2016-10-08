@@ -5,14 +5,14 @@ declare let ga:Function;
 import { TopNavComponent } from './shared';
 import { DataService } from './data';
 import { MetaService } from './meta';
-import { ShareSectionComponent, CommentSectionComponent } from './components';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from './components';
 
 @Component({
 	moduleId: module.id,
 	selector: 'dimensions-builder',
 	templateUrl: 'app.component.html',
 	styleUrls: ['app.component.css'],
-	directives: [ROUTER_DIRECTIVES, TopNavComponent, ShareSectionComponent, CommentSectionComponent],
+	directives: [ROUTER_DIRECTIVES, TopNavComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent],
 	providers: [DataService, MetaService]
 })
 export class AppComponent {

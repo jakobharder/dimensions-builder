@@ -3,12 +3,13 @@ import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { MetaService, MetaModel } from '../meta';
 import { Piece, DataService, Pieces } from '../data';
 import { PieceTableComponent } from '../components/tables';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
 
 @Component({
 	moduleId: module.id,
 	selector: 'character-list',
 	templateUrl: 'character-list.component.html',
-    directives: [ROUTER_DIRECTIVES, PieceTableComponent ]
+    directives: [ROUTER_DIRECTIVES, PieceTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent ]
 })
 
 export class CharacterListComponent implements OnInit {

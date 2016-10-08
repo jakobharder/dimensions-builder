@@ -3,6 +3,7 @@ import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { MetaService, MetaModel } from '../meta';
 import { Piece, Wave, DataService } from '../data';
 import { PackTableComponent, PieceTableComponent } from '../components/tables';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
 
 @Component({
 	moduleId: module.id,

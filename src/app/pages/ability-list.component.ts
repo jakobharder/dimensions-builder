@@ -3,8 +3,8 @@ import { Title } from '@angular/platform-browser';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Abilities, AbilityType, DataService } from '../data';
 import { MetaService, MetaModel } from '../meta';
-import { ShareSectionComponent } from '../components';
 import { AbilityTableComponent } from '../components/tables';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
 
 export enum AbilityListType {
     Rare,
@@ -16,7 +16,7 @@ export enum AbilityListType {
 	moduleId: module.id,
 	selector: 'ability-list',
 	templateUrl: 'ability-list.component.html',
-    directives: [ROUTER_DIRECTIVES, ShareSectionComponent, AbilityTableComponent]
+    directives: [ROUTER_DIRECTIVES, ShareSectionComponent, AbilityTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent]
 })
 export class AbilityListComponent implements OnInit, OnDestroy {
     sub: any;

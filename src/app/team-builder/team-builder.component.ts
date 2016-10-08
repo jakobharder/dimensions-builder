@@ -3,13 +3,14 @@ import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { MetaService, MetaModel } from '../meta';
 import { Abilities, Piece, Skill, FilterSkill, DataService, MinifigList } from '../data/index';
 import { MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent, AbilitySelection } from '../components/index';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
 
 @Component({
 	moduleId: module.id,
 	selector: 'team-builder',
 	templateUrl: 'team-builder.component.html',
     styleUrls: ['team-builder.component.css'],
-    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilitySelectComponent, PanelButtonComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent]
 })
 export class TeamBuilderComponent implements OnInit {
     skills: FilterSkill[] = [];

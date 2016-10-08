@@ -18,7 +18,10 @@ export class CommentSectionComponent implements OnInit, OnDestroy {
         this.sub = this.meta.url.subscribe(
             (url: string) => {
 				this.url = url;
-            });
+		});
+		if (this.meta._url !== undefined) {
+			this.url = this.meta._url;
+		}
 	}
 
 	ngOnDestroy() {

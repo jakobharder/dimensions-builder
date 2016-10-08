@@ -2,14 +2,14 @@ import { Component, Pipe, Injectable, PipeTransform, OnInit } from '@angular/cor
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { MetaService, MetaModel } from '../meta';
 import { Wave, DataService } from '../data';
-import { ShareSectionComponent } from '../components';
 import { PackTableComponent } from '../components/tables';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
 
 @Component({
 	moduleId: module.id,
 	selector: 'page-wave-list',
 	templateUrl: 'wave-list.component.html',
-	directives: [ROUTER_DIRECTIVES, PackTableComponent, ShareSectionComponent],
+	directives: [ROUTER_DIRECTIVES, PackTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent],
 })
 export class WaveListComponent implements OnInit {
 	private waves: Wave[] = [];

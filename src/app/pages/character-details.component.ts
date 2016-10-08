@@ -3,12 +3,13 @@ import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { MetaService, MetaModel } from '../meta';
 import { Pack, Minifig, DataService, PieceState } from '../data';
 import { AbilityTableComponent, PackTableComponent } from '../components/tables';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
 
 @Component({
 	moduleId: module.id,
 	selector: 'page-character-details',
 	templateUrl: 'character-details.component.html',
-    directives: [ROUTER_DIRECTIVES, AbilityTableComponent, PackTableComponent]
+    directives: [ROUTER_DIRECTIVES, AbilityTableComponent, PackTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent]
 })
 export class CharacterDetailsComponent implements OnInit, OnDestroy {
     sub: any;

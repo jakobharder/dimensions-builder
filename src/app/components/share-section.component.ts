@@ -22,6 +22,9 @@ export class ShareSectionComponent implements OnInit, OnDestroy {
             (url: string) => {
 				this.url = url;
             });
+		if (this.meta._url !== undefined) {
+			this.url = this.meta._url;
+		}
 	}
 
 	ngOnDestroy() {

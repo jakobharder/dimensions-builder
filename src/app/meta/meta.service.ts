@@ -6,7 +6,7 @@ import { MetaModel } from './meta.model';
 @Injectable()
 export class MetaService {
     public url: EventEmitter<string> = new EventEmitter<string>();
-    private _url: string;
+    public _url: string;
 
     private _r: Renderer;
     private _el: ElementRef;

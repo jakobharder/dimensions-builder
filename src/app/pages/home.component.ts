@@ -3,12 +3,13 @@ import { MetaService, MetaModel } from '../meta';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { Piece, Pieces, DataService } from '../data';
 import { PieceTableComponent } from '../components/tables';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
 
 @Component({
 	moduleId: module.id,
 	selector: 'home-cmp',
 	templateUrl: 'home.component.html',
-	directives: [ROUTER_DIRECTIVES, PieceTableComponent],
+	directives: [ROUTER_DIRECTIVES, PieceTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent],
 })
 export class HomeComponent implements OnInit {
 	private mostSkills: Piece[];
