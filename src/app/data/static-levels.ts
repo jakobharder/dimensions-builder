@@ -20,7 +20,7 @@ export class LevelData {
 
 export const levels: LevelData[] = [
     <LevelData>{ url: 'adventure-time-level', name: 'A Book and a Bad Guy', chapter: 0, story: 'Year 2 Level Packs',
-        abilitiesMinikits: [Ability.BMODocks, Ability.Flying, Ability.Diffindo, Ability.MasterBuild, Ability.Dive, Ability.ChargeTransfer], abilitiesRescue: [], abilitiesExtra: [],
+        abilitiesMinikits: [Ability.BMODocks, Ability.Flying, Ability.Diffindo, Ability.MasterBuild, Ability.Dive, Ability.ChargeTransfer], abilitiesRescue: [Ability.MagicWalls], abilitiesExtra: [],
         abilitiesStory: [Ability.Target, Ability.SwordSwitch, Ability.RopeSwings, Ability.Accelerator, Ability.VineCutting, Ability.RedDemonObjects, Ability.Grapple, Ability.Laser, Ability.LaserDeflector, Ability.Acrobat], 
         access: Ability.Level_AdventureTime, walkthrough: '', year: 2, franchise: Franchise.AdventureTime, 
         desc: 'If you play through this level you will gain Finn\'s Laser ability (Billy\'s Gauntlet). Also like with all Level packs, you have to play the level in order to get the build instructions for the Jakemobile and the Ancient War Elephant.',
