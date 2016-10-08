@@ -10,7 +10,7 @@ export const minifigs: MinifigData[] = [
         packId: 71203, image: '71203_1to1_MF_MUGSHOT_Chell_168', url: 'chell' },
     <MinifigData>{ id: 7120101, name: 'Marty McFly', skillIds: [18, Ability.Level_BackToTheFuture, Ability.Adventure_BackToTheFuture], 
         packId: 71201, image: '71201_1to1_MF_MUGSHOT_Marty_168', url: 'marty-mcfly' },
-    <MinifigData>{ id: 7123501, name: 'Gamer Kid', skillIds: [Ability.SuperStrength, Ability.SuperStrengthHandles, 12, 37, 44, 45, Ability.Level_Midway, Ability.Adventure_Midway], 
+    <MinifigData>{ id: 7123501, name: 'Gamer Kid', skillIds: [Ability.SuperStrength, Ability.SuperStrengthHandles, 12, 37, 44, 45, Ability.MidwayArcadeLevel, Ability.Adventure_Midway, Ability.Invisibility], 
         packId: 71235, image: '71235_1to1_MF_MUGSHOT_Retro_Gamer_168', url: 'gamer-kid' },
     <MinifigData>{ id: 7122801, name: 'Peter Venkman', skillIds: [12, 34, 56, Ability.GhostbustersLevel, Ability.Adventure_Ghostbusters], 
         packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168', url: 'peter-venkman' },

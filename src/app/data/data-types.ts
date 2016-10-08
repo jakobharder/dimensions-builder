@@ -47,7 +47,7 @@ export enum Franchise {
 
 export const franchises: string[] = [
     'Lego Dimensions',
-    'Back To The Future',
+    'Back to the Future',
     'The Simpsons',
     'Doctor Who',
     'Portal 2',
@@ -58,8 +58,8 @@ export const franchises: string[] = [
     'Jurassic World',
     'DCComics',
     'Lego Movie',
-    'Lord Of The Rings',
-    'The Wizard Of Oz',
+    'Lord of the Rings',
+    'The Wizard of Oz',
     'Chima',
     'Ghostbusters 2016',
     'Mission: Impossible',

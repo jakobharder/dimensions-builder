@@ -60,9 +60,12 @@ export const levels: LevelData[] = [
         desc: 'You have to play the level in order to get the build instructions for the Ecto-1 and the Ghost Trap.',
         image: 'ghostbusters-level' },
 
-    <LevelData>{ url: 'midway-arcade-level', name: 'Midway Arcade Level', chapter: 0, story: 'Year 1 Level Packs',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
-        access: Ability.Level_Midway, walkthrough: '', year: 1, franchise: Franchise.MidwayArcade },
+    <LevelData>{ url: 'midway-arcade-level', name: 'Retro Wreckage', chapter: 0, story: 'Year 1 Level Packs',
+        abilitiesMinikits: [Ability.Grapple, Ability.XRay, Ability.SonarSmash, Ability.Drone, Ability.FlightDock, Ability.Magic, Ability.RelicDetector, Ability.FixIt, Ability.CargoHook], abilitiesRescue: [Ability.Digging], abilitiesExtra: [Ability.TowBar, Ability], 
+        abilitiesStory: [Ability.Invulnerability, Ability.MidwayArcadeLevel, Ability.Accelerator, Ability.Arcade, Ability.Invisibility, Ability.Laser, Ability.Speed, Ability.SuperStrength, Ability.Stealth], 
+        access: Ability.MidwayArcadeLevel, walkthrough: '', year: 1, franchise: Franchise.MidwayArcade,
+        desc: 'You have to play the level in order to get the build instructions for the Arcade Machine and the Spy Hunter.',
+        image: 'midway-arcade-level' },
         
     <LevelData>{ url: 'main-story-1-follow-the-lego-brick-road', name: 'Follow The Lego Brick Road – Wizard Of Oz', chapter: 1, story: 'Main Story',
         abilitiesMinikits: [Ability.SilverDestroy, Ability.Hacking, Ability.HazardCleaner, Ability.Grapple, Ability.RelicDetector, Ability.SuperStrength, Ability.Tracking, 
