@@ -79,7 +79,7 @@ export class Levels {
         // assumes the data is sorted
         let previous: Level = null;
         for (let level of this.list) {
-            if (previous !== null) {
+            if (level.chapter !== 0 && previous !== null) {
                 if (previous.story !== level.story) {
                     previous = null;
                 } else {

@@ -25,8 +25,9 @@ export class LevelListComponent implements OnInit {
         this.description = "There are " + this.levels.list.length + " released levels for Lego Dimensions so far.";
 
         this.meta.set(<MetaModel>{
-            title: "List of all Lego Dimensions Levels, Worlds and Battle Areanas",
-            description: this.description
+            title: 'List of all Lego Dimensions Levels, Worlds and Battle Areanas',
+            description: this.description,
+            image: '/assets/images/lego-dimensions.jpg'
         });
     }
 }
