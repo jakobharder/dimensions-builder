@@ -22,7 +22,7 @@ export class LevelListComponent implements OnInit {
         this.levels = this.data.getLevels();
         this.collections = this.levels.getCollections();
 
-        this.description = 'The list has currently includes all released level packs from year 1 and 2, and parts of the main story. More will be added in the next days.';
+        this.description = 'The list has currently includes all released Lego Dimensions level packs from year 1 and 2, and parts of the main story. More will be added in the next days.';
         //"There are " + this.levels.list.length + " released levels for Lego Dimensions so far.";
 
         this.meta.set(<MetaModel>{
