@@ -139,6 +139,7 @@ export enum Ability {
     GoldDestroy,
     RefillHealth,
     TauntEnemies,
+    TargetPlusSilver,
 
     /* end of year 1 */
 }
@@ -248,6 +249,7 @@ export const abilities: AbilityData[] = [
     //<AbilityData>{ id: Ability.GoldDestroy, url: 'gold-destroy', name: 'Gold Lego Objects Blowup', desc: 'destroy gold Lego Objects', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.RefillHealth, url: 'refill-health', name: 'Refill Health', desc: 'automatically refill health of nearby characters', type: AbilityType.Normal, tags: [], unimportant: true },
     <AbilityData>{ id: Ability.TauntEnemies, url: 'taunt-enemies', name: 'Taunt Enemies', desc: 'distract enemies', type: AbilityType.Normal, tags: [] },
+    <AbilityData>{ id: Ability.TargetPlusSilver, url: null, name: 'Target + Silver Destroy', desc: 'target and destroy silver objects', type: AbilityType.Combo, tags: [] },
 
     <AbilityData>{ id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
