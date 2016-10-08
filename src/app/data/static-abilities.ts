@@ -98,7 +98,7 @@ export enum Ability {
     Adventure_ATeam,
     Adventure_LegoMovie,
     Adventure_Simpsons,
-    Level_Simpsons,
+    SimpsonsLevel,
     Story_Batman,
     Adventure_Batman,
     Level_Portal2,
@@ -108,7 +108,7 @@ export enum Ability {
     Adventure_DoctorWho,
     Level_DoctorWho,
     Adventure_BackToTheFuture,
-    Level_BackToTheFuture,
+    BackToTheFutureLevel,
     MissionImpossibleWorld,
     MissionImpossibleLevel,
     Adventure_AdventureTime,
@@ -140,7 +140,8 @@ export enum Ability {
     RefillHealth,
     TauntEnemies,
     TargetPlusSilver,
-    MagicWalls
+    MagicWalls,
+    HoverOrFlying,
 
     /* end of year 1 */
 }
@@ -220,6 +221,8 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: 72, url: 'dive+tracking', name: 'Dive + Tracking', desc: '', type: AbilityType.Combo, tags: [] },
     <AbilityData>{ id: 73, url: 'dive+x-ray-vision', name: 'Dive + X-Ray Vision', desc: '', type: AbilityType.Combo, tags: [] },
     <AbilityData>{ id: 74, url: 'flight+laser', name: 'Flight + Laser', desc: '', type: AbilityType.Combo, tags: [] },
+    <AbilityData>{ id: Ability.TargetPlusSilver, url: null, name: 'Target + Silver Destroy', desc: 'target and destroy silver objects', type: AbilityType.Combo, tags: [] },
+    <AbilityData>{ id: Ability.HoverOrFlying, url: null, name: 'Hover or Fly', desc: 'cross short distances', type: AbilityType.Alternative, tags: [], unimportant: true },
 
     //<AbilityData>{ id: 75, url: 'dodging', name: 'Dodging', desc: 'dodge (not confirmed ability)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.SwordSwitch, url: 'sword-switch', name: 'Sword Switch', desc: 'use sword switches', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
@@ -249,7 +252,6 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.SailsOnWater, url: 'sails-on-water', name: 'Sails on Water', desc: 'sails on water', type: AbilityType.Normal, tags: [], unimportant: true },
     <AbilityData>{ id: Ability.RefillHealth, url: 'refill-health', name: 'Refill Health', desc: 'automatically refill health of nearby characters', type: AbilityType.Normal, tags: [], unimportant: true },
     <AbilityData>{ id: Ability.TauntEnemies, url: 'taunt-enemies', name: 'Taunt Enemies', desc: 'distract enemies', type: AbilityType.Normal, tags: [] },
-    <AbilityData>{ id: Ability.TargetPlusSilver, url: null, name: 'Target + Silver Destroy', desc: 'target and destroy silver objects', type: AbilityType.Combo, tags: [] },
     <AbilityData>{ id: Ability.MagicWalls, url: 'magic-walls', name: 'Magic Walls (unconfirmed)', desc: 'do something with magic walls', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
     <AbilityData>{ id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
@@ -259,7 +261,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.Adventure_ATeam, url: null, name: 'A-Team Adventure World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_LegoMovie, url: null, name: 'Lego Movie World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Simpsons, url: null, name: 'The Simpsons World', desc: '', type: AbilityType.LocationAccess, tags: [] },
-    <AbilityData>{ id: Ability.Level_Simpsons, url: null, name: 'The Simpsons Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.SimpsonsLevel, url: null, name: 'The Simpsons Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Story_Batman, url: null, name: 'Lego Batman Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Batman, url: null, name: 'Lego Batman World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Level_Portal2, url: null, name: 'Portal 2 Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
@@ -269,7 +271,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.Adventure_DoctorWho, url: null, name: 'Doctor Who World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Level_DoctorWho, url: null, name: 'Doctor Who Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_BackToTheFuture, url: null, name: 'Back to the Future World', desc: '', type: AbilityType.LocationAccess, tags: [] },
-    <AbilityData>{ id: Ability.Level_BackToTheFuture, url: null, name: 'Back to the Future Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.BackToTheFutureLevel, url: null, name: 'Back to the Future Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.MissionImpossibleWorld, url: null, name: 'Mission: Impossible World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.MissionImpossibleLevel, url: null, name: 'Mission: Impossible Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_AdventureTime, url: null, name: 'Adventure Time World', desc: '', type: AbilityType.LocationAccess, tags: [] },
