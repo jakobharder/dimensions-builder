@@ -140,6 +140,7 @@ export enum Ability {
     RefillHealth,
     TauntEnemies,
     TargetPlusSilver,
+    MagicWalls
 
     /* end of year 1 */
 }
@@ -246,10 +247,10 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.SpecialAttack, url: 'special-attack', name: 'Special Attack', desc: '', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.SpecialWeapon, url: 'special-weapon', name: 'Special Weapon', desc: '', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.SailsOnWater, url: 'sails-on-water', name: 'Sails on Water', desc: 'sails on water', type: AbilityType.Normal, tags: [], unimportant: true },
-    //<AbilityData>{ id: Ability.GoldDestroy, url: 'gold-destroy', name: 'Gold Lego Objects Blowup', desc: 'destroy gold Lego Objects', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.RefillHealth, url: 'refill-health', name: 'Refill Health', desc: 'automatically refill health of nearby characters', type: AbilityType.Normal, tags: [], unimportant: true },
     <AbilityData>{ id: Ability.TauntEnemies, url: 'taunt-enemies', name: 'Taunt Enemies', desc: 'distract enemies', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.TargetPlusSilver, url: null, name: 'Target + Silver Destroy', desc: 'target and destroy silver objects', type: AbilityType.Combo, tags: [] },
+    <AbilityData>{ id: Ability.MagicWalls, url: 'magic-walls', name: 'Magic Walls (unconfirmed)', desc: 'do something with magic walls', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
     <AbilityData>{ id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
