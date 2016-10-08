@@ -1,18 +1,12 @@
 <div class="card text-xs-center" *ngIf="url">
     <div class="card-block">
-        <div id="disqus_thread"></div>
+        <div id="disqus_thread" [attr.data-dburl]="url"></div>
         <script>
         var disqus_config = function () {
-            var url = document.querySelector('link[rel=canonical]').getAttribute('href');
+            var url = document.querySelector('#disqus_thread').getAttribute('data-dburl');
             console.log(url);
             this.page.identifier = url;
         };
-        (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = '//dimensions-builder.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
         </script>
     </div>
 </div>
