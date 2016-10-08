@@ -27,7 +27,7 @@ export const levels: LevelData[] = [
         image: 'adventure-time-level' },
 
     <LevelData>{ url: 'mission-impossible-level', name: 'Mission: Impossible', chapter: 0, story: 'Year 2 Level Packs',
-        abilitiesMinikits: [Ability.RelicDetector, Ability.Parseltongue, Ability.Laser, Ability.Intelligence, Ability.MiniAccess, Ability.SonarSmash, Ability.Boomerang, Ability.Digging, Ability.SlurpAccess, Ability.ChargeTransfer, Ability.MasterBuild, Ability.Magic], abilitiesRescue: [Ability.Magic,, Ability.Drilling, Ability.SilverDestroy], abilitiesExtra: [],
+        abilitiesMinikits: [Ability.RelicDetector, Ability.Parseltongue, Ability.Laser, Ability.Intelligence, Ability.MiniAccess, Ability.SonarSmash, Ability.Boomerang, Ability.Digging, Ability.SlurpAccess, Ability.ChargeTransfer, Ability.MasterBuild, Ability.Magic], abilitiesRescue: [Ability.Magic,, Ability.Drilling, Ability.TargetPlusSilver], abilitiesExtra: [],
         abilitiesStory: [Ability.Grapple, Ability.SilverDestroy, Ability.FuseBox, Ability.Disguise, Ability.Technology, Ability.Stealth, Ability.Accelerator, Ability.TowBar, Ability.MagnoGloves, Ability.Acrobat /* or fly */, Ability.XRay, Ability.Target, Ability.FlyingDrone],
         access: Ability.MissionImpossibleLevel, walkthrough: '', year: 2, franchise: Franchise.MissionImpossible,
         desc: 'You have to play the level in order to get the build instructions for the IMF Scrambler and the IMF Sport Car.',
