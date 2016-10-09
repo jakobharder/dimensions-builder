@@ -7,3 +7,4 @@ export * from './share-section.component';
 export * from './panel-button.component';
 export * from './comment-section.component';
 export * from './nav-section.component';
+export * from './youtube.component';

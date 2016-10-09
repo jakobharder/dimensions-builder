@@ -4,12 +4,13 @@ import { MetaService, MetaModel } from '../meta';
 import { DataService, Level, Abilities, Piece } from '../data';
 import { AbilityTableComponent, PieceTableComponent } from '../components/tables';
 import * as Serializer from './../data/serializer';
-import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent, YoutubeComponent } from '../components';
 
 @Component({
 	moduleId: module.id,
 	templateUrl: 'level-details.component.html',
-    directives: [ROUTER_DIRECTIVES, AbilityTableComponent, PieceTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent]
+    directives: [ROUTER_DIRECTIVES, AbilityTableComponent, PieceTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent,
+    YoutubeComponent]
 })
 export class LevelDetailsComponent implements OnInit {
     sub: any;

@@ -31,6 +31,10 @@
         <p>You need the following abilities to play through the complete level.</p>
     </div>
     <cmp-ability-table [abilities]="storyAbilities.list" class="delimiter"></cmp-ability-table>
+    <div class="card-block text-xs-center" *ngIf="level.storyVideo">
+        <h2 class="card-title">Story Walkthrough</h2>
+        <cmp-youtube [url]="level.storyVideo"></cmp-youtube>
+    </div>
 </div>
 <div class="card" *ngIf="allAbilities.list.length > 0">
     <div class="card-block text-xs-center m-b-1">

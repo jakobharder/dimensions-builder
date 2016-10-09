@@ -16,6 +16,7 @@ export class LevelData {
     franchise: Franchise;
     desc: string;
     image: string;
+    storyVideo: string;
 }
 
 export const levels: LevelData[] = [
@@ -31,7 +32,8 @@ export const levels: LevelData[] = [
         abilitiesStory: [Ability.Grapple, Ability.SilverDestroy, Ability.FuseBox, Ability.Disguise, Ability.Technology, Ability.Stealth, Ability.Accelerator, Ability.TowBar, Ability.MagnoGloves, Ability.Acrobat /* or fly */, Ability.XRay, Ability.Target, Ability.FlyingDrone],
         access: Ability.MissionImpossibleLevel, walkthrough: '', year: 2, franchise: Franchise.MissionImpossible,
         desc: 'You have to play the level in order to get the build instructions for the IMF Scrambler and the IMF Sport Car.',
-        image: 'mission-impossible-level' },
+        image: 'mission-impossible-level',
+        storyVideo: 'https://youtube.com/embed/tJjxh9KzrSc' },
 
     <LevelData>{ url: 'back-to-the-future-level', name: 'Back to the Future', chapter: 0, story: 'Year 1 Level Packs',
         abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.Atlantis], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.Arcade, Ability.FixIt], 
