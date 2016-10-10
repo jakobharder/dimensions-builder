@@ -17,6 +17,6 @@
         </td>
         <td class="second-button hidden-md-down"><a *ngIf="level.builderFinish" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderFinish]" >Team for Story</a></td>
         <td class="second-button hidden-md-down"><a *ngIf="level.builderComplete" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderComplete]" >Team for 100%</a></td>
-        <td class="hidden-md-down"><a class="btn btn-secondary" [title]="'more about ' + level.name" [routerLink]="['/level/' + level.url]" >Details</a></td>
+        <td class="hidden-md-down"><a *ngIf="level.builderFinish" class="btn btn-secondary" [title]="'more about ' + level.name" [routerLink]="['/level/' + level.url]" >Details</a></td>
     </tr>
 </table>
