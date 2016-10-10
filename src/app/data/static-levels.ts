@@ -37,6 +37,42 @@ export const levels: LevelData[] = [
         image: 'mission-impossible-level',
         storyVideo: 'tJjxh9KzrSc' },
 
+    <LevelData>{ url: 'ghostbusters-1', name: 'Paranormal Beginnings', chapter: 1, story: 'Ghostbusters 2016',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
+        abilitiesStory: [],
+        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
+    },
+
+    <LevelData>{ url: 'ghostbusters-2', name: 'Ghostbusting!', chapter: 2, story: 'Ghostbusters 2016',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
+        abilitiesStory: [],
+        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
+    },
+
+    <LevelData>{ url: 'ghostbusters-3', name: 'The Mercado Building', chapter: 3, story: 'Ghostbusters 2016',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
+        abilitiesStory: [],
+        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
+    },
+
+    <LevelData>{ url: 'ghostbusters-4', name: 'Breaking the Barrier', chapter: 4, story: 'Ghostbusters 2016',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
+        abilitiesStory: [],
+        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
+    },
+
+    <LevelData>{ url: 'ghostbusters-5', name: 'The Battle for Times Square', chapter: 5, story: 'Ghostbusters 2016',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
+        abilitiesStory: [],
+        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
+    },
+
+    <LevelData>{ url: 'ghostbusters-6', name: 'The Final Showdown', chapter: 6, story: 'Ghostbusters 2016',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
+        abilitiesStory: [],
+        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
+    },
+
     <LevelData>{ url: 'back-to-the-future-level', name: 'Back to the Future', chapter: 0, story: 'Year 1 Level Packs',
         abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.Atlantis], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.Arcade, Ability.FixIt], 
         abilitiesStory: [Ability.SonarSmash, Ability.Accelerator, Ability.TimeTravel, Ability.HoverOrFlying, Ability.BackToTheFutureLevel], 

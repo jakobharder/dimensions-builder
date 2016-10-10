@@ -91,7 +91,7 @@ export enum Ability {
     Intelligence,
     ChargeTransfer,
 
-    Story_Ghostbusters2016,
+    Ghostbusters2016Story,
     Adventure_Ghostbusters2016,
     Adventure_JurassicWorld,
     Adventure_DC,
@@ -254,7 +254,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.TauntEnemies, url: 'taunt-enemies', name: 'Taunt Enemies', desc: 'distract enemies', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.MagicWalls, url: 'magic-walls', name: 'Magic Walls (unconfirmed)', desc: 'do something with magic walls', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
-    <AbilityData>{ id: Ability.Story_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_JurassicWorld, url: null, name: 'Jurassic World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_DC, url: null, name: 'DC Comics World', desc: '', type: AbilityType.LocationAccess, tags: [] },
