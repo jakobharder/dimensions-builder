@@ -17,6 +17,7 @@ export class LevelData {
     desc: string;
     image: string;
     storyVideo: string;
+    fullVideo: string;
 }
 
 export const levels: LevelData[] = [
@@ -25,7 +26,8 @@ export const levels: LevelData[] = [
         abilitiesStory: [Ability.Target, Ability.SwordSwitch, Ability.RopeSwings, Ability.Accelerator, Ability.VineCutting, Ability.RedDemonObjects, Ability.Grapple, Ability.Laser, Ability.LaserDeflector, Ability.Acrobat], 
         access: Ability.Level_AdventureTime, walkthrough: '', year: 2, franchise: Franchise.AdventureTime, 
         desc: 'If you play through this level you will gain Finn\'s Laser ability (Billy\'s Gauntlet). Also like with all Level packs, you have to play the level in order to get the build instructions for the Jakemobile and the Ancient War Elephant.',
-        image: 'adventure-time-level' },
+        image: 'adventure-time-level',
+        fullVideo: '8WIV1MA-hhg' },
 
     <LevelData>{ url: 'mission-impossible-level', name: 'Mission: Impossible', chapter: 0, story: 'Year 2 Level Packs',
         abilitiesMinikits: [Ability.RelicDetector, Ability.Parseltongue, Ability.Laser, Ability.Intelligence, Ability.MiniAccess, Ability.SonarSmash, Ability.Boomerang, Ability.Digging, Ability.SlurpAccess, Ability.ChargeTransfer, Ability.MasterBuild, Ability.Magic], abilitiesRescue: [Ability.Magic,, Ability.Drilling, Ability.TargetPlusSilver], abilitiesExtra: [],
@@ -33,7 +35,7 @@ export const levels: LevelData[] = [
         access: Ability.MissionImpossibleLevel, walkthrough: '', year: 2, franchise: Franchise.MissionImpossible,
         desc: 'You have to play the level in order to get the build instructions for the IMF Scrambler and the IMF Sport Car.',
         image: 'mission-impossible-level',
-        storyVideo: 'https://youtube.com/embed/tJjxh9KzrSc' },
+        storyVideo: 'tJjxh9KzrSc' },
 
     <LevelData>{ url: 'back-to-the-future-level', name: 'Back to the Future', chapter: 0, story: 'Year 1 Level Packs',
         abilitiesMinikits: [Ability.Laser, Ability.Drone, Ability.Grapple, Ability.Boomerang, Ability.Magic, Ability.Digging, Ability.Drilling, Ability.SilverDestroy, Ability.Atlantis], abilitiesRescue: [Ability.Magic], abilitiesExtra: [Ability.Arcade, Ability.FixIt], 

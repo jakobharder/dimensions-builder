@@ -32,7 +32,7 @@
     </div>
     <cmp-ability-table [abilities]="storyAbilities.list" class="delimiter"></cmp-ability-table>
     <div class="card-block text-xs-center" *ngIf="level.storyVideo">
-        <h2 class="card-title">Story Walkthrough</h2>
+        <h2 class="card-title card-title-prim light">Story Walkthrough</h2>
         <cmp-youtube [url]="level.storyVideo"></cmp-youtube>
     </div>
 </div>
@@ -42,6 +42,10 @@
         <p>You need the following abilities in addition to the story abilities to collect all minikits and rescue the citizen in peril.</p>
     </div>
     <cmp-ability-table [abilities]="allAbilities.list" class="delimiter"></cmp-ability-table>
+    <div class="card-block text-xs-center" *ngIf="level.fullVideo">
+        <h2 class="card-title card-title-prim light">All Minikits 100% Guide</h2>
+        <cmp-youtube [url]="level.fullVideo"></cmp-youtube>
+    </div>
 </div>
 <div class="card" *ngIf="extraAbilities.list.length > 0">
     <div class="card-block text-xs-center m-b-1">

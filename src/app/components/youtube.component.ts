@@ -18,7 +18,7 @@ export class SafePipe implements PipeTransform {
 })
 export class YoutubeComponent {
     @Input() set url(value: string) {
-        this._url = this.sanitizer.bypassSecurityTrustResourceUrl(value);
+        this._url = this.sanitizer.bypassSecurityTrustResourceUrl('https://youtube.com/embed/' + value);
     }
     private _url:  SafeResourceUrl;
 
