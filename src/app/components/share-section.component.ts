@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
 import { MetaService } from '../meta';
-import { ButtonComponent } from './basic';
+import { ButtonComponent, TweetComponent } from './basic';
 
 @Component({
 	moduleId: module.id,
 	selector: 'share-section',
 	templateUrl: './share-section.component.html',
-	directives: [ButtonComponent]
+	directives: [ButtonComponent, TweetComponent]
 })
 export class ShareSectionComponent implements OnInit, OnDestroy {
 	private site = "http://dimensions-builder.com";
@@ -23,7 +23,7 @@ export class ShareSectionComponent implements OnInit, OnDestroy {
 				this.url = url;
             });
 		if (this.meta._url !== undefined) {
-			this.url = this.meta._url;
+			this.url = this.meta._safeurl;
 		}
 	}
 

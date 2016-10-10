@@ -7,6 +7,7 @@ import { MetaModel } from './meta.model';
 export class MetaService {
     public url: EventEmitter<string> = new EventEmitter<string>();
     public _url: string;
+    public _safeurl: string;
 
     private _r: Renderer;
     private _el: ElementRef;
@@ -81,6 +82,7 @@ export class MetaService {
         } else {
             this._url = 'http://dimensions-builder.com' + this.router.url;
         }
+        this._safeurl = this._url.replace(':', '%3A');
         this.setAttr(this.ogUrl, this._url);
         this.setAttr(this.canonical, this._url, 'href');
         this.url.emit(this._url);

@@ -1,7 +1,9 @@
-<div class="card" *ngIf="url">
-    <div class="card-block text-xs-center">
+<div class="card text-xs-center" style="background: inherit" *ngIf="url">
+<!--    <div class="card-block text-xs-center">
         <h2 class="card-title">Do you like this site?</h2>
-        <p>Please help me spread the word and share it to your friends.</p>
-        <cmp-btn title="share on Facebook" [url]="url"></cmp-btn>
-    </div>
+        <p>Please help me spread the word and share it to your friends.</p>-->
+        <cmp-btn title="visit on Facebook" [url]="'https://www.facebook.com/dimensionsbuilder'"></cmp-btn>
+        <cmp-btn title="share on Facebook" [url]="'http://www.facebook.com/sharer/sharer.php?u=' + url"></cmp-btn>
+        <cmp-tweet title="share on Twitter" [url]="'https://twitter.com/home?status=%23LegoDimensions%20' + url + '%20'"></cmp-tweet>
+<!--    </div>-->
 </div>

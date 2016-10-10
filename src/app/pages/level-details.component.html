@@ -36,7 +36,7 @@
         <cmp-youtube [url]="level.storyVideo"></cmp-youtube>
     </div>
 </div>
-<div class="card" *ngIf="allAbilities.list.length > 0">
+<div class="card" *ngIf="allAbilities.list.length > 0" id="complete">
     <div class="card-block text-xs-center m-b-1">
         <h2 class="card-title card-title-prim">Abilities needed to complete 100%:</h2>
         <p>You need the following abilities in addition to the story abilities to collect all minikits and rescue the citizen in peril.</p>
@@ -57,4 +57,4 @@
 
 <share-section></share-section>
 <nav-section></nav-section>
-<comment-section></comment-section>
+<comment-section id="comments"></comment-section>
