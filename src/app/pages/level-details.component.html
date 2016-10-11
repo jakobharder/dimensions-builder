@@ -31,10 +31,8 @@
         <p>You need the following abilities to play through the complete level.</p>
     </div>
     <cmp-ability-table [abilities]="storyAbilities.list" class="delimiter"></cmp-ability-table>
-    <div class="card-block text-xs-center" *ngIf="level.storyVideo">
-        <h2 class="card-title card-title-prim light">Story Walkthrough</h2>
-        <cmp-youtube [url]="level.storyVideo"></cmp-youtube>
-    </div>
+    <h2 *ngIf="level.storyVideo" class="card-title card-title-prim light m-t-0 m-b-0">Story Walkthrough</h2>
+    <cmp-youtube *ngIf="level.storyVideo" [url]="level.storyVideo"></cmp-youtube>
 </div>
 <div class="card" *ngIf="allAbilities.list.length > 0" id="complete">
     <div class="card-block text-xs-center m-b-1">
@@ -42,9 +40,10 @@
         <p>You need the following abilities in addition to the story abilities to collect all minikits and rescue the citizen in peril.</p>
     </div>
     <cmp-ability-table [abilities]="allAbilities.list" class="delimiter"></cmp-ability-table>
-    <div class="card-block text-xs-center" *ngIf="level.fullVideo">
-        <h2 class="card-title card-title-prim light">All Minikits 100% Guide</h2>
-        <cmp-youtube [url]="level.fullVideo"></cmp-youtube>
+    <h2 *ngIf="level.fullVideo" class="card-title card-title-prim light m-t-0 m-b-0">All Minikits 100% Guide</h2>
+    <cmp-youtube *ngIf="level.fullVideo" [url]="level.fullVideo" ></cmp-youtube>
+    <div *ngIf="level.fullVideo" class="card-block text-xs-center">
+        <p class="m-b-0">Open the video on Youtube to get shortcuts for all minikit scenes.</p>
     </div>
 </div>
 <div class="card" *ngIf="extraAbilities.list.length > 0">
