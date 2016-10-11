@@ -17,7 +17,8 @@ export const minifigs: MinifigData[] = [
     <MinifigData>{ id: 7124801, name: 'Ethan Hunt', skillIds: [Ability.Target, Ability.SilverDestroy, Ability.Stealth, Ability.XRay, Ability.Grapple, Ability.Technology, Ability.Drone, Ability.Disguise, Ability.FlyingDrone, Ability.MagnoGloves, Ability.Acrobat, Ability.Dive, Ability.MissionImpossibleLevel, Ability.MissionImpossibleWorld, Ability.DivePlusGrapple, Ability.DivePlusSilverDestroy, Ability.DivePlusTarget, Ability.DivePlusTechnology, Ability.DivePlusXRay, Ability.FuseBox], 
         packId: 71248, image: 'wave-6-ethan-hunt', state: PieceState.New, url: 'ethan-hunt' },
     <MinifigData>{ id: 7124501, name: 'Finn', skillIds: [Ability.SwordSwitch, Ability.Acrobat, Ability.VineCutting, Ability.RedDemonObjects, Ability.Grapple, Ability.LaserDeflector, Ability.Laser, Ability.Target, Ability.Electricity, Ability.RopeSwings, Ability.PoleVault, Ability.Level_AdventureTime, Ability.Adventure_AdventureTime], 
-        packId: 71245, image: 'wave-6-finn', state: PieceState.New, url: 'finn' }, /* vine cutting = gras sword */
+        packId: 71245, image: 'wave-6-finn', state: PieceState.New, url: 'finn',
+        comments: [{ title: 'Gained after completing missions or the story', ids: [Ability.Laser] }, { title: 'Unconfirmed', ids: [Ability.PoleVault] }] }, /* vine cutting = gras sword */
     /*{ id: 7124401, name: 'Sonic the Hedgehog', skillIds: [], packId: 71244, image: 'wave-6-sonic-the-hedgehog' },*/
     <MinifigData>{ id: 7120501, name: 'Owen', skillIds: [22, 26, 27, 37, Ability.Adventure_JurassicWorld], 
         packId: 71205, image: '75917_1to1_MF_OWEN_MUGSHOT_168', url: 'owen' },
@@ -114,7 +115,7 @@ export const minifigs: MinifigData[] = [
         packId: 71264, image: 'wave-7.5-batgirl', state: PieceState.Incomplete, url: 'batgirl' },
     <MinifigData>{ id: 7126402, name: 'Robin', skillIds: [Ability.Dive, Ability.VineCutting, Ability.LaserDeflector, Ability.Acrobat, Ability.Story_Batman, Ability.Adventure_Batman], 
         packId: 71264, image: 'wave-7.5-robin', state: PieceState.Incomplete, url: 'robin' },
-    <MinifigData>{ id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.TrapGhosts, Ability.HazardProtection, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Intelligence, Ability.ChargeTransfer, Ability.Ghostbusters2016Story, Ability.Adventure_Ghostbusters2016, Ability.Grapple, Ability.RopeSwings], 
+    <MinifigData>{ id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.TrapGhosts, Ability.HazardProtection, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Intelligence, Ability.ChargeTransfer, Ability.Ghostbusters2016Story, Ability.Adventure_Ghostbusters2016, Ability.Grapple, Ability.RopeSwings, Ability.FixIt, Ability.Technology], 
         packId: 71242, image: 'wave-6-abby-yates', state: PieceState.New, url: 'abby-yates',
-        comments: [{ title: 'other characters', ids: [Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Grapple, Ability.RopeSwings] }, { title: 'unconfirmed', ids: [Ability.HazardProtection]}] }
+        comments: [{ title: 'Jillian Holtzmann, Patty Tolan, Erin Gilbert', ids: [Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Grapple, Ability.RopeSwings, Ability.FixIt, Ability.Technology] }, { title: 'unconfirmed', ids: [Ability.HazardProtection]}] }
 ];
