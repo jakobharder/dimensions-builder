@@ -50,41 +50,7 @@ export class DataService {
                 this.skills.push(skill);
             }
 
-            this.minifigMap = {};
-            this.urlToCharacter = {};
-            this.minifigs = [];
-            for (let data of minifigs) {
-                let minifig: Minifig = Object.assign({}, data);
-                minifig.type = PieceType.Character;
-                minifig.skills = new Abilities(this.getSkills(data.skillIds)).orderByName().list;
-                minifig.locationAccess = [];
-                if (minifig.url !== undefined) {
-                    this.urlToCharacter[minifig.url] = minifig;
-                }
-                for (let skill of minifig.skills) {
-                    skill.providers.push(minifig);
-                    if (skill.type == AbilityType.LocationAccess) {
-                        minifig.locationAccess.push(skill);
-                    }
-                }
-
-                let pack = this.packMap[minifig.packId];
-                if (pack !== undefined) {
-                    pack.minifigs.push(minifig.id);
-                    minifig.isYear2 = pack.year == 2;
-                } else {
-                    console.log('cannot find pack ' + minifig.packId);
-                }
-
-                minifig.workInProgress = !pack.released;
-
-                this.minifigMap[minifig.id] = minifig;
-                this.minifigs.push(minifig);
-                if (minifig.skillIds.length > 7) {
-                    minifig.extra = "all-rounder";
-                }
-            }
-
+            this._initCharacters();
             this._initBuilds();
 
             for (let ability of this.skills) {
@@ -325,6 +291,43 @@ export class DataService {
                     return 0;
                 }
             });
+        }
+    }
+
+    private _initCharacters() {
+        this.minifigMap = {};
+        this.urlToCharacter = {};
+        this.minifigs = [];
+        for (let data of minifigs) {
+            let minifig: Minifig = Object.assign({}, data);
+            minifig.type = PieceType.Character;
+            minifig.skills = new Abilities(this.getSkills(data.skillIds)).orderByName().list;
+            minifig.locationAccess = [];
+            if (minifig.url !== undefined) {
+                this.urlToCharacter[minifig.url] = minifig;
+            }
+            for (let skill of minifig.skills) {
+                skill.providers.push(minifig);
+                if (skill.type == AbilityType.LocationAccess) {
+                    minifig.locationAccess.push(skill);
+                }
+            }
+
+            let pack = this.packMap[minifig.packId];
+            if (pack !== undefined) {
+                pack.minifigs.push(minifig.id);
+                minifig.isYear2 = pack.year == 2;
+            } else {
+                console.log('cannot find pack ' + minifig.packId);
+            }
+
+            minifig.workInProgress = !pack.released;
+
+            this.minifigMap[minifig.id] = minifig;
+            this.minifigs.push(minifig);
+            if (minifig.skillIds.length > 7) {
+                minifig.extra = "all-rounder";
+            }
         }
     }
 
