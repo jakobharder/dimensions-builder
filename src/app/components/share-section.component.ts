@@ -7,6 +7,21 @@ import { ShareButtonComponent } from './basic';
 	moduleId: module.id,
 	selector: 'share-section',
 	templateUrl: './share-section.component.html',
+	styles: [`share-button {
+		float: left;
+	}
+    @media (max-width: 767px) {
+        share-button {
+            width: 50%;
+			border-top: 1px solid #16203B;
+        }
+    }
+    @media (min-width: 768px) {
+        share-button {
+            width: 25%;
+        }
+    }
+	`],
 	directives: [ShareButtonComponent]
 })
 export class ShareSectionComponent implements OnInit, OnDestroy {

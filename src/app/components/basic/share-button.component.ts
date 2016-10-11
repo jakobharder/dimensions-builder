@@ -3,7 +3,18 @@ import { Component, Input } from '@angular/core';
 @Component({
 	moduleId: module.id,
 	selector: 'share-button',
-    styles: [`.btn.disabled {
+    styles: [`
+    div.btn-group a {
+        border-radius: 0;
+    }
+    div.btn-group a:last-child {
+        width: calc(100% - 38px);
+    }
+    .btn-group {
+        margin: 0;
+        width: 100%;
+    }
+    .btn.disabled {
         height: 38px;
         width: 38px;
         padding: 9px 11px;
@@ -34,7 +45,7 @@ import { Component, Input } from '@angular/core';
     `],
 	template: `<div class="btn-group">
 		<a [attr.class]="'btn disabled btn-' + type"><i [attr.class]="'fa fa-' + type" style="width:16px; height:20px"></i></a>
-		<a [attr.class]="'btn btn-' + type" [href]='_url' style="width:12em" rel="nofollow" target="_blank"> {{title}}</a>
+		<a [attr.class]="'btn btn-' + type" [href]='_url' target="_blank"> {{title}}</a>
 	</div>`
 })
 export class ShareButtonComponent {
