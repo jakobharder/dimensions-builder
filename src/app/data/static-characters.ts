@@ -116,5 +116,5 @@ export const minifigs: MinifigData[] = [
         packId: 71264, image: 'wave-7.5-robin', state: PieceState.Incomplete, url: 'robin' },
     <MinifigData>{ id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.TrapGhosts, Ability.HazardProtection, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Intelligence, Ability.ChargeTransfer, Ability.Ghostbusters2016Story, Ability.Adventure_Ghostbusters2016, Ability.Grapple, Ability.RopeSwings], 
         packId: 71242, image: 'wave-6-abby-yates', state: PieceState.New, url: 'abby-yates',
-        comments: [{ title: 'other characters', abilities: [Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Grapple, Ability.RopeSwings] }, { title: 'unconfirmed', abilities: [Ability.HazardProtection]}] }
+        comments: [{ title: 'other characters', ids: [Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Grapple, Ability.RopeSwings] }, { title: 'unconfirmed', ids: [Ability.HazardProtection]}] }
 ];

@@ -1,4 +1,4 @@
-import { AbilityData, AbilityType, BuilderTag, PieceState } from './data-types';
+import { AbilityData, AbilityType, BuilderTag, PieceState, CommentData } from './data-types';
 import { Level } from './levels';
 import { Abilities } from './ability';
 
@@ -87,13 +87,46 @@ export class Piece {
     url: string;
     isYear2: boolean;
     state: PieceState;
+    comments: CommentData[];
 
     locationAccess: Skill[];
 
     getGroupedAbilities() {
         let groups: Abilities[] = [];
+        groups.push(new Abilities(this.skills));
+        groups[0].title = this.name + '\'s Abilities';
+
         groups.push(new Abilities([]));
-        groups[0].title = 'test';
+        groups[1].title = 'Relevant Combos';
+        for (let ability of groups[0].list) {
+            if (ability.type === AbilityType.Combo) {
+                groups[1].add(ability);
+            }
+        }
+        groups[0].removeRange(groups[1]);
+
+        groups.push(new Abilities([]));
+        groups[2].title = 'Location Access';
+        for (let ability of groups[0].list) {
+            if (ability.type === AbilityType.LocationAccess) {
+                groups[2].add(ability);
+            }
+        }
+        groups[0].removeRange(groups[2]);
+
+        let index = 3;
+        for (let comment of this.comments) {
+            groups.push(new Abilities([]));
+            groups[index].title = comment.title;
+            for (let ability of groups[0].list) {
+                if (-1 !== comment.ids.indexOf(ability.id)) {
+                    groups[index].add(ability);
+                }
+            }
+            groups[0].removeRange(groups[index]);
+            index ++;            
+        }
+
         return groups;
     }
 }
