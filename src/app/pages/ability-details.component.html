@@ -9,16 +9,12 @@
 </div>
 
 <div class="card" *ngIf="ability && !buildsOnly">
-    <div class="card-block text-xs-center">
-        <h2 class="card-title card-title-prim">Characters with {{ability.name}} ability</h2>
-    </div>
+    <h2 class="card-title card-title-prim">Characters with {{ability.name}} ability</h2>
     <cmp-piece-table [pieces]="characters"></cmp-piece-table>
 </div>
 
 <div class="card" *ngIf="ability && !charactersOnly">
-    <div class="card-block">
-        <h2 class="card-title card-title-prim">Vehicles and gadgets with {{ability.name}} ability</h2>
-    </div>
+    <h2 class="card-title card-title-prim">Vehicles and gadgets with {{ability.name}} ability</h2>
     <cmp-piece-table [pieces]="builds"></cmp-piece-table>
 </div>
 
@@ -30,8 +26,8 @@
 </div>
 
 <div class="card text-xs-center red">
+    <h2 class="card-title card-title-prim red">Team Builder</h2>
     <div class="card-block">
-        <h2 class="card-title card-title-prim red">Team Builder</h2>
         <p>Use the Team Builder to put together a team with all the abilities you want.</p>
         <a class="btn btn-info" [routerLink]="['/team-builder']">Go to the team builder now</a>
     </div>
