@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
 import { MetaService } from '../meta';
-import { ButtonComponent } from './basic';
 
 @Component({
 	moduleId: module.id,

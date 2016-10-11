@@ -1,2 +1,1 @@
-export * from './button.component';
-export * from './tweet.component';
+export * from './share-button.component';
