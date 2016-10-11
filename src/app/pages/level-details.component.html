@@ -9,16 +9,14 @@
         <p *ngIf="level.previous">The previous level is: <a [routerLink]="'/level/' + level.previous.url">{{level.previous.name}}</a></p>
         <p *ngIf="level.next">The next level is: <a [routerLink]="'/level/' + level.next.url">{{level.next.name}}</a></p>
     </div>
-    <div class="card-block" *ngIf="levelAccess">
-        <h2 class="card-title card-title-prim light" *ngIf="!characterWithAccess">You need a character with {{levelAccess}} access to enter this level.</h2>
-        <h2 class="card-title card-title-prim light" *ngIf="characterWithAccess">You need {{characterWithAccess.name}} to enter this level.</h2>
-    </div>
+    <h2 class="card-title card-title-prim light" *ngIf="levelAccess && !characterWithAccess">You need a character with {{levelAccess}} access to enter this level.</h2>
+    <h2 class="card-title card-title-prim light" *ngIf="levelAccess && characterWithAccess">You need {{characterWithAccess.name}} to enter this level.</h2>
     <cmp-piece-table [pieces]="charactersWithAccess" *ngIf="levelAccess"></cmp-piece-table>
 </div>
 
 <div class="card text-xs-center red" *ngIf="level.builderFinish || level.builderComplete">
+    <h2 class="card-title card-title-prim red">Choose a team for this level</h2>
     <div class="card-block m-b-negative">
-        <h2 class="card-title card-title-prim red">Choose a team for this level</h2>
         <p>Use the Team Builder to put together a team with all the characters you need to play or complete this level.</p>
         <a class="btn btn-info m-b-1" [routerLink]="['/team-builder', level.builderFinish]">Team for Play</a>
         <a class="btn btn-info m-b-1" [routerLink]="['/team-builder', level.builderComplete]" *ngIf="level.builderComplete">Team for 100%</a>
@@ -26,8 +24,8 @@
 </div>
 
 <div class="card" *ngIf="storyAbilities.list.length > 0">
-    <div class="card-block text-xs-center m-b-1">
-        <h2 class="card-title card-title-prim">Abilities needed to finish the story:</h2>
+    <h2 class="card-title card-title-prim">Abilities needed to finish the story:</h2>
+    <div class="card-block text-xs-center">
         <p>You need the following abilities to play through the complete level.</p>
     </div>
     <cmp-ability-table [abilities]="storyAbilities.list" class="delimiter"></cmp-ability-table>
@@ -35,20 +33,20 @@
     <cmp-youtube *ngIf="level.storyVideo" [url]="level.storyVideo"></cmp-youtube>
 </div>
 <div class="card" *ngIf="allAbilities.list.length > 0" id="complete">
-    <div class="card-block text-xs-center m-b-1">
-        <h2 class="card-title card-title-prim">Abilities needed to complete 100%:</h2>
+    <h2 class="card-title card-title-prim">Abilities needed to complete 100%:</h2>
+    <div class="card-block text-xs-center">
         <p>You need the following abilities in addition to the story abilities to collect all minikits and rescue the citizen in peril.</p>
     </div>
     <cmp-ability-table [abilities]="allAbilities.list" class="delimiter"></cmp-ability-table>
     <h2 *ngIf="level.fullVideo" class="card-title card-title-prim light m-t-0 m-b-0">All Minikits 100% Guide</h2>
     <cmp-youtube *ngIf="level.fullVideo" [url]="level.fullVideo" ></cmp-youtube>
     <div *ngIf="level.fullVideo" class="card-block text-xs-center">
-        <p class="m-b-0">Open the video on Youtube to get shortcuts for all minikit scenes.</p>
+        <p>Open the video on Youtube to get shortcuts for all minikit scenes.</p>
     </div>
 </div>
 <div class="card" *ngIf="extraAbilities.list.length > 0">
-    <div class="card-block text-xs-center m-b-1">
-        <h2 class="card-title card-title-prim">Additional abilities:</h2>
+    <h2 class="card-title card-title-prim">Additional abilities:</h2>
+    <div class="card-block text-xs-center">
         <p>You can collect some more extra coins if you have the following abilities, but they are not needed to collect 100%.</p>
     </div>
     <cmp-ability-table [abilities]="extraAbilities.list" class="delimiter"></cmp-ability-table>

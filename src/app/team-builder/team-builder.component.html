@@ -8,8 +8,8 @@
         </div>
     </div>
     <div class="card">
+        <h2 class="card-title card-title-prim">Select Your Abilities</h2>
         <div class="card-block">
-            <h2 class="card-title card-title-prim">Select Your Abilities</h2>
             <p class="text-xs-center">You can either select the abilities by a level, world or arena to play or make your custom selection.</p>
             <p class="text-xs-center">
                 <a class="btn btn-primary" [routerLink]="['/levels']">Select by level to play</a>
@@ -23,8 +23,8 @@
         </div>
     </div>
     <div class="card text-xs-center">
+        <h2 class="card-title card-title-prim">Your Team for {{levelName}}</h2>
         <div class="card-block">
-            <h2 class="card-title card-title-prim">Your Team for {{levelName}}</h2>
             <p>Click on a character to remove it from your team.</p>
             <div *ngIf="team">
                 <minifig-panel class="pull-md-left" *ngFor="let minifig of team.get()" (click)="removeMember(minifig)" [piece]="minifig">{{minifig.name}}</minifig-panel>
@@ -34,9 +34,9 @@
     </div>
     <section>
         <div class="card text-xs-center">
+            <h2 *ngIf="(currentSkillIndex < skills.length)" class="card-title card-title-prim">Next: {{skills[currentSkillIndex].name}}</h2>
+            <h2 *ngIf="(currentSkillIndex >= skills.length)" class="card-title card-title-prim">Finished</h2>
             <div class="card-block">
-                <h2 *ngIf="(currentSkillIndex < skills.length)" class="card-title card-title-prim">Next: {{skills[currentSkillIndex].name}}</h2>
-                <h2 *ngIf="(currentSkillIndex >= skills.length)" class="card-title card-title-prim">Finished</h2>
                 <p *ngIf="(currentSkillIndex < skills.length)">Click on a character to add {{skills[currentSkillIndex].name}} and other abilities to your team.</p>
                 <p>Characters are shown in order of rarity of the ability. In case of vehicles abilities from all build-stages count. The 'obvious choices' are all required characters with unique abilities.</p>
                 <div *ngIf="proposedMinifigs && currentSkillIndex < skills.length">
