@@ -7,22 +7,28 @@ import { Component, Input } from '@angular/core';
         height: 38px;
         width: 38px;
         padding: 9px 11px;
-        background: #1A4E95;
         color: #fff;
         opacity: 1;
     }
-    .btn, .btn:link, .btn:visited {
-        background: #3468AF;
+    .btn, .btn:link, .btn:visited, .btn:hover, .btn:active, .btn:checked {
         color: #fff;
     }
-    .btn:hover, .btn:active, .btn:checked {
+    .btn-facebook, .btn-facebook:link, .btn-facebook:visited {
+        background: #3468AF;
+    }
+    .btn-facebook.disabled, .btn-facebook:hover, .btn-facebook:active, .btn-facebook:checked {
         background: #1A4E95;
-        color: #fff;
+    }
+    .btn-youtube, .btn-youtube:link, .btn-youtube:visited {
+        background: #e64c65;
+    }
+    .btn-youtube.disabled, .btn-youtube:hover, .btn-youtube:active, .btn-youtube:checked {
+        background: #cc324b;
     }
     `],
 	template: `<div class="btn-group">
-		<a class='btn disabled'><i class="fa fa-facebook" style="width:16px; height:20px"></i></a>
-		<a class='btn ' [href]='_url' style="width:12em" rel="nofollow" target="_blank"> {{title}}</a>
+		<a [attr.class]="'btn disabled btn-' + type"><i [attr.class]="'fa fa-' + type" style="width:16px; height:20px"></i></a>
+		<a [attr.class]="'btn btn-' + type" [href]='_url' style="width:12em" rel="nofollow" target="_blank"> {{title}}</a>
 	</div>`
 })
 export class ButtonComponent {
@@ -30,6 +36,6 @@ export class ButtonComponent {
     @Input() set url(value: string) {
         this._url = value;
     }
-
     private _url: string;
+    @Input() type: string;
 }
