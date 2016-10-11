@@ -26,8 +26,11 @@ export class AppComponent {
 	ngOnInit() {
         this.sub = this.router.events.subscribe(
             (event:Event) => {
-                if (event instanceof NavigationEnd && typeof ga === "function") {
-					ga('send', 'pageview', event.urlAfterRedirects);
+                if (event instanceof NavigationEnd) {
+					if (typeof ga === "function") {
+						ga('send', 'pageview', event.urlAfterRedirects);
+					}
+					window.scroll(0, 0);
                 }
             });
 	}
