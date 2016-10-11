@@ -73,6 +73,11 @@ export enum PieceState {
     Incomplete
 }
 
+export class CommentData {
+    title: string;
+    ids: number[];
+}
+
 export class PieceData {
     id: number;
     name: string;
@@ -81,6 +86,7 @@ export class PieceData {
     image: string;
     url: string;
     state: PieceState;
+    comments: CommentData[];
 }
 
 export class MinifigData extends PieceData {
