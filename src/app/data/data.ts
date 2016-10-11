@@ -96,25 +96,19 @@ export class Piece {
         groups.push(new Abilities(this.skills));
         groups[0].title = this.name + '\'s Abilities';
 
-        groups.push(new Abilities([]));
-        groups[1].title = 'Relevant Combos';
+        let abilities = new Abilities([]);
+        abilities.title = 'Relevant Combos';
         for (let ability of groups[0].list) {
             if (ability.type === AbilityType.Combo) {
-                groups[1].add(ability);
+                abilities.add(ability);
             }
         }
-        groups[0].removeRange(groups[1]);
-
-        groups.push(new Abilities([]));
-        groups[2].title = 'Location Access';
-        for (let ability of groups[0].list) {
-            if (ability.type === AbilityType.LocationAccess) {
-                groups[2].add(ability);
-            }
+        if (abilities.list.length > 0) {
+            groups[0].removeRange(abilities);
+            groups.push(abilities);
         }
-        groups[0].removeRange(groups[2]);
 
-        let index = 3;
+        let index = groups.length;
         for (let comment of this.comments) {
             groups.push(new Abilities([]));
             groups[index].title = comment.title;
@@ -126,6 +120,16 @@ export class Piece {
             groups[0].removeRange(groups[index]);
             index ++;            
         }
+
+        abilities = new Abilities([]);
+        abilities.title = 'Location Access';
+        for (let ability of groups[0].list) {
+            if (ability.type === AbilityType.LocationAccess) {
+                abilities.add(ability);
+            }
+        }
+        groups[0].removeRange(abilities);
+        groups.push(abilities);
 
         return groups;
     }
