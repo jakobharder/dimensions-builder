@@ -3,6 +3,7 @@ import { AbilityType } from './data-types';
 
 export class Abilities {
     list: Skill[];
+    title: string;
 
     constructor(skills: Skill[]) {
         this.list = skills;

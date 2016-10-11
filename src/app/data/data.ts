@@ -1,5 +1,6 @@
 import { AbilityData, AbilityType, BuilderTag, PieceState } from './data-types';
 import { Level } from './levels';
+import { Abilities } from './ability';
 
 export class Pack {
     id: number;
@@ -88,6 +89,13 @@ export class Piece {
     state: PieceState;
 
     locationAccess: Skill[];
+
+    getGroupedAbilities() {
+        let groups: Abilities[] = [];
+        groups.push(new Abilities([]));
+        groups[0].title = 'test';
+        return groups;
+    }
 }
 
 export class Minifig extends Piece {

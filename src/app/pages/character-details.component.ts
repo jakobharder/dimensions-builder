@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { MetaService, MetaModel } from '../meta';
-import { Pack, Minifig, DataService, PieceState } from '../data';
+import { Pack, Piece, DataService, PieceState, Abilities } from '../data';
 import { AbilityTableComponent, PackTableComponent } from '../components/tables';
 import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
 
@@ -14,10 +14,11 @@ import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } f
 export class CharacterDetailsComponent implements OnInit, OnDestroy {
     sub: any;
     pack: Pack;
-    character: Minifig;
+    private character: Piece;
     private mustHave: boolean = false;
     private description: string;
     private workInProgress: string;
+    private groupedAbilities: Abilities[];
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -64,6 +65,8 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
                     image: '/assets/images/' + this.character.image + '.png',
                     canonical: this.character.url ? ('/character/' + this.character.url) : undefined
                 });
+
+                this.groupedAbilities = this.character.getGroupedAbilities();
             }
         });
     }

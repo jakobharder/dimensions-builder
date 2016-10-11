@@ -299,7 +299,8 @@ export class DataService {
         this.urlToCharacter = {};
         this.minifigs = [];
         for (let data of minifigs) {
-            let minifig: Minifig = Object.assign({}, data);
+            let minifig: Minifig = new Minifig();
+            Object.assign(minifig, data);
             minifig.type = PieceType.Character;
             minifig.skills = new Abilities(this.getSkills(data.skillIds)).orderByName().list;
             minifig.locationAccess = [];
