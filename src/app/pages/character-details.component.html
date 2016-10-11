@@ -17,12 +17,8 @@
         </div>
     </div>
     <div class="card">
-        <div class="card-block">
-            <h2 class="card-title card-title-prim text-xs-center">{{character.name}}'s Abilities</h2>
-        </div>
-        <cmp-ability-table [abilities]="character.skills"></cmp-ability-table>
-        <div *ngFor="let group of groupedAbilities">
-            <h2 class="card-title card-title-prim light text-xs-center">{{group.title}}</h2>
+        <div *ngFor="let group of groupedAbilities; let isFirst = first">
+            <h2 [attr.class]="'card-title card-title-prim' + (isFirst?'':' light')">{{group.title}}</h2>
             <cmp-ability-table [abilities]="group.list"></cmp-ability-table>
         </div>
     </div>
