@@ -1,12 +1,13 @@
-<table *ngIf="levels">
+<table *ngIf="levels" class="level-table">
     <tr *ngFor="let level of levels">
+        <!--<td class="level-icon hidden-md-down"><img *ngIf="level.icon" src="/assets/images/levels/{{level.url}}.png" alt="{{level.name}}"></td>-->
         <td class="title">
-            <span *ngIf="level.chapter != 0" class="hidden-sm-down">Chapter {{level.chapter}}</span> 
             <span class="title-span" *ngIf="showFranchise && level.franchiseName != level.name">
                 <span class="avoidwrap">{{level.franchiseName}}</span> - 
                 <span class="avoidwrap">{{level.name}}</span>
             </span>
             <span class="title-span" *ngIf="!showFranchise || level.franchiseName == level.name">
+                <span *ngIf="level.chapter != 0">{{level.chapter}} -</span>
                 <span>{{level.name}}</span>
             </span>
             <div class="hidden-lg-up btn-group">

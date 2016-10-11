@@ -4,14 +4,33 @@ table {
     width: 100%;
     box-sizing: border-box;
 }
+.level-table td {
+    padding: 0.5rem 0.25rem;
+}
 td {
     padding: 0.75rem;
+}
+.level-table td:first-child {
+    padding-left: 0.75rem;
+}
+.level-table td:last-child {
+    padding-right: 0.5rem;
+}
+td:first-child {
+    padding-left: 0.75rem;
+}
+td:last-child {
+    padding-right: 0.75rem;
 }
 td.icon {
     width: 133px;
 }
 td.piece-icon {
     width: 32px;
+    position: relative;
+}
+td.level-icon {
+    width: 49px;
     position: relative;
 }
 td.piece-icon img {
@@ -21,6 +40,11 @@ td.piece-icon img {
 }
 td.icon img {
     height: 61px;
+    margin: -0.75rem 0;
+}
+td.level-icon img {
+    width: 49px;
+    height: 49px;
     margin: -0.75rem 0;
 }
 td.title span.title-span {

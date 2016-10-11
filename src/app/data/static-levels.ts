@@ -18,6 +18,7 @@ export class LevelData {
     image: string;
     storyVideo: string;
     fullVideo: string;
+    icon: boolean;
 }
 
 export const levels: LevelData[] = [
@@ -70,7 +71,8 @@ export const levels: LevelData[] = [
     <LevelData>{ url: 'ghostbusters-6', name: 'The Final Showdown', chapter: 6, story: 'Ghostbusters 2016',
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
         abilitiesStory: [],
-        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
+        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016,
+        icon: true
     },
 
     <LevelData>{ url: 'back-to-the-future-level', name: 'Back to the Future', chapter: 0, story: 'Year 1 Level Packs',
