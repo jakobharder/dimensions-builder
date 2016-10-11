@@ -109,16 +109,19 @@ export class Piece {
         }
 
         let index = groups.length;
-        for (let comment of this.comments) {
-            groups.push(new Abilities([]));
-            groups[index].title = comment.title;
-            for (let ability of groups[0].list) {
-                if (-1 !== comment.ids.indexOf(ability.id)) {
-                    groups[index].add(ability);
+        if (this.comments) {
+            console.log(this.comments);
+            for (let comment of this.comments) {
+                groups.push(new Abilities([]));
+                groups[index].title = comment.title;
+                for (let ability of groups[0].list) {
+                    if (-1 !== comment.ids.indexOf(ability.id)) {
+                        groups[index].add(ability);
+                    }
                 }
+                groups[0].removeRange(groups[index]);
+                index ++;            
             }
-            groups[0].removeRange(groups[index]);
-            index ++;            
         }
 
         abilities = new Abilities([]);
