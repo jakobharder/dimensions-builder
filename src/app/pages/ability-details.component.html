@@ -1,10 +1,10 @@
 <div class="card" *ngIf="ability">
     <div class="card-block text-xs-center">
         <h1>{{ability.name}} Ability</h1>
-        <p class="m-b-0">{{description}}</p>
-        <div class="m-t-1" *ngIf="ability.image">
-            <img class="rimage" src="/assets/images/abilities/{{ability.image}}.jpg" title="{{ability.name}}" alt="{{ability.name}} ability">
-        </div>
+        <p>{{description}}</p>
+    </div>
+    <div class="text-xs-center">
+        <img *ngIf="ability.image" class="rimage" src="/assets/images/abilities/{{ability.image}}.jpg" title="{{ability.name}}" alt="{{ability.name}} ability">
     </div>
 </div>
 
