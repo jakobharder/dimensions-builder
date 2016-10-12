@@ -37,7 +37,7 @@ td.piece-icon img {
     height: 61px;
     margin: -0.75rem 0;
 }
-td.icon img {
+.icon img {
     height: 61px;
     margin: -0.75rem 0;
 }
@@ -46,7 +46,7 @@ td.level-icon img {
     height: 49px;
     margin: -0.75rem 0;
 }
-td.title span.title-span {
+.title span.title-span {
   font-family: 'Bebas Neue Bold',Arial,sans-serif;
   font-weight: 600;
   color: #fff;
@@ -136,4 +136,15 @@ tr:last-child {
 }
 .icon-banner.incomplete {
     background: #475072;
+}
+
+div.title {
+    line-height: 1rem;
+    margin-top: 0.5rem;
+}
+div.row+div.row {
+    border-top: 1px solid #16203B;
+}
+div.row>div {
+    padding: 0.75rem;
 }
