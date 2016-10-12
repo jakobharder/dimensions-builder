@@ -14,6 +14,7 @@ import { LimitFilter } from './common';
 export class PackTableComponent {
     @Input() packs: Pack[];
 	@Input() comments: string[];
+	@Input() amazon: boolean;
 
 	private typeStrings = packTypeStrings;
 }
