@@ -143,6 +143,21 @@ export enum Ability {
     MagicWalls,
     HoverOrFlying,
 
+    FantasticsBeastsStory,
+    FantasticsBeastsWorld,
+    SonicLevel,
+    SonicWorld,
+    GremlinsWorld,
+    ETWorld,
+    KnightRiderWorld,
+    BatmanMovieWorld,
+    BatmanMovieStory,
+    GooniesLevel,
+    GooniesWorld,
+    TeenTitansGoWorld,
+
+    BatmanMasterBuild
+
     /* end of year 1 */
 }
 
@@ -253,6 +268,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.RefillHealth, url: 'refill-health', name: 'Refill Health', desc: 'automatically refill health of nearby characters', type: AbilityType.Normal, tags: [], unimportant: true },
     <AbilityData>{ id: Ability.TauntEnemies, url: 'taunt-enemies', name: 'Taunt Enemies', desc: 'distract enemies', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.MagicWalls, url: 'magic-walls', name: 'Magic Walls (unconfirmed)', desc: 'do something with magic walls', type: AbilityType.Normal, tags: [BuilderTag.Year2], image: 'magic-walls' },
+    <AbilityData>{ id: Ability.BatmanMasterBuild, url: 'batman-master-build', name: 'Batman Master Build', desc: 'rebuild Batman? Lego objects like in the Lego Movie', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
     <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
@@ -286,6 +302,20 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.Adventure_Ghostbusters, url: null, name: 'Ghostbusters World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_ScoobyDoo, url: null, name: 'Scooby Doo World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Oz, url: null, name: 'The Wizard of Oz World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+
+    <AbilityData>{ id: Ability.FantasticsBeastsStory, url: null, name: 'Fantastic Beasts Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.FantasticsBeastsWorld, url: null, name: 'Fantastic Beasts World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.SonicLevel, url: null, name: 'Sonic Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.SonicWorld, url: null, name: 'Sonic World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.GremlinsWorld, url: null, name: 'Gremlins World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.ETWorld, url: null, name: 'E.T. World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.KnightRiderWorld, url: null, name: 'Knight Rider World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.BatmanMovieWorld, url: null, name: 'Batman Movie World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.BatmanMovieStory, url: null, name: 'Batman Movie Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.GooniesLevel, url: null, name: 'The Goonies Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.GooniesWorld, url: null, name: 'The Goonies World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.TeenTitansGoWorld, url: null, name: 'Teen Titans Go World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+      
 
 /*
     { id: , url: '', name: '', desc: '' },
