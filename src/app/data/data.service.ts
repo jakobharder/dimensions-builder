@@ -91,6 +91,14 @@ export class DataService {
         return this.packMap[id];
     }
 
+    getPacks(ids: number[]) {
+        let packs: Pack[] = [];
+        for (let id of ids) {
+            packs.push(this.packMap[id]);
+        }
+        return packs;
+    }
+
     getAllPacks() {
         return packs;
     }

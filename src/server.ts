@@ -58,7 +58,7 @@ app.get('/combo-abilities', ngApp);
 app.get('/ability/*', ngApp);
 app.get('/level/*', ngApp);
 app.get('/levels', ngApp);
-app.get('/all-year2-packs-and-characters', ngApp);
+app.get('/buyers-guide-year-2', ngApp);
 
 var urls = [
   // changefreq: 'weekly',  priority: 0.5 
@@ -70,7 +70,7 @@ var urls = [
   { url: '/rare-abilities', changefreq: 'daily', priority: 0.5 },
   { url: '/combo-abilities', changefreq: 'daily', priority: 0.5 },
   { url: '/levels', changefreq: 'daily', priority: 0.7 },
-  { url: '/all-year2-packs-and-characters', changefreq: 'daily', priority: 0.5 }
+  { url: '/buyers-guide-year-2', changefreq: 'daily', priority: 0.5 }
 ];
 for (let ability of abilities) {
   if (ability.url) {

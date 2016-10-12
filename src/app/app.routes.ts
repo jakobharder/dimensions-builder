@@ -14,7 +14,7 @@ import {
 	LevelListComponent
 } from './pages';
 import {
-	Year2Component
+	BuyersGuideComponent
 } from './blog';
 import { TeamBuilderComponent } from './team-builder';
 
@@ -36,6 +36,6 @@ export const routes: RouterConfig = [
 	{ path: 'team-builder/:abilities/:team', component: TeamBuilderComponent },
 	{ path: 'levels', component: LevelListComponent },
 	{ path: 'level/:id', component: LevelDetailsComponent },
-	{ path: 'all-year2-packs-and-characters', component: Year2Component },
+	{ path: 'buyers-guide-year-2', component: BuyersGuideComponent },
 	{ path: '**', redirectTo: '/' }
 ];

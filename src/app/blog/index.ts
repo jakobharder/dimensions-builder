@@ -1,1 +1,1 @@
-export * from './year2.component';
+export * from './buyers-guide.component';

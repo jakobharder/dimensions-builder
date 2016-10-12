@@ -13,6 +13,7 @@ import { LimitFilter } from './common';
 })
 export class PackTableComponent {
     @Input() packs: Pack[];
+	@Input() comments: string[];
 
 	private typeStrings = packTypeStrings;
 }
