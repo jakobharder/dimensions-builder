@@ -19,7 +19,6 @@ export const minifigs: MinifigData[] = [
     <MinifigData>{ id: 7124501, name: 'Finn', skillIds: [Ability.SwordSwitch, Ability.Acrobat, Ability.VineCutting, Ability.RedDemonObjects, Ability.Grapple, Ability.LaserDeflector, Ability.Laser, Ability.Target, Ability.Electricity, Ability.RopeSwings, Ability.PoleVault, Ability.Level_AdventureTime, Ability.Adventure_AdventureTime], 
         packId: 71245, image: 'wave-6-finn', state: PieceState.New, url: 'finn',
         comments: [{ title: 'Gained after completing missions or the story', ids: [Ability.Laser] }, { title: 'Unconfirmed', ids: [Ability.PoleVault] }] }, /* vine cutting = gras sword */
-    /*{ id: 7124401, name: 'Sonic the Hedgehog', skillIds: [], packId: 71244, image: 'wave-6-sonic-the-hedgehog' },*/
     <MinifigData>{ id: 7120501, name: 'Owen', skillIds: [22, 26, 27, 37, Ability.Adventure_JurassicWorld], 
         packId: 71205, image: '75917_1to1_MF_OWEN_MUGSHOT_168', url: 'owen' },
     <MinifigData>{ id: 7120502, name: 'ACU Trooper', skillIds: [6, 31, Ability.Adventure_JurassicWorld], 
@@ -100,7 +99,6 @@ export const minifigs: MinifigData[] = [
         packId: 71241, image: '71241_1to1_MF_MUGSHOT_Slimer_168', url: 'slimer' },
     <MinifigData>{ id: 7125101, name: 'B.A. Baracus', skillIds: [Ability.FixIt, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.LaserDeflector, Ability.ATeamMasterBuild, Ability.Target, Ability.SilverDestroy, Ability.Adventure_ATeam], 
         packId: 71251, image: 'wave-6-ba-baracus', state: PieceState.New, url: 'ba-baracus' },
-    /*{ id: 7128501, name: 'Marceline', skillIds: [], packId: 71285, image: 'wave-6-marceline' },*/
     <MinifigData>{ id: 7117001, name: 'Batman', skillIds: [35, 36, 37, Ability.Adventure_DC], 
         packId: 71170, image: '71200_1to1_MF_MUGSHOT_Batman_168', url: 'batman' },
     <MinifigData>{ id: 7117002, name: 'Gandalf', skillIds: [31, 46, 47, Ability.Adventure_LordOfTheRing], 
@@ -117,5 +115,23 @@ export const minifigs: MinifigData[] = [
         packId: 71264, image: 'wave-7.5-robin', state: PieceState.Incomplete, url: 'robin' },
     <MinifigData>{ id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.TrapGhosts, Ability.HazardProtection, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Intelligence, Ability.ChargeTransfer, Ability.Ghostbusters2016Story, Ability.Adventure_Ghostbusters2016, Ability.Grapple, Ability.RopeSwings, Ability.FixIt, Ability.Technology], 
         packId: 71242, image: 'wave-6-abby-yates', state: PieceState.New, url: 'abby-yates',
-        comments: [{ title: 'Jillian Holtzmann, Patty Tolan, Erin Gilbert', ids: [Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Grapple, Ability.RopeSwings, Ability.FixIt, Ability.Technology] }, { title: 'unconfirmed', ids: [Ability.HazardProtection]}] }
+        comments: [{ title: 'Jillian Holtzmann, Patty Tolan, Erin Gilbert', ids: [Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Grapple, Ability.RopeSwings, Ability.FixIt, Ability.Technology] }, { title: 'unconfirmed', ids: [Ability.HazardProtection]}] },
+    <MinifigData>{ id: 7125301, name: 'Newt Scamander', skillIds: [], 
+        packId: 71253, image: 'wave-7-newt-scamander', state: PieceState.Incomplete, url: 'newt-scamander' },
+    <MinifigData>{ id: 7124401, name: 'Sonic the Hedgehog', skillIds: [], 
+        packId: 71244, image: 'wave-7-sonic-the-hedgehog', state: PieceState.Incomplete, url: 'sonic-the-hedgehog' },
+    <MinifigData>{ id: 7125601, name: 'Stripe', skillIds: [], 
+        packId: 71256, image: 'wave-7-stripe', state: PieceState.Incomplete, url: 'stripe' },
+    <MinifigData>{ id: 7125602, name: 'Gizmo', skillIds: [], 
+        packId: 71256, image: 'wave-7-gizmo', state: PieceState.Incomplete, url: 'gizmo' },
+    <MinifigData>{ id: 7125701, name: 'Tina Goldstein', skillIds: [], 
+        packId: 71257, image: 'wave-7-tina-goldstein', state: PieceState.Incomplete, url: 'tina-goldstein' },
+    <MinifigData>{ id: 7125801, name: 'E.T.', skillIds: [], 
+        packId: 71258, image: 'wave-7-e-t', state: PieceState.Incomplete, url: 'e-t' },
+    <MinifigData>{ id: 7128501, name: 'Marceline', skillIds: [], 
+        packId: 71285, image: 'wave-7-marceline', state: PieceState.Incomplete, url: 'marceline' },
+    <MinifigData>{ id: 9000001, name: 'Sloth', skillIds: [], 
+        packId: 90000, image: 'wave-9-sloth', state: PieceState.Incomplete, url: 'sloth' },
+    <MinifigData>{ id: 9000101, name: 'Raven', skillIds: [], 
+        packId: 90001, image: 'wave-9-raven', state: PieceState.Incomplete, url: 'raven' },
 ];
