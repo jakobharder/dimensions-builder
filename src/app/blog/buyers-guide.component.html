@@ -17,7 +17,10 @@
     <cmp-pack-table [packs]='teamPacks' [comments]='teamComments'></cmp-pack-table>
 
     <h2 class="card-title card-title-prim light">Fun Packs</h2>
-    <cmp-pack-table [packs]='funPacks' [comments]='funComments'></cmp-pack-table>
+    <div class="card-block">
+        <p>Some of the Fun Packs give you another Adventure World, others only one ability. Most of the added abilities have much less gameplay than another Adventure World. So if you consider which to buy, then go for an Adventure World of your liking.</p>
+    </div>
+    <cmp-pack-table [packs]='funPacks' [comments]='funComments' class="delemiter"></cmp-pack-table>
 </div>
 
 <share-section></share-section>

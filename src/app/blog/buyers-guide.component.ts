@@ -32,9 +32,9 @@ export class BuyersGuideComponent implements OnInit {
         });
 
         this.storyPacks = this.data.getPacks([71253, 71242, 71264]);
-        this.storyComments = ['', 
+        this.storyComments = ['Will be released with wave 7 in November 2016.', 
             'Abby Yates comes with many abilities like Rope Swings, Super Strength, Technology besides the Charge Transfer and obvious Ghostbusting abilities. If you consider to buy only very view Packs this is a good choice. Especially if you do not own the Ghostbusters Level Pack.', 
-            ''];
+            'Will be released with wave 7.5 in February 2017'];
 
         this.levelPacks = this.data.getPacks([71245, 71201, 71204, 71228, 71235, 71248, 71203, 90000, 71202, 71244]);
         this.levelComments = ['',
@@ -46,8 +46,7 @@ export class BuyersGuideComponent implements OnInit {
             '',
             '',
             '',
-            '',
-            'Sonic'];
+            ''];
 
         this.teamPacks = this.data.getPacks([71246, 71256, 71247, 71205, 71206]);
         this.teamComments = ['Needed for BMO Docks Ability. Jake has many abilities like Drilling, Digging, Super Strength and Dive.', 
@@ -57,15 +56,15 @@ export class BuyersGuideComponent implements OnInit {
             'Scooby Doo Adventure World. Scooby Doo is the only character with Digging underwater. Adventure Time Team Pack may be a better choice.'];
 
         this.funPacks = this.data.getPacks([71251, 71237, 71223, 71238, 71258, 71286, 90001, 71234, 71241, 71221]);
-        this.funComments = ['A-Team Adventure World and A-Team Master Build',
-            'Atlantis Pool Ability. You gain only a single ability. I do not recommend him if you don\'t care about 100%.',
-            'Chima Adventure World and Chi Ability',
-            'Dive + Hacking Ability',
-            'E.T. The Extra-Terrestrial Adventure World',
-            'Knight Rider Adventure World',
-            'Magic Walls Ability',
-            'Ninjago Adventure World and Pole Vault',
-            'Dive + Ghost Immunity Ability',
-            'Wizard of Oz Adventure World. If you do not care about 100% and the Adventure World, then the Harry Potter Team Pack is a better choice. Lord Voldemort has the same abilities and more as the Wicked Witch.'];
+        this.funComments = ['Needed for A-Team Adventure World and A-Team Master Build.',
+            'Needed for Atlantis Pool Ability. You gain only one single ability. I do not recommend him if you don\'t care about 100%.',
+            'Needed for Chima Adventure World and Chi Ability.',
+            'Needed for Dive + Hacking Ability. Cyberman is otherwise an excellent character with many abilities like Technology, Hacking, Dive, Drone Access and more.',
+            'Needed for E.T. The Extra-Terrestrial Adventure World.',
+            'Needed for Knight Rider Adventure World.',
+            'Needed for Magic Walls ability.',
+            'Needed for Ninjago Adventure World and Pole Vault. You could use different Fun Packs to achieve the same.',
+            'Needed for Dive + Ghost Immunity ability.',
+            'Needed for Wizard of Oz Adventure World. If you do not care about 100% and the Adventure World, then the Harry Potter Team Pack is a better choice. Lord Voldemort has the same abilities and more as the Wicked Witch.'];
     }
 }
