@@ -90,8 +90,13 @@ export class MetaService {
 
     public setTitle(siteTitle = '', pageTitle ='', separator = ' - '){
         let title = siteTitle;
-        if (pageTitle != '') {
-            title += separator + pageTitle;
+        if (!title) {
+            title = pageTitle + separator + 'All about abilities, characters, levels and more';
+        }
+        else {
+            if (pageTitle != '') {
+                title += separator + pageTitle;
+            }
         }
         this._document.title = title;
     }

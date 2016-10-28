@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit() {
 		this.meta.set(<MetaModel>{
-			title: "Home",
-			description: "Lego Dimensions Builder is a Dimensions Character and Vehicle Ability Guide.",
+			title: null,
+			description: 'All about Lego Dimensions Abilities, Characters, Vehicles, Levels. Find out which abilities you need to 100% complete a level and more.',
 			image: ''
 		});
 
