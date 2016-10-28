@@ -113,7 +113,7 @@ export const minifigs: MinifigData[] = [
         packId: 71264, image: 'wave-7.5-batgirl', state: PieceState.Incomplete, url: 'batgirl' },
     <MinifigData>{ id: 7126402, name: 'Robin', skillIds: [Ability.Dive, Ability.VineCutting, Ability.LaserDeflector, Ability.Acrobat, Ability.Story_Batman, Ability.Adventure_Batman], 
         packId: 71264, image: 'wave-7.5-robin', state: PieceState.Incomplete, url: 'robin' },
-    <MinifigData>{ id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.TrapGhosts, Ability.HazardProtection, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Intelligence, Ability.ChargeTransfer, Ability.Ghostbusters2016Story, Ability.Adventure_Ghostbusters2016, Ability.Grapple, Ability.RopeSwings, Ability.FixIt, Ability.Technology], 
+    <MinifigData>{ id: 7124201, name: 'Abby Yates', skillIds: [Ability.Laser, Ability.SuspendGhost, Ability.TrapGhosts, Ability.HazardProtection, Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Intelligence, Ability.ChargeTransfer, Ability.Ghostbusters2016Story, Ability.Adventure_Ghostbusters2016, Ability.Grapple, Ability.RopeSwings, Ability.FixIt, Ability.Technology, Ability.PKEMeter], 
         packId: 71242, image: 'wave-6-abby-yates', state: PieceState.New, url: 'abby-yates',
         comments: [{ title: 'Jillian Holtzmann, Patty Tolan, Erin Gilbert', ids: [Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.Grapple, Ability.RopeSwings, Ability.FixIt, Ability.Technology] }, { title: 'unconfirmed', ids: [Ability.HazardProtection]}] },
     <MinifigData>{ id: 7125301, name: 'Newt Scamander', skillIds: [Ability.FantasticsBeastsStory, Ability.FantasticsBeastsWorld], 

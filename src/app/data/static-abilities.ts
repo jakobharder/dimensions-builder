@@ -156,7 +156,8 @@ export enum Ability {
     GooniesWorld,
     TeenTitansGoWorld,
 
-    BatmanMasterBuild
+    BatmanMasterBuild,
+    PKEMeter
 
     /* end of year 1 */
 }
@@ -269,6 +270,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.TauntEnemies, url: 'taunt-enemies', name: 'Taunt Enemies', desc: 'distract enemies', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.MagicWalls, url: 'magic-walls', name: 'Magic Walls (unconfirmed)', desc: 'do something with magic walls', type: AbilityType.Normal, tags: [BuilderTag.Year2], image: 'magic-walls' },
     <AbilityData>{ id: Ability.BatmanMasterBuild, url: 'batman-master-build', name: 'Batman Master Build', desc: 'rebuild Batman? Lego objects like in the Lego Movie', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    <AbilityData>{ id: Ability.PKEMeter, url: 'pke-meter', name: 'P.K.E. Meter', desc: 'detect hidden Ghosts', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
     <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },

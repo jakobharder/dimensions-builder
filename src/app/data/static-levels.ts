@@ -39,9 +39,14 @@ export const levels: LevelData[] = [
         storyVideo: 'tJjxh9KzrSc' },
 
     <LevelData>{ url: 'ghostbusters-1', name: 'Paranormal Beginnings', chapter: 1, story: 'Ghostbusters 2016',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
-        abilitiesStory: [],
-        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
+        abilitiesMinikits: [Ability.RelicDetector, Ability.Grapple, Ability.Magic, Ability.SilverDestroy, Ability.ATeamMasterBuild, Ability.TimeTravel, Ability.MasterBuild, Ability.Diffindo], 
+        abilitiesRescue: [Ability.Grapple], 
+        abilitiesExtra: [],
+        abilitiesStory: [Ability.Technology, Ability.FixIt, Ability.ChargeTransfer, Ability.Laser, Ability.PKEMeter, Ability.Intelligence, Ability.TowBar],
+        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016,
+        desc: 'In the first level of the Ghostbusters 2016 Story Pack you play already with three characters Abby Yates, Jillian Holtzmann, Erin Gilbert. Patty Tolan will follow later. Notable is that you need the alternate character abilities - Fix-It and Technology.',
+        image: 'ghostbusters-chapter1-thumbnail',
+        storyVideo: 'TAunMvBvtuc'
     },
 
     <LevelData>{ url: 'ghostbusters-2', name: 'Ghostbusting!', chapter: 2, story: 'Ghostbusters 2016',
