@@ -215,7 +215,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: 51, url: 'cargo-hook', name: 'Cargo Hook', desc: 'grab cargo while flying and place it somewhere else', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 52, url: 'growth', name: 'Growth', desc: 'grow plants', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 53, url: 'time-travel-switch', name: 'Time Travel Switch', desc: 'use time travel switches', type: AbilityType.Normal, tags: [] },
-    <AbilityData>{ id: 54, url: 'tardis-pad', name: 'Tardis Pad', desc: 'use the Tardis pads', type: AbilityType.Normal, tags: [] },
+    <AbilityData>{ id: 54, url: 'tardis-pad', name: 'Tardis Pad', desc: 'use the Tardis pads', type: AbilityType.Normal, tags: [], extradesc: 'OK, this was pretty obvious from the name, wasn\'t it?' },
     <AbilityData>{ id: 55, url: 'arcade-station', name: 'Arcade Station', desc: 'use the arcade station pads', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 56, url: 'suspend-ghost', name: 'Suspend Ghost', desc: 'prepare ghosts for capturing', type: AbilityType.Normal, tags: [] },
 

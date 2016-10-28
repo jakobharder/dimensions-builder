@@ -57,12 +57,12 @@ export class AbilityDetailsComponent implements OnInit {
 
                 let desc = "";
                 if (!this.buildsOnly) {
-                    desc += 'Characters with this skill can ' + this.ability.desc + '. '
+                    desc += 'When playing a character with ' + this.ability.name + ' you can ' + this.ability.desc + '. '
                 } else if (this.buildsOnly) {
-                    desc += 'Only vehicles and gadgets have this ability. Characters need to use one of the below mentioned builds to ' + this.ability.desc + '. ';
+                    desc += 'This is a build ability a character can use by riding a vehicle or using a gadget. With ' + this.ability.name + ' you can ' + this.ability.desc + '. ';
                 }
                 if (this.unique !== null) {
-                    desc += this.ability.name + " is a unique ability. Only " + this.unique.name + " has this power. ";
+                    desc += this.ability.name + ' is a unique ability which only ' + (this.buildsOnly?'the ':'') + this.unique.name + ' has. ';
                 }
                 else {
                     if (this.rare) {
