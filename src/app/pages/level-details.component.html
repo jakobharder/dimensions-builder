@@ -38,9 +38,14 @@
         <p>You need the following abilities in addition to the story abilities to collect all minikits and rescue the citizen in peril.</p>
     </div>
     <cmp-ability-table [abilities]="allAbilities.list" class="delimiter"></cmp-ability-table>
-    <h2 *ngIf="level.fullVideo" class="card-title card-title-prim light m-t-0 m-b-0">All Minikits 100% Guide</h2>
-    <cmp-youtube *ngIf="level.fullVideo" [url]="level.fullVideo" ></cmp-youtube>
-    <div *ngIf="level.fullVideo" class="card-block text-xs-center">
+    <h2 *ngIf="level.quickVideo" class="card-title card-title-prim light m-t-0 m-b-0">All Minikits 100% Guide</h2>
+    <cmp-youtube *ngIf="level.quickVideo" [url]="level.quickVideo" ></cmp-youtube>
+    <div *ngIf="level.quickVideo && level.fullVideo" class="card-block text-xs-center">
+        <a class="btn btn-secondary" [attr.href]="'https://youtu.be/' + level.fullVideo">View the full gameplay at Youtube</a>
+    </div>
+    <h2 *ngIf="level.fullVideo && !level.quickVideo" class="card-title card-title-prim light m-t-0 m-b-0">All Minikits 100% Guide</h2>
+    <cmp-youtube *ngIf="level.fullVideo && !level.quickVideo" [url]="level.fullVideo" ></cmp-youtube>
+    <div *ngIf="level.fullVideo && !level.quickVideo" class="card-block text-xs-center">
         <p>Open the video on Youtube to get shortcuts for all minikit scenes.</p>
     </div>
 </div>

@@ -18,6 +18,7 @@ export class LevelData {
     image: string;
     storyVideo: string;
     fullVideo: string;
+    quickVideo: string;
     icon: boolean;
 }
 
@@ -36,7 +37,8 @@ export const levels: LevelData[] = [
         access: Ability.MissionImpossibleLevel, walkthrough: '', year: 2, franchise: Franchise.MissionImpossible,
         desc: 'You have to play the level in order to get the build instructions for the IMF Scrambler and the IMF Sport Car.',
         image: 'mission-impossible-level',
-        storyVideo: 'tJjxh9KzrSc' },
+        fullVideo: 'fG66-JlOJDE',
+        quickVideo: 'IvOCseETdKM' },
 
     <LevelData>{ url: 'ghostbusters-1', name: 'Paranormal Beginnings', chapter: 1, story: 'Ghostbusters 2016',
         abilitiesMinikits: [Ability.RelicDetector, Ability.Grapple, Ability.Magic, Ability.SilverDestroy, Ability.ATeamMasterBuild, Ability.TimeTravel, Ability.MasterBuild, Ability.Diffindo], 
