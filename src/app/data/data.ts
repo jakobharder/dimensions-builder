@@ -41,6 +41,7 @@ export class Skill {
     builds: Piece[];
     tags: BuilderTag[];
     levels: Level[];
+    actionClip: string;
 
     unimportant: boolean;
 

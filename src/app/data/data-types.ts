@@ -15,6 +15,7 @@ export class AbilityData {
     type: AbilityType;
     tags: BuilderTag[];
     unimportant: boolean;
+    actionClip: string;
 };
 
 export enum BuilderTag {

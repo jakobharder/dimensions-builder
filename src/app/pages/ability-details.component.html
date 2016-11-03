@@ -18,6 +18,12 @@
     <cmp-piece-table [pieces]="builds"></cmp-piece-table>
 </div>
 
+<div class="card text-xs-center" *ngIf="ability.actionClip">
+    <div class="card-block">
+        <h2 class="card-title">Watch {{ability.name}} in action</h2>
+    </div>
+    <cmp-youtube autoloop="true" [url]="ability.actionClip" ></cmp-youtube>
+</div>
 <div class="card" *ngIf="ability == undefined">
     <div class="card-block text-xs-center">
         <h1>Unknown Ability</h1>

@@ -4,13 +4,13 @@ import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Skill, Vehicle, Piece, Pieces, AbilitiesOrdered, DataService } from '../data';
 import { MinifigPanelComponent } from '../components';
 import { PieceTableComponent } from '../components/tables';
-import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent, YoutubeComponent } from '../components';
 
 @Component({
 	moduleId: module.id,
 	selector: 'ability-list',
 	templateUrl: 'ability-details.component.html',
-    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, PieceTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, PieceTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent, YoutubeComponent]
 })
 export class AbilityDetailsComponent implements OnInit {
     sub: any;
