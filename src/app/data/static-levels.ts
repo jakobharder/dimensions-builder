@@ -52,34 +52,43 @@ export const levels: LevelData[] = [
     },
 
     <LevelData>{ url: 'ghostbusters-2', name: 'Ghostbusting!', chapter: 2, story: 'Ghostbusters 2016',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
-        abilitiesStory: [],
+        abilitiesMinikits: [Ability.Magic, Ability.Flying, Ability.Target, Ability.ATeamMasterBuild, Ability.BMODocks, Ability.SilverDestroy, Ability.RelicDetector, Ability.XRay, Ability.RedDemonObjects, Ability.Grapple], 
+        abilitiesRescue: [Ability.PoleVault, Ability.Acrobat], 
+        abilitiesExtra: [Ability.FuseBox],
+        abilitiesStory: [Ability.TowBar, Ability.Laser, Ability.PKEMeter, Ability.SuperStrengthHandles, Ability.FixIt, Ability.Technology, Ability.ChargeTransfer, Ability.Accelerator, Ability.SuspendGhost, Ability.TrapGhosts],
         access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
     },
 
     <LevelData>{ url: 'ghostbusters-3', name: 'The Mercado Building', chapter: 3, story: 'Ghostbusters 2016',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
-        abilitiesStory: [],
+        abilitiesMinikits: [Ability.SuperStrengthHandles, Ability.SonarSmash, Ability.BMODocks, Ability.Drone, Ability.RelicDetector, Ability.Technology, Ability.PortalGun, Ability.Diffindo, Ability.WeightSwitch, Ability.SentryTurret, Ability.Gyrosphere, Ability.Boomerang], 
+        abilitiesRescue: [Ability.PortalGun], 
+        abilitiesExtra: [],
+        abilitiesStory: [Ability.Laser, Ability.TowBar, Ability.SuspendGhost, Ability.TrapGhosts, Ability.PKEMeter, Ability.FixIt, Ability.Intelligence, Ability.Accelerator, Ability.ChargeTransfer],
         access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
     },
 
     <LevelData>{ url: 'ghostbusters-4', name: 'Breaking the Barrier', chapter: 4, story: 'Ghostbusters 2016',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
-        abilitiesStory: [],
+        abilitiesMinikits: [Ability.SlurpAccess, Ability.Magic, Ability.Parseltongue, Ability.Hacking, Ability.Flying, Ability.CargoHook, Ability.RelicDetector, Ability.Chi, Ability.RainbowLego, Ability.MiniAccess], 
+        abilitiesRescue: [Ability.SonarSmash, Ability.MasterBuild, Ability.SilverDestroy], 
+        abilitiesExtra: [],
+        abilitiesStory: [Ability.SuspendGhost, Ability.TrapGhosts, Ability.SuperStrength, Ability.Intelligence, Ability.SuperStrengthHandles, Ability.ChargeTransfer, Ability.FixIt, Ability.PKEMeter, Ability.Laser, Ability.Accelerator],
         access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
     },
 
     <LevelData>{ url: 'ghostbusters-5', name: 'The Battle for Times Square', chapter: 5, story: 'Ghostbusters 2016',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
-        abilitiesStory: [],
+        abilitiesMinikits: [Ability.Boomerang, Ability.Flying, Ability.FlightDock, Ability.SilverDestroy, Ability.RelicDetector, Ability.Drilling, Ability.VineCutting, Ability.SwordSwitch, Ability.WaterSpray, Ability.Magic], 
+        abilitiesRescue: [Ability.FuseBox, Ability.VineCutting], 
+        abilitiesExtra: [],
+        abilitiesStory: [Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.ChargeTransfer, Ability.Accelerator, Ability.SuspendGhost, Ability.TrapGhosts, Ability.PKEMeter, Ability.Intelligence, Ability.FixIt, Ability.Technology, Ability.Laser, Ability.Grapple],
         access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
     },
 
     <LevelData>{ url: 'ghostbusters-6', name: 'The Final Showdown', chapter: 6, story: 'Ghostbusters 2016',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [],
-        abilitiesStory: [],
-        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016,
-        icon: true
+        abilitiesMinikits: [Ability.Atlantis, Ability.CargoHook, Ability.Gyrosphere, Ability.Diffindo, Ability.Flying, Ability.FuseBox], 
+        abilitiesRescue: [], 
+        abilitiesExtra: [],
+        abilitiesStory: [Ability.SilverDestroy, Ability.SuperStrengthHandles, Ability.Laser, Ability.Grapple, Ability.FixIt, Ability.RopeSwings, Ability.SuspendGhost, Ability.TrapGhosts, Ability.ChargeTransfer, Ability.TowBar, Ability.TargetPlusSilver, Ability.PKEMeter, Ability.Technology],
+        access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016
     },
 
     <LevelData>{ url: 'back-to-the-future-level', name: 'Back to the Future', chapter: 0, story: 'Year 1 Level Packs',
