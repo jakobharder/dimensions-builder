@@ -1,8 +1,8 @@
 import { Component, Input, Output, OnInit, EventEmitter, AfterViewInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Skill, FilterSkill, DataService, Abilities } from './../data/index';
-
 import * as Serializer from '../data/serializer';
+var document: Document;
 
 class SkillList { 
     list: FilterSkill[] = [];
@@ -167,15 +167,18 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         }
         let value = (allAreSame ? (checked ? 1 : 0) : 2);
 
-        let radio = $('#option' + value + '-' + index);
-        radio.prop("checked", true);
-        radio.parent().parent().children('.active').removeClass("active");
-        radio.parent().addClass("active");
+        if (document) {
+            // server-side rendering does not care about the selection
+            let radio = $('#option' + value + '-' + index);
+            radio.prop("checked", true);
+            radio.parent().parent().children('.active').removeClass("active");
+            radio.parent().addClass("active");
+        }
     }
 
     private _updateAllSkills() {
         if (this.skillLists.length == 0) {
-            return;
+            return [];
         }
         
         this.skills = [];
