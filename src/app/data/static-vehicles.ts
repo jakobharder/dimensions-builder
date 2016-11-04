@@ -199,6 +199,9 @@ export const vehicles: VehicleData[] = [
     <VehicleData>{ id: 71256021, name: 'R.C. Racer', skillIds: [Ability.Accelerator], packId: 71256, image: 'wave-7-r-c-racer', stage: 1, vehicleId: 7125602, state: PieceState.Incomplete },
     <VehicleData>{ id: 71256022, name: 'R.C. Racer', skillIds: [], packId: 71256, image: 'none', stage: 2, vehicleId: 7125602, state: PieceState.Incomplete },
     <VehicleData>{ id: 71256023, name: 'R.C. Racer', skillIds: [], packId: 71256, image: 'none', stage: 3, vehicleId: 7125602, state: PieceState.Incomplete },
+    <VehicleData>{ id: 71285011, name: 'Lunatic Amp', skillIds: [], packId: 71285, image: 'wave-7-lunatic-amp', stage: 1, vehicleId: 7128501, state: PieceState.Incomplete },
+    <VehicleData>{ id: 71285012, name: 'Lunatic Amp', skillIds: [], packId: 71285, image: 'none', stage: 2, vehicleId: 7128501, state: PieceState.Incomplete },
+    <VehicleData>{ id: 71285013, name: 'Lunatic Amp', skillIds: [], packId: 71285, image: 'none', stage: 3, vehicleId: 7128501, state: PieceState.Incomplete },
 
 /*
     { id: 021, name: '', skillIds: [], packId: , image: 'none', stage: 1, vehicleId:  },
