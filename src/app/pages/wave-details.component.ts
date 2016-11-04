@@ -9,7 +9,7 @@ import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent, Yo
 	moduleId: module.id,
 	selector: 'page-wave-details',
 	templateUrl: 'wave-details.component.html',
-	directives: [ROUTER_DIRECTIVES, PackTableComponent, PieceTableComponent, YoutubeComponent],
+	directives: [ROUTER_DIRECTIVES, PackTableComponent, PieceTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent, YoutubeComponent],
 })
 export class WaveDetailsComponent implements OnInit {
 	private sub: any;
