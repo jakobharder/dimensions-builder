@@ -15,6 +15,7 @@ export class PackTableComponent {
     @Input() packs: Pack[];
 	@Input() comments: string[];
 	@Input() amazon: boolean;
+	@Input() labels: boolean = true;
 
 	private typeStrings = packTypeStrings;
 }

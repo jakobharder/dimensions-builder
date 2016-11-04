@@ -12,19 +12,19 @@
 <div class="card">
     <h2 class="card-title card-title-prim">All Packs you need for 100%</h2>
     <h2 class="card-title card-title-prim light">Story Packs</h2>
-    <cmp-pack-table [packs]='storyPacks' [comments]='storyComments' amazon='true'></cmp-pack-table>
+    <cmp-pack-table [packs]='storyPacks' [comments]='storyComments' amazon='true' [labels]='false'></cmp-pack-table>
 
     <h2 class="card-title card-title-prim light">Level Packs</h2>
-    <cmp-pack-table [packs]='levelPacks' [comments]='levelComments' amazon='true'></cmp-pack-table>
+    <cmp-pack-table [packs]='levelPacks' [comments]='levelComments' amazon='true' [labels]='false'></cmp-pack-table>
 
     <h2 class="card-title card-title-prim light">Team Packs</h2>
-    <cmp-pack-table [packs]='teamPacks' [comments]='teamComments' amazon='true'></cmp-pack-table>
+    <cmp-pack-table [packs]='teamPacks' [comments]='teamComments' amazon='true' [labels]='false'></cmp-pack-table>
 
     <h2 class="card-title card-title-prim light">Fun Packs</h2>
     <div class="card-block">
         <p>Some of the Fun Packs give you another Adventure World, others only one ability. Most of the added abilities have much less gameplay than another Adventure World. So if you consider which to buy, then go for an Adventure World of your liking.</p>
     </div>
-    <cmp-pack-table [packs]='funPacks' [comments]='funComments' amazon='true' class="delimiter"></cmp-pack-table>
+    <cmp-pack-table [packs]='funPacks' [comments]='funComments' amazon='true' [labels]='false' class="delimiter"></cmp-pack-table>
 </div>
 
 <share-section></share-section>
