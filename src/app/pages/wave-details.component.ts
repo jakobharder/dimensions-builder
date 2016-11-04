@@ -3,13 +3,13 @@ import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { MetaService, MetaModel } from '../meta';
 import { Piece, Wave, DataService } from '../data';
 import { PackTableComponent, PieceTableComponent } from '../components/tables';
-import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent, YoutubeComponent } from '../components';
 
 @Component({
 	moduleId: module.id,
 	selector: 'page-wave-details',
 	templateUrl: 'wave-details.component.html',
-	directives: [ROUTER_DIRECTIVES, PackTableComponent, PieceTableComponent],
+	directives: [ROUTER_DIRECTIVES, PackTableComponent, PieceTableComponent, YoutubeComponent],
 })
 export class WaveDetailsComponent implements OnInit {
 	private sub: any;

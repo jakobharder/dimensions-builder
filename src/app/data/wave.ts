@@ -8,4 +8,5 @@ export class Wave {
     released: boolean;
     image: string;
     buyersGuide: string;
+    video: string;
 };
