@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
 declare let ga:Function;
+var window: Window;
 
 import { TopNavComponent } from './shared';
 import { DataService } from './data';
@@ -30,7 +31,9 @@ export class AppComponent {
 					if (typeof ga === "function") {
 						ga('send', 'pageview', event.urlAfterRedirects);
 					}
-					window.scroll(0, 0);
+					if (window) {
+						window.scroll(0, 0);
+					}
                 }
             });
 	}
