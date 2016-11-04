@@ -23,6 +23,11 @@
     <h2 class="card-title card-title-prim">Characters and builds included in this {{type}}</h2>
     <cmp-piece-table [pieces]="pieces.list"></cmp-piece-table>
 </div>
+
+<div class="card text-xs-center" *ngIf="pack.video">
+    <cmp-youtube [url]="pack.video" ></cmp-youtube>
+</div>
+
 <div class="card text-xs-center" *ngIf="pack.amazon">
     <div class="card-block">
         <a class="btn btn-primary" target="_blank" [attr.href]="pack.amazon">See more details at Amazon</a>

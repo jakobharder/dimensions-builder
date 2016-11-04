@@ -4,14 +4,14 @@ import { MetaService, MetaModel } from '../meta';
 import { Pack, Piece, Pieces, Skill, DataService, packTypeStrings, Abilities } from '../data';
 import { MinifigPanelComponent } from '../components';
 import { AbilityTableComponent, PieceTableComponent, LevelTableComponent } from '../components/tables';
-import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent, YoutubeComponent } from '../components';
 
 @Component({
 	moduleId: module.id,
 	selector: 'pack-details',
     styleUrls: ['pack-details.component.css'],
 	templateUrl: 'pack-details.component.html',
-    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilityTableComponent, PieceTableComponent, LevelTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent]
+    directives: [ROUTER_DIRECTIVES, MinifigPanelComponent, AbilityTableComponent, PieceTableComponent, LevelTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent, YoutubeComponent]
 })
 export class PackDetailsComponent implements OnInit, OnDestroy {
     sub: any;
