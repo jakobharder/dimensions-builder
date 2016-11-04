@@ -16,9 +16,9 @@ export const minifigs: MinifigData[] = [
         packId: 71228, image: '71228_1to1_MF_MUGSHOT_Peter_168', url: 'peter-venkman' },
     <MinifigData>{ id: 7124801, name: 'Ethan Hunt', skillIds: [Ability.Target, Ability.SilverDestroy, Ability.Stealth, Ability.XRay, Ability.Grapple, Ability.Technology, Ability.Drone, Ability.Disguise, Ability.FlyingDrone, Ability.MagnoGloves, Ability.Acrobat, Ability.Dive, Ability.MissionImpossibleLevel, Ability.MissionImpossibleWorld, Ability.DivePlusGrapple, Ability.DivePlusSilverDestroy, Ability.DivePlusTarget, Ability.DivePlusTechnology, Ability.DivePlusXRay, Ability.FuseBox], 
         packId: 71248, image: 'wave-6-ethan-hunt', state: PieceState.New, url: 'ethan-hunt' },
-    <MinifigData>{ id: 7124501, name: 'Finn', skillIds: [Ability.SwordSwitch, Ability.Acrobat, Ability.VineCutting, Ability.RedDemonObjects, Ability.Grapple, Ability.LaserDeflector, Ability.Laser, Ability.Target, Ability.Electricity, Ability.RopeSwings, Ability.PoleVault, Ability.Level_AdventureTime, Ability.Adventure_AdventureTime], 
+    <MinifigData>{ id: 7124501, name: 'Finn', skillIds: [Ability.SwordSwitch, Ability.Acrobat, Ability.VineCutting, Ability.RedDemonObjects, Ability.Grapple, Ability.LaserDeflector, Ability.Laser, Ability.Target, Ability.RopeSwings, Ability.PoleVault, Ability.Level_AdventureTime, Ability.Adventure_AdventureTime], 
         packId: 71245, image: 'wave-6-finn', state: PieceState.New, url: 'finn',
-        comments: [{ title: 'Gained after completing missions or the story', ids: [Ability.Laser] }, { title: 'Unconfirmed', ids: [Ability.PoleVault] }] }, /* vine cutting = gras sword */
+        comments: [{ title: 'Gained after completing missions or the story', ids: [Ability.Laser] }] },
     <MinifigData>{ id: 7120501, name: 'Owen', skillIds: [22, 26, 27, 37, Ability.Adventure_JurassicWorld], 
         packId: 71205, image: '75917_1to1_MF_OWEN_MUGSHOT_168', url: 'owen' },
     <MinifigData>{ id: 7120502, name: 'ACU Trooper', skillIds: [6, 31, Ability.Adventure_JurassicWorld], 
