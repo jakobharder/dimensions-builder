@@ -167,7 +167,7 @@ export class AbilitySelectComponent implements OnInit, AfterViewInit {
         }
         let value = (allAreSame ? (checked ? 1 : 0) : 2);
 
-        if (document) {
+        if (true /*document*/) {
             // server-side rendering does not care about the selection
             let radio = $('#option' + value + '-' + index);
             radio.prop("checked", true);
