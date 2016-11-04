@@ -157,7 +157,9 @@ export enum Ability {
     TeenTitansGoWorld,
 
     BatmanMasterBuild,
-    PKEMeter
+    PKEMeter,
+    Telekinesis,
+    Gremlin
 
     /* end of year 1 */
 }
@@ -271,6 +273,10 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.MagicWalls, url: 'magic-walls', name: 'Magic Walls (not yet released)', desc: 'teleport through purple magic walls', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'So far it is unclear if it will be a unique skill or available to more than one character.', image: 'magic-walls', actionClip: 'uxOBHpn1oDM' },
     <AbilityData>{ id: Ability.BatmanMasterBuild, url: 'batman-master-build', name: 'Batman Master Build', desc: 'rebuild Batman? Lego objects like in the Lego Movie', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.PKEMeter, url: 'pke-meter', name: 'P.K.E. Meter', desc: 'detect hidden Ghosts', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+
+    /* wave 7 */
+    <AbilityData>{ id: Ability.Telekinesis, url: 'telekineses', name: 'Telekineses (unconfirmed)', desc: 'do something', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
+    <AbilityData>{ id: Ability.Gremlin, url: 'gremlin', name: 'Gremlin Transformation (unconfirmed)', desc: 'transform into a Gremlin', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
 
     <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },

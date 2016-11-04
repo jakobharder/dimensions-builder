@@ -68,7 +68,7 @@ export const packs: PackData[] = [
     <PackData>{ id: 71251, wave: 6, year: 2, minifigs: [], builds: [], name: 'the A-Team', type: PackType.FunPack, image: 'wave-6-funpack_ba-baracus', desc: '', amazon: 'http://amzn.to/2dkG6vT' },
     <PackData>{ id: 71253, wave: 7, year: 2, minifigs: [], builds: [], name: 'Fantastic Beasts and Where to Find Them', type: PackType.StoryPack, image: 'wave-7-fantastic-beasts-story-pack', desc: '', amazon: 'http://amzn.to/2d06z0p' },
     <PackData>{ id: 71257, wave: 7, year: 2, minifigs: [], builds: [], name: 'Tina Goldstein', type: PackType.FunPack, image: 'wave-7-tina-goldstein-fun-pack', desc: '', amazon: 'http://amzn.to/2cwPeyU' },
-    <PackData>{ id: 71244, wave: 7, year: 2, minifigs: [], builds: [], name: 'Sonic the Hedgehog', type: PackType.LevelPack, image: 'wave-7-sonic-level-pack', desc: '', amazon: 'http://amzn.to/2e6vdm2' },
+    <PackData>{ id: 71244, wave: 7, year: 2, minifigs: [], builds: [], name: 'Sonic the Hedgehog', type: PackType.LevelPack, image: 'wave-7-sonic-level-pack', desc: '', amazon: 'http://amzn.to/2e6vdm2', video: 'EgqMlOMvQNY' },
     <PackData>{ id: 71256, wave: 7, year: 2, minifigs: [], builds: [], name: 'Gremlins', type: PackType.TeamPack, image: 'wave-7-gremlins-team-pack', desc: '', amazon: 'http://amzn.to/2dkFPJu', video: 'F_bjch-jtGw' },
     <PackData>{ id: 71258, wave: 7, year: 2, minifigs: [], builds: [], name: 'E.T. The Extra-Terrestrial', type: PackType.FunPack, image: 'wave-7-et-fun-pack', desc: '', amazon: 'http://amzn.to/2dkFKFs' },
     <PackData>{ id: 71285, wave: 7, year: 2, minifigs: [], builds: [], name: 'Marceline', type: PackType.FunPack, image: 'wave-7-marceline-fun-pack', desc: '', amazon: null },
