@@ -268,7 +268,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.SailsOnWater, url: 'sails-on-water', name: 'Sails on Water', desc: 'sails on water', type: AbilityType.Normal, tags: [], unimportant: true },
     <AbilityData>{ id: Ability.RefillHealth, url: 'refill-health', name: 'Refill Health', desc: 'automatically refill health of nearby characters', type: AbilityType.Normal, tags: [], unimportant: true },
     <AbilityData>{ id: Ability.TauntEnemies, url: 'taunt-enemies', name: 'Taunt Enemies', desc: 'distract enemies', type: AbilityType.Normal, tags: [] },
-    <AbilityData>{ id: Ability.MagicWalls, url: 'magic-walls', name: 'Magic Walls (wave 7.5)', desc: 'teleport through purple magic walls', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'So far it is unclear if it will be a unique skill or available to more than one character.', image: 'magic-walls', actionClip: 'uxOBHpn1oDM' },
+    <AbilityData>{ id: Ability.MagicWalls, url: 'magic-walls', name: 'Magic Walls (not released yet)', desc: 'teleport through purple magic walls', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'So far it is unclear if it will be a unique skill or available to more than one character.', image: 'magic-walls', actionClip: 'uxOBHpn1oDM' },
     <AbilityData>{ id: Ability.BatmanMasterBuild, url: 'batman-master-build', name: 'Batman Master Build', desc: 'rebuild Batman? Lego objects like in the Lego Movie', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.PKEMeter, url: 'pke-meter', name: 'P.K.E. Meter', desc: 'detect hidden Ghosts', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
