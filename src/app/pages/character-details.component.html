@@ -22,6 +22,10 @@
             <cmp-ability-table [abilities]="group.list"></cmp-ability-table>
         </div>
     </div>
+
+    <div class="card text-xs-center" *ngIf="character.video">
+        <cmp-youtube [url]="character.video" ></cmp-youtube>
+    </div>
 </section>
 
 <share-section></share-section>

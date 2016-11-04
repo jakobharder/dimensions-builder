@@ -89,6 +89,7 @@ export class Piece {
     isYear2: boolean;
     state: PieceState;
     comments: CommentData[];
+    video: string;
 
     locationAccess: Skill[];
 

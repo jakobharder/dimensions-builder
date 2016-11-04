@@ -88,6 +88,7 @@ export class PieceData {
     url: string;
     state: PieceState;
     comments: CommentData[];
+    video: string;
 }
 
 export class MinifigData extends PieceData {
