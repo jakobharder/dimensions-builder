@@ -370,7 +370,7 @@ export class DataService {
         this.waveMap = {};
 
         for (let data of waves) {
-            let wave = <Wave>{ packs: [], number: data.wave, year: data.year, release: data.release, released: data.released, image: data.image };
+            let wave = <Wave>{ packs: [], number: data.wave, year: data.year, release: data.release, released: data.released, image: data.image, buyersGuide: data.buyersGuide };
             this.waveMap[data.wave] = wave;
             this.waves.push(wave);
         }

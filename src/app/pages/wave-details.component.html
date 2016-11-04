@@ -2,9 +2,7 @@
     <div class="card-block">
         <h2>Wave {{wave.number}} - Year {{wave.year}} ({{wave.release}})</h2>
         <p class="m-b-0">{{description}}</p>
-    </div>
-    <div class="card-block" *ngIf="wave.image">
-        <div class="m-x-auto">
+        <div class="m-x-auto m-t-1" *ngIf="wave.image">
             <img class="rimage" src="/assets/images/{{wave.image}}.jpg">
         </div>
     </div>
@@ -13,10 +11,13 @@
     </div>
 </div>
 
-
 <div class="card">
     <h2 [attr.class]="'card-title card-title-prim year' + wave.year">All packs in wave {{wave.number}}</h2>
-    <cmp-pack-table [packs]="wave.packs"></cmp-pack-table>
+    <div class="card-block">
+        <p>Completionist: All packs labeled as 'must-buy' are needed to complete the game.</p>
+        <p>Best-value: {{wave.buyersGuide}}</p>
+    </div>
+    <cmp-pack-table class="delimiter" [packs]="wave.packs" amazon='true'></cmp-pack-table>
 </div>
 
 <div class="card text-xs-center red">

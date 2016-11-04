@@ -7,4 +7,5 @@ export class Wave {
     release: string;
     released: boolean;
     image: string;
+    buyersGuide: string;
 };
