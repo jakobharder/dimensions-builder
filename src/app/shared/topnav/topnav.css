@@ -34,3 +34,8 @@ button.bg-inverse {
     width: 100%;
     text-align: left;
 }
+.navbar-brand>img {
+    height: 36px;
+    width: 36px;
+    display: inline-block;
+}
