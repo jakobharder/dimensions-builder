@@ -12,41 +12,16 @@ export class MetaService {
     private _r: Renderer;
     private _el: ElementRef;
     private _document: any;
-    /**
-     * Angular 2 Title Service
-     */
-    //private titleService: Title;
-    /**
-     * <head> Element of the HTML document
-     */
+
     private headElement: any;//HTMLElement;
-    /**
-    <meta property="og:title" content="Title Here" />
-    */
     private ogTitle: HTMLElement;
-    /**
-    <meta property="og:type" content="article" />
-    */
     private ogType: HTMLElement;
-    /**
-    <meta property="og:url" content="http://www.example.com/" />
-    */
     private ogUrl: HTMLElement;
-    /**
-    <meta property="og:image" content="http://example.com/image.jpg" />
-    */
     private ogImage: HTMLElement;
-    /**
-    <meta property="og:description" content="Description Here" />
-    */
     private ogDescription: HTMLElement;
     private description: HTMLElement;
     private canonical: HTMLElement;
 
-    /**
-     * Inject the Angular 2 Title Service
-     * @param titleService
-     */
     constructor(@Inject(DOCUMENT) private document, 
                 @Inject(Router) private router,
                 element: ElementRef, 
