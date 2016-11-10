@@ -239,7 +239,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: 72, url: 'dive+tracking', name: 'Underwater Tracking', desc: '', type: AbilityType.Combo, tags: [] },
     <AbilityData>{ id: 73, url: 'dive+x-ray-vision', name: 'Underwater X-Ray Vision', desc: '', type: AbilityType.Combo, tags: [] },
     <AbilityData>{ id: 74, url: 'flight+laser', name: 'Flight + Laser', desc: '', type: AbilityType.Combo, tags: [] },
-    <AbilityData>{ id: Ability.TargetPlusSilver, url: null, name: 'Target + Silver Destroy', desc: 'target and destroy silver objects', type: AbilityType.Combo, tags: [] },
+    <AbilityData>{ id: Ability.TargetPlusSilver, url: 'target+silver', name: 'Target + Silver Destroy', desc: 'target and destroy silver objects', type: AbilityType.Combo, tags: [] },
     <AbilityData>{ id: Ability.HoverOrFlying, url: null, name: 'Hover or Fly', desc: 'cross short distances', type: AbilityType.Alternative, tags: [], unimportant: true },
 
     //<AbilityData>{ id: 75, url: 'dodging', name: 'Dodging', desc: 'dodge (not confirmed ability)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
