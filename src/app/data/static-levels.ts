@@ -44,7 +44,7 @@ export const levels: LevelData[] = [
         fullVideo: 'fG66-JlOJDE',
         quickVideo: 'IvOCseETdKM' },
     
-    <LevelData>{ url: 'adventure-time-adventure-world', name: 'Adventure World', chapter: 0, story: 'Year 2 Adventure Worlds',
+    <LevelData>{ url: 'adventure-time-adventure-world', name: 'Adventure Time World', chapter: 0, story: 'Year 2 Adventure Worlds',
         abilitiesMinikits: [Ability.SwordSwitch, Ability.Laser, Ability.Target, Ability.Tardis, Ability.Magic, Ability.Technology, Ability.SonarSmash, Ability.SilverDestroy, Ability.RelicDetector, Ability.Grapple, Ability.FixIt, Ability.Accelerator, Ability.DivePlusLaser, Ability.SlurpAccess, 
         Ability.Parseltongue, Ability.Diffindo, Ability.DivePlusSuperStrength, Ability.DivePlusBoomerang, Ability.DivePlusGrapple, Ability.Tracking, Ability.TowBar, Ability.MasterBuild, Ability.DivePlusSilverDestroy, Ability.Intelligence, Ability.RainbowLego, 
         Ability.RedDemonObjects, Ability.BMODocks, Ability.VineCutting, Ability.RopeSwings, Ability.Acrobat, Ability.DivePlusFuseBox, Ability.Drilling, Ability.DivePlusChi, Ability.LaserDeflector, Ability.Flying], 
@@ -55,7 +55,7 @@ export const levels: LevelData[] = [
         desc: '',
         },
     
-    <LevelData>{ url: 'a-team-adventure-world', name: 'Adventure World', chapter: 0, story: 'Year 2 Adventure Worlds',
+    <LevelData>{ url: 'a-team-adventure-world', name: 'A-Team World', chapter: 0, story: 'Year 2 Adventure Worlds',
         abilitiesMinikits: [Ability.ChargeTransfer, Ability.SuperStrengthHandles, Ability.LaserDeflector, Ability.FixIt, Ability.ATeamMasterBuild, Ability.Accelerator, 
         Ability.Grapple, Ability.Magic, Ability.SuperStrength, Ability.HazardCleaner, Ability.CargoHook, Ability.SwordSwitch, Ability.XRay, Ability.Diffindo, Ability.SonarSmash, 
         Ability.MagicWalls, Ability.SilverDestroy, Ability.Parseltongue, Ability.FlyingTowBar, Ability.TowBar, Ability.Intelligence, Ability.BMODocks, Ability.Electricity, 
@@ -67,7 +67,7 @@ export const levels: LevelData[] = [
         desc: '',
         },
     
-    <LevelData>{ url: 'ghostbusters-2016-adventure-world', name: 'Adventure World', chapter: 0, story: 'Year 2 Adventure Worlds',
+    <LevelData>{ url: 'ghostbusters-2016-adventure-world', name: 'Ghostbusters 2016 World', chapter: 0, story: 'Year 2 Adventure Worlds',
         abilitiesMinikits: [Ability.Laser, Ability.FixIt, Ability.SuperStrengthHandles, Ability.SuspendGhost, Ability.TrapGhosts, Ability.Intelligence, Ability.Magic,
         Ability.Boomerang, Ability.PKEMeter, Ability.RelicDetector, Ability.Disguise, Ability.Digging, Ability.WeightSwitch, Ability.HazardCleaner, Ability.Diffindo,
         Ability.Illumination, Ability.SuperStrength, Ability.Parseltongue, Ability.Stealth, Ability.FlyingTowBar, Ability.Dive, Ability.XRay, Ability.Electricity,
@@ -79,7 +79,7 @@ export const levels: LevelData[] = [
         desc: '',
         },
     
-    <LevelData>{ url: 'harry-potter-adventure-world', name: 'Adventure World', chapter: 0, story: 'Year 2 Adventure Worlds',
+    <LevelData>{ url: 'harry-potter-adventure-world', name: 'Harry Potter World', chapter: 0, story: 'Year 2 Adventure Worlds',
         abilitiesMinikits: [], 
         abilitiesRescue: [], 
         abilitiesExtra: [],
@@ -88,7 +88,7 @@ export const levels: LevelData[] = [
         desc: '',
         },
     
-    <LevelData>{ url: 'mission-impossible-adventure-world', name: 'Adventure World', chapter: 0, story: 'Year 2 Adventure Worlds',
+    <LevelData>{ url: 'mission-impossible-adventure-world', name: 'Mission: Impossible World', chapter: 0, story: 'Year 2 Adventure Worlds',
         abilitiesMinikits: [], 
         abilitiesRescue: [], 
         abilitiesExtra: [],
