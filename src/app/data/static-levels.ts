@@ -24,7 +24,9 @@ export class LevelData {
 
 export const levels: LevelData[] = [
     <LevelData>{ url: 'adventure-time-level', name: 'A Book and a Bad Guy', chapter: 0, story: 'Year 2 Level Packs',
-        abilitiesMinikits: [Ability.BMODocks, Ability.Diffindo, Ability.MasterBuild, Ability.Dive, Ability.ChargeTransfer], abilitiesRescue: [Ability.MagicWalls], abilitiesExtra: [],
+        abilitiesMinikits: [Ability.BMODocks, Ability.Diffindo, Ability.MasterBuild, Ability.Dive, Ability.ChargeTransfer], 
+        abilitiesRescue: [Ability.MagicWalls], 
+        abilitiesExtra: [],
         abilitiesStory: [Ability.Target, Ability.SwordSwitch, Ability.RopeSwings, Ability.Accelerator, Ability.VineCutting, Ability.RedDemonObjects, Ability.Grapple, Ability.Laser, Ability.LaserDeflector, Ability.Acrobat], 
         access: Ability.Level_AdventureTime, walkthrough: '', year: 2, franchise: Franchise.AdventureTime, 
         desc: 'If you play through this level you will gain Finn\'s Laser ability (Billy\'s Gauntlet). Also like with all Level packs, you have to play the level in order to get the build instructions for the Jakemobile and the Ancient War Elephant.',
@@ -32,7 +34,9 @@ export const levels: LevelData[] = [
         fullVideo: '8WIV1MA-hhg' },
 
     <LevelData>{ url: 'mission-impossible-level', name: 'Mission: Impossible', chapter: 0, story: 'Year 2 Level Packs',
-        abilitiesMinikits: [Ability.RelicDetector, Ability.Parseltongue, Ability.Laser, Ability.Intelligence, Ability.MiniAccess, Ability.SonarSmash, Ability.Boomerang, Ability.Digging, Ability.SlurpAccess, Ability.ChargeTransfer, Ability.MasterBuild, Ability.Magic], abilitiesRescue: [Ability.Magic,, Ability.Drilling, Ability.TargetPlusSilver], abilitiesExtra: [],
+        abilitiesMinikits: [Ability.RelicDetector, Ability.Parseltongue, Ability.Laser, Ability.Intelligence, Ability.MiniAccess, Ability.SonarSmash, Ability.Boomerang, Ability.Digging, Ability.SlurpAccess, Ability.ChargeTransfer, Ability.MasterBuild, Ability.Magic], 
+        abilitiesRescue: [Ability.Magic,, Ability.Drilling, Ability.TargetPlusSilver], 
+        abilitiesExtra: [],
         abilitiesStory: [Ability.Grapple, Ability.SilverDestroy, Ability.FuseBox, Ability.Disguise, Ability.Technology, Ability.Stealth, Ability.Accelerator, Ability.TowBar, Ability.MagnoGloves, Ability.Acrobat /* or fly */, Ability.XRay, Ability.Target, Ability.FlyingDrone],
         access: Ability.MissionImpossibleLevel, walkthrough: '', year: 2, franchise: Franchise.MissionImpossible,
         desc: 'You have to play the level in order to get the build instructions for the IMF Scrambler and the IMF Sport Car.',
