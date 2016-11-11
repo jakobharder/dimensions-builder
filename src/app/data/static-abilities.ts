@@ -160,7 +160,8 @@ export enum Ability {
     PKEMeter,
     Telekinesis,
     Gremlin,
-    DivePlusFuseBox
+    DivePlusFuseBox,
+    FlyingTowBar,
 
     /* end of year 1 */
 }
@@ -276,6 +277,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.PKEMeter, url: 'pke-meter', name: 'P.K.E. Meter', desc: 'detect hidden Ghosts', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
 
     <AbilityData>{ id: Ability.DivePlusFuseBox, url: 'dive+fuse-box', name: 'Underwater Fuse Box', desc: 'rewire a fuse box underwater', type: AbilityType.Combo, tags: [BuilderTag.Year2] },
+    <AbilityData>{ id: Ability.FlyingTowBar, url: 'flying+tow-bar', name: 'Flying Tow Bar', desc: 'pull down weak Lego walls in higher positions', type: AbilityType.Combo, tags: [BuilderTag.Year2] },
 
     /* wave 7 */
     <AbilityData>{ id: Ability.Telekinesis, url: 'telekineses', name: 'Telekineses (unconfirmed)', desc: 'do something', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
