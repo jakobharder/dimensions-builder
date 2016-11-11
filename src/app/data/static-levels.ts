@@ -68,7 +68,10 @@ export const levels: LevelData[] = [
         },
     
     <LevelData>{ url: 'ghostbusters-2016-adventure-world', name: 'Adventure World', chapter: 0, story: 'Year 2 Adventure Worlds',
-        abilitiesMinikits: [], 
+        abilitiesMinikits: [Ability.Laser, Ability.FixIt, Ability.SuperStrengthHandles, Ability.SuspendGhost, Ability.TrapGhosts, Ability.Intelligence, Ability.Magic,
+        Ability.Boomerang, Ability.PKEMeter, Ability.RelicDetector, Ability.Disguise, Ability.Digging, Ability.WeightSwitch, Ability.HazardCleaner, Ability.Diffindo,
+        Ability.Illumination, Ability.SuperStrength, Ability.Parseltongue, Ability.Stealth, Ability.FlyingTowBar, Ability.Dive, Ability.XRay, Ability.Electricity,
+        Ability.Grapple, Ability.Accelerator, Ability.WaterSpray], 
         abilitiesRescue: [], 
         abilitiesExtra: [],
         abilitiesStory: [], 
