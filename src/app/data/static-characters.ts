@@ -90,7 +90,7 @@ export const minifigs: MinifigData[] = [
         packId: 71236, image: '71236_1to1_MF_MUGSHOT_Superman_168', url: 'superman' },
     <MinifigData>{ id: 7123701, name: 'Aquaman', skillIds: [0, 4, 11, Ability.WaterSpray, 52, Ability.DivePlusHazardCleaner, Ability.WaterSprayOrIce], 
         packId: 71237, image: '71237_1to1_MF_MUGSHOT_Aquaman_168', url: 'aquaman' },
-    <MinifigData>{ id: 7123801, name: 'Cyberman', skillIds: [4, 10, Ability.SilverDestroy, Ability.TargetPlusSilver, 23, 30, 40, 41, Ability.DivePlusDrone, Ability.DivePlusHacking, Ability.DivePlusLaser, Ability.DivePlusSilverDestroy, Ability.DivePlusTechnology, Ability.DivePlusXRay, Ability.Adventure_DoctorWho], 
+    <MinifigData>{ id: 7123801, name: 'Cyberman', skillIds: [4, 10, Ability.SilverDestroy, Ability.TargetPlusSilver, 23, 30, 40, 41, Ability.DivePlusDrone, Ability.DivePlusHacking, Ability.DivePlusSilverDestroy, Ability.DivePlusTechnology, Ability.DivePlusXRay, Ability.Adventure_DoctorWho], 
         packId: 71238, image: '71238_1to1_MF_MUGSHOT_Gyberman_168', url: 'cyberman' },
     <MinifigData>{ id: 7123901, name: 'Lloyd', skillIds: [20, 31, 37, 38, 39, Ability.Adventure_Ninjago], 
         packId: 71239, image: '71239_1to1_MF_MUGSHOT_Lloyd_168', url: 'lloyd' },
