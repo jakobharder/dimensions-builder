@@ -47,7 +47,7 @@ export const levels: LevelData[] = [
     <LevelData>{ url: 'adventure-time-adventure-world', name: 'Adventure World', chapter: 0, story: 'Year 2 Adventure Worlds',
         abilitiesMinikits: [Ability.SwordSwitch, Ability.Laser, Ability.Target, Ability.Tardis, Ability.Magic, Ability.Technology, Ability.SonarSmash, Ability.SilverDestroy, Ability.RelicDetector, Ability.Grapple, Ability.FixIt, Ability.Accelerator, Ability.DivePlusLaser, Ability.SlurpAccess, 
         Ability.Parseltongue, Ability.Diffindo, Ability.DivePlusSuperStrength, Ability.DivePlusBoomerang, Ability.DivePlusGrapple, Ability.Tracking, Ability.TowBar, Ability.MasterBuild, Ability.DivePlusSilverDestroy, Ability.Intelligence, Ability.RainbowLego, 
-        Ability.RedDemonObjects, Ability.BMODocks, Ability.VineCutting, Ability.RopeSwings, Ability.Acrobat, Ability.DivePlusFuseBox, Ability.Drilling, Ability.DivePlusChi, Ability.LaserDeflector], 
+        Ability.RedDemonObjects, Ability.BMODocks, Ability.VineCutting, Ability.RopeSwings, Ability.Acrobat, Ability.DivePlusFuseBox, Ability.Drilling, Ability.DivePlusChi, Ability.LaserDeflector, Ability.Flying], 
         abilitiesRescue: [], 
         abilitiesExtra: [],
         abilitiesStory: [], 
