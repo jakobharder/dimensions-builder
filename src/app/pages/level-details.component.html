@@ -18,7 +18,7 @@
     <h2 class="card-title card-title-prim red">Choose a team for this level</h2>
     <div class="card-block m-b-negative">
         <p>Use the Team Builder to put together a team with all the characters you need to play or complete this level.</p>
-        <a class="btn btn-info m-b-1" [routerLink]="['/team-builder', level.builderFinish]">Team for Play</a>
+        <a class="btn btn-info m-b-1" [routerLink]="['/team-builder', level.builderFinish]" *ngIf="level.builderFinish">Team for Play</a>
         <a class="btn btn-info m-b-1" [routerLink]="['/team-builder', level.builderComplete]" *ngIf="level.builderComplete">Team for 100%</a>
     </div>
 </div>
