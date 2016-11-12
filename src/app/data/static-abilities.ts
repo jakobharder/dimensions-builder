@@ -162,6 +162,8 @@ export enum Ability {
     Gremlin,
     DivePlusFuseBox,
     FlyingTowBar,
+    DivePlusCargo,
+    DivePlusDock
 
     /* end of year 1 */
 }
@@ -278,6 +280,8 @@ export const abilities: AbilityData[] = [
 
     <AbilityData>{ id: Ability.DivePlusFuseBox, url: 'dive+fuse-box', name: 'Underwater Fuse Box', desc: 'rewire a fuse box underwater', type: AbilityType.Combo, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.FlyingTowBar, url: 'flying+tow-bar', name: 'Flying Tow Bar', desc: 'pull down weak Lego walls in higher positions', type: AbilityType.Combo, tags: [BuilderTag.Year2] },
+    <AbilityData>{ id: Ability.DivePlusCargo, url: 'dive+cargo-hook', name: 'Underwater Cargo Hook', desc: 'grab cargo and place it somewhere else', type: AbilityType.Alternative, tags: [BuilderTag.Year2], unimportant: true },
+    <AbilityData>{ id: Ability.DivePlusDock, url: 'dive+flight-dock', name: 'Underwater Flight Dock', desc: 'power underwater jet switches', type: AbilityType.Alternative, tags: [BuilderTag.Year2], unimportant: true },
 
     /* wave 7 */
     <AbilityData>{ id: Ability.Telekinesis, url: 'telekineses', name: 'Telekineses (unconfirmed)', desc: 'do something', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
