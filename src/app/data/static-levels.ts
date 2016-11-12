@@ -80,9 +80,11 @@ export const levels: LevelData[] = [
         },
     
     <LevelData>{ url: 'harry-potter-adventure-world', name: 'Harry Potter World', chapter: 0, story: 'Year 2 Adventure Worlds',
-        abilitiesMinikits: [], 
+        abilitiesMinikits: [Ability.Magic, Ability.Intelligence, Ability.Acrobat, Ability.RelicDetector, Ability.SuspendGhost, Ability.TrapGhosts, Ability.HazardCleaner, 
+        Ability.Grapple, Ability.Laser /* or fire */, Ability.Chi, Ability.MasterBuild, Ability.Flying, Ability.Disguise, Ability.Spinjitzu, Ability.Accelerator, 
+        Ability.Parseltongue, Ability.Diffindo, Ability.DivePlusTechnology, Ability.FuseBox, Ability.PortalGun, Ability.Digging, Ability.Hacking], 
         abilitiesRescue: [], 
-        abilitiesExtra: [],
+        abilitiesExtra: [Ability.SilverDestroy, Ability.SonarSmash],
         abilitiesStory: [], 
         access: Ability.Adventure_HarryPotter, walkthrough: '', year: 2, franchise: Franchise.HarryPotter, 
         desc: '',
