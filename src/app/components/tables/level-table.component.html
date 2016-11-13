@@ -12,8 +12,8 @@
             </span>
             <div class="hidden-lg-up btn-group">
                 <a class="btn btn-secondary" [title]="'more about ' + level.name" [routerLink]="['/level/' + level.url]" >Details</a>
-                <a *ngIf="level.builderComplete" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderComplete]" ><span class="hidden-xs-down">Team for </span>100%</a>
-                <a *ngIf="level.builderFinish" class="btn btn-info" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderFinish]" ><span class="hidden-xs-down">Team for </span>Story</a>
+                <a *ngIf="level.builderComplete" class="btn btn-secondary" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderComplete]" ><span class="hidden-xs-down">Team for </span>100%</a>
+                <a *ngIf="level.builderFinish" class="btn btn-secondary" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderFinish]" ><span class="hidden-xs-down">Team for </span>Story</a>
             </div>
         </td>
         <td class="second-button hidden-md-down"><a *ngIf="level.builderFinish" class="btn btn-secondary" [title]="'select characters for ' + level.name" [routerLink]="['/team-builder', level.builderFinish]" >Team for Story</a></td>
