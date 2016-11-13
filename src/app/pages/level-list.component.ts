@@ -23,13 +23,14 @@ export class LevelListComponent implements OnInit {
         this.levels = this.data.getLevels();
         this.collections = this.levels.getCollections();
 
-        this.description = 'The list has currently includes all released Lego Dimensions level packs from year 1 and 2, and parts of the main story. More will be added in the next days.';
-        //"There are " + this.levels.list.length + " released levels for Lego Dimensions so far.";
+        this.description = `Find out the character abilities to complete a Lego Dimensions level or adventure world. 
+            The list now includes all wave 6 (year 2) levels, story chapters and adventure worlds.
+            Year 1 data is not complete yet, but will follow soon.`;
 
         this.meta.set(<MetaModel>{
             title: 'All levels and the abilities needed to complete them',
             description: this.description,
-            image: '/assets/images/lego-dimensions.jpg'
+            image: '/assets/images/lego-dimensions-level-abilities.jpg'
         });
     }
 }
