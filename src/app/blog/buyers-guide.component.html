@@ -10,6 +10,11 @@
 </div>
 
 <div class="card">
+    <h2 class="card-title card-title-prim">Recommended Packs to Own</h2>
+    <cmp-pack-table [packs]='top3Packs' [comments]='top3Comments' amazon='true' [labels]='false'></cmp-pack-table>
+</div>
+
+<div class="card">
     <h2 class="card-title card-title-prim">All Packs you need for 100%</h2>
     <h2 class="card-title card-title-prim light">Story Packs</h2>
     <cmp-pack-table [packs]='storyPacks' [comments]='storyComments' amazon='true' [labels]='false'></cmp-pack-table>
