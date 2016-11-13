@@ -23,12 +23,12 @@ export class LevelListComponent implements OnInit {
         this.levels = this.data.getLevels();
         this.collections = this.levels.getCollections();
 
-        this.description = `Find out the character abilities to complete a Lego Dimensions level or adventure world. 
-            The list now includes all wave 6 (year 2) levels, story chapters and adventure worlds.
+        this.description = `Find out the character abilities to complete a Lego Dimensions level or Adventure World. 
+            The list now includes all wave 6 (year 2) levels, story chapters and Adventure Worlds.
             Year 1 data is not complete yet, but will follow soon.`;
 
         this.meta.set(<MetaModel>{
-            title: 'All levels and the abilities needed to complete them',
+            title: 'Abilities needed for Lego Dimensions levels and Adventure Worlds',
             description: this.description,
             image: '/assets/images/lego-dimensions-level-abilities.jpg'
         });
