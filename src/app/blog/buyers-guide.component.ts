@@ -38,8 +38,8 @@ export class BuyersGuideComponent implements OnInit {
 
         this.levelPacks = this.data.getPacks([71245, 71201, 71204, 71228, 71235, 71248, 71203, 90000, 71202, 71244]);
         this.levelComments = ['',
-            '',
-            '',
+            'If you are not a completionist then buy the Doc Brown Fun Pack instead. No unique abilities come with this Level Pack. You can get Back to the Future Adventure World access and Time Travel with the Doc Brown Fun Pack as well.',
+            'Absolutely recommended! In many levels and worlds the Tardis is used to get to secret areas giving you much play value outside of the actual level pack contents.',
             '',
             '',
             '',
