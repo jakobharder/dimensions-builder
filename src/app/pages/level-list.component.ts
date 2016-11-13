@@ -30,7 +30,7 @@ export class LevelListComponent implements OnInit {
         this.meta.set(<MetaModel>{
             title: 'Abilities needed for Lego Dimensions levels and Adventure Worlds',
             description: this.description,
-            image: '/assets/images/lego-dimensions-level-abilities.jpg'
+            image: '/assets/images/lego-dimensions-level-character-abilities.jpg'
         });
     }
 }
