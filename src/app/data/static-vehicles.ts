@@ -184,7 +184,7 @@ export const vehicles: VehicleData[] = [
     <VehicleData>{ id: 71257011, name: 'Swooping Evil', skillIds: [Ability.Flying, Ability.TowBar, Ability.Digging, Ability.Electricity], packId: 71257, image: 'wave-7-swooping-evil', stage: 1, vehicleId: 7125701, state: PieceState.Incomplete },
     <VehicleData>{ id: 71257012, name: 'Swooping Evil', skillIds: [], packId: 71257, image: 'none', stage: 2, vehicleId: 7125701, state: PieceState.Incomplete },
     <VehicleData>{ id: 71257013, name: 'Swooping Evil', skillIds: [], packId: 71257, image: 'none', stage: 3, vehicleId: 7125701, state: PieceState.Incomplete },
-    <VehicleData>{ id: 71258011, name: 'Phone Home', skillIds: [], packId: 71258, image: 'wave-7-phone-home', stage: 1, vehicleId: 7125801, state: PieceState.Incomplete },
+    <VehicleData>{ id: 71258011, name: 'Phone Home', skillIds: [Ability.PhoneHome], packId: 71258, image: 'wave-7-phone-home', stage: 1, vehicleId: 7125801, state: PieceState.Incomplete },
     <VehicleData>{ id: 71258012, name: 'Phone Home', skillIds: [], packId: 71258, image: 'none', stage: 2, vehicleId: 7125801, state: PieceState.Incomplete },
     <VehicleData>{ id: 71258013, name: 'Phone Home', skillIds: [Ability.Flying], packId: 71258, image: 'none', stage: 3, vehicleId: 7125801, state: PieceState.Incomplete },
     <VehicleData>{ id: 71244011, name: 'Sonic Speedster', skillIds: [Ability.Accelerator], packId: 71244, image: 'wave-7-sonic-speedster', stage: 1, vehicleId: 7124401, state: PieceState.Incomplete },

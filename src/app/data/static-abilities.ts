@@ -167,7 +167,8 @@ export enum Ability {
     FantasticalBriefcase,
     ApparateAccess,
     GrindRails,
-    HeartRegen
+    HeartRegen,
+    PhoneHome
 
     /* end of year 1 */
 }
@@ -294,6 +295,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.ApparateAccess, url: 'apparate-access', name: 'Apparate Access (new with wave 7)', desc: 'use Apparate Access', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.GrindRails, url: 'grind-rails', name: 'Grind Rails (new with wave 7)', desc: 'use Grind Rails', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.HeartRegen, url: 'heart-regen', name: 'Heart Regen (new with wave 7)', desc: 'use Heart Regen', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
+    <AbilityData>{ id: Ability.PhoneHome, url: 'phone-home', name: 'Phone Home (new with wave 7)', desc: 'phone home', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
 
     <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
