@@ -4,7 +4,10 @@
         <p>{{description}}</p>
     </div>
     <div class="text-xs-center">
-        <img *ngIf="ability.image" class="rimage" src="/assets/images/abilities/{{ability.image}}.jpg" title="{{ability.name}}" alt="{{ability.name}} ability">
+        <img *ngIf="ability.image && !ability.video" class="rimage" src="/assets/images/abilities/{{ability.image}}.jpg" title="{{ability.name}}" alt="{{ability.name}} ability">
+        <video *ngIf="ability.video" class="rimage" loop="true" autoplay="true" poster="/assets/images/abilities/{{ability.image}}.jpg">
+            <source src="/assets/images/abilities/{{ability.image}}.mp4" type="video/mp4">
+        </video>
     </div>
 </div>
 

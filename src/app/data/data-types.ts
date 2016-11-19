@@ -11,6 +11,7 @@ export class AbilityData {
     desc: string;
     url: string;
     image: string;
+    video: boolean;
     extradesc: string;
     type: AbilityType;
     tags: BuilderTag[];

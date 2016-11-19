@@ -33,6 +33,7 @@ export class Skill {
     desc: string;
     url: string;
     image: string;
+    video: boolean;
     extradesc: string;
     type: AbilityType;
     providers: Piece[];
