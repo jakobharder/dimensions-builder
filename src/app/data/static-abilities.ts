@@ -218,7 +218,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: 43, url: 'flying', name: 'Flying', desc: 'fly', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 44, url: 'invulnerability', name: 'Invulnerability', desc: 'take no damage', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 45, url: 'speed', name: 'Speed', desc: 'move faster', type: AbilityType.Normal, tags: [] },
-    <AbilityData>{ id: 46, url: 'magic', name: 'Magic', desc: 'move objects with blue stars', type: AbilityType.Normal, tags: [] },
+    <AbilityData>{ id: 46, url: 'magic', name: 'Magic / Telekineses', desc: 'move objects with blue stars', type: AbilityType.Normal, tags: [], extradesc: 'E.T. and Marceline also have the ability \'Magic\', but in their case it is more commonly known as \'Telekineses.\'' },
     <AbilityData>{ id: 47, url: 'magic-shield', name: 'Magic Shield', desc: 'prevent damage using a shield', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 48, url: 'ice', name: 'Freeze Breath', desc: 'freeze other characters and extinguish fire', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: 49, url: 'gliding', name: 'Gliding', desc: 'fall down slower', type: AbilityType.Normal, tags: [] },
