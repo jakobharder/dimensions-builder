@@ -294,7 +294,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.FantasticalBriefcase, url: 'fantastical-briefcase', name: 'Fantastical Briefcase (new with wave 7)', desc: 'use the Fantastical Briefcase (still need to figure out what this means)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.ApparateAccess, url: 'apparate-access', name: 'Apparate Access (new with wave 7)', desc: 'use Apparate Access (still need to figure out what this means)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.GrindRails, url: 'grind-rails', name: 'Grind Rails (new with wave 7)', desc: 'grind on rails', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
-    <AbilityData>{ id: Ability.HeartRegen, url: 'heart-regen', name: 'Heart Regen (new with wave 7)', desc: 'automatically heal damage', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'Heart regeneration is quite similar to \'Invulnerability\'.' },    
+    <AbilityData>{ id: Ability.HeartRegen, url: 'heart-regen', name: 'Heart Regen (new with wave 7)', desc: 'automatically heal damage', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true, extradesc: 'Heart regeneration is quite similar to \'Invulnerability\'.' },    
     //<AbilityData>{ id: Ability.PhoneHome, url: 'phone-home', name: 'Phone Home (new with wave 7)', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
 
     <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
