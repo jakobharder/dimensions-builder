@@ -271,7 +271,7 @@ export const abilities: AbilityData[] = [
     //<AbilityData>{ id: Ability.Jump, url: null, name: 'Jump', desc: 'jump', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
     //<AbilityData>{ id: Ability.SuperJump, url: null, name: 'Super Jump', desc: 'jump (unconfirmed)', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
     <AbilityData>{ id: Ability.BMODocks, url: 'bmo-docks', name: 'BMO Docks', desc: 'use BMO docks', type: AbilityType.Normal, tags: [BuilderTag.Year2], image: 'bmo-docks' },
-    <AbilityData>{ id: Ability.Guardian, url: 'guardian', name: 'Guardian', desc: 'do something (unconfirmed)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
+    <AbilityData>{ id: Ability.Guardian, url: 'guardian', name: 'Guardian', desc: 'do something (unconfirmed)', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true, extradesc: 'I don\'t know yet what Guardian does.' },
     <AbilityData>{ id: Ability.Hover, url: 'hover', name: 'Hover', desc: 'fly over short distance', type: AbilityType.Normal, tags: [] },
     <AbilityData>{ id: Ability.Invisibility, url: 'invisibility', name: 'Invisibility', desc: 'hide from enemies', type: AbilityType.Normal, tags: [], unimportant: true },
     <AbilityData>{ id: Ability.SpecialAttack, url: 'special-attack', name: 'Special Attack', desc: '', type: AbilityType.Normal, tags: [] },
@@ -290,11 +290,11 @@ export const abilities: AbilityData[] = [
 
     /* wave 7 */
     //<AbilityData>{ id: Ability.Telekinesis, url: null, name: 'Telekineses (new with wave 7)', desc: 'do something', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
-    <AbilityData>{ id: Ability.Gremlin, url: 'gremlin', name: 'Gremlin Transformation (new with wave 7)', desc: 'transform into a Gremlin', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
-    <AbilityData>{ id: Ability.FantasticalBriefcase, url: 'fantastical-briefcase', name: 'Fantastical Briefcase (new with wave 7)', desc: 'use the Fantastical Briefcase (still need to figure out what this means)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
-    <AbilityData>{ id: Ability.ApparateAccess, url: 'apparate-access', name: 'Apparate Access (new with wave 7)', desc: 'use Apparate Access (still need to figure out what this means)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
-    <AbilityData>{ id: Ability.GrindRails, url: 'grind-rails', name: 'Grind Rails (new with wave 7)', desc: 'grind on rails', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
-    <AbilityData>{ id: Ability.HeartRegen, url: 'heart-regen', name: 'Heart Regen (new with wave 7)', desc: 'automatically heal damage', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true, extradesc: 'Heart regeneration is quite similar to \'Invulnerability\'.' },    
+    <AbilityData>{ id: Ability.Gremlin, url: 'gremlin', name: 'Gremlin Transformation', desc: 'transform into a Gremlin', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true, extradesc: 'I\'m not sure yet what benefits the Gremlins form has.' },    
+    <AbilityData>{ id: Ability.FantasticalBriefcase, url: 'fantastical-briefcase', name: 'Fantastical Briefcase', desc: 'use the Fantastical Briefcase to solve puzzles like lock-picking (unconfirmed)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
+    <AbilityData>{ id: Ability.ApparateAccess, url: 'apparate-access', name: 'Apparate Access', desc: 'teleport via Apparate Access panels', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'Introduced in wave 7, Harry Potter and Voldemort got Apparate Access retroactively.' },    
+    <AbilityData>{ id: Ability.GrindRails, url: 'grind-rails', name: 'Grind Rails', desc: 'grind on rails', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'Grind Rails was added in wave 7 for Sonic the Hedgehog. Legolas is the only year 1 character known to get this ability retroactively.' },    
+    <AbilityData>{ id: Ability.HeartRegen, url: 'heart-regen', name: 'Heart Regen', desc: 'automatically heal damage', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true, extradesc: 'Heart regeneration was added with wave 7 and is quite similar to \'Invulnerability\'.' },    
     //<AbilityData>{ id: Ability.PhoneHome, url: 'phone-home', name: 'Phone Home (new with wave 7)', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
 
     <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
