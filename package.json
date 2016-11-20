@@ -37,10 +37,10 @@
     "methods": "~1.1.2",
     "parse5": "^1.5.0",
     "preboot": "^2.1.2",
-    "rxjs": "^5.0.0-beta.6",
+    "rxjs": "5.0.0-beta.6",
     "sitemap": "^1.8.1",
     "uglifyjs": "^2.4.10",
-    "webpack": "^2.1.0-beta.20"
+    "webpack": "2.1.0-beta.20"
   },
   "devDependencies": {
     "@types/body-parser": "0.0.29",
@@ -60,8 +60,8 @@
     "ts-loader": "^0.8.2",
     "typescript": "~1.8.10",
     "typings": "1.0.4",
-    "webpack": "^2.1.0-beta.20",
-    "webpack-dev-server": "^2.1.0-beta.0",
-    "webpack-merge": "^0.13.0"
+    "webpack": "2.1.0-beta.20",
+    "webpack-dev-server": "2.1.0-beta.0",
+    "webpack-merge": "0.13.0"
   }
 }
