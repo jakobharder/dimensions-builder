@@ -128,8 +128,8 @@ export enum Ability {
     SuperStrengthHandles,
     ATeamMasterBuild,
 
-    Jump,
-    SuperJump,
+    __Jump,
+    __SuperJump,
     BMODocks,
     Guardian,
     Hover,
@@ -158,7 +158,7 @@ export enum Ability {
 
     BatmanMasterBuild,
     PKEMeter,
-    Telekinesis,
+    __Telekinesis,
     Gremlin,
     DivePlusFuseBox,
     FlyingTowBar,
@@ -168,7 +168,7 @@ export enum Ability {
     ApparateAccess,
     GrindRails,
     HeartRegen,
-    PhoneHome
+    __PhoneHome
 
     /* end of year 1 */
 }
@@ -268,8 +268,8 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.FlyingDrone, url: 'flying-drone', name: 'Flying Drone', desc: 'use a flying drone', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.SuperStrengthHandles, url: 'super-strength-handles', name: 'Super Strength Handles', desc: 'pull super strength handles', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'This ability was introduced with year 2. Many year 1 characters with super strength ability also got this ability. The vehicles with super strength handles are to be confirmed.' },
     <AbilityData>{ id: Ability.ATeamMasterBuild, url: 'a-team-master-build', name: 'A-Team Master Build', desc: 'rebuild brown Lego objects like in the Lego Movie', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
-    <AbilityData>{ id: Ability.Jump, url: null, name: 'Jump', desc: 'jump', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
-    <AbilityData>{ id: Ability.SuperJump, url: null, name: 'Super Jump', desc: 'jump (unconfirmed)', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
+    //<AbilityData>{ id: Ability.Jump, url: null, name: 'Jump', desc: 'jump', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
+    //<AbilityData>{ id: Ability.SuperJump, url: null, name: 'Super Jump', desc: 'jump (unconfirmed)', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },
     <AbilityData>{ id: Ability.BMODocks, url: 'bmo-docks', name: 'BMO Docks', desc: 'use BMO docks', type: AbilityType.Normal, tags: [BuilderTag.Year2], image: 'bmo-docks' },
     <AbilityData>{ id: Ability.Guardian, url: 'guardian', name: 'Guardian', desc: 'do something (unconfirmed)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },
     <AbilityData>{ id: Ability.Hover, url: 'hover', name: 'Hover', desc: 'fly over short distance', type: AbilityType.Normal, tags: [] },
@@ -289,13 +289,13 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.DivePlusDock, url: 'dive+flight-dock', name: 'Underwater Flight Dock', desc: 'power underwater jet switches', type: AbilityType.Alternative, tags: [BuilderTag.Year2], unimportant: true },
 
     /* wave 7 */
-    <AbilityData>{ id: Ability.Telekinesis, url: null, name: 'Telekineses (new with wave 7)', desc: 'do something', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
+    //<AbilityData>{ id: Ability.Telekinesis, url: null, name: 'Telekineses (new with wave 7)', desc: 'do something', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.Gremlin, url: 'gremlin', name: 'Gremlin Transformation (new with wave 7)', desc: 'transform into a Gremlin', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.FantasticalBriefcase, url: 'fantastical-briefcase', name: 'Fantastical Briefcase (new with wave 7)', desc: 'use the Fantastical Briefcase (still need to figure out what this means)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.ApparateAccess, url: 'apparate-access', name: 'Apparate Access (new with wave 7)', desc: 'use Apparate Access (still need to figure out what this means)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.GrindRails, url: 'grind-rails', name: 'Grind Rails (new with wave 7)', desc: 'grind on rails', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.HeartRegen, url: 'heart-regen', name: 'Heart Regen (new with wave 7)', desc: 'use Heart Regen (still need to figure out what this means)', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
-    <AbilityData>{ id: Ability.PhoneHome, url: 'phone-home', name: 'Phone Home (new with wave 7)', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
+    //<AbilityData>{ id: Ability.PhoneHome, url: 'phone-home', name: 'Phone Home (new with wave 7)', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
 
     <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
