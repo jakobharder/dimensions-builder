@@ -9,7 +9,8 @@ import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } f
 export enum AbilityListType {
     Rare,
     All,
-    Combos
+    Combos,
+    Year2
 }
 
 @Component({
@@ -34,6 +35,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
     isAll: boolean;
     isRare: boolean;
     isCombo: boolean;
+    isYear2: boolean;
 
     constructor(private data: DataService,
                 private route: ActivatedRoute,
@@ -74,6 +76,16 @@ export class AbilityListComponent implements OnInit, OnDestroy {
             image: ''
                     });
                     this.isRare = true;
+                    break;
+                case AbilityListType.Year2:
+                    this.abilities = this.unfiltered.getYear2().getFilteredByType(AbilityType.Normal).orderByName();
+                    this.listTitle = "Year 2 Character Abilities";
+                    this.meta.set(<MetaModel>{
+                        title: this.listTitle, 
+                        description: "A complete list of all new Lego Dimensions year 2 character abilities with mapping to characters and vehicles.",
+            image: ''
+                    });
+                    this.isYear2 = true;
                     break;
                 case AbilityListType.All:
                 default:

@@ -1,7 +1,7 @@
 <div class="card text-xs-center">
     <div class="card-block" *ngIf="abilities">
         <h1 class="card-title">Lego Dimensions Abilities</h1>
-        <p class="last-update">Last update: Nov 13, 2016</p>
+        <p class="last-update">Last update: Nov 20, 2016</p>
         <h3>Character Abilities and Vehicle &amp; Gadget Abilities</h3>
         
         <p>There are {{abilityCount}} abilities in total with {{comboCount}} important ability combos needed to unlock everything of the game. Most of the combos are character abilities used underwater.</p>
@@ -11,6 +11,7 @@
         <a class="btn" [ngClass]="{'btn-primary': isAll, 'btn-secondary': !isAll}" [routerLink]="['/abilities']">All Abilities</a>
         <a class="btn" [ngClass]="{'btn-primary': isRare, 'btn-secondary': !isRare}" [routerLink]="['/rare-abilities']">Rare Abilities</a>
         <a class="btn" [ngClass]="{'btn-primary': isCombo, 'btn-secondary': !isCombo}" [routerLink]="['/combo-abilities']">Combo Abilities</a>
+        <a class="btn" [ngClass]="{'btn-primary': isYear2, 'btn-secondary': !isYear2}" [routerLink]="['/year2-abilities']">Year 2 Abilities</a>
     </div>
 </div>
 <share-section></share-section>

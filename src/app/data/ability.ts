@@ -107,6 +107,16 @@ export class Abilities {
         }
         return new Abilities(newlist);
     }
+
+    getYear2() {
+        let newlist = [];
+        for (let item of this.list) {
+            if (item.isYear2()) {
+                newlist.push(item);
+            }
+        }
+        return new Abilities(newlist);    
+    }
 }
 
 export class AbilitiesOrdered extends Abilities {

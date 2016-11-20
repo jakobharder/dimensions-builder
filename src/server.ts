@@ -55,6 +55,7 @@ app.get('/team-builder*', ngApp);
 app.get('/abilities', ngApp);
 app.get('/rare-abilities', ngApp);
 app.get('/combo-abilities', ngApp);
+app.get('/year2-abilities', ngApp);
 app.get('/ability/*', ngApp);
 app.get('/level/*', ngApp);
 app.get('/levels', ngApp);
@@ -63,13 +64,14 @@ app.get('/buyers-guide-year-2', ngApp);
 var urls = [
   // changefreq: 'weekly',  priority: 0.5 
   { url: '/', changefreq: 'weekly', priority: 0.5 },
-  { url: '/team-builder', changefreq: 'daily', priority: 0.7 },
-  { url: '/all-waves-and-packs', changefreq: 'daily', priority: 0.7 },
+  { url: '/team-builder', changefreq: 'weekly', priority: 0.7 },
+  { url: '/all-waves-and-packs', changefreq: 'weekly', priority: 0.7 },
   { url: '/characters', changefreq: 'daily', priority: 0.7 },   
   { url: '/abilities', changefreq: 'daily', priority: 0.7 },
   { url: '/rare-abilities', changefreq: 'daily', priority: 0.5 },
   { url: '/combo-abilities', changefreq: 'daily', priority: 0.5 },
-  { url: '/levels', changefreq: 'daily', priority: 0.7 },
+  { url: '/year2-abilities', changefreq: 'daily', priority: 0.7 },
+  { url: '/levels', changefreq: 'weekly', priority: 0.7 },
   { url: '/buyers-guide-year-2', changefreq: 'daily', priority: 0.5 }
 ];
 for (let ability of abilities) {

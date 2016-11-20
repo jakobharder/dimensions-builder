@@ -28,6 +28,7 @@ export const routes: RouterConfig = [
 	{ path: 'abilities', component: AbilityListComponent, data: { type: AbilityListType.All } },
 	{ path: 'rare-abilities', component: AbilityListComponent, data: { type: AbilityListType.Rare } },
 	{ path: 'combo-abilities', component: AbilityListComponent, data: { type: AbilityListType.Combos } },
+	{ path: 'year2-abilities', component: AbilityListComponent, data: { type: AbilityListType.Year2 } },
 	{ path: 'ability/:id', component: AbilityDetailsComponent },
 	{ path: 'team-builder', component: TeamBuilderComponent },
 	{ path: 'team-builder/level/:level' , component: TeamBuilderComponent },
