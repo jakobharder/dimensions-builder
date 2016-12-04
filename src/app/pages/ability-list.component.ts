@@ -50,7 +50,7 @@ export class AbilityListComponent implements OnInit, OnDestroy {
             image: ''
         });
 
-        if (!document) {
+        if (typeof document === 'undefined') {
             this.isServer = true;
         }
 
