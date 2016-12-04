@@ -37,6 +37,8 @@ export class AbilityListComponent implements OnInit, OnDestroy {
     isCombo: boolean;
     isYear2: boolean;
 
+    isServer: boolean;
+
     constructor(private data: DataService,
                 private route: ActivatedRoute,
                 private meta: MetaService) {
@@ -47,6 +49,10 @@ export class AbilityListComponent implements OnInit, OnDestroy {
             description: "A complete overview list of all Character and Vehicle abilities and which Piece has them.",
             image: ''
         });
+
+        if (!document) {
+            this.isServer = true;
+        }
 
         this.unfiltered = this.data.getAbilities(null);
 
