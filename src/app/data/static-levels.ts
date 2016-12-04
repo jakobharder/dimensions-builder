@@ -20,6 +20,7 @@ export class LevelData {
     fullVideo: string;
     quickVideo: string;
     icon: boolean;
+    lastUpdate: string;
 }
 
 export const levels: LevelData[] = [
@@ -206,7 +207,8 @@ export const levels: LevelData[] = [
         abilitiesExtra: [Ability.Flying, Ability.XRay, Ability.HazardCleaner, Ability.Electricity], 
         abilitiesStory: [Ability.RelicDetector, Ability.Grapple, Ability.Magic, Ability.Accelerator, Ability.MasterBuild, Ability.Acrobat], 
         /* secret area: Hacking, Tardis */
-        access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions },
+        access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions,
+        lastUpdate: 'Dec 4, 2016' },
 
     <LevelData>{ url: 'main-story-3-elements-of-surprise', name: 'Elements of Surprise', chapter: 3, story: 'Main Story',
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions },
