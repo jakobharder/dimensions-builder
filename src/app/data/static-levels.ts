@@ -253,7 +253,15 @@ export const levels: LevelData[] = [
     },
 
     <LevelData>{ url: 'main-story-4-dalektable-adventure', name: 'A Dalektable Adventure', chapter: 4, story: 'Main Story',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions },
+        abilitiesMinikits: [Ability.Technology, Ability.Spinjitzu, Ability.TargetPlusSilver, Ability.Drone, Ability.Growth, Ability.Tardis, Ability.SonarSmash,
+        Ability.Laser], 
+        abilitiesRescue: [Ability.FixIt, Ability.Boomerang], 
+        abilitiesExtra: [Ability.TowBar, Ability.Arcade], 
+        abilitiesStory: [Ability.Acrobat, Ability.Boomerang, Ability.Magic, Ability.Grapple, Ability.Stealth, Ability.RelicDetector, Ability.MasterBuild, Ability.Accelerator,
+        Ability.SuperStrength, Ability.Illumination], 
+        access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions,
+        lastUpdate: 'Dec 4, 2016'
+    },
 
     <LevelData>{ url: 'main-story-5-painting-the-town-black', name: 'Painting the Town Black', chapter: 5, story: 'Main Story',
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions },
