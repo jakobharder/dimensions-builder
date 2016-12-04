@@ -157,6 +157,7 @@ export const levels: LevelData[] = [
         abilitiesRescue: [Ability.FuseBox, Ability.VineCutting], 
         abilitiesExtra: [],
         abilitiesStory: [Ability.SuperStrength, Ability.SuperStrengthHandles, Ability.ChargeTransfer, Ability.Accelerator, Ability.SuspendGhost, Ability.TrapGhosts, Ability.PKEMeter, Ability.Intelligence, Ability.FixIt, Ability.Technology, Ability.Laser, Ability.Grapple],
+        /* secret area: VineCutting */
         access: Ability.Ghostbusters2016Story, year: 2, franchise: Franchise.Ghostbusters2016,
         lastUpdate: 'Nov 13, 2016'
     },
@@ -233,7 +234,15 @@ export const levels: LevelData[] = [
         lastUpdate: 'Dec 4, 2016' },
 
     <LevelData>{ url: 'main-story-3-elements-of-surprise', name: 'Elements of Surprise', chapter: 3, story: 'Main Story',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions },
+        abilitiesMinikits: [Ability.TowBar, Ability.PortalGun, Ability.Flying, Ability.Hacking, Ability.SuperStrength, Ability.Spinjitzu, Ability.Stealth,
+        Ability.FixIt, Ability.RainbowLego, Ability.Tracking, Ability.Atlantis], 
+        abilitiesRescue: [Ability.Drilling, Ability.FixIt], 
+        abilitiesExtra: [], 
+        abilitiesStory: [Ability.Magic, Ability.Acrobat, Ability.RelicDetector, Ability.Boomerang, Ability.MasterBuild, Ability.Accelerator, Ability.Grapple], 
+        /* secret area: Spinjitzu */
+        access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions,
+        lastUpdate: 'Dec 4, 2016'
+    },
 
     <LevelData>{ url: 'main-story-4-dalektable-adventure', name: 'A Dalektable Adventure', chapter: 4, story: 'Main Story',
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions },
