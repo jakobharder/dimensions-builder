@@ -48,17 +48,10 @@ export const levels: LevelData[] = [
         quickVideo: 'IvOCseETdKM',
         lastUpdate: 'Nov 13, 2016'
     },
-    
-    <LevelData>{ url: 'adventure-time-adventure-world', name: 'Adventure Time World', chapter: 0, story: 'Year 2 Adventure Worlds',
-        abilitiesMinikits: [Ability.SwordSwitch, Ability.Laser, Ability.Target, Ability.Tardis, Ability.Magic, Ability.Technology, Ability.SonarSmash, Ability.SilverDestroy, Ability.RelicDetector, Ability.Grapple, Ability.FixIt, Ability.Accelerator, Ability.DivePlusLaser, Ability.SlurpAccess, 
-        Ability.Parseltongue, Ability.Diffindo, Ability.DivePlusSuperStrength, Ability.DivePlusBoomerang, Ability.DivePlusGrapple, Ability.Tracking, Ability.TowBar, Ability.MasterBuild, Ability.DivePlusSilverDestroy, Ability.Intelligence, Ability.RainbowLego, 
-        Ability.RedDemonObjects, Ability.BMODocks, Ability.VineCutting, Ability.RopeSwings, Ability.Acrobat, Ability.DivePlusFuseBox, Ability.Drilling, Ability.DivePlusChi, Ability.LaserDeflector, Ability.Flying], 
-        abilitiesRescue: [], 
-        abilitiesExtra: [],
-        abilitiesStory: [], 
-        access: Ability.Adventure_AdventureTime, walkthrough: '', year: 2, franchise: Franchise.AdventureTime, 
-        desc: '',
-        lastUpdate: 'Nov 13, 2016'
+
+    <LevelData>{ url: 'sonic-the-hedgehog-level', name: 'Sonic the Hedgehog', chapter: 0, story: 'Year 2 Level Packs',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.SonicLevel, walkthrough: '', year: 2, franchise: Franchise.SonicTheHedgehog
     },
     
     <LevelData>{ url: 'a-team-adventure-world', name: 'A-Team World', chapter: 0, story: 'Year 2 Adventure Worlds',
@@ -72,6 +65,33 @@ export const levels: LevelData[] = [
         access: Ability.Adventure_ATeam, walkthrough: '', year: 2, franchise: Franchise.ATeam, 
         desc: '',
         lastUpdate: 'Nov 13, 2016'
+    },
+    
+    <LevelData>{ url: 'adventure-time-adventure-world', name: 'Adventure Time World', chapter: 0, story: 'Year 2 Adventure Worlds',
+        abilitiesMinikits: [Ability.SwordSwitch, Ability.Laser, Ability.Target, Ability.Tardis, Ability.Magic, Ability.Technology, Ability.SonarSmash, Ability.SilverDestroy, Ability.RelicDetector, Ability.Grapple, Ability.FixIt, Ability.Accelerator, Ability.DivePlusLaser, Ability.SlurpAccess, 
+        Ability.Parseltongue, Ability.Diffindo, Ability.DivePlusSuperStrength, Ability.DivePlusBoomerang, Ability.DivePlusGrapple, Ability.Tracking, Ability.TowBar, Ability.MasterBuild, Ability.DivePlusSilverDestroy, Ability.Intelligence, Ability.RainbowLego, 
+        Ability.RedDemonObjects, Ability.BMODocks, Ability.VineCutting, Ability.RopeSwings, Ability.Acrobat, Ability.DivePlusFuseBox, Ability.Drilling, Ability.DivePlusChi, Ability.LaserDeflector, Ability.Flying], 
+        abilitiesRescue: [], 
+        abilitiesExtra: [],
+        abilitiesStory: [], 
+        access: Ability.Adventure_AdventureTime, walkthrough: '', year: 2, franchise: Franchise.AdventureTime, 
+        desc: '',
+        lastUpdate: 'Nov 13, 2016'
+    },
+
+    <LevelData>{ url: 'e-t-adventure-world', name: 'E.T. World', chapter: 0, story: 'Year 2 Adventure Worlds',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.ETWorld, walkthrough: '', year: 2, franchise: Franchise.ET
+    },
+
+    <LevelData>{ url: 'fantastic-beasts-adventure-world', name: 'Fantastic Beasts World', chapter: 0, story: 'Year 2 Adventure Worlds',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.FantasticsBeastsWorld, walkthrough: '', year: 2, franchise: Franchise.FantasticBeasts
+    },
+
+    <LevelData>{ url: 'gremlins-adventure-world', name: 'Gremlins World', chapter: 0, story: 'Year 2 Adventure Worlds',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.GremlinsWorld, walkthrough: '', year: 2, franchise: Franchise.Gremlins
     },
     
     <LevelData>{ url: 'ghostbusters-2016-adventure-world', name: 'Ghostbusters 2016 World', chapter: 0, story: 'Year 2 Adventure Worlds',
@@ -111,6 +131,41 @@ export const levels: LevelData[] = [
         access: Ability.MissionImpossibleWorld, walkthrough: '', year: 2, franchise: Franchise.MissionImpossible, 
         desc: '',
         lastUpdate: 'Nov 13, 2016'
+    },
+
+    <LevelData>{ url: 'sonic-adventure-world', name: 'Sonic the Hedgehog World', chapter: 0, story: 'Year 2 Adventure Worlds',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.SonicWorld, walkthrough: '', year: 2, franchise: Franchise.SonicTheHedgehog
+    },
+
+    <LevelData>{ url: 'fantastic-beasts-1', name: 'Accruing Interest', chapter: 1, story: 'Fantastic Beasts',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.FantasticsBeastsStory, walkthrough: '', year: 2, franchise: Franchise.FantasticBeasts
+    },
+
+    <LevelData>{ url: 'fantastic-beasts-2', name: 'Grand Opening', chapter: 2, story: 'Fantastic Beasts',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.FantasticsBeastsStory, walkthrough: '', year: 2, franchise: Franchise.FantasticBeasts
+    },
+
+    <LevelData>{ url: 'fantastic-beasts-3', name: 'A Walk in the Park', chapter: 3, story: 'Fantastic Beasts',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.FantasticsBeastsStory, walkthrough: '', year: 2, franchise: Franchise.FantasticBeasts
+    },
+
+    <LevelData>{ url: 'fantastic-beasts-4', name: 'A Trail with Style', chapter: 4, story: 'Fantastic Beasts',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.FantasticsBeastsStory, walkthrough: '', year: 2, franchise: Franchise.FantasticBeasts
+    },
+
+    <LevelData>{ url: 'fantastic-beasts-5', name: 'Demiguise Double-Cross', chapter: 5, story: 'Fantastic Beasts',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.FantasticsBeastsStory, walkthrough: '', year: 2, franchise: Franchise.FantasticBeasts
+    },
+
+    <LevelData>{ url: 'fantastic-beasts-6', name: 'Obscurus For-Sure-Us', chapter: 6, story: 'Fantastic Beasts',
+        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], 
+        access: Ability.FantasticsBeastsStory, walkthrough: '', year: 2, franchise: Franchise.FantasticBeasts
     },
 
     <LevelData>{ url: 'ghostbusters-1', name: 'Paranormal Beginnings', chapter: 1, story: 'Ghostbusters 2016',
