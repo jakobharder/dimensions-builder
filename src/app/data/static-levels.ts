@@ -200,7 +200,13 @@ export const levels: LevelData[] = [
         access: -1, walkthrough: 'http://www.ign.com/wikis/lego-dimensions/Follow_the_LEGO_Brick_Road', year: 1, franchise: Franchise.Dimensions },
 
     <LevelData>{ url: 'main-story-2-meltdown-at-sector-7g', name: 'Meltdown at Sector 7-G – The Simpsons', chapter: 2, story: 'Main Story',
-        abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions },
+        abilitiesMinikits: [Ability.Digging, /* Ability.Shoot */ Ability.SilverDestroy, Ability.Drilling, Ability.Spinjitzu, Ability.Illumination, Ability.WeightSwitch,
+        Ability.Stealth, Ability.Hacking, Ability.Tardis, Ability.Technology, Ability.Laser], 
+        abilitiesRescue: [Ability.RainbowLego], 
+        abilitiesExtra: [Ability.Flying, Ability.XRay, Ability.HazardCleaner, Ability.Electricity], 
+        abilitiesStory: [Ability.RelicDetector, Ability.Grapple, Ability.Magic, Ability.Accelerator, Ability.MasterBuild, Ability.Acrobat], 
+        /* secret area: Hacking, Tardis */
+        access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions },
 
     <LevelData>{ url: 'main-story-3-elements-of-surprise', name: 'Elements of Surprise', chapter: 3, story: 'Main Story',
         abilitiesMinikits: [], abilitiesRescue: [], abilitiesExtra: [], abilitiesStory: [], access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions },
