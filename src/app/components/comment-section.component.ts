@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
 import { MetaService } from '../meta';
-var document: Document;
+//var document: Document;
 
 @Component({
 	moduleId: module.id,
