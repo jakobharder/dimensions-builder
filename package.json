@@ -7,12 +7,8 @@
     "watch": "webpack --watch",
     "devstart": "webpack --progress -p && nodemon dist/server/index.js",
     "build": ";",
-    "build:prod": ";",
     "server": "node dist/server/index.js",
     "start": "npm run server",
-    "predebug": "npm run build",
-    "debug:build": "node-nightly --inspect --debug-brk node_modules/webpack/bin/webpack.js",
-    "debug": "node --debug-brk dist/server/index.js",
     "postinstall": "npm run typings && rimraf dist && webpack --progress -p"
   },
   "license": "MIT",
@@ -59,16 +55,8 @@
     "@types/mime": "0.0.28",
     "@types/node": "^4.0.30",
     "@types/serve-static": "^1.7.27",
-    "angular2-template-loader": "^0.4.0",
-    "cookie-parser": "^1.4.3",
     "nodemon": "^1.10.0",
-    "raw-loader": "^0.5.1",
-    "rimraf": "^2.5.4",
-    "ts-loader": "^0.8.2",
     "typescript": "~1.8.10",
-    "typings": "1.0.4",
-    "webpack": "2.1.0-beta.20",
-    "webpack-dev-server": "2.1.0-beta.0",
-    "webpack-merge": "0.13.0"
+    "webpack-dev-server": "2.1.0-beta.0"
   }
 }
