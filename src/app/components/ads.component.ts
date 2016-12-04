@@ -9,14 +9,17 @@ export class AdsComponent implements AfterViewInit {
 	isServer: boolean;
 
 	constructor() {
-        if (typeof document === 'undefined') {
-            this.isServer = true;
-        }
+		try {
+			if (typeof document === 'undefined') {
+				this.isServer = true;
+			}
+		} catch (e) {}
 	}
 
 	ngAfterViewInit() {
 		try {
 			(adsbygoogle = window.adsbygoogle || []).push({});
-		} catch (e) {}
+		} catch (e) {
+		}
 	}
 }
