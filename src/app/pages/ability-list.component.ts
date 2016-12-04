@@ -4,7 +4,7 @@ import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 import { Abilities, AbilityType, DataService } from '../data';
 import { MetaService, MetaModel } from '../meta';
 import { AbilityTableComponent } from '../components/tables';
-import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent } from '../components';
+import { ShareSectionComponent, CommentSectionComponent, NavSectionComponent, AdsComponent } from '../components';
 
 export enum AbilityListType {
     Rare,
@@ -17,7 +17,7 @@ export enum AbilityListType {
 	moduleId: module.id,
 	selector: 'ability-list',
 	templateUrl: 'ability-list.component.html',
-    directives: [ROUTER_DIRECTIVES, ShareSectionComponent, AbilityTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent]
+    directives: [ROUTER_DIRECTIVES, ShareSectionComponent, AbilityTableComponent, ShareSectionComponent, CommentSectionComponent, NavSectionComponent, AdsComponent]
 })
 export class AbilityListComponent implements OnInit, OnDestroy {
     sub: any;
@@ -37,8 +37,6 @@ export class AbilityListComponent implements OnInit, OnDestroy {
     isCombo: boolean;
     isYear2: boolean;
 
-    isServer: boolean;
-
     constructor(private data: DataService,
                 private route: ActivatedRoute,
                 private meta: MetaService) {
@@ -49,10 +47,6 @@ export class AbilityListComponent implements OnInit, OnDestroy {
             description: "A complete overview list of all Character and Vehicle abilities and which Piece has them.",
             image: ''
         });
-
-        if (typeof document === 'undefined') {
-            this.isServer = true;
-        }
 
         this.unfiltered = this.data.getAbilities(null);
 
