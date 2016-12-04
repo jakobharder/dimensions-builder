@@ -45,7 +45,11 @@ export enum Franchise {
     MissionImpossible,
     AdventureTime,
     HarryPotter,
-    ATeam
+    ATeam,
+    SonicTheHedgehog,
+    FantasticBeasts,
+    Gremlins,
+    ET
 }
 
 export const franchises: string[] = [
@@ -68,7 +72,11 @@ export const franchises: string[] = [
     'Mission: Impossible',
     'Adventure Time',
     'Harry Potter',
-    'A-Team' 
+    'A-Team',
+    'Sonic the Hedgehog',
+    'Fantastic Beats',
+    'Gremlins',
+    'E.T.'
 ];
 
 export enum PieceState {
