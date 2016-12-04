@@ -74,7 +74,7 @@ export const franchises: string[] = [
     'Harry Potter',
     'A-Team',
     'Sonic the Hedgehog',
-    'Fantastic Beats',
+    'Fantastic Beasts',
     'Gremlins',
     'E.T.'
 ];
