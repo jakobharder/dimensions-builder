@@ -177,24 +177,28 @@ export const levels: LevelData[] = [
         access: Ability.BackToTheFutureLevel, walkthrough: 'https://www.youtube.com/watch?v=6X6F7J2aZxo', year: 1, franchise: Franchise.BackToTheFuture,
         desc: undefined,
         image: 'back-to-the-future-level',
-        lastUpdate: 'Nov 13, 2016' }, /* Marty McFly, car */
+        lastUpdate: 'Nov 13, 2016'
+    }, /* Marty McFly, car */
 
     <LevelData>{ url: 'portal-2-level', name: 'Aperture Science', chapter: 0, story: 'Year 1 Level Packs',
         abilitiesMinikits: [Ability.LaserDeflector, Ability.XRay, Ability.Flying, Ability.Target, Ability.Grapple, Ability.Boomerang, Ability.Illumination, Ability.RelicDetector, Ability.Laser, Ability.VineCutting], abilitiesRescue: [Ability.Chi], abilitiesExtra: [], abilitiesStory: [Ability.PortalGun, Ability.WeightSwitch, Ability.SentryTurret], 
         access: Ability.Level_Portal2, walkthrough: '', year: 1, franchise: Franchise.Portal2,
-        lastUpdate: 'Nov 13, 2016' }, /* chell, turret */
+        lastUpdate: 'Nov 13, 2016'
+    }, /* chell, turret */
 
     <LevelData>{ url: 'doctor-who-level', name: 'The Dalek Extermination of Earth', chapter: 0, story: 'Year 1 Level Packs',
         abilitiesMinikits: [Ability.VineCutting, Ability.RelicDetector, Ability.Grapple, Ability.Magic, Ability.Digging, Ability.Laser, Ability.MasterBuild, Ability.Boomerang, Ability.Stealth, Ability.Electricity], abilitiesRescue: [Ability.WaterSpray, Ability.Magic], abilitiesExtra: [], abilitiesStory: [Ability.FixIt, Ability.Tardis, Ability.SilverDestroy, Ability.Technology, Ability.Stealth, Ability.Flying], 
         access: Ability.Level_DoctorWho, walkthrough: '', year: 1, franchise: Franchise.DoctorWho,
-        lastUpdate: 'Nov 13, 2016' }, /* water spray or ice */
+        lastUpdate: 'Nov 13, 2016'
+    }, /* water spray or ice */
 
     <LevelData>{ url: 'the-simpsons-level', name: 'The Mysterious Voyage of Homer', chapter: 0, story: 'Year 1 Level Packs',
         abilitiesMinikits: [Ability.Tracking, Ability.RelicDetector, Ability.Laser, Ability.Hacking, Ability.Tardis, Ability.Technology, Ability.PortalGun /* or fly */, Ability.WeightSwitch], abilitiesRescue: [Ability.Atlantis], abilitiesExtra: [Ability.Gyrosphere, Ability.Chi, Ability.PoleVault, Ability.Acrobat], 
         abilitiesStory: [Ability.SonarSmash, Ability.SimpsonsLevel, Ability.TowBar, Ability.SuperStrength, Ability.SilverDestroy, Ability.Magic, Ability.Accelerator /* vehicle */, Ability.TauntEnemies], 
         access: Ability.SimpsonsLevel, walkthrough: '', year: 1, franchise: Franchise.TheSimpsons,
         image: 'simpsons-level',
-        lastUpdate: 'Nov 13, 2016' },
+        lastUpdate: 'Nov 13, 2016'
+    },
         /* extra gyrosphete, target, chima, poul valt, acrobat */
         /* atlantis is for rescue? */
 
@@ -204,7 +208,8 @@ export const levels: LevelData[] = [
         access: Ability.GhostbustersLevel, walkthrough: '', year: 1, franchise: Franchise.Ghostbusters,
         desc: 'You have to play the level in order to get the build instructions for the Ecto-1 and the Ghost Trap.',
         image: 'ghostbusters-level',
-        lastUpdate: 'Nov 13, 2016' },
+        lastUpdate: 'Nov 13, 2016'
+    },
 
     <LevelData>{ url: 'midway-arcade-level', name: 'Retro Wreckage', chapter: 0, story: 'Year 1 Level Packs',
         abilitiesMinikits: [Ability.Grapple, Ability.XRay, Ability.SonarSmash, Ability.Drone, Ability.FlightDock, Ability.Magic, Ability.RelicDetector, Ability.FixIt, Ability.CargoHook], abilitiesRescue: [Ability.Digging], abilitiesExtra: [Ability.TowBar, Ability], 
@@ -212,7 +217,8 @@ export const levels: LevelData[] = [
         access: Ability.MidwayArcadeLevel, walkthrough: '', year: 1, franchise: Franchise.MidwayArcade,
         desc: 'You have to play the level in order to get the build instructions for the Arcade Machine and the Spy Hunter.',
         image: 'midway-arcade-level',
-        lastUpdate: 'Nov 13, 2016' },
+        lastUpdate: 'Nov 13, 2016'
+    },
         
     <LevelData>{ url: 'main-story-1-follow-the-lego-brick-road', name: 'Follow The Lego Brick Road – Wizard Of Oz', chapter: 1, story: 'Main Story',
         abilitiesMinikits: [Ability.SilverDestroy, Ability.Hacking, Ability.HazardCleaner, Ability.Grapple, Ability.RelicDetector, Ability.SuperStrength, Ability.Tracking, 
@@ -221,7 +227,8 @@ export const levels: LevelData[] = [
         Ability.Acrobat],
         // ranged attack (magic or boomerang)? // driving vehicle or flying
         access: -1, walkthrough: 'http://www.ign.com/wikis/lego-dimensions/Follow_the_LEGO_Brick_Road', year: 1, franchise: Franchise.Dimensions,
-        lastUpdate: 'Nov 13, 2016' },
+        lastUpdate: 'Nov 13, 2016'
+    },
 
     <LevelData>{ url: 'main-story-2-meltdown-at-sector-7g', name: 'Meltdown at Sector 7-G – The Simpsons', chapter: 2, story: 'Main Story',
         abilitiesMinikits: [Ability.Digging, /* Ability.Shoot */ Ability.SilverDestroy, Ability.Drilling, Ability.Spinjitzu, Ability.Illumination, Ability.WeightSwitch,
@@ -231,7 +238,8 @@ export const levels: LevelData[] = [
         abilitiesStory: [Ability.RelicDetector, Ability.Grapple, Ability.Magic, Ability.Accelerator, Ability.MasterBuild, Ability.Acrobat], 
         /* secret area: Hacking, Tardis */
         access: -1, walkthrough: '', year: 1, franchise: Franchise.Dimensions,
-        lastUpdate: 'Dec 4, 2016' },
+        lastUpdate: 'Dec 4, 2016'
+    },
 
     <LevelData>{ url: 'main-story-3-elements-of-surprise', name: 'Elements of Surprise', chapter: 3, story: 'Main Story',
         abilitiesMinikits: [Ability.TowBar, Ability.PortalGun, Ability.Flying, Ability.Hacking, Ability.SuperStrength, Ability.Spinjitzu, Ability.Stealth,
