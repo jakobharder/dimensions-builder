@@ -9,3 +9,4 @@ export * from './comment-section.component';
 export * from './nav-section.component';
 export * from './youtube.component';
 export * from './ads.component';
+export * from './amazon.component';
