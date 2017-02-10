@@ -1,9 +1,12 @@
 
-<div class="card card-inverse text-xs-center" *ngIf="!isServer">
-    <!-- dimensionsbuilder -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-3920545471711155"
-        data-ad-slot="8392583822"
-        data-ad-format="auto"></ins>
+<div class="card text-xs-center" *ngIf="!isServer">
+    <div class="card-block text-xs-center">
+        <h2 class="card-title">Help me to run this site</h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="GNJ9CNUXKEJHE">
+            <input type="submit" border="0" name="submit" class="btn btn-primary" value="Leave a tip" title="Thanks a lot!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
 </div>
