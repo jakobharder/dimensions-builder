@@ -108,7 +108,7 @@ export const minifigs: MinifigData[] = [
         packId: 71170, image: '70810_MF_Mugshot_WildStyle_168', url: 'wyldstyle' },
     <MinifigData>{ id: 7128601, name: 'Michael Knight', skillIds: [Ability.Dodging, Ability.Speed, Ability.XRay, Ability.Hacking, Ability.Tracking, Ability.Level_KnightRider, Ability.Adventure_KnightRider], 
         packId: 71286, image: 'wave-7.5-knight-rider', state: PieceState.Incomplete, url: 'michael-knight' }, // doging, dash=speed?
-    <MinifigData>{ id: 7134401, name: 'Excalibur Batman', skillIds: [Ability.SwordSwitch, Ability.BatmanMasterBuild, Ability.VineCutting, Ability.Adventure_Batman], 
+    <MinifigData>{ id: 7134401, name: 'Excalibur Batman', skillIds: [Ability.SwordSwitch, Ability.MasterBuild, Ability.VineCutting, Ability.Adventure_Batman], 
         packId: 71344, image: 'wave-7.5-excalibur-batman', state: PieceState.Incomplete, url: 'excalibur-batman' },
     <MinifigData>{ id: 7126401, name: 'Batgirl', skillIds: [Ability.Boomerang, Ability.Gliding, Ability.Stealth, Ability.Story_Batman, Ability.Adventure_Batman], 
         packId: 71264, image: 'wave-7.5-batgirl', state: PieceState.Incomplete, url: 'batgirl' },
