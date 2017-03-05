@@ -128,8 +128,8 @@ export enum Ability {
     SuperStrengthHandles,
     ATeamMasterBuild,
 
-    __Jump,
-    __SuperJump,
+    DetectiveMode,
+    HighSecurityAccess,
     BMODocks,
     Guardian,
     Hover,
@@ -158,7 +158,7 @@ export enum Ability {
 
     BatmanMasterBuild,
     PKEMeter,
-    __Telekinesis,
+    SuitRip,
     Gremlin,
     DivePlusFuseBox,
     FlyingTowBar,
@@ -295,7 +295,11 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.ApparateAccess, url: 'apparate-access', name: 'Apparate Access', desc: 'teleport via Apparate Access panels', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'Introduced in wave 7, Harry Potter and Voldemort got Apparate Access retroactively.' },    
     <AbilityData>{ id: Ability.GrindRails, url: 'grind-rails', name: 'Grind Rails', desc: 'grind on rails', type: AbilityType.Normal, tags: [BuilderTag.Year2], extradesc: 'Grind Rails was added in wave 7 for Sonic the Hedgehog. Legolas is the only year 1 character known to get this ability retroactively.' },    
     <AbilityData>{ id: Ability.HeartRegen, url: 'heart-regen', name: 'Heart Regen', desc: 'automatically heal damage', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true, extradesc: 'Heart regeneration was added with wave 7 and is quite similar to \'Invulnerability\'.' },    
-    //<AbilityData>{ id: Ability.PhoneHome, url: 'phone-home', name: 'Phone Home (new with wave 7)', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
+
+    /* wave 7.5 */
+    <AbilityData>{ id: Ability.DetectiveMode, url: 'detetive-mode', name: 'Detective Mode', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
+    <AbilityData>{ id: Ability.HighSecurityAccess, url: 'high-security-access', name: 'High Security Access', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
+    <AbilityData>{ id: Ability.SuitRip, url: 'suit-rip', name: 'Suit Rip', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },    
 
     <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
