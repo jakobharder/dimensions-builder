@@ -131,8 +131,8 @@ export const minifigs: MinifigData[] = [
         packId: 71258, image: 'wave-7-e-t', state: PieceState.New, url: 'e-t' },
     <MinifigData>{ id: 7128501, name: 'Marceline', skillIds: [Ability.SonarSmash, Ability.Flying, Ability.Acrobat, Ability.LaserDeflector, Ability.SuperStrength, Ability.Digging, Ability.RedDemonObjects, Ability.HeartRegen, Ability.Stealth, Ability.Magic, Ability.MindControl, Ability.SlurpAccess, Ability.MiniAccess, Ability.Tracking, Ability.VineCutting, Ability.Adventure_AdventureTime], 
         packId: 71285, image: 'wave-7-marceline', state: PieceState.New, url: 'marceline' },
-    <MinifigData>{ id: 9000001, name: 'Sloth', skillIds: [Ability.GooniesLevel, Ability.GooniesWorld], 
-        packId: 90000, image: 'wave-9-sloth', state: PieceState.Incomplete, url: 'sloth' },
-    <MinifigData>{ id: 9000101, name: 'Raven', skillIds: [Ability.MagicWalls, Ability.TeenTitansGoWorld], 
-        packId: 90001, image: 'wave-9-raven', state: PieceState.Incomplete, url: 'raven' },
+    <MinifigData>{ id: 7126701, name: 'Sloth', skillIds: [Ability.GooniesLevel, Ability.GooniesWorld], 
+        packId: 71267, image: 'wave-9-sloth', state: PieceState.Incomplete, url: 'sloth' },
+    <MinifigData>{ id: 7125501, name: 'Raven', skillIds: [Ability.MagicWalls, Ability.TeenTitansGoWorld], 
+        packId: 71255, image: 'wave-9-raven', state: PieceState.Incomplete, url: 'raven' },
 ];

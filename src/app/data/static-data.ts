@@ -75,8 +75,10 @@ export const packs: PackData[] = [
     <PackData>{ id: 71264, wave: 7.5, year: 2, minifigs: [], builds: [], name: 'LEGO Batman Movie', type: PackType.StoryPack, image: 'wave-7.5-batman-story-pack', desc: '', amazon: 'http://amzn.to/2d7vS5F' },
     <PackData>{ id: 71344, wave: 7.5, year: 2, minifigs: [], builds: [], name: 'Excalibur Batman', type: PackType.FunPack, image: 'wave-7.5-excalibur-batman-fun-pack', desc: '', amazon: null },
     <PackData>{ id: 71286, wave: 7.5, year: 2, minifigs: [], builds: [], name: 'Knight Rider', type: PackType.FunPack, image: 'wave-7.5-knight-rider-fun-pack', desc: '', amazon: null },
-    <PackData>{ id: 90000, wave: 9, year: 2, minifigs: [], builds: [], name: 'The Goonies', type: PackType.LevelPack, image: 'wave-9-goonies-level-pack', desc: 'The Goonies Pack is not officially announced yet. It is unclear with which wave it will be released.', amazon: null },
-    <PackData>{ id: 90001, wave: 9, year: 2, minifigs: [], builds: [], name: 'Raven', type: PackType.FunPack, image: 'wave-9-raven-fun-pack', desc: 'The Raven Pack is not officially announced yet. It is unclear with which wave it will be released.', amazon: null }
+
+    <PackData>{ id: 71267, wave: 8, year: 2, minifigs: [], builds: [], name: 'The Goonies', type: PackType.LevelPack, image: 'wave-9-goonies-level-pack', desc: '', amazon: null },
+
+    <PackData>{ id: 71255, wave: 9, year: 2, minifigs: [], builds: [], name: 'Teen Titans Go!', type: PackType.TeamPack, image: 'wave-9-raven-fun-pack', desc: '', amazon: null }
 /*
     { id: , wave: , year: , minifigs: [], builds: [], name: '', type: PackType.FunPack, image: '', desc: '' },
 */
