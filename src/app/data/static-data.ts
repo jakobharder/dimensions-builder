@@ -77,6 +77,7 @@ export const packs: PackData[] = [
     <PackData>{ id: 71286, wave: 7.5, year: 2, minifigs: [], builds: [], name: 'Knight Rider', type: PackType.FunPack, image: 'wave-7.5-knight-rider-fun-pack', desc: '', amazon: null },
 
     <PackData>{ id: 71267, wave: 8, year: 2, minifigs: [], builds: [], name: 'The Goonies', type: PackType.LevelPack, image: 'wave-9-goonies-level-pack', desc: '', amazon: null },
+    <PackData>{ id: 71266, wave: 8, year: 2, minifigs: [], builds: [], name: 'Chase McCain', type: PackType.FunPack, image: 'wave-8-chase-mccain-fun-pack', desc: '', amazon: null },
 
     <PackData>{ id: 71255, wave: 9, year: 2, minifigs: [], builds: [], name: 'Teen Titans Go!', type: PackType.TeamPack, image: 'wave-9-raven-fun-pack', desc: '', amazon: null }
 /*
