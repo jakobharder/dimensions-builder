@@ -133,6 +133,11 @@ export const minifigs: MinifigData[] = [
         packId: 71285, image: 'wave-7-marceline', state: PieceState.New, url: 'marceline' },
     <MinifigData>{ id: 7126701, name: 'Sloth', skillIds: [Ability.GooniesLevel, Ability.GooniesWorld], 
         packId: 71267, image: 'wave-9-sloth', state: PieceState.Incomplete, url: 'sloth' },
+    <MinifigData>{ id: 7126601, name: 'Chase McCain', skillIds: [Ability.LegoCityWorld, Ability.Acrobat, 
+        Ability.Grapple, Ability.RopeSwings, Ability.Tracking, Ability.RelicDetector, Ability.Illumination, 
+        Ability.SilverDestroy, Ability.SuperStrength, Ability.WaterSpray, Ability.Growth, Ability.HazardCleaner, 
+        Ability.Gliding, Ability.Target, Ability.Hacking, Ability.Flying, Ability.Drilling], 
+        packId: 71266, image: 'wave-8-chase-mccain', state: PieceState.Incomplete, url: 'chase-mccain' },
     <MinifigData>{ id: 7125501, name: 'Raven', skillIds: [Ability.MagicWalls, Ability.TeenTitansGoWorld], 
         packId: 71255, image: 'wave-9-raven', state: PieceState.Incomplete, url: 'raven' },
 ];

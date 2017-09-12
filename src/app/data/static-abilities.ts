@@ -168,9 +168,9 @@ export enum Ability {
     ApparateAccess,
     GrindRails,
     HeartRegen,
-    __PhoneHome
+    __PhoneHome,
 
-    /* end of year 1 */
+    LegoCityWorld
 }
 
 export const abilities: AbilityData[] = [
@@ -340,8 +340,11 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.SonicWorld, url: null, name: 'Sonic World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.GremlinsWorld, url: null, name: 'Gremlins World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.ETWorld, url: null, name: 'E.T. World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+
     <AbilityData>{ id: Ability.GooniesLevel, url: null, name: 'The Goonies Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.GooniesWorld, url: null, name: 'The Goonies World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.LegoCityWorld, url: null, name: 'Lego City World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+
     <AbilityData>{ id: Ability.TeenTitansGoWorld, url: null, name: 'Teen Titans Go World', desc: '', type: AbilityType.LocationAccess, tags: [] },
       
 
