@@ -149,7 +149,7 @@ export enum Ability {
     SonicWorld,
     GremlinsWorld,
     ETWorld,
-    __unused_3,
+    Adventure_Beetlejuice,
     __unused_2,
     __unused_1,
     GooniesLevel,
@@ -346,6 +346,7 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.Adventure_LegoCity, url: null, name: 'Lego City World', desc: '', type: AbilityType.LocationAccess, tags: [] },
 
     <AbilityData>{ id: Ability.TeenTitansGoWorld, url: null, name: 'Teen Titans Go World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.Adventure_Beetlejuice, url: null, name: 'Beetlejuice World', desc: '', type: AbilityType.LocationAccess, tags: [] }
       
 
 /*

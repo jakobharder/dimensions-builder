@@ -80,7 +80,8 @@ export const packs: PackData[] = [
     <PackData>{ id: 71266, wave: 8, year: 2, minifigs: [], builds: [], name: 'Chase McCain', type: PackType.FunPack, image: 'wave-8-chase-mccain-fun-pack', desc: '', amazon: null },
     <PackData>{ id: 71348, wave: 8, year: 2, minifigs: [], builds: [], name: 'Hermione Granger', type: PackType.FunPack, image: 'wave-8-hermione-granger-fun-pack', desc: '', amazon: null },
 
-    <PackData>{ id: 71255, wave: 9, year: 2, minifigs: [], builds: [], name: 'Teen Titans Go!', type: PackType.TeamPack, image: 'wave-9-raven-fun-pack', desc: '', amazon: null }
+    <PackData>{ id: 71255, wave: 9, year: 2, minifigs: [], builds: [], name: 'Teen Titans Go!', type: PackType.TeamPack, image: 'wave-9-raven-fun-pack', desc: '', amazon: null },
+    <PackData>{ id: 71349, wave: 9, year: 2, minifigs: [], builds: [], name: 'Beetlejuice', type: PackType.FunPack, image: 'wave-9-beetlejuice-fun-pack', desc: '', amazon: null }
 /*
     { id: , wave: , year: , minifigs: [], builds: [], name: '', type: PackType.FunPack, image: '', desc: '' },
 */

@@ -145,4 +145,8 @@ export const minifigs: MinifigData[] = [
         packId: 71348, image: 'wave-8-hermione-granger', state: PieceState.New, url: 'hermione-granger' },
     <MinifigData>{ id: 7125501, name: 'Raven', skillIds: [Ability.MagicWalls, Ability.TeenTitansGoWorld], 
         packId: 71255, image: 'wave-9-raven', state: PieceState.Incomplete, url: 'raven' },
+    <MinifigData>{ id: 7134901, name: 'Betelgeuse', skillIds: [Ability.MindControl, Ability.Magic, 
+        Ability.SlurpAccess, Ability.Illumination, Ability.MiniAccess, Ability.SuperStrength, 
+        Ability.Adventure_Beetlejuice], 
+        packId: 71349, image: 'wave-9-betelgeuse', state: PieceState.New, url: 'betelgeuse' },
 ];
