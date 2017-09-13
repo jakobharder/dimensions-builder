@@ -5,25 +5,11 @@
 	background: #ECF0F1;
 }
 .highlight-btn {
-	float: left;
+		width: 100%;
+		border-top: 1px solid #16203B;
+		border-left: none;
 }
 .highlight-btn a {
 	width: 100%;
 	border-radius: 0;
-}
-@media (max-width: 767px) {
-	.highlight-btn {
-		width: 100%;
-		border-top: 1px solid #16203B;
-		border-left: none;
-	}
-}
-@media (min-width: 768px) {
-	.highlight-btn {
-		width: 50%;
-		border-top: none;
-	}
-	.highlight-btn+.highlight-btn {
-		border-left: 1px solid #16203B;
-	}
 }
