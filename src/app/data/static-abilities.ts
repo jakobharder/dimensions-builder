@@ -170,7 +170,7 @@ export enum Ability {
     HeartRegen,
     __PhoneHome,
 
-    LegoCityWorld
+    Adventure_LegoCity
 }
 
 export const abilities: AbilityData[] = [
@@ -343,7 +343,7 @@ export const abilities: AbilityData[] = [
 
     <AbilityData>{ id: Ability.GooniesLevel, url: null, name: 'The Goonies Level', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.GooniesWorld, url: null, name: 'The Goonies World', desc: '', type: AbilityType.LocationAccess, tags: [] },
-    <AbilityData>{ id: Ability.LegoCityWorld, url: null, name: 'Lego City World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.Adventure_LegoCity, url: null, name: 'Lego City World', desc: '', type: AbilityType.LocationAccess, tags: [] },
 
     <AbilityData>{ id: Ability.TeenTitansGoWorld, url: null, name: 'Teen Titans Go World', desc: '', type: AbilityType.LocationAccess, tags: [] },
       
