@@ -150,8 +150,8 @@ export enum Ability {
     GremlinsWorld,
     ETWorld,
     Adventure_Beetlejuice,
-    __unused_2,
-    __unused_1,
+    Adventure_PowerPuffGirls,
+    LegoConstructs,
     GooniesLevel,
     GooniesWorld,
     TeenTitansGoWorld,
@@ -168,7 +168,7 @@ export enum Ability {
     ApparateAccess,
     GrindRails,
     HeartRegen,
-    __PhoneHome,
+    EnergyShield,
 
     Adventure_LegoCity
 }
@@ -301,6 +301,10 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.HighSecurityAccess, url: 'high-security-access', name: 'High Security Access', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.SuitRip, url: 'suit-rip', name: 'Suit Rip', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },    
 
+    /* wave 9 */
+    <AbilityData>{ id: Ability.LegoConstructs, url: 'lego-constructs', name: 'Lego Constructs', desc: '', type: AbilityType.Normal, tags: [] }, /* super girl had this? */
+    <AbilityData>{ id: Ability.EnergyShield, url: 'energy-shield', name: 'Energy Shield', desc: '', type: AbilityType.Normal, tags: [] },
+
     <AbilityData>{ id: Ability.Ghostbusters2016Story, url: null, name: 'Ghostbusters 2016 Story', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Ghostbusters2016, url: null, name: 'Ghostbusters 2016 World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_JurassicWorld, url: null, name: 'Jurassic World', desc: '', type: AbilityType.LocationAccess, tags: [] },
@@ -346,8 +350,8 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.Adventure_LegoCity, url: null, name: 'Lego City World', desc: '', type: AbilityType.LocationAccess, tags: [] },
 
     <AbilityData>{ id: Ability.TeenTitansGoWorld, url: null, name: 'Teen Titans Go World', desc: '', type: AbilityType.LocationAccess, tags: [] },
-    <AbilityData>{ id: Ability.Adventure_Beetlejuice, url: null, name: 'Beetlejuice World', desc: '', type: AbilityType.LocationAccess, tags: [] }
-      
+    <AbilityData>{ id: Ability.Adventure_Beetlejuice, url: null, name: 'Beetlejuice World', desc: '', type: AbilityType.LocationAccess, tags: [] },
+    <AbilityData>{ id: Ability.Adventure_PowerPuffGirls, url: null, name: 'Power Puff Girls World', desc: '', type: AbilityType.LocationAccess, tags: [] }    
 
 /*
     { id: , url: '', name: '', desc: '' },
