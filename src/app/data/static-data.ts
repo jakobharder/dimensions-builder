@@ -82,7 +82,8 @@ export const packs: PackData[] = [
 
     <PackData>{ id: 71255, wave: 9, year: 2, minifigs: [], builds: [], name: 'Teen Titans Go!', type: PackType.TeamPack, image: 'wave-9-raven-fun-pack', desc: '', amazon: null },
     <PackData>{ id: 71349, wave: 9, year: 2, minifigs: [], builds: [], name: 'Beetlejuice', type: PackType.FunPack, image: 'wave-9-beetlejuice-fun-pack', desc: '', amazon: null },
-    <PackData>{ id: 71343, wave: 9, year: 2, minifigs: [], builds: [], name: 'Buttercup', type: PackType.FunPack, image: 'wave-9-buttercup-fun-pack', desc: '', amazon: null }
+    <PackData>{ id: 71343, wave: 9, year: 2, minifigs: [], builds: [], name: 'Buttercup', type: PackType.FunPack, image: 'wave-9-buttercup-fun-pack', desc: '', amazon: null },
+    <PackData>{ id: 71287, wave: 9, year: 2, minifigs: [], builds: [], name: 'Starfire', type: PackType.FunPack, image: 'wave-9-starfire-fun-pack', desc: '', amazon: null }
 
 /*
 */

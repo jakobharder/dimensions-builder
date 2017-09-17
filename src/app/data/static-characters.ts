@@ -150,8 +150,12 @@ export const minifigs: MinifigData[] = [
         Ability.Adventure_Beetlejuice], 
         packId: 71349, image: 'wave-9-betelgeuse', state: PieceState.New, url: 'betelgeuse' },
     <MinifigData>{ id: 7134301, name: 'Buttercup', skillIds: [Ability.Adventure_PowerPuffGirls, Ability.MiniAccess, 
-        Ability.Flying, Ability.LegoConstructs, Ability.SuperStrength, Ability.SuperStrengthHandles, 
+        Ability.Flying, Ability.HoverOrFlying, Ability.LegoConstructs, Ability.SuperStrength, Ability.SuperStrengthHandles, 
         Ability.EnergyShield, Ability.Gyrosphere, Ability.Dive, Ability.DivePlusSuperStrength, Ability.Spinjitzu,
         Ability.HeartRegen], 
         packId: 71343, image: 'wave-9-buttercup', state: PieceState.New, url: 'buttercup' },
+    <MinifigData>{ id: 7128701, name: 'Starfire', skillIds: [Ability.TeenTitansGoWorld, Ability.Acrobat,
+        Ability.Flying, Ability.Laser, Ability.HoverOrFlying, Ability.RainbowLego, Ability.Dive, Ability.Atlantis, 
+        Ability.Parseltongue, Ability.HeartRegen], 
+        packId: 71287, image: 'wave-9-starfire', state: PieceState.New, url: 'starfire' },
 ];
