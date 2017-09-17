@@ -19,5 +19,5 @@ export const waves: WaveData[] = [
     <WaveData>{ year: 2, wave: 7, release: "November 2016", released: true, image: 'wave-7', buyersGuide: 'First of all, go for the franchises you like rather than for the abilities. I don\'t expect any pack to be much better than the others. Telekinesis from E.T. and Marceline could be interesting and potentially used a lot. I suggest to pick up at least the E.T. Fun Pack.', video: '_dvqQVH3UwY' },
     <WaveData>{ year: 2, wave: 7.5, release: "February 2017", released: true, image: 'wave-7.5', buyersGuide: 'Too few information to give any advise.' },
     <WaveData>{ year: 2, wave: 8, release: "May 2017", released: true, image: null, buyersGuide: 'Too few information to give any advise.'  },
-    <WaveData>{ year: 2, wave: 9, release: "September 2017", released: true, image: null, buyersGuide: 'Too few information to give any advise.'  }
+    <WaveData>{ year: 2, wave: 9, release: "September 2017", released: true, image: 'wave-9', buyersGuide: 'Too few information to give any advise.'  }
 ];
