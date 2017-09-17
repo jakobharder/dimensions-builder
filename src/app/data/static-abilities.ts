@@ -150,7 +150,7 @@ export enum Ability {
     GremlinsWorld,
     ETWorld,
     Adventure_Beetlejuice,
-    Adventure_PowerPuffGirls,
+    Adventure_PowerpuffGirls,
     LegoConstructs,
     GooniesLevel,
     GooniesWorld,
@@ -351,7 +351,7 @@ export const abilities: AbilityData[] = [
 
     <AbilityData>{ id: Ability.TeenTitansGoWorld, url: null, name: 'Teen Titans Go World', desc: '', type: AbilityType.LocationAccess, tags: [] },
     <AbilityData>{ id: Ability.Adventure_Beetlejuice, url: null, name: 'Beetlejuice World', desc: '', type: AbilityType.LocationAccess, tags: [] },
-    <AbilityData>{ id: Ability.Adventure_PowerPuffGirls, url: null, name: 'Power Puff Girls World', desc: '', type: AbilityType.LocationAccess, tags: [] }    
+    <AbilityData>{ id: Ability.Adventure_PowerpuffGirls, url: null, name: 'Power Puff Girls World', desc: '', type: AbilityType.LocationAccess, tags: [] }    
 
 /*
     { id: , url: '', name: '', desc: '' },
