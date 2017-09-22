@@ -170,7 +170,8 @@ export enum Ability {
     HeartRegen,
     EnergyShield,
 
-    Adventure_LegoCity
+    Adventure_LegoCity,
+    TruffleShuffle
 }
 
 export const abilities: AbilityData[] = [
@@ -300,6 +301,9 @@ export const abilities: AbilityData[] = [
     <AbilityData>{ id: Ability.DetectiveMode, url: 'detetive-mode', name: 'Detective Mode', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.HighSecurityAccess, url: 'high-security-access', name: 'High Security Access', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2] },    
     <AbilityData>{ id: Ability.SuitRip, url: 'suit-rip', name: 'Suit Rip', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },    
+
+    /* wave 8 */
+    <AbilityData>{ id: Ability.TruffleShuffle, url: 'truffle-shuffle', name: 'Truffle Shuffle', desc: '... I don\'t know yet actually', type: AbilityType.Normal, tags: [BuilderTag.Year2], unimportant: true },    
 
     /* wave 9 */
     <AbilityData>{ id: Ability.LegoConstructs, url: 'lego-constructs', name: 'Lego Constructs', desc: '', type: AbilityType.Normal, tags: [] }, /* super girl had this? */
