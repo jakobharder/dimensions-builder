@@ -151,7 +151,7 @@ export const minifigs: MinifigData[] = [
                 Ability.LaserDeflector, Ability.HazardProtection] },
             { title: 'Stef', ids: [Ability.Target, Ability.Dive, Ability.Acrobat] }
         ],
-        packId: 71267, image: 'wave-9-sloth', state: PieceState.Incomplete, url: 'sloth' },
+        packId: 71267, image: 'wave-8-sloth', state: PieceState.New, url: 'sloth' },
     <MinifigData>{ id: 7126601, name: 'Chase McCain', skillIds: [Ability.Adventure_LegoCity, Ability.Acrobat, 
         Ability.Grapple, Ability.RopeSwings, Ability.Tracking, Ability.RelicDetector, Ability.Illumination, 
         Ability.SilverDestroy, Ability.SuperStrength, Ability.WaterSpray, Ability.Growth, Ability.HazardCleaner, 
