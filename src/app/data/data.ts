@@ -99,6 +99,23 @@ export class Piece {
         groups.push(new Abilities(this.skills));
         groups[0].title = this.name + '\'s Abilities';
 
+        let index = groups.length;
+        if (this.comments) {
+            for (let comment of this.comments) {
+                groups.push(new Abilities([]));
+                groups[index].title = comment.title;
+
+                // go through all abilities, not the remaining ones to allow them appear twice
+                for (let ability of this.skills) {
+                    if (-1 !== comment.ids.indexOf(ability.id)) {
+                        groups[index].add(ability);
+                    }
+                }
+                groups[0].removeRange(groups[index]);
+                index ++;            
+            }
+        }
+
         let abilities = new Abilities([]);
         abilities.title = 'Relevant Combos';
         for (let ability of groups[0].list) {
@@ -109,22 +126,6 @@ export class Piece {
         if (abilities.list.length > 0) {
             groups[0].removeRange(abilities);
             groups.push(abilities);
-        }
-
-        let index = groups.length;
-        if (this.comments) {
-            console.log(this.comments);
-            for (let comment of this.comments) {
-                groups.push(new Abilities([]));
-                groups[index].title = comment.title;
-                for (let ability of groups[0].list) {
-                    if (-1 !== comment.ids.indexOf(ability.id)) {
-                        groups[index].add(ability);
-                    }
-                }
-                groups[0].removeRange(groups[index]);
-                index ++;            
-            }
         }
 
         abilities = new Abilities([]);
